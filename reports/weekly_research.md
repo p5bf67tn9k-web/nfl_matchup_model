@@ -2,7 +2,7 @@
 
 > These indices are **transparent research indices**, not ratings, probabilities, or predictions of game outcomes. Each is an equal-weight mean of its member metrics' oriented, shrunk z-scores (reference-SD units). The member metrics are shown alongside every index. This project does not model game winners, scores, or spreads.
 
-Generated 2026-09-09T00:28:43+00:00. Latest completed regular-season week detected: **0** — running in preseason-baseline mode.
+Generated 2026-09-09T22:15:52+00:00. Latest completed regular-season week detected: **0** — running in preseason-baseline mode.
 
 No games have been played yet. The tables below are the **preseason baseline**: each team's prior full regular season, shrunk toward the 3-season league reference. They update automatically once Week 1 completes.
 

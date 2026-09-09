@@ -2,7 +2,7 @@
 
 > These indices are **transparent research indices**, not ratings, probabilities, or predictions of game outcomes. Each is an equal-weight mean of its member metrics' oriented, shrunk z-scores (reference-SD units). The member metrics are shown alongside every index. This project does not model game winners, scores, or spreads.
 
-Generated 2026-09-09T00:28:43+00:00. Source tables: `outputs/rankings/team_rankings_weekly.csv`, `outputs/team_strength/team_metrics_weekly.parquet`, `outputs/weekly/weekly_metric_detail.csv`.
+Generated 2026-09-09T22:15:52+00:00. Source tables: `outputs/rankings/team_rankings_weekly.csv`, `outputs/team_strength/team_metrics_weekly.parquet`, `outputs/weekly/weekly_metric_detail.csv`.
 
 ## Index construction
 ```
