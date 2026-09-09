@@ -1,0 +1,17 @@
+metric,horizon,n,skill_shrunk_vs_raw,skill_shrunk_vs_league,skill_raw_vs_league
+pass_rush.sack_rate_generated,2,2732,0.0635,0.0094,-0.0577
+pass_rush.sack_rate_generated,4,2350,0.1194,0.014,-0.1198
+qb.interception_rate,2,2431,0.1179,-0.0035,-0.1376
+qb.interception_rate,4,1890,0.2032,-0.0086,-0.2658
+rb.explosive_rush_rate,2,4374,0.1093,0.0132,-0.1079
+rb.explosive_rush_rate,4,3095,0.1968,0.02,-0.2201
+special_teams.fg_pct,2,2684,0.0653,-0.0007,-0.0706
+special_teams.fg_pct,4,2349,0.1236,0.0069,-0.1331
+team_defense.explosive_pass_rate,2,2732,0.0726,-0.0013,-0.0796
+team_defense.explosive_pass_rate,4,2351,0.1332,-0.0022,-0.1562
+team_defense.rush_epa_per_play,2,2732,0.0756,0.0093,-0.0717
+team_defense.rush_epa_per_play,4,2351,0.1429,0.0148,-0.1496
+team_offense.explosive_rush_rate,2,2732,0.0769,0.0136,-0.0686
+team_offense.explosive_rush_rate,4,2351,0.1403,0.0222,-0.1374
+wr.epa_per_target,2,13728,0.0833,0.009,-0.0811
+wr.epa_per_target,4,10029,0.1634,0.013,-0.1798

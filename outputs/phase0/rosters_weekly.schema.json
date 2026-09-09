@@ -1,0 +1,142 @@
+{
+  "source": "rosters_weekly",
+  "seasons_requested": [
+    2016,
+    2020,
+    2024,
+    2025
+  ],
+  "n_rows": 172578,
+  "n_cols": 36,
+  "coverage": {
+    "season_min": 2016,
+    "season_max": 2025,
+    "week_min": 1,
+    "week_max": 22,
+    "has_week_zero": false
+  },
+  "rows_per_season": {
+    "2016": 35020,
+    "2020": 44130,
+    "2024": 46579,
+    "2025": 46849
+  },
+  "columns": [
+    "season",
+    "team",
+    "position",
+    "depth_chart_position",
+    "jersey_number",
+    "status",
+    "full_name",
+    "first_name",
+    "last_name",
+    "birth_date",
+    "height",
+    "weight",
+    "college",
+    "gsis_id",
+    "espn_id",
+    "sportradar_id",
+    "yahoo_id",
+    "rotowire_id",
+    "pff_id",
+    "pfr_id",
+    "fantasy_data_id",
+    "sleeper_id",
+    "years_exp",
+    "headshot_url",
+    "ngs_position",
+    "week",
+    "game_type",
+    "status_description_abbr",
+    "football_name",
+    "esb_id",
+    "gsis_it_id",
+    "smart_id",
+    "entry_year",
+    "rookie_year",
+    "draft_club",
+    "draft_number"
+  ],
+  "schema": {
+    "season": "Int32",
+    "team": "String",
+    "position": "String",
+    "depth_chart_position": "String",
+    "jersey_number": "Int32",
+    "status": "String",
+    "full_name": "String",
+    "first_name": "String",
+    "last_name": "String",
+    "birth_date": "Date",
+    "height": "Float64",
+    "weight": "Int32",
+    "college": "String",
+    "gsis_id": "String",
+    "espn_id": "String",
+    "sportradar_id": "String",
+    "yahoo_id": "String",
+    "rotowire_id": "String",
+    "pff_id": "String",
+    "pfr_id": "String",
+    "fantasy_data_id": "String",
+    "sleeper_id": "String",
+    "years_exp": "Int32",
+    "headshot_url": "String",
+    "ngs_position": "String",
+    "week": "Int32",
+    "game_type": "String",
+    "status_description_abbr": "String",
+    "football_name": "String",
+    "esb_id": "String",
+    "gsis_it_id": "String",
+    "smart_id": "String",
+    "entry_year": "Int32",
+    "rookie_year": "Int32",
+    "draft_club": "String",
+    "draft_number": "Int32"
+  },
+  "candidate_asof_columns": {
+    "birth_date": {
+      "dtype": "Date",
+      "non_null": 171293,
+      "null_pct": 0.74,
+      "sample": [
+        "1975-01-23",
+        "1975-01-23",
+        "1975-01-23"
+      ]
+    }
+  },
+  "key_fields": {
+    "season": {
+      "present": true,
+      "null_pct": 0.0
+    },
+    "week": {
+      "present": true,
+      "null_pct": 0.0
+    },
+    "gsis_id": {
+      "present": true,
+      "null_pct": 0.02
+    },
+    "status": {
+      "present": true,
+      "null_pct": 0.01
+    },
+    "position": {
+      "present": true,
+      "null_pct": 0.02
+    },
+    "depth_chart_position": {
+      "present": true,
+      "null_pct": 0.01
+    },
+    "game_type": {
+      "present": true,
+      "null_pct": 0.0
+    }
+  }
+}

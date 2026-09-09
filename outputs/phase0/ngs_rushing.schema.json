@@ -1,0 +1,110 @@
+{
+  "source": "ngs_rushing",
+  "seasons_requested": [
+    2016,
+    2020,
+    2024,
+    2025
+  ],
+  "n_rows": 2424,
+  "n_cols": 22,
+  "coverage": {
+    "season_min": 2016,
+    "season_max": 2025,
+    "week_min": 0,
+    "week_max": 23,
+    "has_week_zero": true
+  },
+  "rows_per_season": {
+    "2016": 579,
+    "2020": 596,
+    "2024": 601,
+    "2025": 648
+  },
+  "columns": [
+    "season",
+    "season_type",
+    "week",
+    "player_display_name",
+    "player_position",
+    "team_abbr",
+    "efficiency",
+    "percent_attempts_gte_eight_defenders",
+    "avg_time_to_los",
+    "rush_attempts",
+    "rush_yards",
+    "avg_rush_yards",
+    "rush_touchdowns",
+    "player_gsis_id",
+    "player_first_name",
+    "player_last_name",
+    "player_jersey_number",
+    "player_short_name",
+    "expected_rush_yards",
+    "rush_yards_over_expected",
+    "rush_yards_over_expected_per_att",
+    "rush_pct_over_expected"
+  ],
+  "schema": {
+    "season": "Int32",
+    "season_type": "String",
+    "week": "Int32",
+    "player_display_name": "String",
+    "player_position": "String",
+    "team_abbr": "String",
+    "efficiency": "Float64",
+    "percent_attempts_gte_eight_defenders": "Float64",
+    "avg_time_to_los": "Float64",
+    "rush_attempts": "Int32",
+    "rush_yards": "Int32",
+    "avg_rush_yards": "Float64",
+    "rush_touchdowns": "Int32",
+    "player_gsis_id": "String",
+    "player_first_name": "String",
+    "player_last_name": "String",
+    "player_jersey_number": "Int32",
+    "player_short_name": "String",
+    "expected_rush_yards": "Float64",
+    "rush_yards_over_expected": "Float64",
+    "rush_yards_over_expected_per_att": "Float64",
+    "rush_pct_over_expected": "Float64"
+  },
+  "candidate_asof_columns": {
+    "avg_time_to_los": {
+      "dtype": "Float64",
+      "non_null": 2424,
+      "null_pct": 0.0,
+      "sample": [
+        "2.6375078124999995",
+        "2.5891712707182335",
+        "2.834389743589743"
+      ]
+    }
+  },
+  "key_fields": {
+    "player_gsis_id": {
+      "present": true,
+      "null_pct": 0.0
+    },
+    "season": {
+      "present": true,
+      "null_pct": 0.0
+    },
+    "week": {
+      "present": true,
+      "null_pct": 0.0
+    },
+    "rush_yards_over_expected": {
+      "present": true,
+      "null_pct": 23.89
+    },
+    "efficiency": {
+      "present": true,
+      "null_pct": 0.0
+    },
+    "percent_attempts_gte_eight_defenders": {
+      "present": true,
+      "null_pct": 0.0
+    }
+  }
+}

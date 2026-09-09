@@ -1,0 +1,104 @@
+{
+  "source": "injuries",
+  "seasons_requested": [
+    2016,
+    2020,
+    2024,
+    2025
+  ],
+  "n_rows": 23059,
+  "n_cols": 17,
+  "coverage": {
+    "season_min": 2016,
+    "season_max": 2025,
+    "week_min": 1,
+    "week_max": 22,
+    "has_week_zero": false
+  },
+  "rows_per_season": {
+    "2016": 5115,
+    "2020": 5661,
+    "2024": 6215,
+    "2025": 6068
+  },
+  "columns": [
+    "season",
+    "game_type",
+    "team",
+    "week",
+    "gsis_id",
+    "position",
+    "full_name",
+    "first_name",
+    "last_name",
+    "report_primary_injury",
+    "report_secondary_injury",
+    "report_status",
+    "practice_primary_injury",
+    "practice_secondary_injury",
+    "practice_status",
+    "date_modified",
+    "season_type"
+  ],
+  "schema": {
+    "season": "Float64",
+    "game_type": "String",
+    "team": "String",
+    "week": "Float64",
+    "gsis_id": "String",
+    "position": "String",
+    "full_name": "String",
+    "first_name": "String",
+    "last_name": "String",
+    "report_primary_injury": "String",
+    "report_secondary_injury": "String",
+    "report_status": "String",
+    "practice_primary_injury": "String",
+    "practice_secondary_injury": "String",
+    "practice_status": "String",
+    "date_modified": "Datetime(time_unit='us', time_zone='UTC')",
+    "season_type": "String"
+  },
+  "candidate_asof_columns": {
+    "date_modified": {
+      "dtype": "Datetime(time_unit='us', time_zone='UTC')",
+      "non_null": 16991,
+      "null_pct": 26.32,
+      "sample": [
+        "2016-09-09 13:14:37+00:00",
+        "2016-09-09 13:14:48+00:00",
+        "2016-09-09 13:15:07+00:00"
+      ]
+    }
+  },
+  "key_fields": {
+    "season": {
+      "present": true,
+      "null_pct": 0.0
+    },
+    "week": {
+      "present": true,
+      "null_pct": 0.0
+    },
+    "gsis_id": {
+      "present": true,
+      "null_pct": 0.0
+    },
+    "report_primary_injury": {
+      "present": true,
+      "null_pct": 51.31
+    },
+    "report_status": {
+      "present": true,
+      "null_pct": 51.31
+    },
+    "practice_status": {
+      "present": true,
+      "null_pct": 0.2
+    },
+    "date_modified": {
+      "present": true,
+      "null_pct": 26.32
+    }
+  }
+}

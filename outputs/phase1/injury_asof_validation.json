@@ -1,0 +1,174 @@
+{
+  "generated_at": "2026-09-08T19:57:25+00:00",
+  "seasons": [
+    2022,
+    2023,
+    2024
+  ],
+  "rows_evaluated": 17479,
+  "false_inclusion_n": 1,
+  "false_inclusion_rate": 5.7211510956004346e-05,
+  "false_inclusion_threshold": 0.005,
+  "passes_acceptance": true,
+  "cutoff_staleness_n": 125,
+  "cutoff_staleness_rate": 0.007151438869500543,
+  "false_exclusion_n": 0,
+  "affected_games_false_inclusion": 1,
+  "per_season": [
+    {
+      "season": 2022,
+      "rows": 5665,
+      "false_inclusion_n": 0,
+      "cutoff_staleness_n": 29,
+      "false_exclusion_n": 0,
+      "fi_games": 0,
+      "false_inclusion_rate": 0.0,
+      "cutoff_staleness_rate": 0.005119152691968226
+    },
+    {
+      "season": 2023,
+      "rows": 5599,
+      "false_inclusion_n": 0,
+      "cutoff_staleness_n": 25,
+      "false_exclusion_n": 0,
+      "fi_games": 0,
+      "false_inclusion_rate": 0.0,
+      "cutoff_staleness_rate": 0.00446508305054474
+    },
+    {
+      "season": 2024,
+      "rows": 6215,
+      "false_inclusion_n": 1,
+      "cutoff_staleness_n": 71,
+      "false_exclusion_n": 0,
+      "fi_games": 1,
+      "false_inclusion_rate": 0.00016090104585679806,
+      "cutoff_staleness_rate": 0.011423974255832662
+    }
+  ],
+  "false_inclusion_examples": [
+    {
+      "season": 2024,
+      "week": 1,
+      "team": "BAL",
+      "game_id": "2024_01_BAL_KC",
+      "gsis_id": "00-0031360",
+      "report_status": "Out",
+      "practice_status": "\n    ",
+      "dm_utc": "2024-09-06 03:11:40+00:00",
+      "kickoff_utc": "2024-09-06 00:20:00+00:00"
+    }
+  ],
+  "cutoff_staleness_examples": [
+    {
+      "season": 2023,
+      "week": 15,
+      "team": "LAC",
+      "game_id": "2023_15_LAC_LV",
+      "gsis_id": "00-0030500",
+      "report_status": "Questionable",
+      "dm_utc": "2023-12-14 23:34:17+00:00",
+      "injury_asof_cutoff": "2023-12-14 01:15:00+00:00",
+      "kickoff_utc": "2023-12-15 01:15:00+00:00"
+    },
+    {
+      "season": 2024,
+      "week": 18,
+      "team": "WAS",
+      "game_id": "2024_18_WAS_DAL",
+      "gsis_id": "00-0039149",
+      "report_status": "Questionable",
+      "dm_utc": "2025-01-05 15:27:22+00:00",
+      "injury_asof_cutoff": "2025-01-05 04:59:59+00:00",
+      "kickoff_utc": "2025-01-05 18:00:00+00:00"
+    },
+    {
+      "season": 2024,
+      "week": 15,
+      "team": "WAS",
+      "game_id": "2024_15_WAS_NO",
+      "gsis_id": "00-0036376",
+      "report_status": "Questionable",
+      "dm_utc": "2024-12-15 15:22:47+00:00",
+      "injury_asof_cutoff": "2024-12-15 04:59:59+00:00",
+      "kickoff_utc": "2024-12-15 18:00:00+00:00"
+    },
+    {
+      "season": 2022,
+      "week": 10,
+      "team": "MIA",
+      "game_id": "2022_10_CLE_MIA",
+      "gsis_id": "00-0034487",
+      "report_status": "Questionable",
+      "dm_utc": "2022-11-13 14:40:40+00:00",
+      "injury_asof_cutoff": "2022-11-13 04:59:59+00:00",
+      "kickoff_utc": "2022-11-13 18:00:00+00:00"
+    },
+    {
+      "season": 2023,
+      "week": 12,
+      "team": "MIA",
+      "game_id": "2023_12_MIA_NYJ",
+      "gsis_id": "00-0031921",
+      "report_status": "Questionable",
+      "dm_utc": "2023-11-24 16:26:38+00:00",
+      "injury_asof_cutoff": "2023-11-23 20:00:00+00:00",
+      "kickoff_utc": "2023-11-24 20:00:00+00:00"
+    },
+    {
+      "season": 2024,
+      "week": 18,
+      "team": "CLE",
+      "game_id": "2024_18_CLE_BAL",
+      "gsis_id": "00-0035525",
+      "report_status": "Questionable",
+      "dm_utc": "2025-01-04 17:54:45+00:00",
+      "injury_asof_cutoff": "2025-01-03 21:30:00+00:00",
+      "kickoff_utc": "2025-01-04 21:30:00+00:00"
+    },
+    {
+      "season": 2024,
+      "week": 15,
+      "team": "HOU",
+      "game_id": "2024_15_MIA_HOU",
+      "gsis_id": "00-0039359",
+      "report_status": "Out",
+      "dm_utc": "2024-12-15 14:17:06+00:00",
+      "injury_asof_cutoff": "2024-12-15 04:59:59+00:00",
+      "kickoff_utc": "2024-12-15 18:00:00+00:00"
+    },
+    {
+      "season": 2024,
+      "week": 16,
+      "team": "ARI",
+      "game_id": "2024_16_ARI_CAR",
+      "gsis_id": "00-0035258",
+      "report_status": "Questionable",
+      "dm_utc": "2024-12-22 13:57:13+00:00",
+      "injury_asof_cutoff": "2024-12-22 04:59:59+00:00",
+      "kickoff_utc": "2024-12-22 18:00:00+00:00"
+    },
+    {
+      "season": 2024,
+      "week": 15,
+      "team": "NYJ",
+      "game_id": "2024_15_NYJ_JAX",
+      "gsis_id": "00-0034270",
+      "report_status": "Out",
+      "dm_utc": "2024-12-15 13:57:00+00:00",
+      "injury_asof_cutoff": "2024-12-15 04:59:59+00:00",
+      "kickoff_utc": "2024-12-15 18:00:00+00:00"
+    },
+    {
+      "season": 2024,
+      "week": 15,
+      "team": "ARI",
+      "game_id": "2024_15_NE_ARI",
+      "gsis_id": "00-0035629",
+      "report_status": "Questionable",
+      "dm_utc": "2024-12-15 16:50:27+00:00",
+      "injury_asof_cutoff": "2024-12-15 04:59:59+00:00",
+      "kickoff_utc": "2024-12-15 21:25:00+00:00"
+    }
+  ]
+}

@@ -1,0 +1,59 @@
+source,column,dtype,null_pct,sample
+pbp,game_date,String,0.0,2016-09-11 | 2016-09-11 | 2016-09-11
+pbp,time,String,0.03,15:00 | 15:00 | 14:57
+pbp,home_timeouts_remaining,Float64,0.0,3.0 | 3.0 | 3.0
+pbp,away_timeouts_remaining,Float64,0.0,3.0 | 3.0 | 3.0
+pbp,timeout,Float64,3.03,0.0 | 0.0 | 0.0
+pbp,timeout_team,String,95.64,BAL | BUF | BUF
+pbp,posteam_timeouts_remaining,Float64,5.36,3.0 | 3.0 | 3.0
+pbp,defteam_timeouts_remaining,Float64,5.36,3.0 | 3.0 | 3.0
+pbp,kickoff_inside_twenty,Float64,3.03,1.0 | 0.0 | 0.0
+pbp,kickoff_in_endzone,Float64,3.03,1.0 | 0.0 | 0.0
+pbp,kickoff_out_of_bounds,Float64,3.03,0.0 | 0.0 | 0.0
+pbp,kickoff_downed,Float64,3.03,0.0 | 0.0 | 0.0
+pbp,kickoff_fair_catch,Float64,3.03,0.0 | 0.0 | 0.0
+pbp,own_kickoff_recovery,Float64,3.03,0.0 | 0.0 | 0.0
+pbp,own_kickoff_recovery_td,Float64,3.03,0.0 | 0.0 | 0.0
+pbp,kickoff_attempt,Float64,3.03,1.0 | 0.0 | 0.0
+pbp,kickoff_returner_player_name,String,97.26,D.Hester | D.Hester | N.O'Leary
+pbp,kickoff_returner_player_id,String,97.26,00-0024272 | 00-0024272 | 00-0032117
+pbp,lateral_kickoff_returner_player_id,String,100.0,00-0029764 | 00-0036316 | 00-0036316
+pbp,lateral_kickoff_returner_player_name,String,100.0,C.Davis | C.Claybrooks | C.Claybrooks
+pbp,own_kickoff_recovery_player_id,String,99.99,00-0032977 | 00-0031697 | 00-0032377
+pbp,own_kickoff_recovery_player_name,String,99.99,R.Higgins | J.Taylor | J.Ferguson
+pbp,start_time,String,0.0,"9/11/16, 13:04:26 | 9/11/16, 13:04:26 | 9/11/16, 13:04:26"
+pbp,time_of_day,String,3.29,2016-09-11T17:04:26Z | 2016-09-11T17:05:12Z | 2016-09-11T17:05:42Z
+pbp,end_clock_time,String,57.65,2024-09-08T17:03:06.833Z | 2024-09-08T17:03:43.660Z | 2024-09-08T17:04:20.843Z
+pbp,drive_real_start_time,String,1.76,2016-09-11T17:04:26Z | 2016-09-11T17:04:26Z | 2016-09-11T17:04:26Z
+pbp,drive_time_of_possession,String,1.14,3:16 | 3:16 | 3:16
+pbp,home_opening_kickoff,Float64,0.0,1.0 | 1.0 | 1.0
+player_stats_week,kickoff_returns,Int32,0.0,0 | 0 | 0
+player_stats_week,kickoff_return_yards,Int32,0.0,0 | 0 | 0
+team_stats_week,timeouts,Int32,0.0,4 | 4 | 4
+team_stats_week,kickoff_returns,Int32,0.0,4 | 3 | 2
+team_stats_week,kickoff_return_yards,Int32,0.0,61 | 85 | 37
+ngs_passing,avg_time_to_throw,Float64,0.0,2.424237741456166 | 2.5668229166666667 | 2.606104395604396
+ngs_rushing,avg_time_to_los,Float64,0.0,2.6375078124999995 | 2.5891712707182335 | 2.834389743589743
+pfr_pass,times_sacked,Float64,0.0,2.0 | 0.0 | 4.0
+pfr_pass,times_blitzed,Float64,0.0,7.0 | 0.0 | 12.0
+pfr_pass,times_hurried,Float64,0.0,5.0 | 0.0 | 3.0
+pfr_pass,times_hit,Float64,0.0,2.0 | 0.0 | 6.0
+pfr_pass,times_pressured,Float64,0.0,9.0 | 0.0 | 13.0
+pfr_pass,times_pressured_pct,Float64,0.0,0.25 | 0.0 | 0.265
+pfr_pass,def_times_blitzed,Float64,100.0,""
+pfr_pass,def_times_hurried,Float64,100.0,""
+pfr_pass,def_times_hitqb,Float64,100.0,""
+pfr_def,def_times_blitzed,Float64,0.0,0.0 | 0.0 | 0.0
+pfr_def,def_times_hurried,Float64,0.0,0.0 | 0.0 | 0.0
+pfr_def,def_times_hitqb,Float64,0.0,0.0 | 0.0 | 0.0
+injuries,date_modified,"Datetime(time_unit='us', time_zone='UTC')",26.32,2016-09-09 13:14:37+00:00 | 2016-09-09 13:14:48+00:00 | 2016-09-09 13:15:07+00:00
+depth_charts,dt,String,16.57,2026-03-14T07:32:09Z | 2026-03-14T07:32:09Z | 2026-03-14T07:32:09Z
+rosters_weekly,birth_date,Date,0.74,1975-01-23 | 1975-01-23 | 1975-01-23
+schedules,gameday,String,0.0,1999-09-12 | 1999-09-12 | 1999-09-12
+schedules,weekday,String,0.0,Sunday | Sunday | Sunday
+schedules,gametime,String,3.43,13:00 | 13:00 | 13:00
+schedules,overtime,Int32,3.6,0 | 0 | 0
+participation,time_to_throw,Float64,59.16,2.323 | 2.893 | 2.556
+ftn_charting,is_created_reception,Boolean,0.0,False | False | False
+ftn_charting,date_pulled,"Datetime(time_unit='us', time_zone='UTC')",0.0,2024-09-06 23:50:14.696374+00:00 | 2024-09-06 23:50:14.696374+00:00 | 2024-09-06 23:50:14.696374+00:00
+players,birth_date,String,0.13,1987-01-25 | 2002-10-05 | 1985-06-18

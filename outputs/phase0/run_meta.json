@@ -1,0 +1,9 @@
+{
+  "generated_at": "2026-09-08T14:10:08",
+  "run_date": "2026-09-08",
+  "nflreadpy_version": "0.1.5",
+  "polars_version": "1.44.1",
+  "current_season_season_logic": 2025,
+  "current_season_roster_logic": 2026,
+  "errors": {}
+}

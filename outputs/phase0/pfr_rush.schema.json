@@ -1,0 +1,85 @@
+{
+  "source": "pfr_rush",
+  "seasons_requested": [
+    2018,
+    2024,
+    2025
+  ],
+  "n_rows": 6903,
+  "n_cols": 16,
+  "coverage": {
+    "season_min": 2018,
+    "season_max": 2025,
+    "week_min": 1,
+    "week_max": 22,
+    "has_week_zero": false
+  },
+  "rows_per_season": {
+    "2018": 2189,
+    "2024": 2359,
+    "2025": 2355
+  },
+  "columns": [
+    "game_id",
+    "pfr_game_id",
+    "season",
+    "week",
+    "game_type",
+    "team",
+    "opponent",
+    "pfr_player_name",
+    "pfr_player_id",
+    "carries",
+    "rushing_yards_before_contact",
+    "rushing_yards_before_contact_avg",
+    "rushing_yards_after_contact",
+    "rushing_yards_after_contact_avg",
+    "rushing_broken_tackles",
+    "receiving_broken_tackles"
+  ],
+  "schema": {
+    "game_id": "String",
+    "pfr_game_id": "String",
+    "season": "Int32",
+    "week": "Int32",
+    "game_type": "String",
+    "team": "String",
+    "opponent": "String",
+    "pfr_player_name": "String",
+    "pfr_player_id": "String",
+    "carries": "Float64",
+    "rushing_yards_before_contact": "Float64",
+    "rushing_yards_before_contact_avg": "Float64",
+    "rushing_yards_after_contact": "Float64",
+    "rushing_yards_after_contact_avg": "Float64",
+    "rushing_broken_tackles": "Float64",
+    "receiving_broken_tackles": "Float64"
+  },
+  "candidate_asof_columns": {},
+  "key_fields": {
+    "pfr_id": {
+      "present": false,
+      "null_pct": null
+    },
+    "season": {
+      "present": true,
+      "null_pct": 0.0
+    },
+    "week": {
+      "present": true,
+      "null_pct": 0.0
+    },
+    "ybc_att": {
+      "present": false,
+      "null_pct": null
+    },
+    "yac_att": {
+      "present": false,
+      "null_pct": null
+    },
+    "brk_tkl": {
+      "present": false,
+      "null_pct": null
+    }
+  }
+}

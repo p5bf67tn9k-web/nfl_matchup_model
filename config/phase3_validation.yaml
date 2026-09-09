@@ -1,0 +1,195 @@
+# =============================================================================
+# PHASE 3 PRE-REGISTERED VALIDATION METHODOLOGY
+# =============================================================================
+# Written and committed BEFORE inspecting any Phase 3 result (spec section 21).
+# These rules define the persistence-validation protocol. They are NOT to be
+# changed after seeing results. Any post-hoc change must be recorded as a
+# documented deviation in reports/phase3_report.md.
+#
+# PURPOSE (spec section 1): test whether a DESCRIPTIVE MEASUREMENT, computed
+# strictly as-of the target kickoff, carries stable out-of-sample information
+# about the SAME football unit's FUTURE performance, beyond simple baselines.
+#
+# This is NOT a test of matchup value. A metric with strong persistence may still
+# fail to improve opponent-adjusted matchup prediction (spec section 16).
+# =============================================================================
+
+schema_version: 2
+frozen: true
+frozen_note: "pre-registered; do not tune against results"
+
+# DISCLOSED DEVIATIONS (recorded during harness setup, before the official run;
+# both documented in reports/phase3_report.md):
+#
+# (A) schema_version 1 set the primary status cell to horizon 1 (the target
+#     game). A setup smoke-run made clear that a single game's unit performance
+#     is irreducibly noisy for every predictor (the league mean included), so
+#     horizon-1 skill mostly measures "single games are unpredictable" rather
+#     than "does the measurement persist". v2 moves the PRIMARY status decision
+#     to the multi-game horizons (2 and 4) -- the shortest genuine aggregates.
+#     Horizon 1 is still computed and reported in full.
+#
+# (B) The smoke-run showed several metrics (notably QB efficiency) have clear
+#     out-of-sample RANK persistence (Spearman ~0.3-0.4 at H4, CI well above 0)
+#     while their RMSE skill vs the league mean is slightly NEGATIVE -- the raw
+#     metric over-extrapolates because no regression-to-the-mean shrinkage is
+#     applied (shrinkage was deliberately deferred from Phase 2). The 4-value
+#     `predictive_status` taxonomy the spec fixes is strict and baseline-RMSE
+#     based, so it stays as specified. v2 ADDS a SECONDARY `rank_persistence`
+#     classification (RANK_PERSISTENT / NOT_RANK_PERSISTENT / INSUFFICIENT) that
+#     is reported alongside `predictive_status`. It does not alter the taxonomy;
+#     it prevents a real finding from being hidden.
+
+# ---- evaluation period ------------------------------------------------------
+seasons:
+  eval_start: 2019
+  eval_end: 2025              # most recent completed season
+  history_available_from: 2016  # game_metrics built from here (covers ref windows)
+
+season_phase_buckets:          # spec section 15 -- diagnostic only, never optimized against
+  early:   [1, 4]              # reported SEPARATELY as early-season analysis (spec section 3)
+  wk5_9:   [5, 9]
+  wk10_14: [10, 14]
+  wk15_18: [15, 18]
+primary_analysis_weeks: [5, 18]   # weeks 5..18 = the primary persistence analysis
+
+# ---- horizons (spec sections 3-4) -----------------------------------------
+# H_k target = the k eligible games STARTING AT the target game (inclusive),
+# raw components summed then the rate recomputed. Uses only games at/after the
+# feature's as-of cutoff => cannot leak into the feature.
+horizons: [1, 2, 4]
+
+# ---- feature construction -------------------------------------------------
+feature:
+  windows: [season_to_date, trailing_3, trailing_5, prior_season]
+  variants: [raw, normalized]   # normalized = z-score vs 3 completed seasons (Phase 2 pipeline)
+  availability: production_publish_lag   # data_asof = kickoff + 4h + source publish_lag_days
+  # a feature observation is kept only if the window has:
+  min_feature_games:
+    season_to_date: 2
+    trailing_3: 3
+    trailing_5: 5
+    prior_season: 6
+  min_feature_opportunities:      # per family (denominator units)
+    qb: 40
+    rb: 20
+    wr: 12
+    team_offense: 120
+    team_defense: 120
+    pass_protection: 60
+    pass_rush: 60
+    special_teams: 40
+
+# ---- target eligibility (spec section 5) ---------------------------------
+# A missing future opportunity is NOT zero performance. An entity that does not
+# meet the per-game opportunity bar in a horizon game -> that game is not
+# counted toward the horizon; if fewer than k eligible games remain in the
+# season, the observation is EXCLUDED for that horizon (reason logged).
+target:
+  per_game_min_opportunities:
+    qb: 10
+    rb: 5
+    wr: 2
+    team_offense: 20
+    team_defense: 20
+    pass_protection: 10
+    pass_rush: 10
+    special_teams: 3
+  horizon_games_from_same_season_only: true   # do not span into the next season
+  require_full_horizon: true                  # need all k eligible games or exclude
+
+# ---- metrics evaluated (spec section 12) --------------------------------
+# EVERY registered rate metric with enough data is evaluated under the identical
+# protocol. Phase 2 reliability/redundancy MUST NOT pre-select. Volume metrics
+# (wr.targets, team_offense.plays) and un-windowed external metrics are marked
+# UNVALIDATED (not evaluable as a persistence rate) rather than skipped silently.
+metric_selection: all_registered_rate_metrics
+exclude_from_persistence:
+  - wr.targets
+  - team_offense.plays
+external_metrics_secondary_analysis: true   # NGS/PFR: lighter trailing-week treatment, flagged
+
+# ---- baselines (spec section 6) ----------------------------------------
+baselines:
+  league_mean:
+    definition: "mean of the metric over the 3 completed reference seasons, entity-season level, min-opportunity filtered (== Phase 2 normalize ref_mean)"
+    as_of: true
+  prior_season:
+    definition: "the entity's value in the single most recent COMPLETED season, min-opportunity filtered"
+    rookies_or_no_prior: unavailable   # excluded from skill_vs_prior_season; never imputed
+  raw_trailing3:
+    definition: "the entity's raw trailing-3-game metric value, strictly as-of kickoff"
+    note: "identical to the trailing_3 raw feature cell by construction"
+
+# ---- scoring (spec section 7) ----------------------------------------
+scoring_metrics: [rmse, mae, bias, spearman, pearson, skill_vs_league, skill_vs_prior_season, skill_vs_raw_trailing3]
+skill_formula: "1 - RMSE_feature / RMSE_baseline"
+# calibration slope is NOT used for continuous targets (spec section 7)
+
+report_fields: [n, n_entities, n_seasons, opportunity_n_median, target_mean, target_sd, excluded_target_rate]
+
+# ---- uncertainty (spec section 8) ----------------------------------
+bootstrap:
+  method: multiplier_cluster_exponential   # Bayesian/multiplier cluster bootstrap:
+  # each (entity_id x season) cluster gets an Exponential(1) weight per resample,
+  # broadcast to its rows. Equivalent in spirit to case-resampling clusters, fully
+  # vectorised. spearman CI uses a weighted Pearson of the fixed rank vectors
+  # (standard fast approximation). Chosen over case-resampling purely for speed;
+  # it respects the same cluster structure. Disclosed here, not tuned to results.
+  cluster_by: [entity_id, season]    # respects chronological/entity structure, not IID
+  iterations: 1000
+  ci: percentile
+  ci_level: 0.95
+  seed: 20260908
+
+# ---- negative control / placebo (spec section 13) -----------------
+negative_control:
+  method: within_season_feature_permutation
+  description: "permute the feature vector across observations within the same eval season (breaks the entity link, preserves the marginal distribution and season structure)"
+  n_permutations_null: 20
+  seed: 20260908
+  expectation: "skill point estimates near 0; correlation CIs include 0"
+
+# ---- status thresholds (spec sections 2, 20) --------------------
+# Applied to the PRIMARY cells: weeks 5-18, horizons 2 AND 4, the metric's BEST
+# window per horizon (best = highest skill_vs_league point estimate among windows
+# meeting the min-data bar). See the disclosed deviation note at the top.
+status_rules:
+  primary_weeks: [5, 18]
+  primary_horizons: [2, 4]
+  insufficient_data_min_n: 300
+  economic_floor:
+    min_skill_vs_league: 0.03        # >= 3% RMSE reduction vs the league-mean baseline
+    min_abs_spearman: 0.15
+  validated_persistence_requires:                # must hold at BOTH primary horizons
+    - "n >= insufficient_data_min_n"
+    - "skill_vs_league 95% CI lower bound > 0"
+    - "skill_vs_prior_season 95% CI lower bound > 0 (on the subset with a prior-season value)"
+    - "spearman 95% CI lower bound > 0"
+    - "skill_vs_league point estimate >= economic_floor.min_skill_vs_league"
+    - "abs(spearman point estimate) >= economic_floor.min_abs_spearman"
+  no_incremental_persistence_when:               # holds at BOTH primary horizons
+    - "n >= insufficient_data_min_n AND clearly fails to beat league or prior-season (CI includes 0 / negative point estimate)"
+  # met the bar at exactly one primary horizon, or CI straddles the economic
+  # floor, or only-just-positive -> retain UNVALIDATED (spec section 20)
+  ambiguous_keeps: UNVALIDATED
+  not_evaluable_keeps: UNVALIDATED   # volume metrics, un-windowed external metrics
+
+  # secondary classification -- reported, does NOT change predictive_status
+  rank_persistence:
+    requires:                        # must hold at BOTH primary horizons, best-by-spearman window
+      - "n >= insufficient_data_min_n"
+      - "spearman 95% CI lower bound > 0"
+      - "abs(spearman point estimate) >= economic_floor.min_abs_spearman"
+    not_rank_persistent_when: "n >= insufficient_data_min_n at both horizons but the bar is not met"
+
+# ---- forbidden (spec sections 17-18) --------------------------
+forbidden:
+  - player_or_unit_ratings
+  - composite_scores
+  - metric_weights
+  - opponent_adjustment
+  - matchup_interactions
+  - expected_performance
+  - expected_score
+  - any_market_data   # spread / total / moneyline / line / odds / market prob

@@ -1,0 +1,665 @@
+[
+  {
+    "family": "pass_protection",
+    "metric": "qb_hit_rate_allowed",
+    "alpha": 30.0,
+    "selected_on_seasons": [
+      2016,
+      2018
+    ],
+    "alpha_curve": {
+      "1": 0.064831,
+      "3": 0.064709,
+      "10": 0.064478,
+      "30": 0.064452,
+      "100": 0.065082,
+      "300": 0.065809
+    }
+  },
+  {
+    "family": "pass_protection",
+    "metric": "rush_stuffed_rate_approx",
+    "alpha": 30.0,
+    "selected_on_seasons": [
+      2016,
+      2018
+    ],
+    "alpha_curve": {
+      "1": 0.094996,
+      "3": 0.094778,
+      "10": 0.094435,
+      "30": 0.094296,
+      "100": 0.09469,
+      "300": 0.095201
+    }
+  },
+  {
+    "family": "pass_protection",
+    "metric": "sack_rate_allowed",
+    "alpha": 30.0,
+    "selected_on_seasons": [
+      2016,
+      2018
+    ],
+    "alpha_curve": {
+      "1": 0.045881,
+      "3": 0.04582,
+      "10": 0.045683,
+      "30": 0.045563,
+      "100": 0.045631,
+      "300": 0.045792
+    }
+  },
+  {
+    "family": "pass_rush",
+    "metric": "qb_hit_rate_generated",
+    "alpha": 100.0,
+    "selected_on_seasons": [
+      2016,
+      2018
+    ],
+    "alpha_curve": {
+      "1": 0.067035,
+      "3": 0.066893,
+      "10": 0.066598,
+      "30": 0.066305,
+      "100": 0.066237,
+      "300": 0.066344
+    }
+  },
+  {
+    "family": "qb",
+    "metric": "adot",
+    "alpha": 10.0,
+    "selected_on_seasons": [
+      2016,
+      2018
+    ],
+    "alpha_curve": {
+      "1": 4.263524,
+      "3": 4.130805,
+      "10": 4.118453,
+      "30": 4.151742,
+      "100": 4.187074,
+      "300": 4.207028
+    }
+  },
+  {
+    "family": "qb",
+    "metric": "completion_pct",
+    "alpha": 30.0,
+    "selected_on_seasons": [
+      2016,
+      2018
+    ],
+    "alpha_curve": {
+      "1": 0.180748,
+      "3": 0.170468,
+      "10": 0.16444,
+      "30": 0.163243,
+      "100": 0.164016,
+      "300": 0.164797
+    }
+  },
+  {
+    "family": "qb",
+    "metric": "cpoe",
+    "alpha": 30.0,
+    "selected_on_seasons": [
+      2016,
+      2018
+    ],
+    "alpha_curve": {
+      "1": 16.384729,
+      "3": 15.701095,
+      "10": 15.348751,
+      "30": 15.291498,
+      "100": 15.350839,
+      "300": 15.406365
+    }
+  },
+  {
+    "family": "qb",
+    "metric": "cpoe_coverage_fraction",
+    "alpha": 30.0,
+    "selected_on_seasons": [
+      2016,
+      2018
+    ],
+    "alpha_curve": {
+      "1": 0.045496,
+      "3": 0.04281,
+      "10": 0.041708,
+      "30": 0.041516,
+      "100": 0.041594,
+      "300": 0.041693
+    }
+  },
+  {
+    "family": "qb",
+    "metric": "dropback_success_rate",
+    "alpha": 30.0,
+    "selected_on_seasons": [
+      2016,
+      2018
+    ],
+    "alpha_curve": {
+      "1": 0.174498,
+      "3": 0.166303,
+      "10": 0.161471,
+      "30": 0.160609,
+      "100": 0.161481,
+      "300": 0.162276
+    }
+  },
+  {
+    "family": "qb",
+    "metric": "epa_per_dropback",
+    "alpha": 30.0,
+    "selected_on_seasons": [
+      2016,
+      2018
+    ],
+    "alpha_curve": {
+      "1": 0.737506,
+      "3": 0.70256,
+      "10": 0.6884,
+      "30": 0.686583,
+      "100": 0.688101,
+      "300": 0.689448
+    }
+  },
+  {
+    "family": "qb",
+    "metric": "explosive_pass_rate",
+    "alpha": 10.0,
+    "selected_on_seasons": [
+      2016,
+      2018
+    ],
+    "alpha_curve": {
+      "1": 0.117195,
+      "3": 0.110977,
+      "10": 0.109067,
+      "30": 0.109068,
+      "100": 0.109264,
+      "300": 0.109379
+    }
+  },
+  {
+    "family": "qb",
+    "metric": "sack_rate",
+    "alpha": 30.0,
+    "selected_on_seasons": [
+      2016,
+      2018
+    ],
+    "alpha_curve": {
+      "1": 0.088436,
+      "3": 0.084918,
+      "10": 0.083096,
+      "30": 0.082801,
+      "100": 0.083076,
+      "300": 0.083322
+    }
+  },
+  {
+    "family": "qb",
+    "metric": "yards_per_attempt",
+    "alpha": 30.0,
+    "selected_on_seasons": [
+      2016,
+      2018
+    ],
+    "alpha_curve": {
+      "1": 4.101713,
+      "3": 3.908787,
+      "10": 3.828398,
+      "30": 3.813752,
+      "100": 3.817261,
+      "300": 3.822237
+    }
+  },
+  {
+    "family": "rb",
+    "metric": "fumble_lost_rate",
+    "alpha": 30.0,
+    "selected_on_seasons": [
+      2016,
+      2018
+    ],
+    "alpha_curve": {
+      "1": 0.08978,
+      "3": 0.087806,
+      "10": 0.086651,
+      "30": 0.086602,
+      "100": 0.08699,
+      "300": 0.087245
+    }
+  },
+  {
+    "family": "rb",
+    "metric": "rush_epa_per_att",
+    "alpha": 30.0,
+    "selected_on_seasons": [
+      2016,
+      2018
+    ],
+    "alpha_curve": {
+      "1": 0.895612,
+      "3": 0.873862,
+      "10": 0.861058,
+      "30": 0.859045,
+      "100": 0.861146,
+      "300": 0.862775
+    }
+  },
+  {
+    "family": "rb",
+    "metric": "rush_success_rate",
+    "alpha": 10.0,
+    "selected_on_seasons": [
+      2016,
+      2018
+    ],
+    "alpha_curve": {
+      "1": 0.332376,
+      "3": 0.326364,
+      "10": 0.323579,
+      "30": 0.324392,
+      "100": 0.326637,
+      "300": 0.328074
+    }
+  },
+  {
+    "family": "rb",
+    "metric": "yards_per_carry",
+    "alpha": 10.0,
+    "selected_on_seasons": [
+      2016,
+      2018
+    ],
+    "alpha_curve": {
+      "1": 4.815713,
+      "3": 4.712509,
+      "10": 4.661326,
+      "30": 4.664593,
+      "100": 4.684366,
+      "300": 4.696345
+    }
+  },
+  {
+    "family": "team_defense",
+    "metric": "early_down_epa_per_play",
+    "alpha": 100.0,
+    "selected_on_seasons": [
+      2016,
+      2018
+    ],
+    "alpha_curve": {
+      "1": 0.178232,
+      "3": 0.177964,
+      "10": 0.177375,
+      "30": 0.176774,
+      "100": 0.176651,
+      "300": 0.176888
+    }
+  },
+  {
+    "family": "team_defense",
+    "metric": "epa_per_play",
+    "alpha": 30.0,
+    "selected_on_seasons": [
+      2016,
+      2018
+    ],
+    "alpha_curve": {
+      "1": 0.189487,
+      "3": 0.189087,
+      "10": 0.188242,
+      "30": 0.187483,
+      "100": 0.187625,
+      "300": 0.188266
+    }
+  },
+  {
+    "family": "team_defense",
+    "metric": "explosive_rush_rate",
+    "alpha": 30.0,
+    "selected_on_seasons": [
+      2016,
+      2018
+    ],
+    "alpha_curve": {
+      "1": 0.067277,
+      "3": 0.067156,
+      "10": 0.066909,
+      "30": 0.066685,
+      "100": 0.066701,
+      "300": 0.066863
+    }
+  },
+  {
+    "family": "team_defense",
+    "metric": "pass_epa_per_dropback",
+    "alpha": 100.0,
+    "selected_on_seasons": [
+      2016,
+      2018
+    ],
+    "alpha_curve": {
+      "1": 0.293072,
+      "3": 0.292459,
+      "10": 0.291133,
+      "30": 0.28982,
+      "100": 0.289686,
+      "300": 0.290378
+    }
+  },
+  {
+    "family": "team_defense",
+    "metric": "pass_success_rate",
+    "alpha": 100.0,
+    "selected_on_seasons": [
+      2016,
+      2018
+    ],
+    "alpha_curve": {
+      "1": 0.088997,
+      "3": 0.08882,
+      "10": 0.08841,
+      "30": 0.087957,
+      "100": 0.087817,
+      "300": 0.087965
+    }
+  },
+  {
+    "family": "team_defense",
+    "metric": "rush_success_rate",
+    "alpha": 30.0,
+    "selected_on_seasons": [
+      2016,
+      2018
+    ],
+    "alpha_curve": {
+      "1": 0.106715,
+      "3": 0.106556,
+      "10": 0.106244,
+      "30": 0.106052,
+      "100": 0.106359,
+      "300": 0.106827
+    }
+  },
+  {
+    "family": "team_defense",
+    "metric": "success_rate",
+    "alpha": 30.0,
+    "selected_on_seasons": [
+      2016,
+      2018
+    ],
+    "alpha_curve": {
+      "1": 0.068441,
+      "3": 0.068326,
+      "10": 0.068076,
+      "30": 0.067874,
+      "100": 0.068003,
+      "300": 0.068281
+    }
+  },
+  {
+    "family": "team_offense",
+    "metric": "early_down_epa_per_play",
+    "alpha": 10.0,
+    "selected_on_seasons": [
+      2016,
+      2018
+    ],
+    "alpha_curve": {
+      "1": 0.173177,
+      "3": 0.173034,
+      "10": 0.17291,
+      "30": 0.173337,
+      "100": 0.174931,
+      "300": 0.176446
+    }
+  },
+  {
+    "family": "team_offense",
+    "metric": "epa_per_play",
+    "alpha": 3.0,
+    "selected_on_seasons": [
+      2016,
+      2018
+    ],
+    "alpha_curve": {
+      "1": 0.181963,
+      "3": 0.181903,
+      "10": 0.181997,
+      "30": 0.182917,
+      "100": 0.185399,
+      "300": 0.187588
+    }
+  },
+  {
+    "family": "team_offense",
+    "metric": "explosive_pass_rate",
+    "alpha": 30.0,
+    "selected_on_seasons": [
+      2016,
+      2018
+    ],
+    "alpha_curve": {
+      "1": 0.047947,
+      "3": 0.047892,
+      "10": 0.047774,
+      "30": 0.047677,
+      "100": 0.047736,
+      "300": 0.047865
+    }
+  },
+  {
+    "family": "team_offense",
+    "metric": "pass_epa_per_dropback",
+    "alpha": 3.0,
+    "selected_on_seasons": [
+      2016,
+      2018
+    ],
+    "alpha_curve": {
+      "1": 0.284985,
+      "3": 0.284883,
+      "10": 0.284939,
+      "30": 0.285955,
+      "100": 0.288823,
+      "300": 0.291392
+    }
+  },
+  {
+    "family": "team_offense",
+    "metric": "pass_success_rate",
+    "alpha": 10.0,
+    "selected_on_seasons": [
+      2016,
+      2018
+    ],
+    "alpha_curve": {
+      "1": 0.086258,
+      "3": 0.086175,
+      "10": 0.086142,
+      "30": 0.086502,
+      "100": 0.087594,
+      "300": 0.088581
+    }
+  },
+  {
+    "family": "team_offense",
+    "metric": "proe",
+    "alpha": 10.0,
+    "selected_on_seasons": [
+      2016,
+      2018
+    ],
+    "alpha_curve": {
+      "1": 0.071617,
+      "3": 0.071497,
+      "10": 0.071279,
+      "30": 0.071297,
+      "100": 0.07203,
+      "300": 0.072852
+    }
+  },
+  {
+    "family": "team_offense",
+    "metric": "rush_epa_per_play",
+    "alpha": 30.0,
+    "selected_on_seasons": [
+      2016,
+      2018
+    ],
+    "alpha_curve": {
+      "1": 0.207146,
+      "3": 0.207002,
+      "10": 0.206725,
+      "30": 0.206694,
+      "100": 0.207431,
+      "300": 0.208279
+    }
+  },
+  {
+    "family": "team_offense",
+    "metric": "rush_success_rate",
+    "alpha": 30.0,
+    "selected_on_seasons": [
+      2016,
+      2018
+    ],
+    "alpha_curve": {
+      "1": 0.106991,
+      "3": 0.106868,
+      "10": 0.106665,
+      "30": 0.106639,
+      "100": 0.107078,
+      "300": 0.107572
+    }
+  },
+  {
+    "family": "team_offense",
+    "metric": "success_rate",
+    "alpha": 10.0,
+    "selected_on_seasons": [
+      2016,
+      2018
+    ],
+    "alpha_curve": {
+      "1": 0.066802,
+      "3": 0.066733,
+      "10": 0.066708,
+      "30": 0.067007,
+      "100": 0.067889,
+      "300": 0.068673
+    }
+  },
+  {
+    "family": "wr",
+    "metric": "adot",
+    "alpha": 3.0,
+    "selected_on_seasons": [
+      2016,
+      2018
+    ],
+    "alpha_curve": {
+      "1": 5.999313,
+      "3": 5.971301,
+      "10": 6.119853,
+      "30": 6.48226,
+      "100": 6.955396,
+      "300": 7.235857
+    }
+  },
+  {
+    "family": "wr",
+    "metric": "catch_rate",
+    "alpha": 10.0,
+    "selected_on_seasons": [
+      2016,
+      2018
+    ],
+    "alpha_curve": {
+      "1": 0.317741,
+      "3": 0.313405,
+      "10": 0.310684,
+      "30": 0.31101,
+      "100": 0.313143,
+      "300": 0.314738
+    }
+  },
+  {
+    "family": "wr",
+    "metric": "explosive_rec_rate",
+    "alpha": 30.0,
+    "selected_on_seasons": [
+      2016,
+      2018
+    ],
+    "alpha_curve": {
+      "1": 0.184297,
+      "3": 0.181355,
+      "10": 0.179043,
+      "30": 0.178377,
+      "100": 0.178753,
+      "300": 0.179212
+    }
+  },
+  {
+    "family": "wr",
+    "metric": "target_success_rate",
+    "alpha": 30.0,
+    "selected_on_seasons": [
+      2016,
+      2018
+    ],
+    "alpha_curve": {
+      "1": 0.336648,
+      "3": 0.331195,
+      "10": 0.326719,
+      "30": 0.325035,
+      "100": 0.325221,
+      "300": 0.325784
+    }
+  },
+  {
+    "family": "wr",
+    "metric": "yards_per_reception",
+    "alpha": 10.0,
+    "selected_on_seasons": [
+      2016,
+      2018
+    ],
+    "alpha_curve": {
+      "1": 7.468386,
+      "3": 7.343197,
+      "10": 7.274494,
+      "30": 7.311037,
+      "100": 7.413593,
+      "300": 7.485516
+    }
+  },
+  {
+    "family": "wr",
+    "metric": "yards_per_target",
+    "alpha": 30.0,
+    "selected_on_seasons": [
+      2016,
+      2018
+    ],
+    "alpha_curve": {
+      "1": 6.322262,
+      "3": 6.212807,
+      "10": 6.126898,
+      "30": 6.102437,
+      "100": 6.115998,
+      "300": 6.132572
+    }
+  }
+]

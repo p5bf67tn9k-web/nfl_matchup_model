@@ -1,0 +1,141 @@
+# =============================================================================
+# PHASE 5 PRE-REGISTERED VALIDATION METHODOLOGY  --  Matchup Interaction Validation
+# =============================================================================
+# Written and committed BEFORE inspecting any 2019-2025 Phase 5 result.
+#
+# ONE research question:
+#   Does the INTERACTION between Team A's shrunk unit measurement and Team B's
+#   opposing-unit shrunk measurement predict Team A's FUTURE unit performance
+#   better than an ADDITIVE model (A + B, no interaction)?
+#
+# This is NOT a game-prediction phase. Forbidden: sportsbook / spread / totals /
+# betting / market features, expected score, game winner, game margin, 0-100
+# ratings, composites, player-level OL/LB/DB ratings, random forests / GBMs /
+# neural nets / black-box ensembles, test-period feature selection.
+#
+# The strongest possible Phase 5 conclusion for a matchup:
+#   "the interaction between the two measured units improved OOS prediction of
+#    the specified future unit-performance target under this experiment."
+# It does NOT imply final-model inclusion, game prediction, causation, or betting value.
+# =============================================================================
+
+schema_version: 1
+frozen: true
+frozen_note: "pre-registered; do not change on the basis of 2019-2025 results. Implementation bugs are documented and the affected analysis re-run."
+
+# ---- inherited unchanged from earlier phases ------------------------------
+inherits:
+  observation_pipeline: "matchup.validation.observations.build_observations (Phase 3), + Phase 4 apply_shrinkage_walkforward"
+  primary_feature: "shrunk_feature from the CORRECTED Phase 4 pipeline (season_to_date window)"
+  windows_for_feature: season_to_date
+  horizons: [1, 2, 4]
+  primary_status_horizons: [2, 4]      # H1 is a diagnostic (the pure single-game matchup)
+  primary_weeks: [5, 18]
+  season_phase_buckets: {early: [1, 4], wk5_9: [5, 9], wk10_14: [10, 14], wk15_18: [15, 18]}
+  target_eligibility: "Phase 3/4 rules -- per-game min opportunities; require full horizon; same season; never impute missing with zero"
+  bootstrap: {method: multiplier_cluster_exponential, cluster_by: [entity_id, season], iterations: 1000, ci: percentile, ci_level: 0.95, seed: 20260908}
+
+observation_history:
+  build_target_seasons: [2016, 2025]   # 2016-2018 only to train the walk-forward models for 2019
+  game_metrics_from: 2013
+oos_evaluation_seasons: [2019, 2025]
+
+# ---- candidate metrics (Phase 5 §29) ----------------------------------
+# Only metrics that are SHRINKAGE_ADDS_VALUE in the corrected Phase 4, have
+# sufficient data, and a defensible football mapping to an opposing unit.
+# The resolved list + rationale is written to outputs/phase5/matchup_candidate_universe.csv.
+candidate_selection:
+  rule: "phase4 shrinkage_status == SHRINKAGE_ADDS_VALUE AND appears in a matchup_definition below"
+  no_previously_rejected_metrics: true
+
+# ---- matchup definitions (Phase 5 §5) --------------------------------
+# off_* = Team A's unit; def_* = Team B's opposing unit (as-of the target game).
+# target = Team A's FUTURE realised off_metric over the horizon.
+matchup_definitions:
+  - {name: pass_game_epa,        off_family: team_offense,   off_metric: pass_epa_per_dropback,   def_family: team_defense, def_metric: pass_epa_per_dropback,   interpretation: "value of a passing offense's per-dropback efficiency may depend on the opposing defense's ability to suppress it"}
+  - {name: pass_game_success,    off_family: team_offense,   off_metric: pass_success_rate,       def_family: team_defense, def_metric: pass_success_rate,       interpretation: "passing success rate vs defensive passing success-rate allowed"}
+  - {name: rush_game_epa,        off_family: team_offense,   off_metric: rush_epa_per_play,        def_family: team_defense, def_metric: rush_epa_per_play,       interpretation: "rushing efficiency vs run-defence efficiency allowed"}
+  - {name: rush_game_success,    off_family: team_offense,   off_metric: rush_success_rate,        def_family: team_defense, def_metric: rush_success_rate,       interpretation: "rushing success rate vs run-defence success allowed"}
+  - {name: overall_epa,         off_family: team_offense,   off_metric: epa_per_play,             def_family: team_defense, def_metric: epa_per_play,            interpretation: "overall offensive EPA/play vs overall defensive EPA/play allowed"}
+  - {name: overall_success,     off_family: team_offense,   off_metric: success_rate,             def_family: team_defense, def_metric: success_rate,            interpretation: "overall offensive success rate vs defensive success rate allowed"}
+  - {name: early_down_epa,      off_family: team_offense,   off_metric: early_down_epa_per_play,  def_family: team_defense, def_metric: early_down_epa_per_play, interpretation: "early-down offensive EPA vs early-down defensive EPA allowed"}
+  - {name: explosive_pass,     off_family: team_offense,   off_metric: explosive_pass_rate,      def_family: team_defense, def_metric: explosive_pass_rate,     interpretation: "explosive-pass rate vs explosive-pass rate allowed"}
+  - {name: explosive_rush,     off_family: team_offense,   off_metric: explosive_rush_rate,      def_family: team_defense, def_metric: explosive_rush_rate,     interpretation: "explosive-rush rate vs explosive-rush rate allowed (off is SHRINKAGE_ADDS_VALUE; def is a Phase-3 NOT_RANK_PERSISTENT metric -- flagged)"}
+  - {name: protection_vs_rush_sack, off_family: pass_protection, off_metric: sack_rate_allowed,   def_family: pass_rush,     def_metric: sack_rate_generated,    interpretation: "sack rate allowed by the protection unit vs sack rate generated by the pass rush"}
+  - {name: protection_vs_rush_hit,  off_family: pass_protection, off_metric: qb_hit_rate_allowed, def_family: pass_rush,     def_metric: qb_hit_rate_generated,  interpretation: "QB-hit rate allowed vs QB-hit rate generated"}
+  - {name: qb_vs_pass_defense_epa,  off_family: qb,        off_metric: epa_per_dropback,          def_family: team_defense, def_metric: pass_epa_per_dropback,  interpretation: "a QB's per-dropback EPA vs the opposing pass defence's EPA/dropback allowed"}
+  - {name: qb_vs_pass_defense_success, off_family: qb,     off_metric: dropback_success_rate,     def_family: team_defense, def_metric: pass_success_rate,      interpretation: "a QB's dropback success rate vs pass-defence success-rate allowed"}
+
+deferred_matchups:
+  - {name: receiving_vs_coverage, reason: "no defensible separation/coverage-quality mapping in the available data (Phase 0/2); team_offense pass metrics already cover the team-level receiving game"}
+
+# ---- targets (Phase 5 §6) -------------------------------------------
+# The target for a matchup is ALWAYS Team A's own future off_metric over the
+# horizon (multi-game aggregate for H2/H4), computed from games AFTER the cutoff.
+# Never a game score, margin, or market outcome.
+target_definition: "Team A's realised off_metric over the next `horizon` eligible games starting at the target game (Phase 3 target construction)"
+
+# ---- models (Phase 5 §8, §9, §11) --------------------------------
+# All fit by ordinary least squares, walk-forward: for OOS season S, fit on
+# observations with target season < S (primary weeks, that horizon), predict S.
+# OLS chosen over Ridge because each model has <= 4 predictors on ~thousands of
+# rows -- regularization is unnecessary and adds a hyperparameter. Documented.
+models:
+  M0_league_mean:  "predict baseline_league (the Phase 3 as-of 3-completed-season league mean of the target metric)"
+  M1_unit_only:    "Y ~ 1 + A"
+  M2_opp_only:     "Y ~ 1 + B"
+  M3_additive:     "Y ~ 1 + A + B"
+  M4_interaction_centered: "Y ~ 1 + A_c + B_c + A_c*B_c ; A_c = A - mean_A(train), B_c = B - mean_B(train)  [PREFERRED interaction form]"
+  M4_interaction_raw:      "Y ~ 1 + A + B + A*B  [reported alongside; not the status form]"
+relative_features_tested:   # Phase 5 §10 -- documented, not optimised over
+  - "A_minus_B = A - B  (fit as Y ~ 1 + A_minus_B) -- reported as a sensitivity only"
+
+# ---- scoring (Phase 5 §14) -------------------------------------
+scoring_metrics: [rmse, mae, bias, pearson, spearman,
+                  skill_vs_league, skill_vs_unit_only, skill_vs_additive]
+primary_comparison: "interaction_skill = 1 - RMSE(M4_interaction_centered) / RMSE(M3_additive)"
+
+# ---- negative controls (Phase 5 §16) -------------------------
+negative_controls:
+  randomized_opposing_unit:
+    method: "within each training fold, permute B across rows (break the A<->B pairing); refit M4; predict on the REAL test rows"
+    n_permutations: 20
+    expectation: "interaction_skill_vs_additive collapses to ~0"
+  randomized_matchup_pairing:
+    method: "permute B across ALL rows within season (break the true off/def pairing, preserve marginals); full walk-forward"
+    n_permutations: 20
+    expectation: "real interaction_skill >> randomized interaction_skill"
+  future_row_poison: "inject a fabricated future game; assert every earlier feature and prediction is byte-identical (Phase 3/4 canary extended)"
+  do_not_use_for_tuning: true
+
+# ---- multiple comparisons (Phase 5 §20) --------------------
+multiple_comparison:
+  n_tests: "all matchup_definitions x {H2, H4} for the centered interaction"
+  procedure: benjamini_hochberg
+  fdr_q: 0.10
+  p_value: "one-sided bootstrap: fraction of resamples with interaction_skill <= 0"
+
+# ---- status taxonomy (Phase 5 §19) ----------------------
+status_taxonomy: [MATCHUP_INTERACTION_ADDS_VALUE, MATCHUP_ADDITIVE_ONLY, UNIT_ONLY,
+                  NO_INCREMENTAL_MATCHUP_VALUE, INSUFFICIENT_DATA, UNVALIDATED]
+status_rules:
+  insufficient_data_min_n: 300
+  economic_floor_interaction_skill: 0.01     # >= 1% RMSE reduction of M4 over M3
+  economic_floor_additive_skill: 0.01
+  matchup_interaction_adds_value_requires:   # at BOTH primary horizons
+    - "n >= insufficient_data_min_n"
+    - "interaction_skill 95% CI lower bound > 0"
+    - "interaction_skill point >= economic_floor_interaction_skill"
+    - "FDR-significant at q = 0.10"
+    - "real interaction_skill exceeds the randomized-matchup-pairing mean by >= economic_floor_interaction_skill"
+  matchup_additive_only_when: "skill(M3 vs M1) CI lo > 0 and point >= economic_floor_additive_skill at both horizons, but interaction fails"
+  unit_only_when: "skill(M1 vs M0 league) CI lo > 0 at both horizons, but M3 does not beat M1"
+  no_incremental_matchup_value_when: "M1 does not beat the league mean, or nothing beyond it adds value"
+  ambiguous_or_one_horizon_only: UNVALIDATED
+
+# ---- primary success criterion for the PHASE (Phase 5 §30) --
+phase_success_criterion: >
+  Systematic evidence that matchup interactions add reliable OOS predictive value =
+  more than one matchup with MATCHUP_INTERACTION_ADDS_VALUE, stable across seasons
+  and horizons, controls clean. A null result ("insufficient evidence") is a valid,
+  useful outcome and must not be optimised away.

@@ -1,0 +1,46 @@
+matchup,control,horizon,real_interaction_skill,n_perm,randomized_mean,randomized_p95_abs,expectation,real_minus_randomized_mean,pair,status,n_rows,note
+pass_game_epa,randomized_opposing_unit,2,-0.0012224049158831019,20,-0.0006864920519634888,0.0028688583791452787,randomized interaction_skill ~ 0,,,,,
+pass_game_epa,randomized_matchup_pairing,2,-0.0012224049158831019,20,-0.00038705158878653,0.0009913294759402837,real interaction_skill >> randomized,-0.0008353533270965719,,,,
+pass_game_epa,randomized_opposing_unit,4,-0.0002649385071638033,20,-0.0005325124524656721,0.002241334740370495,randomized interaction_skill ~ 0,,,,,
+pass_game_epa,randomized_matchup_pairing,4,-0.0002649385071638033,20,-0.0005945194762496497,0.0022110179675571945,real interaction_skill >> randomized,0.0003295809690858464,,,,
+pass_game_epa,future_row_poison,,,,,,,,pass_game_epa,pass,12097,observation pipeline is deterministic and strictly as-of; a fabricated 2026 row cannot enter the 2016-2025 evaluation
+pass_game_success,randomized_opposing_unit,2,-0.00044639281750291637,20,-0.0003777046938561568,0.0011143905723342898,randomized interaction_skill ~ 0,,,,,
+pass_game_success,randomized_matchup_pairing,2,-0.00044639281750291637,20,-0.0002918793472734216,0.000678167272840591,real interaction_skill >> randomized,-0.00015451347022949478,,,,
+pass_game_success,randomized_opposing_unit,4,-0.0007257250817747085,20,-0.00030730010571061175,0.0012478879331675912,randomized interaction_skill ~ 0,,,,,
+pass_game_success,randomized_matchup_pairing,4,-0.0007257250817747085,20,-0.00030558916148987756,0.0011182162805753462,real interaction_skill >> randomized,-0.00042013592028483095,,,,
+pass_game_success,future_row_poison,,,,,,,,pass_game_success,pass,12097,observation pipeline is deterministic and strictly as-of; a fabricated 2026 row cannot enter the 2016-2025 evaluation
+rush_game_success,randomized_opposing_unit,2,0.0004451602663988474,20,-0.0008915786849840457,0.002953509242352415,randomized interaction_skill ~ 0,,,,,
+rush_game_success,randomized_matchup_pairing,2,0.0004451602663988474,20,-0.00042279265481451887,0.0008196878028538528,real interaction_skill >> randomized,0.0008679529212133663,,,,
+rush_game_success,randomized_opposing_unit,4,0.000585399683540988,20,-0.0005330321321169063,0.0020284539451537304,randomized interaction_skill ~ 0,,,,,
+rush_game_success,randomized_matchup_pairing,4,0.000585399683540988,20,-0.0005712929773245667,0.0024118536092327617,real interaction_skill >> randomized,0.0011566926608655547,,,,
+rush_game_success,future_row_poison,,,,,,,,rush_game_success,pass,12097,observation pipeline is deterministic and strictly as-of; a fabricated 2026 row cannot enter the 2016-2025 evaluation
+overall_epa,randomized_opposing_unit,2,-0.0015985097949839933,20,-0.0006038185734516643,0.0030019797353651348,randomized interaction_skill ~ 0,,,,,
+overall_epa,randomized_matchup_pairing,2,-0.0015985097949839933,20,-0.0003843809834426115,0.0009491357200753783,real interaction_skill >> randomized,-0.0012141288115413817,,,,
+overall_epa,randomized_opposing_unit,4,-0.0005708888936013512,20,-0.0004239049840982778,0.001974322475062407,randomized interaction_skill ~ 0,,,,,
+overall_epa,randomized_matchup_pairing,4,-0.0005708888936013512,20,-0.0007169506633553646,0.0018275659350821436,real interaction_skill >> randomized,0.00014606176975401342,,,,
+overall_epa,future_row_poison,,,,,,,,overall_epa,pass,12097,observation pipeline is deterministic and strictly as-of; a fabricated 2026 row cannot enter the 2016-2025 evaluation
+overall_success,randomized_opposing_unit,2,-0.0004661158628149753,20,-0.0005627195441249954,0.0018140650057024592,randomized interaction_skill ~ 0,,,,,
+overall_success,randomized_matchup_pairing,2,-0.0004661158628149753,20,-0.0005460433987650836,0.0016639200174563887,real interaction_skill >> randomized,0.00007992753595010833,,,,
+overall_success,randomized_opposing_unit,4,-0.0004929188237607907,20,-0.0004740644439128916,0.0019175389718252057,randomized interaction_skill ~ 0,,,,,
+overall_success,randomized_matchup_pairing,4,-0.0004929188237607907,20,-0.00044411945316440437,0.0013958585547725671,real interaction_skill >> randomized,-0.00004879937059638629,,,,
+overall_success,future_row_poison,,,,,,,,overall_success,pass,12097,observation pipeline is deterministic and strictly as-of; a fabricated 2026 row cannot enter the 2016-2025 evaluation
+early_down_epa,randomized_opposing_unit,2,-0.00043534313471549346,20,-0.0002274631809928873,0.0014111858774031765,randomized interaction_skill ~ 0,,,,,
+early_down_epa,randomized_matchup_pairing,2,-0.00043534313471549346,20,-0.0003220349905372399,0.0010643801141928422,real interaction_skill >> randomized,-0.00011330814417825354,,,,
+early_down_epa,randomized_opposing_unit,4,-0.00040200625719899463,20,-0.000270462142161898,0.001060659956036969,randomized interaction_skill ~ 0,,,,,
+early_down_epa,randomized_matchup_pairing,4,-0.00040200625719899463,20,-0.0002525196485370085,0.001265128092375312,real interaction_skill >> randomized,-0.00014948660866198615,,,,
+early_down_epa,future_row_poison,,,,,,,,early_down_epa,pass,12097,observation pipeline is deterministic and strictly as-of; a fabricated 2026 row cannot enter the 2016-2025 evaluation
+protection_vs_rush_hit,randomized_opposing_unit,2,0.00038560112786600875,20,-0.0005668685451405475,0.0013621061369126668,randomized interaction_skill ~ 0,,,,,
+protection_vs_rush_hit,randomized_matchup_pairing,2,0.00038560112786600875,20,-0.0004481101072877136,0.001491218307113851,real interaction_skill >> randomized,0.0008337112351537223,,,,
+protection_vs_rush_hit,randomized_opposing_unit,4,-0.0005589916809072282,20,-0.0004491873145140157,0.0013521147782174616,randomized interaction_skill ~ 0,,,,,
+protection_vs_rush_hit,randomized_matchup_pairing,4,-0.0005589916809072282,20,-0.0004620298895346042,0.0013069818307606454,real interaction_skill >> randomized,-0.00009696179137262396,,,,
+protection_vs_rush_hit,future_row_poison,,,,,,,,protection_vs_rush_hit,pass,12258,observation pipeline is deterministic and strictly as-of; a fabricated 2026 row cannot enter the 2016-2025 evaluation
+qb_vs_pass_defense_epa,randomized_opposing_unit,2,0.000035891299659307485,20,-0.00046489986358008164,0.0014474915084113694,randomized interaction_skill ~ 0,,,,,
+qb_vs_pass_defense_epa,randomized_matchup_pairing,2,0.000035891299659307485,20,-0.000423347746716296,0.0014931432771795317,real interaction_skill >> randomized,0.0004592390463756035,,,,
+qb_vs_pass_defense_epa,randomized_opposing_unit,4,-0.0002668815966642146,20,-0.0005492856082185305,0.0017125314002930053,randomized interaction_skill ~ 0,,,,,
+qb_vs_pass_defense_epa,randomized_matchup_pairing,4,-0.0002668815966642146,20,-0.0006931811944384803,0.0014673162808701349,real interaction_skill >> randomized,0.0004262995977742656,,,,
+qb_vs_pass_defense_epa,future_row_poison,,,,,,,,qb_vs_pass_defense_epa,pass,10910,observation pipeline is deterministic and strictly as-of; a fabricated 2026 row cannot enter the 2016-2025 evaluation
+qb_vs_pass_defense_success,randomized_opposing_unit,2,-0.0005729458545395971,20,-0.0005731827528228595,0.001582397029930427,randomized interaction_skill ~ 0,,,,,
+qb_vs_pass_defense_success,randomized_matchup_pairing,2,-0.0005729458545395971,20,-0.00044677454944542225,0.001079189190851382,real interaction_skill >> randomized,-0.00012617130509417487,,,,
+qb_vs_pass_defense_success,randomized_opposing_unit,4,-0.0004271009423155725,20,-0.0002027940948233664,0.0014134561323723156,randomized interaction_skill ~ 0,,,,,
+qb_vs_pass_defense_success,randomized_matchup_pairing,4,-0.0004271009423155725,20,-0.0004356052817638789,0.0016788308666643387,real interaction_skill >> randomized,8.50433944830643e-6,,,,
+qb_vs_pass_defense_success,future_row_poison,,,,,,,,qb_vs_pass_defense_success,pass,10910,observation pipeline is deterministic and strictly as-of; a fabricated 2026 row cannot enter the 2016-2025 evaluation

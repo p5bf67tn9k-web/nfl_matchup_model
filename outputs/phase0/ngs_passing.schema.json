@@ -1,0 +1,124 @@
+{
+  "source": "ngs_passing",
+  "seasons_requested": [
+    2016,
+    2020,
+    2024,
+    2025
+  ],
+  "n_rows": 2373,
+  "n_cols": 29,
+  "coverage": {
+    "season_min": 2016,
+    "season_max": 2025,
+    "week_min": 0,
+    "week_max": 23,
+    "has_week_zero": true
+  },
+  "rows_per_season": {
+    "2016": 573,
+    "2020": 581,
+    "2024": 614,
+    "2025": 605
+  },
+  "columns": [
+    "season",
+    "season_type",
+    "week",
+    "player_display_name",
+    "player_position",
+    "team_abbr",
+    "avg_time_to_throw",
+    "avg_completed_air_yards",
+    "avg_intended_air_yards",
+    "avg_air_yards_differential",
+    "aggressiveness",
+    "max_completed_air_distance",
+    "avg_air_yards_to_sticks",
+    "attempts",
+    "pass_yards",
+    "pass_touchdowns",
+    "interceptions",
+    "passer_rating",
+    "completions",
+    "completion_percentage",
+    "expected_completion_percentage",
+    "completion_percentage_above_expectation",
+    "avg_air_distance",
+    "max_air_distance",
+    "player_gsis_id",
+    "player_first_name",
+    "player_last_name",
+    "player_jersey_number",
+    "player_short_name"
+  ],
+  "schema": {
+    "season": "Int32",
+    "season_type": "String",
+    "week": "Int32",
+    "player_display_name": "String",
+    "player_position": "String",
+    "team_abbr": "String",
+    "avg_time_to_throw": "Float64",
+    "avg_completed_air_yards": "Float64",
+    "avg_intended_air_yards": "Float64",
+    "avg_air_yards_differential": "Float64",
+    "aggressiveness": "Float64",
+    "max_completed_air_distance": "Float64",
+    "avg_air_yards_to_sticks": "Float64",
+    "attempts": "Int32",
+    "pass_yards": "Int32",
+    "pass_touchdowns": "Int32",
+    "interceptions": "Int32",
+    "passer_rating": "Float64",
+    "completions": "Int32",
+    "completion_percentage": "Float64",
+    "expected_completion_percentage": "Float64",
+    "completion_percentage_above_expectation": "Float64",
+    "avg_air_distance": "Float64",
+    "max_air_distance": "Float64",
+    "player_gsis_id": "String",
+    "player_first_name": "String",
+    "player_last_name": "String",
+    "player_jersey_number": "Int32",
+    "player_short_name": "String"
+  },
+  "candidate_asof_columns": {
+    "avg_time_to_throw": {
+      "dtype": "Float64",
+      "non_null": 2373,
+      "null_pct": 0.0,
+      "sample": [
+        "2.424237741456166",
+        "2.5668229166666667",
+        "2.606104395604396"
+      ]
+    }
+  },
+  "key_fields": {
+    "player_gsis_id": {
+      "present": true,
+      "null_pct": 0.0
+    },
+    "season": {
+      "present": true,
+      "null_pct": 0.0
+    },
+    "week": {
+      "present": true,
+      "null_pct": 0.0
+    },
+    "avg_time_to_throw": {
+      "present": true,
+      "null_pct": 0.0
+    },
+    "completion_percentage_above_expectation": {
+      "present": true,
+      "null_pct": 0.0
+    },
+    "aggressiveness": {
+      "present": true,
+      "null_pct": 0.0
+    }
+  }
+}

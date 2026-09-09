@@ -1,0 +1,107 @@
+{
+  "source": "snap_counts",
+  "seasons_requested": [
+    2016,
+    2020,
+    2024,
+    2025
+  ],
+  "n_rows": 102116,
+  "n_cols": 16,
+  "coverage": {
+    "season_min": 2016,
+    "season_max": 2025,
+    "week_min": 1,
+    "week_max": 22,
+    "has_week_zero": false
+  },
+  "rows_per_season": {
+    "2016": 23890,
+    "2020": 24999,
+    "2024": 26615,
+    "2025": 26612
+  },
+  "columns": [
+    "game_id",
+    "pfr_game_id",
+    "season",
+    "game_type",
+    "week",
+    "player",
+    "pfr_player_id",
+    "position",
+    "team",
+    "opponent",
+    "offense_snaps",
+    "offense_pct",
+    "defense_snaps",
+    "defense_pct",
+    "st_snaps",
+    "st_pct"
+  ],
+  "schema": {
+    "game_id": "String",
+    "pfr_game_id": "String",
+    "season": "Int32",
+    "game_type": "String",
+    "week": "Int32",
+    "player": "String",
+    "pfr_player_id": "String",
+    "position": "String",
+    "team": "String",
+    "opponent": "String",
+    "offense_snaps": "Float64",
+    "offense_pct": "Float64",
+    "defense_snaps": "Float64",
+    "defense_pct": "Float64",
+    "st_snaps": "Float64",
+    "st_pct": "Float64"
+  },
+  "candidate_asof_columns": {},
+  "key_fields": {
+    "game_id": {
+      "present": true,
+      "null_pct": 0.0
+    },
+    "pfr_game_id": {
+      "present": true,
+      "null_pct": 0.0
+    },
+    "season": {
+      "present": true,
+      "null_pct": 0.0
+    },
+    "week": {
+      "present": true,
+      "null_pct": 0.0
+    },
+    "player": {
+      "present": true,
+      "null_pct": 0.0
+    },
+    "pfr_player_id": {
+      "present": true,
+      "null_pct": 0.0
+    },
+    "position": {
+      "present": true,
+      "null_pct": 0.0
+    },
+    "offense_snaps": {
+      "present": true,
+      "null_pct": 0.0
+    },
+    "offense_pct": {
+      "present": true,
+      "null_pct": 0.0
+    },
+    "defense_snaps": {
+      "present": true,
+      "null_pct": 0.0
+    },
+    "defense_pct": {
+      "present": true,
+      "null_pct": 0.0
+    }
+  }
+}

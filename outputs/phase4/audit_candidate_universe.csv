@@ -1,0 +1,51 @@
+metric,phase3_status,phase3_rank_persistence,phase3_primary_n_h2,phase3_primary_n_h4,h2_best_skill_vs_league,h2_best_spearman,h4_best_skill_vs_league,h4_best_spearman,approved_eligibility,implemented_eligibility,reason
+ngs_passing.avg_time_to_throw,external_ablation,n/a,,,,,,,yes (approved rule 4: named NGS),yes,in both
+ngs_receiving.avg_separation,external_ablation,n/a,,,,,,,yes (approved rule 4: named NGS),yes,in both
+pass_protection.qb_hit_rate_allowed,UNVALIDATED,RANK_PERSISTENT,2732,2350,0.041,0.4017,0.0413,0.4889,yes (approved rule 2: RANK_PERSISTENT with sufficient data),yes,in both
+pass_protection.rush_stuffed_rate_approx,NO_INCREMENTAL_PERSISTENCE,RANK_PERSISTENT,2732,2350,-0.0178,0.1526,-0.0247,0.1986,yes (approved rule 2: RANK_PERSISTENT with sufficient data),yes,in both
+pass_protection.sack_rate_allowed,UNVALIDATED,RANK_PERSISTENT,2732,2350,-0.0014,0.2865,-0.011,0.3794,yes (approved rule 2: RANK_PERSISTENT with sufficient data),yes,in both
+pass_rush.qb_hit_rate_generated,NO_INCREMENTAL_PERSISTENCE,RANK_PERSISTENT,2732,2350,-0.0319,0.128,-0.0642,0.1605,yes (approved rule 2: RANK_PERSISTENT with sufficient data),yes,in both
+pass_rush.sack_rate_generated,NO_INCREMENTAL_PERSISTENCE,NOT_RANK_PERSISTENT,2732,2350,-0.0431,0.0585,-0.0854,0.072,no,no,excluded by both -- no positive one-horizon evidence
+qb.adot,NO_INCREMENTAL_PERSISTENCE,RANK_PERSISTENT,1922,1543,-0.0098,0.2933,-0.0245,0.3592,yes (approved rule 2: RANK_PERSISTENT with sufficient data),yes,in both
+qb.completion_pct,NO_INCREMENTAL_PERSISTENCE,RANK_PERSISTENT,1922,1543,-0.0213,0.1915,-0.0655,0.1977,yes (approved rule 2: RANK_PERSISTENT with sufficient data),yes,in both
+qb.cpoe,NO_INCREMENTAL_PERSISTENCE,RANK_PERSISTENT,1922,1543,-0.035,0.155,-0.0832,0.1652,yes (approved rule 2: RANK_PERSISTENT with sufficient data),yes,in both
+qb.cpoe_coverage_fraction,UNVALIDATED,RANK_PERSISTENT,1922,1543,0.0523,0.32,0.0912,0.3903,yes (approved rule 2: RANK_PERSISTENT with sufficient data),yes,in both
+qb.dropback_success_rate,NO_INCREMENTAL_PERSISTENCE,RANK_PERSISTENT,2431,1890,0.0086,0.3592,0.0027,0.445,yes (approved rule 2: RANK_PERSISTENT with sufficient data),yes,in both
+qb.epa_per_dropback,NO_INCREMENTAL_PERSISTENCE,RANK_PERSISTENT,1922,1890,-0.0129,0.1954,-0.0383,0.3861,yes (approved rule 2: RANK_PERSISTENT with sufficient data),yes,in both
+qb.explosive_pass_rate,NO_INCREMENTAL_PERSISTENCE,RANK_PERSISTENT,1922,1890,-0.0489,0.0844,-0.1056,0.2579,yes (approved rule 2: RANK_PERSISTENT with sufficient data),yes,in both
+qb.interception_rate,NO_INCREMENTAL_PERSISTENCE,NOT_RANK_PERSISTENT,1922,1543,-0.0524,0.0513,-0.1076,0.0603,no,no,excluded by both -- no positive one-horizon evidence
+qb.sack_rate,UNVALIDATED,RANK_PERSISTENT,2431,1890,-0.0047,0.3211,-0.0042,0.4265,yes (approved rule 2: RANK_PERSISTENT with sufficient data),yes,in both
+qb.yards_per_attempt,NO_INCREMENTAL_PERSISTENCE,RANK_PERSISTENT,1922,1890,-0.0263,0.1709,-0.0603,0.3587,yes (approved rule 2: RANK_PERSISTENT with sufficient data),yes,in both
+rb.explosive_rush_rate,NO_INCREMENTAL_PERSISTENCE,NOT_RANK_PERSISTENT,3883,2730,-0.0748,0.1219,-0.1294,0.1876,no,no,excluded by both; liberal-rule-3 candidate (one-horizon spearman>=0.15)
+rb.fumble_lost_rate,NO_INCREMENTAL_PERSISTENCE,RANK_PERSISTENT,3883,2730,-0.1259,0.0727,-0.2541,-0.0649,yes (approved rule 2: RANK_PERSISTENT with sufficient data),yes,in both
+rb.rush_epa_per_att,NO_INCREMENTAL_PERSISTENCE,RANK_PERSISTENT,3883,2730,-0.0334,0.1388,-0.0951,0.1665,yes (approved rule 2: RANK_PERSISTENT with sufficient data),yes,in both
+rb.rush_success_rate,NO_INCREMENTAL_PERSISTENCE,RANK_PERSISTENT,3883,2730,0.0196,0.2068,0.0255,0.2206,yes (approved rule 2: RANK_PERSISTENT with sufficient data),yes,in both
+rb.yards_per_carry,NO_INCREMENTAL_PERSISTENCE,RANK_PERSISTENT,3883,2730,-0.0884,0.1508,-0.1269,0.2176,yes (approved rule 2: RANK_PERSISTENT with sufficient data),yes,in both
+special_teams.fg_pct,NO_INCREMENTAL_PERSISTENCE,NOT_RANK_PERSISTENT,2685,2349,-0.0671,-0.0422,-0.1331,0.1263,no,no,excluded by both -- no positive one-horizon evidence
+special_teams.st_epa_per_play,NO_INCREMENTAL_PERSISTENCE,RANK_PERSISTENT,2732,2351,-0.0226,0.1914,-0.0347,0.237,yes (approved rule 2: RANK_PERSISTENT with sufficient data),yes,in both
+team_defense.early_down_epa_per_play,NO_INCREMENTAL_PERSISTENCE,RANK_PERSISTENT,2732,2351,-0.0408,0.194,-0.0842,0.1194,yes (approved rule 2: RANK_PERSISTENT with sufficient data),yes,in both
+team_defense.epa_per_play,NO_INCREMENTAL_PERSISTENCE,RANK_PERSISTENT,2732,2351,-0.0351,0.1988,-0.0844,0.1276,yes (approved rule 2: RANK_PERSISTENT with sufficient data),yes,in both
+team_defense.explosive_pass_rate,NO_INCREMENTAL_PERSISTENCE,NOT_RANK_PERSISTENT,2732,2351,-0.041,0.0414,-0.0736,0.0688,no,no,excluded by both -- no positive one-horizon evidence
+team_defense.explosive_rush_rate,NO_INCREMENTAL_PERSISTENCE,RANK_PERSISTENT,2732,2351,-0.0308,0.1615,-0.0535,0.2185,yes (approved rule 2: RANK_PERSISTENT with sufficient data),yes,in both
+team_defense.pass_epa_per_dropback,NO_INCREMENTAL_PERSISTENCE,RANK_PERSISTENT,2732,2351,-0.0438,0.0873,-0.0817,0.106,yes (approved rule 2: RANK_PERSISTENT with sufficient data),yes,in both
+team_defense.pass_success_rate,NO_INCREMENTAL_PERSISTENCE,RANK_PERSISTENT,2732,2351,-0.0282,0.1262,-0.046,0.1675,yes (approved rule 2: RANK_PERSISTENT with sufficient data),yes,in both
+team_defense.rush_epa_per_play,NO_INCREMENTAL_PERSISTENCE,NOT_RANK_PERSISTENT,2732,2351,-0.0437,0.0896,-0.0801,0.1253,no,no,excluded by both -- no positive one-horizon evidence
+team_defense.rush_success_rate,NO_INCREMENTAL_PERSISTENCE,RANK_PERSISTENT,2732,2351,-0.0544,0.0892,-0.092,0.1253,yes (approved rule 2: RANK_PERSISTENT with sufficient data),yes,in both
+team_defense.success_rate,NO_INCREMENTAL_PERSISTENCE,RANK_PERSISTENT,2732,2351,-0.0322,0.2121,-0.0791,0.1321,yes (approved rule 2: RANK_PERSISTENT with sufficient data),yes,in both
+team_offense.early_down_epa_per_play,UNVALIDATED,RANK_PERSISTENT,2732,2351,0.002,0.2891,-0.0025,0.3729,yes (approved rule 2: RANK_PERSISTENT with sufficient data),yes,in both
+team_offense.epa_per_play,VALIDATED_PERSISTENCE,RANK_PERSISTENT,2732,2351,0.0481,0.3795,0.0707,0.4779,yes (approved rule 1: VALIDATED_PERSISTENCE),yes,in both
+team_offense.explosive_pass_rate,NO_INCREMENTAL_PERSISTENCE,RANK_PERSISTENT,2732,2351,-0.0268,0.2196,-0.0509,0.3013,yes (approved rule 2: RANK_PERSISTENT with sufficient data),yes,in both
+team_offense.explosive_rush_rate,NO_INCREMENTAL_PERSISTENCE,NOT_RANK_PERSISTENT,2732,2351,-0.0447,0.1263,-0.0816,0.1646,no,no,excluded by both; liberal-rule-3 candidate (one-horizon spearman>=0.15)
+team_offense.pass_epa_per_dropback,UNVALIDATED,RANK_PERSISTENT,2732,2351,0.0212,0.3389,0.0198,0.4348,yes (approved rule 2: RANK_PERSISTENT with sufficient data),yes,in both
+team_offense.pass_success_rate,UNVALIDATED,RANK_PERSISTENT,2732,2351,0.027,0.3588,0.0206,0.4491,yes (approved rule 2: RANK_PERSISTENT with sufficient data),yes,in both
+team_offense.proe,VALIDATED_PERSISTENCE,RANK_PERSISTENT,2732,2351,0.1108,0.4608,0.1364,0.5187,yes (approved rule 1: VALIDATED_PERSISTENCE),yes,in both
+team_offense.rush_epa_per_play,NO_INCREMENTAL_PERSISTENCE,RANK_PERSISTENT,2732,2351,-0.0331,0.1483,-0.0461,0.1964,yes (approved rule 2: RANK_PERSISTENT with sufficient data),yes,in both
+team_offense.rush_success_rate,NO_INCREMENTAL_PERSISTENCE,RANK_PERSISTENT,2732,2351,-0.0177,0.2003,-0.0167,0.2701,yes (approved rule 2: RANK_PERSISTENT with sufficient data),yes,in both
+team_offense.success_rate,VALIDATED_PERSISTENCE,RANK_PERSISTENT,2732,2351,0.0552,0.39,0.0723,0.4807,yes (approved rule 1: VALIDATED_PERSISTENCE),yes,in both
+wr.adot,UNVALIDATED,RANK_PERSISTENT,13728,10029,0.375,0.7828,0.4456,0.8241,yes (approved rule 2: RANK_PERSISTENT with sufficient data),yes,in both
+wr.catch_rate,NO_INCREMENTAL_PERSISTENCE,RANK_PERSISTENT,12951,9541,0.0101,0.2967,0.0079,0.3795,yes (approved rule 2: RANK_PERSISTENT with sufficient data),yes,in both
+wr.epa_per_target,NO_INCREMENTAL_PERSISTENCE,NOT_RANK_PERSISTENT,12951,9541,-0.0462,0.1365,-0.0944,0.1733,no,no,excluded by both; liberal-rule-3 candidate (one-horizon spearman>=0.15)
+wr.explosive_rec_rate,NO_INCREMENTAL_PERSISTENCE,RANK_PERSISTENT,12951,9541,-0.0339,0.2143,-0.0552,0.2813,yes (approved rule 2: RANK_PERSISTENT with sufficient data),yes,in both
+wr.target_success_rate,NO_INCREMENTAL_PERSISTENCE,RANK_PERSISTENT,12951,9541,-0.0326,0.166,-0.0512,0.2322,yes (approved rule 2: RANK_PERSISTENT with sufficient data),yes,in both
+wr.yards_per_reception,UNVALIDATED,RANK_PERSISTENT,12929,9541,0.0561,0.4397,0.0814,0.5347,yes (approved rule 2: RANK_PERSISTENT with sufficient data),yes,in both
+wr.yards_per_target,NO_INCREMENTAL_PERSISTENCE,RANK_PERSISTENT,12951,9541,-0.0277,0.221,-0.0526,0.2826,yes (approved rule 2: RANK_PERSISTENT with sufficient data),yes,in both

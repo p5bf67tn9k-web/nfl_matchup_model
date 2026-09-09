@@ -1,0 +1,187 @@
+{
+  "generated_at": "2026-09-08T21:04:15+00:00",
+  "config": {
+    "schema_version": 2,
+    "frozen": true,
+    "frozen_note": "pre-registered; do not tune against results",
+    "seasons": {
+      "eval_start": 2019,
+      "eval_end": 2025,
+      "history_available_from": 2016
+    },
+    "season_phase_buckets": {
+      "early": [
+        1,
+        4
+      ],
+      "wk5_9": [
+        5,
+        9
+      ],
+      "wk10_14": [
+        10,
+        14
+      ],
+      "wk15_18": [
+        15,
+        18
+      ]
+    },
+    "primary_analysis_weeks": [
+      5,
+      18
+    ],
+    "horizons": [
+      1,
+      2,
+      4
+    ],
+    "feature": {
+      "windows": [
+        "season_to_date",
+        "trailing_3",
+        "trailing_5",
+        "prior_season"
+      ],
+      "variants": [
+        "raw",
+        "normalized"
+      ],
+      "availability": "production_publish_lag",
+      "min_feature_games": {
+        "season_to_date": 2,
+        "trailing_3": 3,
+        "trailing_5": 5,
+        "prior_season": 6
+      },
+      "min_feature_opportunities": {
+        "qb": 40,
+        "rb": 20,
+        "wr": 12,
+        "team_offense": 120,
+        "team_defense": 120,
+        "pass_protection": 60,
+        "pass_rush": 60,
+        "special_teams": 40
+      }
+    },
+    "target": {
+      "per_game_min_opportunities": {
+        "qb": 10,
+        "rb": 5,
+        "wr": 2,
+        "team_offense": 20,
+        "team_defense": 20,
+        "pass_protection": 10,
+        "pass_rush": 10,
+        "special_teams": 3
+      },
+      "horizon_games_from_same_season_only": true,
+      "require_full_horizon": true
+    },
+    "metric_selection": "all_registered_rate_metrics",
+    "exclude_from_persistence": [
+      "wr.targets",
+      "team_offense.plays"
+    ],
+    "external_metrics_secondary_analysis": true,
+    "baselines": {
+      "league_mean": {
+        "definition": "mean of the metric over the 3 completed reference seasons, entity-season level, min-opportunity filtered (== Phase 2 normalize ref_mean)",
+        "as_of": true
+      },
+      "prior_season": {
+        "definition": "the entity's value in the single most recent COMPLETED season, min-opportunity filtered",
+        "rookies_or_no_prior": "unavailable"
+      },
+      "raw_trailing3": {
+        "definition": "the entity's raw trailing-3-game metric value, strictly as-of kickoff",
+        "note": "identical to the trailing_3 raw feature cell by construction"
+      }
+    },
+    "scoring_metrics": [
+      "rmse",
+      "mae",
+      "bias",
+      "spearman",
+      "pearson",
+      "skill_vs_league",
+      "skill_vs_prior_season",
+      "skill_vs_raw_trailing3"
+    ],
+    "skill_formula": "1 - RMSE_feature / RMSE_baseline",
+    "report_fields": [
+      "n",
+      "n_entities",
+      "n_seasons",
+      "opportunity_n_median",
+      "target_mean",
+      "target_sd",
+      "excluded_target_rate"
+    ],
+    "bootstrap": {
+      "method": "multiplier_cluster_exponential",
+      "cluster_by": [
+        "entity_id",
+        "season"
+      ],
+      "iterations": 1000,
+      "ci": "percentile",
+      "ci_level": 0.95,
+      "seed": 20260908
+    },
+    "negative_control": {
+      "method": "within_season_feature_permutation",
+      "description": "permute the feature vector across observations within the same eval season (breaks the entity link, preserves the marginal distribution and season structure)",
+      "n_permutations_null": 20,
+      "seed": 20260908,
+      "expectation": "skill point estimates near 0; correlation CIs include 0"
+    },
+    "status_rules": {
+      "primary_weeks": [
+        5,
+        18
+      ],
+      "primary_horizons": [
+        2,
+        4
+      ],
+      "insufficient_data_min_n": 300,
+      "economic_floor": {
+        "min_skill_vs_league": 0.03,
+        "min_abs_spearman": 0.15
+      },
+      "validated_persistence_requires": [
+        "n >= insufficient_data_min_n",
+        "skill_vs_league 95% CI lower bound > 0",
+        "skill_vs_prior_season 95% CI lower bound > 0 (on the subset with a prior-season value)",
+        "spearman 95% CI lower bound > 0",
+        "skill_vs_league point estimate >= economic_floor.min_skill_vs_league",
+        "abs(spearman point estimate) >= economic_floor.min_abs_spearman"
+      ],
+      "no_incremental_persistence_when": [
+        "n >= insufficient_data_min_n AND clearly fails to beat league or prior-season (CI includes 0 / negative point estimate)"
+      ],
+      "ambiguous_keeps": "UNVALIDATED",
+      "not_evaluable_keeps": "UNVALIDATED",
+      "rank_persistence": {
+        "requires": [
+          "n >= insufficient_data_min_n",
+          "spearman 95% CI lower bound > 0",
+          "abs(spearman point estimate) >= economic_floor.min_abs_spearman"
+        ],
+        "not_rank_persistent_when": "n >= insufficient_data_min_n at both horizons but the bar is not met"
+      }
+    },
+    "forbidden": [
+      "player_or_unit_ratings",
+      "composite_scores",
+      "metric_weights",
+      "opponent_adjustment",
+      "matchup_interactions",
+      "expected_performance",
+      "expected_score",
+      "any_market_data"
+    ]
+  }
+}

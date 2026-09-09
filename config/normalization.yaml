@@ -1,0 +1,30 @@
+# SCAFFOLD ONLY (Phase 1). No normalization parameters are fitted yet.
+#
+# Decision DG (locked): league-relative normalization at prediction time uses the
+# TRAILING 3 COMPLETED SEASONS available as of the prediction date. Never the current
+# incomplete season. Never future seasons. Parameters are fit inside each walk-forward
+# training context, frozen per fold, and the seasons used are logged.
+#
+# Example: a Week 5 2020 prediction may normalize against 2017-2019.
+#          a Week 5 2026 prediction normalizes against 2023-2025.
+
+schema_version: 0
+status: scaffold
+
+reference_window:
+  n_completed_seasons: 3
+  include_current_incomplete_season: false
+  include_future_seasons: false
+  min_seasons_required: 1            # early-era fallback; fold logs when < 3 available
+
+method:
+  # candidates only -- NOT selected. Phase 2 decides via out-of-sample validation.
+  candidates: [zscore, percentile_rank, league_relative_ratio]
+  shrinkage:
+    approach: empirical_bayes        # candidate
+    k_estimation: variance_decomposition_on_frozen_training_era
+    frozen: false                    # nothing frozen yet
+
+descriptive_only_era:
+  seasons: [2006, 2015]
+  note: available for historical/descriptive analysis only; NOT a production baseline.

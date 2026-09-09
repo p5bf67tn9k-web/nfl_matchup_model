@@ -1,0 +1,145 @@
+family,metric,method,n_pairs,pearson,spearman,spearman_brown_pearson,is_retrospective,seasons,note
+pass_protection,qb_hit_rate_allowed,first_second_half,288,0.5589099974854042,0.5717299832415033,0.7170522972935609,false,2016-2024,descriptive stability only; not predictive value
+pass_protection,qb_hit_rate_allowed,odd_even,288,0.6319788725706091,0.6229287984921373,0.7744939388524663,false,2016-2024,descriptive stability only; not predictive value
+pass_protection,qb_hit_rate_allowed,std_vs_rest_of_season,288,0.5572540370204015,0.5708609125142167,,true,2016-2024,RETROSPECTIVE — uses future observations; never feeds production
+pass_protection,rush_stuffed_rate_approx,first_second_half,288,0.34095949569757017,0.3189208251449791,0.5085306406219261,false,2016-2024,descriptive stability only; not predictive value
+pass_protection,rush_stuffed_rate_approx,odd_even,288,0.3244895002223833,0.30726623504495054,0.48998425456434525,false,2016-2024,descriptive stability only; not predictive value
+pass_protection,rush_stuffed_rate_approx,std_vs_rest_of_season,288,0.32716817593571873,0.30667998906879823,,true,2016-2024,RETROSPECTIVE — uses future observations; never feeds production
+pass_protection,sack_rate_allowed,first_second_half,288,0.4463775151750391,0.45413667619128,0.6172351415750803,false,2016-2024,descriptive stability only; not predictive value
+pass_protection,sack_rate_allowed,odd_even,288,0.46565992834128944,0.47549120078447454,0.6354269763904703,false,2016-2024,descriptive stability only; not predictive value
+pass_protection,sack_rate_allowed,std_vs_rest_of_season,288,0.4512043039047745,0.4529109348186908,,true,2016-2024,RETROSPECTIVE — uses future observations; never feeds production
+pass_rush,qb_hit_rate_generated,first_second_half,288,0.28695991294419654,0.28790705665336436,0.4459500409577082,false,2016-2024,descriptive stability only; not predictive value
+pass_rush,qb_hit_rate_generated,odd_even,288,0.20365304946318943,0.2012170004300142,0.3383916146833434,false,2016-2024,descriptive stability only; not predictive value
+pass_rush,qb_hit_rate_generated,std_vs_rest_of_season,288,0.2703994023115754,0.2763594677469266,,true,2016-2024,RETROSPECTIVE — uses future observations; never feeds production
+pass_rush,sack_rate_generated,first_second_half,288,0.11706158043311132,0.10709463125278806,0.2095884103143602,false,2016-2024,descriptive stability only; not predictive value
+pass_rush,sack_rate_generated,odd_even,288,0.1392973679276618,0.13682739953944278,0.24453206309260306,false,2016-2024,descriptive stability only; not predictive value
+pass_rush,sack_rate_generated,std_vs_rest_of_season,288,0.13370602271953705,0.11744661996792981,,true,2016-2024,RETROSPECTIVE — uses future observations; never feeds production
+qb,adot,first_second_half,314,0.4945387783117335,0.43624574959712614,0.6617945087652745,false,2016-2024,descriptive stability only; not predictive value
+qb,adot,odd_even,314,0.4857618938823394,0.48780234911978254,0.6538892885629599,false,2016-2024,descriptive stability only; not predictive value
+qb,adot,std_vs_rest_of_season,308,0.2539732886934186,0.4533938279550373,,true,2016-2024,RETROSPECTIVE — uses future observations; never feeds production
+qb,completion_pct,first_second_half,314,0.3255041793594615,0.39138436433159773,0.49114017809699945,false,2016-2024,descriptive stability only; not predictive value
+qb,completion_pct,odd_even,314,0.30949704514166115,0.3188800739562832,0.4726960572991286,false,2016-2024,descriptive stability only; not predictive value
+qb,completion_pct,std_vs_rest_of_season,308,0.050112707051393104,0.33089386183848724,,true,2016-2024,RETROSPECTIVE — uses future observations; never feeds production
+qb,cpoe,first_second_half,314,0.282645818707798,0.3998726696067002,0.4407230968757215,false,2016-2024,descriptive stability only; not predictive value
+qb,cpoe,odd_even,314,0.2977970897617816,0.36138206773317977,0.4589270420022964,false,2016-2024,descriptive stability only; not predictive value
+qb,cpoe,std_vs_rest_of_season,308,0.058643339860409816,0.3408761315532133,,true,2016-2024,RETROSPECTIVE — uses future observations; never feeds production
+qb,cpoe_coverage_fraction,first_second_half,314,0.45454545780715133,0.49962605175970787,0.6250000030833227,false,2016-2024,descriptive stability only; not predictive value
+qb,cpoe_coverage_fraction,odd_even,314,0.5697642261250719,0.6138036224237157,0.7259233159256308,false,2016-2024,descriptive stability only; not predictive value
+qb,cpoe_coverage_fraction,std_vs_rest_of_season,308,0.37132589459507126,0.4363679077318748,,true,2016-2024,RETROSPECTIVE — uses future observations; never feeds production
+qb,dropback_success_rate,first_second_half,314,0.4678365533937104,0.5348487006776418,0.637450474049102,false,2016-2024,descriptive stability only; not predictive value
+qb,dropback_success_rate,odd_even,314,0.4496146371386621,0.4972829399560642,0.6203229818734983,false,2016-2024,descriptive stability only; not predictive value
+qb,dropback_success_rate,std_vs_rest_of_season,308,0.22502303608722388,0.4785267229528955,,true,2016-2024,RETROSPECTIVE — uses future observations; never feeds production
+qb,epa_per_dropback,first_second_half,314,0.48583334807719375,0.4957507115094465,0.6539540234521014,false,2016-2024,descriptive stability only; not predictive value
+qb,epa_per_dropback,odd_even,314,0.47387019711613776,0.4647863630505416,0.6430283997102871,false,2016-2024,descriptive stability only; not predictive value
+qb,epa_per_dropback,std_vs_rest_of_season,308,0.25909591710332325,0.42497649720697694,,true,2016-2024,RETROSPECTIVE — uses future observations; never feeds production
+qb,explosive_pass_rate,first_second_half,314,0.2586938279114175,0.3133438182256887,0.4110512376797377,false,2016-2024,descriptive stability only; not predictive value
+qb,explosive_pass_rate,odd_even,314,0.22605010349533497,0.2509100634617005,0.3687452949123218,false,2016-2024,descriptive stability only; not predictive value
+qb,explosive_pass_rate,std_vs_rest_of_season,308,0.08350251664440327,0.33553692125527296,,true,2016-2024,RETROSPECTIVE — uses future observations; never feeds production
+qb,interception_rate,first_second_half,314,0.12276732717920658,0.10698446937432711,0.21868703195637526,false,2016-2024,descriptive stability only; not predictive value
+qb,interception_rate,odd_even,314,0.0975941521819169,0.09549721355748908,0.17783285741438884,false,2016-2024,descriptive stability only; not predictive value
+qb,interception_rate,std_vs_rest_of_season,308,0.07006138691898489,0.09626185458701825,,true,2016-2024,RETROSPECTIVE — uses future observations; never feeds production
+qb,sack_rate,first_second_half,314,0.5172199779438534,0.5173623809426906,0.6817995880133261,false,2016-2024,descriptive stability only; not predictive value
+qb,sack_rate,odd_even,314,0.4209840684856026,0.43958967441599045,0.5925246845789925,false,2016-2024,descriptive stability only; not predictive value
+qb,sack_rate,std_vs_rest_of_season,308,0.2171368008633049,0.3859411200102513,,true,2016-2024,RETROSPECTIVE — uses future observations; never feeds production
+qb,yards_per_attempt,first_second_half,314,0.2840595923199831,0.4087493616522329,0.4424398898913353,false,2016-2024,descriptive stability only; not predictive value
+qb,yards_per_attempt,odd_even,314,0.3960367186806536,0.3759388193933685,0.5673729256275355,false,2016-2024,descriptive stability only; not predictive value
+qb,yards_per_attempt,std_vs_rest_of_season,308,0.16287929138775056,0.44170218952800155,,true,2016-2024,RETROSPECTIVE — uses future observations; never feeds production
+rb,explosive_rush_rate,first_second_half,973,0.32481166655390575,0.2889319977152791,0.4903514586323117,false,2016-2024,descriptive stability only; not predictive value
+rb,explosive_rush_rate,odd_even,973,0.33549648710806484,0.32685469889464397,0.502429606287564,false,2016-2024,descriptive stability only; not predictive value
+rb,explosive_rush_rate,std_vs_rest_of_season,962,0.26730530561812854,0.28459544990222735,,true,2016-2024,RETROSPECTIVE — uses future observations; never feeds production
+rb,fumble_lost_rate,first_second_half,973,0.1422973752155654,0.26221945425309634,0.24914243576671471,false,2016-2024,descriptive stability only; not predictive value
+rb,fumble_lost_rate,odd_even,973,0.2531603942026302,0.34399333634360396,0.4040351025675575,false,2016-2024,descriptive stability only; not predictive value
+rb,fumble_lost_rate,std_vs_rest_of_season,962,0.24678515261281797,0.3775079406090717,,true,2016-2024,RETROSPECTIVE — uses future observations; never feeds production
+rb,rush_epa_per_att,first_second_half,973,0.12196190240019747,0.21620308785402176,0.21740827765949286,false,2016-2024,descriptive stability only; not predictive value
+rb,rush_epa_per_att,odd_even,973,0.23164398713708056,0.24095522968867825,0.37615413148003923,false,2016-2024,descriptive stability only; not predictive value
+rb,rush_epa_per_att,std_vs_rest_of_season,962,0.13093219153611985,0.22437781626516107,,true,2016-2024,RETROSPECTIVE — uses future observations; never feeds production
+rb,rush_success_rate,first_second_half,973,0.3753963351875001,0.3753611562690788,0.5458736883086495,false,2016-2024,descriptive stability only; not predictive value
+rb,rush_success_rate,odd_even,973,0.39914077822376604,0.3504136881492491,0.5705512760917202,false,2016-2024,descriptive stability only; not predictive value
+rb,rush_success_rate,std_vs_rest_of_season,962,0.36288405999919593,0.36770260117240977,,true,2016-2024,RETROSPECTIVE — uses future observations; never feeds production
+rb,yards_per_carry,first_second_half,973,0.3549422854190712,0.343460846198697,0.5239223681166476,false,2016-2024,descriptive stability only; not predictive value
+rb,yards_per_carry,odd_even,973,0.4012383723596422,0.3745447564897138,0.5726910999218058,false,2016-2024,descriptive stability only; not predictive value
+rb,yards_per_carry,std_vs_rest_of_season,962,0.2687189141613941,0.34356220876298293,,true,2016-2024,RETROSPECTIVE — uses future observations; never feeds production
+special_teams,fg_pct,first_second_half,288,0.12478921449625144,0.12082494403787343,0.22188906665883987,false,2016-2024,descriptive stability only; not predictive value
+special_teams,fg_pct,odd_even,288,0.0770278869655057,0.06938148286574315,0.1430378691168889,false,2016-2024,descriptive stability only; not predictive value
+special_teams,fg_pct,std_vs_rest_of_season,288,0.1193521285188951,0.11810721419127194,,true,2016-2024,RETROSPECTIVE — uses future observations; never feeds production
+special_teams,st_epa_per_play,first_second_half,288,0.336864518571252,0.2804968472324368,0.503962090236742,false,2016-2024,descriptive stability only; not predictive value
+special_teams,st_epa_per_play,odd_even,288,0.3338001363534151,0.3053608100342002,0.5005249696045444,false,2016-2024,descriptive stability only; not predictive value
+special_teams,st_epa_per_play,std_vs_rest_of_season,288,0.3334822442078283,0.2752864416928895,,true,2016-2024,RETROSPECTIVE — uses future observations; never feeds production
+team_defense,early_down_epa_per_play,first_second_half,288,0.24329135591536166,0.22685910806216322,0.3913666008499523,false,2016-2024,descriptive stability only; not predictive value
+team_defense,early_down_epa_per_play,odd_even,288,0.2888700389060729,0.2571730987947547,0.448253167792233,false,2016-2024,descriptive stability only; not predictive value
+team_defense,early_down_epa_per_play,std_vs_rest_of_season,288,0.26875267428147087,0.24547631104091566,,true,2016-2024,RETROSPECTIVE — uses future observations; never feeds production
+team_defense,epa_per_play,first_second_half,288,0.31575100621386143,0.3181858826744472,0.4799555610790685,false,2016-2024,descriptive stability only; not predictive value
+team_defense,epa_per_play,odd_even,288,0.3269733016114755,0.3030002531859229,0.4928106710427396,false,2016-2024,descriptive stability only; not predictive value
+team_defense,epa_per_play,std_vs_rest_of_season,288,0.33189117089452763,0.3331138050629147,,true,2016-2024,RETROSPECTIVE — uses future observations; never feeds production
+team_defense,explosive_pass_rate,first_second_half,288,0.10713874443514863,0.09748512030350162,0.1935416766392902,false,2016-2024,descriptive stability only; not predictive value
+team_defense,explosive_pass_rate,odd_even,288,0.20765055178506578,0.18910225496224317,0.34389178471890075,false,2016-2024,descriptive stability only; not predictive value
+team_defense,explosive_pass_rate,std_vs_rest_of_season,288,0.12366088499753944,0.10102670910544993,,true,2016-2024,RETROSPECTIVE — uses future observations; never feeds production
+team_defense,explosive_rush_rate,first_second_half,288,0.27854574302967355,0.2593970156211696,0.43572276478685024,false,2016-2024,descriptive stability only; not predictive value
+team_defense,explosive_rush_rate,odd_even,288,0.25733460973232425,0.24288065297855158,0.40933353419279306,false,2016-2024,descriptive stability only; not predictive value
+team_defense,explosive_rush_rate,std_vs_rest_of_season,288,0.2641140111996446,0.25110919547158894,,true,2016-2024,RETROSPECTIVE — uses future observations; never feeds production
+team_defense,pass_epa_per_dropback,first_second_half,288,0.2472527632589782,0.26964602196689297,0.39647579150344026,false,2016-2024,descriptive stability only; not predictive value
+team_defense,pass_epa_per_dropback,odd_even,288,0.29542306189797546,0.27862608458017357,0.45610282939557906,false,2016-2024,descriptive stability only; not predictive value
+team_defense,pass_epa_per_dropback,std_vs_rest_of_season,288,0.25391040826351396,0.26891811243866276,,true,2016-2024,RETROSPECTIVE — uses future observations; never feeds production
+team_defense,pass_success_rate,first_second_half,288,0.2896199932724506,0.25695809170153,0.44915555711497757,false,2016-2024,descriptive stability only; not predictive value
+team_defense,pass_success_rate,odd_even,288,0.3189284088694969,0.2909086159571433,0.48361746812757245,false,2016-2024,descriptive stability only; not predictive value
+team_defense,pass_success_rate,std_vs_rest_of_season,288,0.28409530211865497,0.2541439100747903,,true,2016-2024,RETROSPECTIVE — uses future observations; never feeds production
+team_defense,rush_epa_per_play,first_second_half,288,0.2535021712177358,0.23725028031298606,0.4044702546808784,false,2016-2024,descriptive stability only; not predictive value
+team_defense,rush_epa_per_play,odd_even,288,0.23515477664059423,0.2172295029920146,0.38076973200099545,false,2016-2024,descriptive stability only; not predictive value
+team_defense,rush_epa_per_play,std_vs_rest_of_season,288,0.26421667875517324,0.24735762310663148,,true,2016-2024,RETROSPECTIVE — uses future observations; never feeds production
+team_defense,rush_success_rate,first_second_half,288,0.3421251518908155,0.3382302705874316,0.5098260045403695,false,2016-2024,descriptive stability only; not predictive value
+team_defense,rush_success_rate,odd_even,288,0.3212643390988889,0.31092436974789917,0.4862983577048531,false,2016-2024,descriptive stability only; not predictive value
+team_defense,rush_success_rate,std_vs_rest_of_season,288,0.3456949980614212,0.3424746512665325,,true,2016-2024,RETROSPECTIVE — uses future observations; never feeds production
+team_defense,success_rate,first_second_half,288,0.3789782346024315,0.3588177021167147,0.5496507850418588,false,2016-2024,descriptive stability only; not predictive value
+team_defense,success_rate,odd_even,288,0.38407568379975193,0.35972294226155316,0.5549923147921151,false,2016-2024,descriptive stability only; not predictive value
+team_defense,success_rate,std_vs_rest_of_season,288,0.3878243916183172,0.37406160455573917,,true,2016-2024,RETROSPECTIVE — uses future observations; never feeds production
+team_offense,early_down_epa_per_play,first_second_half,288,0.4616717885995826,0.4613087702799915,0.6317037685209853,false,2016-2024,descriptive stability only; not predictive value
+team_offense,early_down_epa_per_play,odd_even,288,0.5503344344930826,0.5270205643232904,0.709955764703152,false,2016-2024,descriptive stability only; not predictive value
+team_offense,early_down_epa_per_play,std_vs_rest_of_season,288,0.439195121699632,0.42869098859055826,,true,2016-2024,RETROSPECTIVE — uses future observations; never feeds production
+team_offense,epa_per_play,first_second_half,288,0.5524476957486649,0.5497791656117255,0.711711830629177,false,2016-2024,descriptive stability only; not predictive value
+team_offense,epa_per_play,odd_even,288,0.6250861206950906,0.5998110147932918,0.769295993282775,false,2016-2024,descriptive stability only; not predictive value
+team_offense,epa_per_play,std_vs_rest_of_season,288,0.5269295246497955,0.5195982984298455,,true,2016-2024,RETROSPECTIVE — uses future observations; never feeds production
+team_offense,explosive_pass_rate,first_second_half,288,0.387164604081982,0.4154198264671723,0.5582100393027335,false,2016-2024,descriptive stability only; not predictive value
+team_offense,explosive_pass_rate,odd_even,288,0.3456175562038669,0.3517058903905895,0.5136935894012732,false,2016-2024,descriptive stability only; not predictive value
+team_offense,explosive_pass_rate,std_vs_rest_of_season,288,0.3814531468484974,0.4172077008708793,,true,2016-2024,RETROSPECTIVE — uses future observations; never feeds production
+team_offense,explosive_rush_rate,first_second_half,288,0.27210467258054627,0.27983826242118087,0.4278023317508369,false,2016-2024,descriptive stability only; not predictive value
+team_offense,explosive_rush_rate,odd_even,288,0.35916503787394044,0.3510613714639371,0.5285083530926613,false,2016-2024,descriptive stability only; not predictive value
+team_offense,explosive_rush_rate,std_vs_rest_of_season,288,0.26456121580130426,0.2674859039742153,,true,2016-2024,RETROSPECTIVE — uses future observations; never feeds production
+team_offense,pass_epa_per_dropback,first_second_half,288,0.5003401187218601,0.505454549108022,0.6669689258834189,false,2016-2024,descriptive stability only; not predictive value
+team_offense,pass_epa_per_dropback,odd_even,288,0.5492223331761942,0.5533127167653289,0.7090297130563387,false,2016-2024,descriptive stability only; not predictive value
+team_offense,pass_epa_per_dropback,std_vs_rest_of_season,288,0.4845028081011884,0.4843416563181945,,true,2016-2024,RETROSPECTIVE — uses future observations; never feeds production
+team_offense,pass_success_rate,first_second_half,288,0.5199170128264782,0.5244490192059608,0.684138684466235,false,2016-2024,descriptive stability only; not predictive value
+team_offense,pass_success_rate,odd_even,288,0.5776848304819303,0.5841325769906243,0.7323196868229591,false,2016-2024,descriptive stability only; not predictive value
+team_offense,pass_success_rate,std_vs_rest_of_season,288,0.5225286389079066,0.5218076470186354,,true,2016-2024,RETROSPECTIVE — uses future observations; never feeds production
+team_offense,proe,first_second_half,288,0.5375802602406963,0.49048191730063617,0.6992548930831647,false,2016-2024,descriptive stability only; not predictive value
+team_offense,proe,odd_even,288,0.7640357617810154,0.7078761920837202,0.8662361368565742,false,2016-2024,descriptive stability only; not predictive value
+team_offense,proe,std_vs_rest_of_season,288,0.5488439422692335,0.5065099928063048,,true,2016-2024,RETROSPECTIVE — uses future observations; never feeds production
+team_offense,rush_epa_per_play,first_second_half,288,0.3762132188065114,0.3750673153048882,0.546736819070483,false,2016-2024,descriptive stability only; not predictive value
+team_offense,rush_epa_per_play,odd_even,288,0.3343859962510793,0.3333207745077945,0.5011833115613136,false,2016-2024,descriptive stability only; not predictive value
+team_offense,rush_epa_per_play,std_vs_rest_of_season,288,0.3760596146047957,0.36222918148608085,,true,2016-2024,RETROSPECTIVE — uses future observations; never feeds production
+team_offense,rush_success_rate,first_second_half,288,0.4746057256779939,0.48244426895578896,0.6437052527512462,false,2016-2024,descriptive stability only; not predictive value
+team_offense,rush_success_rate,odd_even,288,0.3983357502491913,0.41098053281570884,0.5697283362428596,false,2016-2024,descriptive stability only; not predictive value
+team_offense,rush_success_rate,std_vs_rest_of_season,288,0.4893041739353203,0.48806911573811745,,true,2016-2024,RETROSPECTIVE — uses future observations; never feeds production
+team_offense,success_rate,first_second_half,288,0.5768077649651845,0.5783188454721918,0.7316145668244096,false,2016-2024,descriptive stability only; not predictive value
+team_offense,success_rate,odd_even,288,0.6235880510580888,0.6296065772076407,0.7681604341097459,false,2016-2024,descriptive stability only; not predictive value
+team_offense,success_rate,std_vs_rest_of_season,288,0.574738711693884,0.5695427381856617,,true,2016-2024,RETROSPECTIVE — uses future observations; never feeds production
+wr,adot,first_second_half,2471,0.8340686351969683,0.8426757899197215,0.9095282686707025,false,2016-2024,descriptive stability only; not predictive value
+wr,adot,odd_even,2471,0.850130959732989,0.8548838306120583,0.9189954421990537,false,2016-2024,descriptive stability only; not predictive value
+wr,adot,std_vs_rest_of_season,2434,0.8017777640117281,0.8267969065015949,,true,2016-2024,RETROSPECTIVE — uses future observations; never feeds production
+wr,catch_rate,first_second_half,2471,0.34426774578344665,0.36457924542117115,0.5122011546632855,false,2016-2024,descriptive stability only; not predictive value
+wr,catch_rate,odd_even,2471,0.3637471307563815,0.3940763841259049,0.5334524598480873,false,2016-2024,descriptive stability only; not predictive value
+wr,catch_rate,std_vs_rest_of_season,2434,0.3246111360398924,0.3686155352330888,,true,2016-2024,RETROSPECTIVE — uses future observations; never feeds production
+wr,epa_per_target,first_second_half,2471,0.17211606649830002,0.19261879769080623,0.2936843396618515,false,2016-2024,descriptive stability only; not predictive value
+wr,epa_per_target,odd_even,2471,0.15027613416778982,0.1917613309317528,0.26128705917473055,false,2016-2024,descriptive stability only; not predictive value
+wr,epa_per_target,std_vs_rest_of_season,2434,0.1574200839526624,0.180728285765833,,true,2016-2024,RETROSPECTIVE — uses future observations; never feeds production
+wr,explosive_rec_rate,first_second_half,2471,0.25521245311684204,0.29404077511785587,0.40664423378388115,false,2016-2024,descriptive stability only; not predictive value
+wr,explosive_rec_rate,odd_even,2471,0.2501914050292807,0.29325723139011967,0.4002449609280764,false,2016-2024,descriptive stability only; not predictive value
+wr,explosive_rec_rate,std_vs_rest_of_season,2434,0.20911346646730616,0.25747043858735785,,true,2016-2024,RETROSPECTIVE — uses future observations; never feeds production
+wr,target_success_rate,first_second_half,2471,0.138867530850382,0.15576280466794795,0.24386950560736576,false,2016-2024,descriptive stability only; not predictive value
+wr,target_success_rate,odd_even,2471,0.16613850150644655,0.1854641008371135,0.2849378547948202,false,2016-2024,descriptive stability only; not predictive value
+wr,target_success_rate,std_vs_rest_of_season,2434,0.1291899617325293,0.160702777190296,,true,2016-2024,RETROSPECTIVE — uses future observations; never feeds production
+wr,yards_per_reception,first_second_half,2468,0.4621509919838588,0.5310912918742872,0.6321522120732667,false,2016-2024,descriptive stability only; not predictive value
+wr,yards_per_reception,odd_even,2469,0.4978285322019996,0.5566048671702789,0.6647336747820233,false,2016-2024,descriptive stability only; not predictive value
+wr,yards_per_reception,std_vs_rest_of_season,2411,0.4017784581373876,0.5030105311569956,,true,2016-2024,RETROSPECTIVE — uses future observations; never feeds production
+wr,yards_per_target,first_second_half,2471,0.24424592081459554,0.2751088683124623,0.39260071779811845,false,2016-2024,descriptive stability only; not predictive value
+wr,yards_per_target,odd_even,2471,0.26802048951119806,0.315217608333553,0.4227384205984175,false,2016-2024,descriptive stability only; not predictive value
+wr,yards_per_target,std_vs_rest_of_season,2434,0.20236449040805976,0.24733166078266836,,true,2016-2024,RETROSPECTIVE — uses future observations; never feeds production

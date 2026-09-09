@@ -1,0 +1,224 @@
+# Point-in-time metadata for every nflverse source the as-of engine may touch.
+#
+# This file fulfils the Phase 1 "publish_lag.yaml" requirement AND carries the
+# point-in-time status contract. It is the single source of truth consumed by
+# src/matchup/pointintime/.
+#
+# ---------------------------------------------------------------------------
+# publish_lag_days:  a source row describing game G is treated as KNOWABLE at
+#                       kickoff_utc(G) + assumed_game_duration_hours + publish_lag_days
+#                    For week-grained sources the "game" is the described
+#                    player/team's game that (season, week).
+#
+# publish_lag_type:
+#   empirical              -> the source carries a real per-row publication
+#                             timestamp we use directly (lag is then a floor only)
+#   conservative_assumption-> NO publication timestamp in the data; the value is a
+#                             deliberately cautious engineering guess. Prefer false
+#                             EXCLUSION over false inclusion. NOT an exact release time.
+#   known                  -> timing is structurally known (e.g. schedule fixtures
+#                             are published months ahead)
+#   unknown                -> timing cannot be reconstructed from available data
+#
+# point_in_time_status:
+#   LIVE_SAFE        -> knowable before kickoff in real time during the season
+#   HISTORICAL_SAFE  -> safe for backtest, NOT guaranteed available live
+#   POST_SEASON_ONLY -> only published after the season/playoffs -> BANNED from live frames
+#   REFERENCE_ONLY   -> benchmark / descriptive only -> BANNED from any feature frame
+#   UNKNOWN          -> timing unproven -> BANNED from live frames
+#
+# The as-of engine refuses to serve POST_SEASON_ONLY / UNKNOWN / REFERENCE_ONLY
+# sources into a prediction feature frame.
+# ---------------------------------------------------------------------------
+
+defaults:
+  assumed_game_duration_hours: 4        # kickoff -> final whistle, conservative
+  kickoff_fallback_local_time: "13:00"  # America/New_York, used when schedules.gametime is null
+  timezone: "America/New_York"
+
+  # Columns stripped from EVERY source before it can enter a feature frame,
+  # regardless of point-in-time status. Two reasons:
+  #  (a) betting / market data -- banned by project rule (no spread-derived features,
+  #      no sportsbook comparison). This includes nflfastR's vegas_* win-probability
+  #      fields, which are computed FROM the pre-game spread.
+  #  (b) denormalised final-game-outcome columns that nflfastR copies onto every
+  #      play row (home_score/away_score/result/total). For a prior game these are
+  #      technically knowable, but downstream metric code must derive outcomes from
+  #      the play data / a dedicated results view, never from a convenience column.
+  globally_stripped_columns:
+    - spread_line
+    - total_line
+    - away_moneyline
+    - home_moneyline
+    - away_spread_odds
+    - home_spread_odds
+    - under_odds
+    - over_odds
+    - vegas_wp
+    - vegas_home_wp
+    - vegas_wpa
+    - vegas_home_wpa
+    - home_score
+    - away_score
+    - result
+    - total
+    - overtime
+
+sources:
+
+  pbp:
+    grain: play
+    join: game_id
+    point_in_time_status: LIVE_SAFE
+    earliest_valid_season: 1999
+    publish_lag_days: 1
+    publish_lag_type: conservative_assumption
+    rationale: >
+      nflfastR play-by-play typically refreshes within ~24h of a game, but rows carry
+      no publication timestamp (game_date is the play's date, time_of_day is the play
+      clock, neither is a release time). 1 day is a conservative floor; true availability
+      for the very first games of a Sunday slate may be a few hours, but we do not rely on that.
+
+  player_stats:
+    grain: player-week
+    join: [season, week, team]          # team == recent team; -> game_calendar
+    point_in_time_status: LIVE_SAFE
+    earliest_valid_season: 1999
+    publish_lag_days: 1
+    publish_lag_type: conservative_assumption
+    rationale: >
+      Derived from pbp; same reasoning as pbp. No publication timestamp.
+
+  team_stats:
+    grain: team-week
+    join: [season, week, team]
+    point_in_time_status: LIVE_SAFE
+    earliest_valid_season: 1999
+    publish_lag_days: 1
+    publish_lag_type: conservative_assumption
+    rationale: >
+      Derived from pbp; rebuildable. No publication timestamp.
+
+  snap_counts:
+    grain: player-game
+    join: game_id
+    point_in_time_status: LIVE_SAFE
+    earliest_valid_season: 2012
+    publish_lag_days: 1
+    publish_lag_type: conservative_assumption
+    rationale: >
+      Sourced from Pro Football Reference. The nflverse update schedule says snaps refresh
+      several times daily in-season, but a full game's snap counts are not timestamped in
+      the data. 1 day is the stated project assumption; treat as conservative, not exact.
+
+  ngs_passing:   &ngs
+    grain: player-week
+    join: [season, week, team]          # team_abbr -> game_calendar
+    point_in_time_status: LIVE_SAFE
+    earliest_valid_season: 2016
+    publish_lag_days: 1
+    publish_lag_type: conservative_assumption
+    rationale: >
+      NFL Next Gen Stats weekly player files update nightly in-season per the nflverse
+      schedule, but rows carry no publication timestamp. week == 0 rows are SEASON
+      AGGREGATES and are dropped by the as-of engine.
+  ngs_receiving: *ngs
+  ngs_rushing:   *ngs
+
+  pfr_pass: &pfr
+    grain: player-week
+    join: game_id                       # PFR advstats carry the nflverse game_id
+    point_in_time_status: LIVE_SAFE
+    earliest_valid_season: 2018
+    publish_lag_days: 3
+    publish_lag_type: conservative_assumption
+    rationale: >
+      Pro Football Reference advanced (charting) stats. Populated a few days after games
+      and only from 2018. 3 days is the stated project assumption; no publication
+      timestamp exists in the data. Any feature built on this cannot exist before 2018.
+  pfr_rush: *pfr
+  pfr_rec:  *pfr
+  pfr_def:  *pfr
+
+  injuries:
+    grain: player-team-week-report
+    join: [season, week, team]
+    point_in_time_status: LIVE_SAFE     # via date_modified (historical) OR the fallback rule
+    earliest_valid_season: 2009
+    publish_lag_days: 0
+    publish_lag_type: empirical         # date_modified used directly when present (2010-2024)
+    fallback_rule: injuries_asof        # see src/matchup/injuries/asof_rule.py
+    rationale: >
+      When date_modified is present (2010-2024) it is a real UTC timestamp and is the
+      primary historical as-of filter (date_modified < kickoff_utc). It is ABSENT for the
+      2025+ / live season, where the conservative fallback rule applies:
+        Thu/Fri/Sat game  -> cutoff = kickoff_utc - 24h
+        Sun/Mon/Tue/Wed   -> cutoff = 23:59:59 America/New_York of the Saturday before kickoff
+      report_status == null means UNKNOWN, never HEALTHY. Availability signal is built from
+      practice_status + roster status + report_status(when present). Injuries remain an
+      AVAIL-ADJ candidate, NOT a trusted predictive input, until later walk-forward validation.
+
+  rosters_weekly:
+    grain: player-team-week
+    join: [season, week, team]
+    point_in_time_status: LIVE_SAFE
+    earliest_valid_season: 2002
+    publish_lag_days: 2
+    publish_lag_type: conservative_assumption
+    rationale: >
+      Weekly roster snapshots. Transaction timing is not stamped per row. 2 days is
+      conservative; a mid-week signing may not be reflected until the following weekly file.
+
+  schedules:
+    grain: game
+    join: game_id
+    point_in_time_status: REFERENCE_ONLY   # the FIXTURE is LIVE_SAFE (used to build the calendar);
+                                           # result / line / score columns are REFERENCE_ONLY and
+                                           # are stripped before any feature frame is produced.
+    earliest_valid_season: 1999
+    publish_lag_days: 0
+    publish_lag_type: known
+    reference_only_columns:
+      - away_score
+      - home_score
+      - result
+      - total
+      - overtime
+      - away_moneyline
+      - home_moneyline
+      - spread_line
+      - away_spread_odds
+      - home_spread_odds
+      - total_line
+      - under_odds
+      - over_odds
+    rationale: >
+      Fixtures (teams, kickoff, venue, roof, rest) are published months ahead -> LIVE_SAFE
+      and used to build game_calendar. Scores and betting lines are post-hoc / market data
+      and are NEVER admitted to a feature frame (project rule). The as-of engine only ever
+      exposes the fixture columns.
+
+  participation:
+    grain: play
+    join: nflverse_game_id
+    point_in_time_status: POST_SEASON_ONLY
+    earliest_valid_season: 2016
+    publish_lag_days: null
+    publish_lag_type: unknown
+    rationale: >
+      2016-2022: sparse legacy NGS-derived feed (routes/pressure/coverage < 45% populated;
+      defense_coverage_type 0% in 2016-17). 2023+: complete FTN feed BUT released only after
+      the postseason. Ingested to the canonical layer for future research; the as-of engine
+      REFUSES to serve it into any live or historical prediction frame.
+
+  players:
+    grain: player
+    join: gsis_id
+    point_in_time_status: REFERENCE_ONLY
+    earliest_valid_season: null
+    publish_lag_days: 0
+    publish_lag_type: known
+    rationale: >
+      Slowly-changing identity / crosswalk dimension (names, positions, draft, ID mappings).
+      Used only for player identity resolution, never as a time-varying feature source.
+      NOTE: a player's `status` field is current-state and must not be read as historical.

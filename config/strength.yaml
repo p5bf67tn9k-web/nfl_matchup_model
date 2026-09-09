@@ -1,0 +1,117 @@
+# =============================================================================
+# TEAM-STRENGTH RESEARCH CONFIG  (final build)
+# =============================================================================
+# This drives the transparent team-strength research layer. It contains NO
+# learned weights and NO black-box parameters. Every number here is a documented
+# choice; every downstream index is an explicit arithmetic function of the
+# metrics listed below.
+#
+# The domain indices are TRANSPARENT RESEARCH INDICES, not claims of a true
+# latent "team strength" and not calibrated ratings or probabilities. Each is an
+# equal-weight mean of the oriented, shrunk z-scores of its member metrics. The
+# member metrics are always reported alongside the index.
+#
+# `k` values are the frozen Phase 4 walk-forward-selected shrinkage constants
+# (median across the 2019-2025 evaluation seasons) from
+# outputs/phase4/shrinkage_k_log.json. Metrics that were not in the Phase 4
+# candidate universe use a family default and are flagged display_only where the
+# Phase 3 evidence does not support using them in an index.
+# =============================================================================
+
+schema_version: 1
+
+# 3 completed prior seasons form the historical reference distribution (z-scores,
+# league mean). Identical rule to Phase 2/3 normalization (completed_seasons_asof).
+reference_seasons: 3
+
+# season-to-date is the primary window; a team "through week W" aggregates its
+# own games in weeks 1..W of the target season (never week W+1 -> PIT-safe).
+window: season_to_date
+
+confidence:
+  # based on the number of games in the season-to-date window
+  high_min_games: 6
+  medium_min_games: 3
+  # below medium_min_games, or when only prior-season data exists -> "low"
+
+family_default_k:
+  team_offense: 10
+  team_defense: 14
+  pass_protection: 10
+  pass_rush: 14
+  special_teams: 16
+
+# --- the transparent team anatomy -------------------------------------------
+# Each metric: family, direction (from config/metrics.yaml), the shrinkage k,
+# whether it feeds a domain index or is display_only, and its Phase 3 status
+# (carried purely as an evidence/confidence annotation).
+metrics:
+  # ---- offense ----
+  team_offense.epa_per_play:            {family: team_offense, direction: higher_better, k: 8,  in_index: true,  phase3: VALIDATED_PERSISTENCE}
+  team_offense.success_rate:            {family: team_offense, direction: higher_better, k: 4,  in_index: true,  phase3: VALIDATED_PERSISTENCE}
+  team_offense.early_down_epa_per_play: {family: team_offense, direction: higher_better, k: 8,  in_index: true,  phase3: UNVALIDATED_RANK_PERSISTENT}
+  team_offense.pass_epa_per_dropback:   {family: team_offense, direction: higher_better, k: 8,  in_index: true,  phase3: UNVALIDATED_RANK_PERSISTENT}
+  team_offense.pass_success_rate:       {family: team_offense, direction: higher_better, k: 8,  in_index: true,  phase3: UNVALIDATED_RANK_PERSISTENT}
+  team_offense.rush_epa_per_play:       {family: team_offense, direction: higher_better, k: 16, in_index: true,  phase3: RANK_PERSISTENT}
+  team_offense.rush_success_rate:       {family: team_offense, direction: higher_better, k: 12, in_index: true,  phase3: RANK_PERSISTENT}
+  team_offense.explosive_pass_rate:     {family: team_offense, direction: higher_better, k: 16, in_index: true,  phase3: RANK_PERSISTENT}
+  team_offense.explosive_rush_rate:     {family: team_offense, direction: higher_better, k: 16, in_index: false, phase3: NOT_RANK_PERSISTENT}
+  team_offense.proe:                    {family: team_offense, direction: neutral,       k: 4,  in_index: false, phase3: VALIDATED_PERSISTENCE}
+  # ---- pass protection (lower is better: sacks / hits allowed) ----
+  pass_protection.sack_rate_allowed:    {family: pass_protection, direction: lower_better, k: 8,  in_index: true, phase3: UNVALIDATED_RANK_PERSISTENT}
+  pass_protection.qb_hit_rate_allowed:  {family: pass_protection, direction: lower_better, k: 8,  in_index: true, phase3: UNVALIDATED_RANK_PERSISTENT}
+  pass_protection.rush_stuffed_rate_approx: {family: pass_protection, direction: lower_better, k: 16, in_index: false, phase3: RANK_PERSISTENT}
+  # ---- defense (lower EPA/success allowed is better) ----
+  team_defense.epa_per_play:            {family: team_defense, direction: lower_better, k: 16, in_index: true,  phase3: RANK_PERSISTENT}
+  team_defense.success_rate:            {family: team_defense, direction: lower_better, k: 16, in_index: true,  phase3: RANK_PERSISTENT}
+  team_defense.early_down_epa_per_play: {family: team_defense, direction: lower_better, k: 16, in_index: true,  phase3: RANK_PERSISTENT}
+  team_defense.pass_epa_per_dropback:   {family: team_defense, direction: lower_better, k: 16, in_index: true,  phase3: RANK_PERSISTENT}
+  team_defense.pass_success_rate:       {family: team_defense, direction: lower_better, k: 16, in_index: true,  phase3: RANK_PERSISTENT}
+  team_defense.rush_epa_per_play:       {family: team_defense, direction: lower_better, k: 14, in_index: true,  phase3: NOT_RANK_PERSISTENT}
+  team_defense.rush_success_rate:       {family: team_defense, direction: lower_better, k: 16, in_index: true,  phase3: RANK_PERSISTENT}
+  team_defense.explosive_pass_rate:     {family: team_defense, direction: lower_better, k: 14, in_index: false, phase3: NOT_RANK_PERSISTENT}
+  team_defense.explosive_rush_rate:     {family: team_defense, direction: lower_better, k: 16, in_index: true,  phase3: RANK_PERSISTENT}
+  # ---- pass rush (higher pressure generated is better) ----
+  pass_rush.qb_hit_rate_generated:      {family: pass_rush, direction: higher_better, k: 16, in_index: true,  phase3: RANK_PERSISTENT}
+  pass_rush.sack_rate_generated:        {family: pass_rush, direction: higher_better, k: 14, in_index: true,  phase3: NOT_RANK_PERSISTENT}
+  # ---- special teams ----
+  special_teams.st_epa_per_play:        {family: special_teams, direction: higher_better, k: 16, in_index: true,  phase3: RANK_PERSISTENT}
+  special_teams.fg_pct:                 {family: special_teams, direction: higher_better, k: 16, in_index: false, phase3: NOT_RANK_PERSISTENT}
+
+# --- domain indices --------------------------------------------------------
+# index value = mean of member metrics' oriented shrunk z-scores
+# (oriented: +z for higher_better, -z for lower_better; neutral metrics excluded).
+# Higher index = stronger on that dimension RELATIVE to the 3-season league
+# reference. It is NOT points, NOT a probability, NOT a definitive rating.
+domains:
+  offense_overall:  {side: offense, label: "Offensive Strength Index",         metrics: [team_offense.epa_per_play, team_offense.success_rate, team_offense.early_down_epa_per_play]}
+  passing_offense:  {side: offense, label: "Passing-Offense Strength Index",   metrics: [team_offense.pass_epa_per_dropback, team_offense.pass_success_rate, team_offense.explosive_pass_rate]}
+  rushing_offense:  {side: offense, label: "Rushing-Offense Strength Index",   metrics: [team_offense.rush_epa_per_play, team_offense.rush_success_rate]}
+  pass_protection:  {side: offense, label: "Pass-Protection Strength Index",   metrics: [pass_protection.sack_rate_allowed, pass_protection.qb_hit_rate_allowed]}
+  defense_overall:  {side: defense, label: "Defensive Strength Index",         metrics: [team_defense.epa_per_play, team_defense.success_rate, team_defense.early_down_epa_per_play]}
+  passing_defense:  {side: defense, label: "Pass-Defense Strength Index",      metrics: [team_defense.pass_epa_per_dropback, team_defense.pass_success_rate]}
+  rushing_defense:  {side: defense, label: "Run-Defense Strength Index",       metrics: [team_defense.rush_epa_per_play, team_defense.rush_success_rate, team_defense.explosive_rush_rate]}
+  pass_rush:        {side: defense, label: "Pass-Rush Strength Index",         metrics: [pass_rush.qb_hit_rate_generated, pass_rush.sack_rate_generated]}
+  special_teams:    {side: special, label: "Special-Teams Strength Index",     metrics: [special_teams.st_epa_per_play]}
+
+# --- research: candidate factors x outcomes -------------------------------
+# Only metrics already implemented. Grouped by domain so redundant variants are
+# not counted as independent evidence.
+research:
+  outcomes: [points_scored, points_allowed, point_differential, win, rolling_win_pct_4]
+  rolling_win_pct_window: 4
+  bootstrap_iters: 2000
+  seed: 20260908
+  # walk-forward: feature = team's season-to-date value BEFORE week W;
+  # outcome = team's realised outcome over the NEXT `horizon` games.
+  walk_forward_horizon: 4
+  walk_forward_seasons: [2019, 2025]
+  factor_groups:
+    offense_efficiency:   [team_offense.epa_per_play, team_offense.success_rate, team_offense.early_down_epa_per_play, team_offense.pass_epa_per_dropback, team_offense.pass_success_rate, team_offense.rush_epa_per_play, team_offense.rush_success_rate]
+    offense_explosiveness: [team_offense.explosive_pass_rate, team_offense.explosive_rush_rate]
+    offense_style:        [team_offense.proe]
+    protection:           [pass_protection.sack_rate_allowed, pass_protection.qb_hit_rate_allowed]
+    defense_efficiency:   [team_defense.epa_per_play, team_defense.success_rate, team_defense.early_down_epa_per_play, team_defense.pass_epa_per_dropback, team_defense.pass_success_rate, team_defense.rush_epa_per_play, team_defense.rush_success_rate]
+    defense_explosiveness: [team_defense.explosive_pass_rate, team_defense.explosive_rush_rate]
+    pass_rush:            [pass_rush.qb_hit_rate_generated, pass_rush.sack_rate_generated]
+    special_teams:        [special_teams.st_epa_per_play]

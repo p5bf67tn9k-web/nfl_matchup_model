@@ -1,0 +1,6 @@
+check,passed,detail
+no_future_week_in_snapshot,true,832 rows <= wk0; 0 later-week rows exist but are excluded
+reference_seasons_before_target,true,"2023,2024,2025"
+results_are_completed_games_only,true,"0 team-game results, 0 with future data_asof"
+deterministic_rebuild,true,"832 rows, max |Δshrunk| = 5.55e-17"
+no_market_columns_in_strength_frame,true,"['direction', 'family', 'in_index', 'k', 'metric', 'metric_bare', 'n_games', 'n_opportunities', 'oriented_z_shrunk', 'phase3_status', 'raw_value', 'ref_mean', 'ref_n', 'ref_sd', 'ref_seasons', 'season', 'shrunk_value', 'team', 'week', 'z_raw', 'z_shrunk']"

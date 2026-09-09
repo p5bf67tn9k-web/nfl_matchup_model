@@ -1,0 +1,120 @@
+{
+  "source": "players",
+  "seasons_requested": null,
+  "n_rows": 24826,
+  "n_cols": 39,
+  "coverage": {},
+  "rows_per_season": {},
+  "columns": [
+    "gsis_id",
+    "display_name",
+    "common_first_name",
+    "first_name",
+    "last_name",
+    "short_name",
+    "football_name",
+    "suffix",
+    "esb_id",
+    "nfl_id",
+    "pfr_id",
+    "pff_id",
+    "otc_id",
+    "espn_id",
+    "smart_id",
+    "birth_date",
+    "position_group",
+    "position",
+    "ngs_position_group",
+    "ngs_position",
+    "height",
+    "weight",
+    "headshot",
+    "college_name",
+    "college_conference",
+    "jersey_number",
+    "rookie_season",
+    "last_season",
+    "latest_team",
+    "status",
+    "ngs_status",
+    "ngs_status_short_description",
+    "years_of_experience",
+    "pff_position",
+    "pff_status",
+    "draft_year",
+    "draft_round",
+    "draft_pick",
+    "draft_team"
+  ],
+  "schema": {
+    "gsis_id": "String",
+    "display_name": "String",
+    "common_first_name": "String",
+    "first_name": "String",
+    "last_name": "String",
+    "short_name": "String",
+    "football_name": "String",
+    "suffix": "String",
+    "esb_id": "String",
+    "nfl_id": "String",
+    "pfr_id": "String",
+    "pff_id": "String",
+    "otc_id": "String",
+    "espn_id": "String",
+    "smart_id": "String",
+    "birth_date": "String",
+    "position_group": "String",
+    "position": "String",
+    "ngs_position_group": "String",
+    "ngs_position": "String",
+    "height": "Int32",
+    "weight": "Int32",
+    "headshot": "String",
+    "college_name": "String",
+    "college_conference": "String",
+    "jersey_number": "String",
+    "rookie_season": "Int32",
+    "last_season": "Int32",
+    "latest_team": "String",
+    "status": "String",
+    "ngs_status": "String",
+    "ngs_status_short_description": "String",
+    "years_of_experience": "Int32",
+    "pff_position": "String",
+    "pff_status": "String",
+    "draft_year": "Int32",
+    "draft_round": "Int32",
+    "draft_pick": "Int32",
+    "draft_team": "String"
+  },
+  "candidate_asof_columns": {
+    "birth_date": {
+      "dtype": "String",
+      "non_null": 24794,
+      "null_pct": 0.13,
+      "sample": [
+        "1987-01-25",
+        "2002-10-05",
+        "1985-06-18"
+      ]
+    }
+  },
+  "key_fields": {
+    "gsis_id": {
+      "present": true,
+      "null_pct": 0.0
+    },
+    "pfr_id": {
+      "present": true,
+      "null_pct": 8.77
+    },
+    "position": {
+      "present": true,
+      "null_pct": 0.0
+    },
+    "status": {
+      "present": true,
+      "null_pct": 0.0
+    }
+  }
+}

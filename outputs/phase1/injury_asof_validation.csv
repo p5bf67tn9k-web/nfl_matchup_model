@@ -1,0 +1,4 @@
+season,rows,false_inclusion_n,cutoff_staleness_n,false_exclusion_n,fi_games,false_inclusion_rate,cutoff_staleness_rate
+2022,5665,0,29,0,0,0.0,0.005119152691968226
+2023,5599,0,25,0,0,0.0,0.00446508305054474
+2024,6215,1,71,0,1,0.00016090104585679806,0.011423974255832662

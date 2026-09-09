@@ -1,0 +1,125 @@
+{
+  "source": "participation",
+  "seasons_requested": [
+    2016,
+    2019,
+    2022,
+    2023,
+    2024,
+    2025
+  ],
+  "n_rows": 283889,
+  "n_cols": 26,
+  "coverage": {},
+  "rows_per_season": {},
+  "columns": [
+    "nflverse_game_id",
+    "old_game_id",
+    "play_id",
+    "possession_team",
+    "offense_formation",
+    "offense_personnel",
+    "defenders_in_box",
+    "defense_personnel",
+    "number_of_pass_rushers",
+    "players_on_play",
+    "offense_players",
+    "defense_players",
+    "n_offense",
+    "n_defense",
+    "ngs_air_yards",
+    "time_to_throw",
+    "was_pressure",
+    "route",
+    "defense_man_zone_type",
+    "defense_coverage_type",
+    "offense_names",
+    "defense_names",
+    "offense_positions",
+    "defense_positions",
+    "offense_numbers",
+    "defense_numbers"
+  ],
+  "schema": {
+    "nflverse_game_id": "String",
+    "old_game_id": "String",
+    "play_id": "Float64",
+    "possession_team": "String",
+    "offense_formation": "String",
+    "offense_personnel": "String",
+    "defenders_in_box": "Int32",
+    "defense_personnel": "String",
+    "number_of_pass_rushers": "Int32",
+    "players_on_play": "String",
+    "offense_players": "String",
+    "defense_players": "String",
+    "n_offense": "Int32",
+    "n_defense": "Int32",
+    "ngs_air_yards": "Float64",
+    "time_to_throw": "Float64",
+    "was_pressure": "Boolean",
+    "route": "String",
+    "defense_man_zone_type": "String",
+    "defense_coverage_type": "String",
+    "offense_names": "String",
+    "defense_names": "String",
+    "offense_positions": "String",
+    "defense_positions": "String",
+    "offense_numbers": "String",
+    "defense_numbers": "String"
+  },
+  "candidate_asof_columns": {
+    "time_to_throw": {
+      "dtype": "Float64",
+      "non_null": 115949,
+      "null_pct": 59.16,
+      "sample": [
+        "2.323",
+        "2.893",
+        "2.556"
+      ]
+    }
+  },
+  "key_fields": {
+    "nflverse_game_id": {
+      "present": true,
+      "null_pct": 0.0
+    },
+    "season": {
+      "present": false,
+      "null_pct": null
+    },
+    "week": {
+      "present": false,
+      "null_pct": null
+    },
+    "play_id": {
+      "present": true,
+      "null_pct": 0.0
+    },
+    "offense_formation": {
+      "present": true,
+      "null_pct": 23.69
+    },
+    "offense_personnel": {
+      "present": true,
+      "null_pct": 12.35
+    },
+    "defenders_in_box": {
+      "present": true,
+      "null_pct": 13.39
+    },
+    "number_of_pass_rushers": {
+      "present": true,
+      "null_pct": 30.1
+    },
+    "offense_players": {
+      "present": true,
+      "null_pct": 0.0
+    },
+    "defense_players": {
+      "present": true,
+      "null_pct": 0.0
+    }
+  }
+}

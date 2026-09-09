@@ -1,0 +1,332 @@
+# Descriptive metric registry (Phase 2) + Phase 3 persistence status.
+#
+# EVERY metric is a descriptive measurement. `predictive_status` now carries the
+# Phase 3 PERSISTENCE result (see reports/phase3_report.md and the evidence in
+# config/metrics_phase3_status.yaml):
+#   VALIDATED_PERSISTENCE      out-of-sample persistence beyond simple baselines at
+#                              BOTH multi-game horizons (does NOT mean it improves
+#                              matchup prediction -- a separate, later question)
+#   NO_INCREMENTAL_PERSISTENCE evaluable, does not beat league-mean / prior-season
+#   UNVALIDATED                not evaluable (volume / external metrics) OR ambiguous
+#   (INSUFFICIENT_DATA         evaluated but n below threshold -- none in this run)
+# A metric being intuitive, reliable, or rank-persistent does NOT make it predictive.
+#
+# taxonomy: core_efficiency | volume | process_style | outcome_noise | availability
+# proposed_role: descriptive | availability_adjustment | candidate_signal
+#   ("candidate_signal" = worth testing in Phase 3; it is NOT a claim of signal.)
+# direction: higher_better | lower_better | neutral
+# grain: player | team
+#
+# Play-universe rules and flag definitions live in src/matchup/metrics/plays.py
+# and are summarised under `play_universe` below.
+
+schema_version: 1
+status: populated
+
+thresholds:
+  explosive_pass_yards: 20        # completed pass, yards_gained >= 20. CHOICE (alt: 15, 16, air-yards>=20).
+  explosive_rush_yards: 10        # designed rush, yards_gained >= 10. CHOICE (alt: 12, 15).
+  min_dropbacks_game: 10
+  min_carries_game: 5
+  min_targets_game: 2
+  min_dropbacks_season_ref: 200   # QB eligibility for the league-reference distribution
+  min_carries_season_ref: 50
+  min_targets_season_ref: 30
+  min_team_plays_season_ref: 200
+
+play_universe:
+  offensive_play: "(nflfastR pass==1 OR rush==1) AND two_point_attempt==0"
+  qb_dropback:    "qb_dropback==1 AND two_point_attempt==0  (throws + sacks + scrambles)"
+  pass_throw:     "(complete_pass==1 OR incomplete_pass==1 OR interception==1) AND two_point_attempt==0 AND qb_spike==0"
+  designed_rush:  "rush==1 AND qb_kneel==0 AND two_point_attempt==0  (excludes scrambles)"
+  early_down:     "down IN (1, 2)"
+  excluded_everywhere: [kneel_downs, spikes, two_point_conversions, "plays with null EPA"]
+  epa_coverage:   "every offensive_play and every qb_dropback has non-null EPA (verified 2024: 0 nulls)"
+  cpoe_coverage:  "cpoe defined on ~95% of pass_throws (2024); CPOE metrics use the attempts-with-CPOE denominator (decision DE)"
+
+windows: [season_to_date, trailing_3, trailing_5, prior_season]
+window_rules:
+  - "rolling windows operate on the entity's GAME SEQUENCE (kickoff order), never week arithmetic"
+  - "a bye is the absence of a game row; trailing windows span it, season_to_date is unaffected"
+  - "player game sequence = games in which the player recorded >=1 eligible opportunity"
+  - "team game sequence = the team's full schedule (from the Phase 1 team_game_sequence)"
+
+normalization:
+  method: [zscore, percentile_rank, league_relative]
+  reference: "the 3 most recently COMPLETED seasons as of the prediction kickoff (decision DG)"
+  league_relative_mode: "diff for metrics that cross zero (EPA, CPOE, rates); ratio otherwise"
+  never: [current_incomplete_season, future_seasons, "future games of the current season"]
+  not_fitted_in_phase2: [empirical_bayes_shrinkage_k, predictive_weights, optimized_combinations]
+
+# ------------------------------------------------------------------------------
+metrics:
+
+  # ============================== QUARTERBACK (grain: player, source: pbp) =====
+  - {name: qb.epa_per_dropback, family: qb, taxonomy: core_efficiency, source: pbp,
+     formula: "sum(epa over dropbacks) / count(dropbacks)",
+     numerator: "sum(epa) where is_dropback", denominator: "count(is_dropback)",
+     eligible: "qb_dropback==1 & two_point_attempt==0", excluded: "2pt, spikes, kneels",
+     sacks: included, scrambles: included, spikes: excluded, kneeldowns: excluded,
+     null_handling: "EPA never null on dropbacks", min_sample: "min_dropbacks_game / min_dropbacks_season_ref",
+     direction: higher_better, earliest_valid_season: 1999, grain: player,
+     proposed_role: candidate_signal, predictive_status: NO_INCREMENTAL_PERSISTENCE}
+
+  - {name: qb.dropback_success_rate, family: qb, taxonomy: core_efficiency, source: pbp,
+     formula: "mean(success) over dropbacks", numerator: "sum(success) where is_dropback",
+     denominator: "count(is_dropback)", eligible: "dropbacks", excluded: "2pt/spike/kneel",
+     sacks: included, scrambles: included, null_handling: "success = 1[EPA>0], never null on dropbacks",
+     direction: higher_better, earliest_valid_season: 1999, grain: player,
+     proposed_role: candidate_signal, predictive_status: NO_INCREMENTAL_PERSISTENCE}
+
+  - {name: qb.cpoe, family: qb, taxonomy: process_style, source: pbp,
+     formula: "sum(cpoe) / count(pass_throws where cpoe is not null)",
+     numerator: "sum(cpoe) where has_cpoe", denominator: "count(has_cpoe)  [decision DE]",
+     eligible: "pass_throw & cpoe not null", excluded: "sacks, scrambles, spikes, 2pt, throws where cpoe undefined (~5%)",
+     null_handling: "throws with null cpoe are dropped from BOTH numerator and denominator; coverage reported",
+     companion_fields: [cpoe_attempt_count, cpoe_coverage_fraction],
+     direction: higher_better, earliest_valid_season: 2006, grain: player,
+     proposed_role: candidate_signal, predictive_status: NO_INCREMENTAL_PERSISTENCE}
+
+  - {name: qb.cpoe_coverage_fraction, family: qb, taxonomy: availability, source: pbp,
+     formula: "count(has_cpoe) / count(pass_throws)", direction: neutral,
+     earliest_valid_season: 2006, grain: player, proposed_role: availability_adjustment,
+     predictive_status: UNVALIDATED, note: "quality flag for qb.cpoe; low coverage => noisy CPOE"}
+
+  - {name: qb.sack_rate, family: qb, taxonomy: core_efficiency, source: pbp,
+     formula: "count(sacks) / count(dropbacks)", numerator: "count(is_sack)", denominator: "count(is_dropback)",
+     direction: lower_better, earliest_valid_season: 1999, grain: player,
+     note: "joint QB+OL+scheme outcome; attributed to QB here only descriptively",
+     proposed_role: candidate_signal, predictive_status: NO_INCREMENTAL_PERSISTENCE}
+
+  - {name: qb.yards_per_attempt, family: qb, taxonomy: core_efficiency, source: pbp,
+     formula: "sum(passing_yards over throws) / count(throws)",
+     numerator: "sum(passing_yards) where is_pass_throw", denominator: "count(is_pass_throw)",
+     excluded: "sacks (not attempts), scrambles, spikes, 2pt", direction: higher_better,
+     earliest_valid_season: 1999, grain: player, proposed_role: candidate_signal, predictive_status: NO_INCREMENTAL_PERSISTENCE}
+
+  - {name: qb.completion_pct, family: qb, taxonomy: core_efficiency, source: pbp,
+     formula: "completions / throws", numerator: "count(is_pass_throw & complete_pass==1)",
+     denominator: "count(is_pass_throw)", direction: higher_better, earliest_valid_season: 1999,
+     grain: player, proposed_role: descriptive, predictive_status: NO_INCREMENTAL_PERSISTENCE}
+
+  - {name: qb.adot, family: qb, taxonomy: process_style, source: pbp,
+     formula: "sum(air_yards over throws) / count(throws)", direction: neutral,
+     earliest_valid_season: 2006, grain: player, proposed_role: descriptive, predictive_status: NO_INCREMENTAL_PERSISTENCE}
+
+  - {name: qb.interception_rate, family: qb, taxonomy: outcome_noise, source: pbp,
+     formula: "interceptions / throws", direction: lower_better, earliest_valid_season: 1999,
+     grain: player, proposed_role: descriptive, predictive_status: NO_INCREMENTAL_PERSISTENCE,
+     note: "low week-to-week reliability (odd/even pearson ~0.10)"}
+
+  - {name: qb.explosive_pass_rate, family: qb, taxonomy: outcome_noise, source: pbp,
+     formula: "count(completed pass, yards_gained >= explosive_pass_yards) / count(throws)",
+     direction: higher_better, earliest_valid_season: 1999, grain: player,
+     proposed_role: descriptive, predictive_status: NO_INCREMENTAL_PERSISTENCE, note: "threshold is a config choice"}
+
+  - {name: qb.ngs_avg_time_to_throw, family: qb, taxonomy: process_style, source: ngs_passing,
+     formula: "NGS weekly avg_time_to_throw (published)", direction: neutral,
+     earliest_valid_season: 2016, grain: player, proposed_role: descriptive, predictive_status: UNVALIDATED,
+     note: "NGS min-attempt threshold => missing for low-volume QBs (not missing-at-random)"}
+  - {name: qb.ngs_aggressiveness, family: qb, taxonomy: process_style, source: ngs_passing,
+     formula: "NGS weekly aggressiveness %% (throws into tight windows)", direction: neutral,
+     earliest_valid_season: 2016, grain: player, proposed_role: descriptive, predictive_status: UNVALIDATED}
+  - {name: qb.ngs_cpoe, family: qb, taxonomy: process_style, source: ngs_passing,
+     formula: "NGS completion_percentage_above_expectation (their own model)", direction: higher_better,
+     earliest_valid_season: 2016, grain: player, proposed_role: descriptive, predictive_status: UNVALIDATED,
+     note: "distinct model from nflfastR cpoe; kept for comparison, not combined"}
+
+  # ============================== RUNNING BACK (grain: player, source: pbp) ====
+  - {name: rb.rush_epa_per_att, family: rb, taxonomy: core_efficiency, source: pbp,
+     formula: "sum(epa over designed rushes) / count(designed rushes)",
+     numerator: "sum(epa) where is_designed_rush", denominator: "count(is_designed_rush)",
+     eligible: "rush==1 & qb_kneel==0 & 2pt==0", excluded: "QB scrambles, kneels",
+     direction: higher_better, earliest_valid_season: 1999, grain: player,
+     proposed_role: candidate_signal, predictive_status: NO_INCREMENTAL_PERSISTENCE,
+     note: "heavily blocking/scheme-entangled at RB level"}
+  - {name: rb.rush_success_rate, family: rb, taxonomy: core_efficiency, source: pbp,
+     formula: "mean(success) over designed rushes", direction: higher_better,
+     earliest_valid_season: 1999, grain: player, proposed_role: candidate_signal, predictive_status: NO_INCREMENTAL_PERSISTENCE}
+  - {name: rb.yards_per_carry, family: rb, taxonomy: core_efficiency, source: pbp,
+     formula: "sum(rushing_yards) / count(designed rushes)", direction: higher_better,
+     earliest_valid_season: 1999, grain: player, proposed_role: descriptive, predictive_status: NO_INCREMENTAL_PERSISTENCE,
+     note: "known to be noisy / tail-driven"}
+  - {name: rb.explosive_rush_rate, family: rb, taxonomy: outcome_noise, source: pbp,
+     formula: "count(designed rush, yards_gained >= explosive_rush_yards) / carries",
+     direction: higher_better, earliest_valid_season: 1999, grain: player,
+     proposed_role: descriptive, predictive_status: NO_INCREMENTAL_PERSISTENCE}
+  - {name: rb.fumble_lost_rate, family: rb, taxonomy: outcome_noise, source: pbp,
+     formula: "fumbles_lost / carries", direction: lower_better, earliest_valid_season: 1999,
+     grain: player, proposed_role: descriptive, predictive_status: NO_INCREMENTAL_PERSISTENCE, note: "very low frequency"}
+  - {name: rb.ngs_ryoe_per_att, family: rb, taxonomy: core_efficiency, source: ngs_rushing,
+     formula: "NGS rush_yards_over_expected_per_att (published)", direction: higher_better,
+     earliest_valid_season: 2018, grain: player, proposed_role: candidate_signal, predictive_status: UNVALIDATED}
+
+  # ============================== WR / TE (grain: player, source: pbp + player_stats) =
+  - {name: wr.targets, family: wr, taxonomy: volume, source: pbp,
+     formula: "count(pass_throw targeting the receiver)", direction: neutral,
+     earliest_valid_season: 1999, grain: player, proposed_role: availability_adjustment, predictive_status: UNVALIDATED}
+  - {name: wr.catch_rate, family: wr, taxonomy: core_efficiency, source: pbp,
+     formula: "receptions / targets", direction: higher_better, earliest_valid_season: 1999,
+     grain: player, proposed_role: descriptive, predictive_status: NO_INCREMENTAL_PERSISTENCE, note: "aDOT-confounded"}
+  - {name: wr.yards_per_target, family: wr, taxonomy: core_efficiency, source: pbp,
+     formula: "sum(receiving_yards) / targets", direction: higher_better, earliest_valid_season: 1999,
+     grain: player, proposed_role: candidate_signal, predictive_status: NO_INCREMENTAL_PERSISTENCE}
+  - {name: wr.epa_per_target, family: wr, taxonomy: core_efficiency, source: pbp,
+     formula: "sum(epa over targets) / targets", direction: higher_better, earliest_valid_season: 1999,
+     grain: player, proposed_role: descriptive, predictive_status: NO_INCREMENTAL_PERSISTENCE,
+     note: "QB/scheme-entangled; descriptive only"}
+  - {name: wr.target_success_rate, family: wr, taxonomy: core_efficiency, source: pbp,
+     formula: "mean(success) over targets", direction: higher_better, earliest_valid_season: 1999,
+     grain: player, proposed_role: descriptive, predictive_status: NO_INCREMENTAL_PERSISTENCE}
+  - {name: wr.adot, family: wr, taxonomy: process_style, source: pbp,
+     formula: "sum(air_yards over targets) / targets", direction: neutral, earliest_valid_season: 2006,
+     grain: player, proposed_role: descriptive, predictive_status: UNVALIDATED}
+  - {name: wr.explosive_rec_rate, family: wr, taxonomy: outcome_noise, source: pbp,
+     formula: "count(completed target, yards_gained >= explosive_pass_yards) / targets",
+     direction: higher_better, earliest_valid_season: 1999, grain: player,
+     proposed_role: descriptive, predictive_status: NO_INCREMENTAL_PERSISTENCE}
+  - {name: wr.target_share, family: wr, taxonomy: volume, source: player_stats,
+     formula: "nflverse player_stats.target_share (team targets while on field not available => team targets)",
+     direction: higher_better, earliest_valid_season: 1999, grain: player,
+     proposed_role: availability_adjustment, predictive_status: UNVALIDATED}
+  - {name: wr.air_yards_share, family: wr, taxonomy: volume, source: player_stats,
+     formula: "nflverse player_stats.air_yards_share", direction: higher_better,
+     earliest_valid_season: 2006, grain: player, proposed_role: availability_adjustment, predictive_status: UNVALIDATED}
+  - {name: wr.wopr, family: wr, taxonomy: volume, source: player_stats,
+     formula: "nflverse player_stats.wopr = 1.5*target_share + 0.7*air_yards_share",
+     direction: higher_better, earliest_valid_season: 2006, grain: player,
+     proposed_role: availability_adjustment, predictive_status: UNVALIDATED}
+  - {name: wr.ngs_avg_separation, family: wr, taxonomy: process_style, source: ngs_receiving,
+     formula: "NGS weekly avg_separation (yds at catch/incompletion)", direction: higher_better,
+     earliest_valid_season: 2016, grain: player, proposed_role: descriptive, predictive_status: UNVALIDATED}
+  - {name: wr.ngs_yac_above_expectation, family: wr, taxonomy: core_efficiency, source: ngs_receiving,
+     formula: "NGS weekly avg_yac_above_expectation", direction: higher_better,
+     earliest_valid_season: 2016, grain: player, proposed_role: descriptive, predictive_status: UNVALIDATED}
+
+  # ============================== TEAM OFFENSE (grain: team, source: pbp) ======
+  - {name: team_offense.epa_per_play, family: team_offense, taxonomy: core_efficiency, source: pbp,
+     formula: "sum(epa over offensive plays) / count(offensive plays)",
+     numerator: "sum(epa) where off_play & posteam==team", denominator: "count(off_play)",
+     eligible: "(pass|rush) & 2pt==0", excluded: "kneels, spikes, ST, no-plays",
+     direction: higher_better, earliest_valid_season: 1999, grain: team,
+     proposed_role: candidate_signal, predictive_status: VALIDATED_PERSISTENCE}
+  - {name: team_offense.success_rate, family: team_offense, taxonomy: core_efficiency, source: pbp,
+     formula: "mean(success) over offensive plays", direction: higher_better,
+     earliest_valid_season: 1999, grain: team, proposed_role: candidate_signal, predictive_status: VALIDATED_PERSISTENCE}
+  - {name: team_offense.pass_epa_per_dropback, family: team_offense, taxonomy: core_efficiency, source: pbp,
+     formula: "sum(epa over dropbacks) / count(dropbacks)", direction: higher_better,
+     earliest_valid_season: 1999, grain: team, proposed_role: candidate_signal, predictive_status: UNVALIDATED}
+  - {name: team_offense.rush_epa_per_play, family: team_offense, taxonomy: core_efficiency, source: pbp,
+     formula: "sum(epa over designed rushes) / count(designed rushes)", direction: higher_better,
+     earliest_valid_season: 1999, grain: team, proposed_role: candidate_signal, predictive_status: NO_INCREMENTAL_PERSISTENCE}
+  - {name: team_offense.early_down_epa_per_play, family: team_offense, taxonomy: core_efficiency, source: pbp,
+     formula: "sum(epa) / count(plays) restricted to down in (1,2) & off_play",
+     direction: higher_better, earliest_valid_season: 1999, grain: team,
+     proposed_role: candidate_signal, predictive_status: UNVALIDATED}
+  - {name: team_offense.proe, family: team_offense, taxonomy: process_style, source: pbp,
+     formula: "mean(is_dropback - xpass) over plays where xpass is not null",
+     direction: neutral, earliest_valid_season: 2006, grain: team,
+     proposed_role: descriptive, predictive_status: VALIDATED_PERSISTENCE,
+     note: "pass rate over expected; a tendency, not a quality metric; highly stable (odd/even ~0.76)"}
+  - {name: team_offense.explosive_pass_rate, family: team_offense, taxonomy: outcome_noise, source: pbp,
+     formula: "count(explosive pass) / count(dropbacks)", direction: higher_better,
+     earliest_valid_season: 1999, grain: team, proposed_role: descriptive, predictive_status: NO_INCREMENTAL_PERSISTENCE}
+  - {name: team_offense.explosive_rush_rate, family: team_offense, taxonomy: outcome_noise, source: pbp,
+     formula: "count(explosive rush) / count(designed rushes)", direction: higher_better,
+     earliest_valid_season: 1999, grain: team, proposed_role: descriptive, predictive_status: NO_INCREMENTAL_PERSISTENCE}
+  - {name: team_offense.plays, family: team_offense, taxonomy: volume, source: pbp,
+     formula: "count(off_play) per game", direction: neutral, earliest_valid_season: 1999, grain: team,
+     proposed_role: descriptive, predictive_status: UNVALIDATED}
+
+  # ============================== TEAM DEFENSE (grain: team, 'allowed' framing) =
+  - {name: team_defense.epa_per_play, family: team_defense, taxonomy: core_efficiency, source: pbp,
+     formula: "sum(epa over opponent offensive plays) / count(those plays), grouped by defteam",
+     direction: lower_better, earliest_valid_season: 1999, grain: team,
+     proposed_role: candidate_signal, predictive_status: NO_INCREMENTAL_PERSISTENCE}
+  - {name: team_defense.success_rate, family: team_defense, taxonomy: core_efficiency, source: pbp,
+     formula: "mean(success) over opponent offensive plays", direction: lower_better,
+     earliest_valid_season: 1999, grain: team, proposed_role: candidate_signal, predictive_status: NO_INCREMENTAL_PERSISTENCE}
+  - {name: team_defense.pass_epa_per_dropback, family: team_defense, taxonomy: core_efficiency, source: pbp,
+     formula: "sum(epa over opponent dropbacks) / count(opponent dropbacks)", direction: lower_better,
+     earliest_valid_season: 1999, grain: team, proposed_role: candidate_signal, predictive_status: NO_INCREMENTAL_PERSISTENCE}
+  - {name: team_defense.rush_epa_per_play, family: team_defense, taxonomy: core_efficiency, source: pbp,
+     formula: "sum(epa over opponent designed rushes) / count(opponent designed rushes)",
+     direction: lower_better, earliest_valid_season: 1999, grain: team,
+     proposed_role: candidate_signal, predictive_status: NO_INCREMENTAL_PERSISTENCE}
+  - {name: team_defense.early_down_epa_per_play, family: team_defense, taxonomy: core_efficiency, source: pbp,
+     formula: "opponent early-down EPA/play", direction: lower_better, earliest_valid_season: 1999,
+     grain: team, proposed_role: candidate_signal, predictive_status: NO_INCREMENTAL_PERSISTENCE}
+  - {name: team_defense.explosive_pass_rate, family: team_defense, taxonomy: outcome_noise, source: pbp,
+     formula: "opponent explosive pass rate", direction: lower_better, earliest_valid_season: 1999,
+     grain: team, proposed_role: descriptive, predictive_status: NO_INCREMENTAL_PERSISTENCE}
+  - {name: team_defense.explosive_rush_rate, family: team_defense, taxonomy: outcome_noise, source: pbp,
+     formula: "opponent explosive rush rate", direction: lower_better, earliest_valid_season: 1999,
+     grain: team, proposed_role: descriptive, predictive_status: NO_INCREMENTAL_PERSISTENCE}
+
+  # ============================== PASS PROTECTION (team-derived; decision #7) ==
+  - {name: pass_protection.sack_rate_allowed, family: pass_protection, taxonomy: core_efficiency, source: pbp,
+     formula: "count(sacks) / count(dropbacks), grouped by posteam",
+     direction: lower_better, earliest_valid_season: 1999, grain: team,
+     proposed_role: candidate_signal, predictive_status: UNVALIDATED,
+     note: "joint OL+QB+scheme; NOT a lineman rating"}
+  - {name: pass_protection.qb_hit_rate_allowed, family: pass_protection, taxonomy: core_efficiency, source: pbp,
+     formula: "sum(qb_hit over dropbacks) / count(dropbacks), grouped by posteam",
+     direction: lower_better, earliest_valid_season: 2006, grain: team,
+     proposed_role: candidate_signal, predictive_status: UNVALIDATED}
+  - {name: pass_protection.rush_stuffed_rate_approx, family: pass_protection, taxonomy: process_style, source: pbp,
+     formula: "count(designed rush with yards_gained <= 0) / count(designed rushes)",
+     direction: lower_better, earliest_valid_season: 1999, grain: team,
+     proposed_role: descriptive, predictive_status: NO_INCREMENTAL_PERSISTENCE,
+     note: "APPROXIMATE run-block indicator; no true blown-block / yards-before-contact data available for free"}
+
+  # ============================== PASS RUSH (team, source pbp; PFR join-through) =
+  - {name: pass_rush.sack_rate_generated, family: pass_rush, taxonomy: core_efficiency, source: pbp,
+     formula: "count(sacks) / count(opponent dropbacks), grouped by defteam",
+     direction: higher_better, earliest_valid_season: 1999, grain: team,
+     proposed_role: candidate_signal, predictive_status: NO_INCREMENTAL_PERSISTENCE}
+  - {name: pass_rush.qb_hit_rate_generated, family: pass_rush, taxonomy: core_efficiency, source: pbp,
+     formula: "sum(qb_hit over opponent dropbacks) / count(opponent dropbacks), grouped by defteam",
+     direction: higher_better, earliest_valid_season: 2006, grain: team,
+     proposed_role: candidate_signal, predictive_status: NO_INCREMENTAL_PERSISTENCE}
+  - {name: pass_rush.pfr_pressure_rate, family: pass_rush, taxonomy: core_efficiency, source: pfr_def,
+     formula: "PFR def_pressures aggregated to team-week / opponent dropbacks (join-through)",
+     direction: higher_better, earliest_valid_season: 2018, grain: team,
+     proposed_role: candidate_signal, predictive_status: UNVALIDATED,
+     note: "single-source charting; 2018 floor"}
+
+  # ============================== DL / DEF PLAYER PFR (join-through, 2018+) ====
+  - {name: pfr_def.missed_tackle_pct, family: pfr_def, taxonomy: outcome_noise, source: pfr_def,
+     formula: "PFR def_missed_tackle_pct (published, player-week)", direction: lower_better,
+     earliest_valid_season: 2018, grain: player, proposed_role: descriptive, predictive_status: UNVALIDATED}
+  - {name: pfr_def.yards_allowed_per_target, family: pfr_def, taxonomy: core_efficiency, source: pfr_def,
+     formula: "PFR def_yards_allowed / def_targets (published)", direction: lower_better,
+     earliest_valid_season: 2018, grain: player, proposed_role: descriptive, predictive_status: UNVALIDATED,
+     note: "charting attribution noise; garbage time; scheme effects"}
+
+  # ============================== QB PROTECTION PFR (join-through, 2018+) ======
+  - {name: pfr_pass.pressure_rate_faced, family: qb, taxonomy: process_style, source: pfr_pass,
+     formula: "PFR times_pressured_pct (published, QB-week)", direction: lower_better,
+     earliest_valid_season: 2018, grain: player, proposed_role: descriptive, predictive_status: UNVALIDATED}
+
+  # ============================== SPECIAL TEAMS (grain: team, source: pbp) =====
+  - {name: special_teams.fg_pct, family: special_teams, taxonomy: core_efficiency, source: pbp,
+     formula: "count(field_goal_result=='made') / count(field_goal_attempt==1)",
+     direction: higher_better, earliest_valid_season: 1999, grain: team,
+     proposed_role: descriptive, predictive_status: NO_INCREMENTAL_PERSISTENCE,
+     note: "not distance-adjusted in Phase 2"}
+  - {name: special_teams.st_epa_per_play, family: special_teams, taxonomy: core_efficiency, source: pbp,
+     formula: "sum(epa) / count(plays) over special_teams_play==1 for the team",
+     direction: higher_better, earliest_valid_season: 1999, grain: team,
+     proposed_role: descriptive, predictive_status: NO_INCREMENTAL_PERSISTENCE}
+
+# ------------------------------------------------------------------------------
+# Deferred / rejected in Phase 2 (documented, not implemented)
+deferred_metrics:
+  - {name: "yards per route run / targets per route run", reason: "requires participation.route (POST_SEASON_ONLY / sparse pre-2023)"}
+  - {name: "coverage scheme rates (man/zone) for/against", reason: "participation.defense_coverage_type not live-safe / 0% pre-2018"}
+  - {name: "OL run-block: yards before contact, blown blocks", reason: "no free source; only the approximate stuffed-rate indicator is implemented"}
+  - {name: "individual OL / LB / DB ratings", reason: "decision #7 -- team-derived only"}
+  - {name: "EPA when pressured vs clean (QB)", reason: "needs FTN (2022+) or participation; small samples; deferred"}
+  - {name: "red zone / third down / third-and-long efficiency", reason: "small-sample situational splits; deferred to later phase if they earn it"}
+  - {name: "distance-adjusted FG / kicker leg", reason: "deferred to the score layer (Phase 6+)"}
+  - {name: "ESPN Total QBR", reason: "no load_espn_qbr in nflreadpy 0.1.5 (Phase 0)"}

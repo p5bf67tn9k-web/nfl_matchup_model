@@ -1,0 +1,14 @@
+matchup,status,resolved,evidence
+pass_game_epa,UNIT_ONLY,true,H2 int_skill=-0.001[-0.003] M3vM1=0.002[-0.001] M1vL=0.060[0.041] | H4 int_skill=-0.000[-0.001] M3vM1=-0.001[-0.002] M1vL=0.093[0.062]
+pass_game_success,UNIT_ONLY,true,H2 int_skill=-0.000[-0.001] M3vM1=0.002[-0.001] M1vL=0.067[0.046] | H4 int_skill=-0.001[-0.002] M3vM1=-0.001[-0.003] M1vL=0.099[0.066]
+rush_game_epa,UNVALIDATED,false,dropped: off[team_offense.rush_epa_per_play]=SHRINKAGE_ADDS_VALUE; def[team_defense.rush_epa_per_play]=NOT_IN_PHASE4_UNIVERSE
+rush_game_success,UNIT_ONLY,true,H2 int_skill=0.000[-0.001] M3vM1=-0.002[-0.006] M1vL=0.031[0.016] | H4 int_skill=0.001[-0.002] M3vM1=-0.002[-0.003] M1vL=0.051[0.024]
+overall_epa,UNIT_ONLY,true,H2 int_skill=-0.002[-0.004] M3vM1=0.004[0.000] M1vL=0.084[0.060] | H4 int_skill=-0.001[-0.002] M3vM1=-0.001[-0.002] M1vL=0.128[0.091]
+overall_success,UNIT_ONLY,true,H2 int_skill=-0.000[-0.002] M3vM1=0.001[-0.002] M1vL=0.091[0.064] | H4 int_skill=-0.000[-0.004] M3vM1=-0.002[-0.004] M1vL=0.133[0.095]
+early_down_epa,UNIT_ONLY,true,H2 int_skill=-0.000[-0.001] M3vM1=0.002[-0.001] M1vL=0.051[0.034] | H4 int_skill=-0.000[-0.001] M3vM1=-0.002[-0.003] M1vL=0.080[0.053]
+explosive_pass,UNVALIDATED,false,dropped: off[team_offense.explosive_pass_rate]=SHRINKAGE_ADDS_VALUE; def[team_defense.explosive_pass_rate]=NOT_IN_PHASE4_UNIVERSE
+explosive_rush,UNVALIDATED,false,dropped: off[team_offense.explosive_rush_rate]=NOT_IN_PHASE4_UNIVERSE; def[team_defense.explosive_rush_rate]=SHRINKAGE_ADDS_VALUE
+protection_vs_rush_sack,UNVALIDATED,false,dropped: off[pass_protection.sack_rate_allowed]=SHRINKAGE_ADDS_VALUE; def[pass_rush.sack_rate_generated]=NOT_IN_PHASE4_UNIVERSE
+protection_vs_rush_hit,UNIT_ONLY,true,H2 int_skill=0.000[-0.001] M3vM1=0.005[0.002] M1vL=0.084[0.059] | H4 int_skill=-0.001[-0.002] M3vM1=0.001[-0.001] M1vL=0.125[0.087]
+qb_vs_pass_defense_epa,UNIT_ONLY,true,H2 int_skill=0.000[-0.001] M3vM1=0.001[-0.002] M1vL=0.053[0.036] | H4 int_skill=-0.000[-0.001] M3vM1=-0.002[-0.003] M1vL=0.088[0.057]
+qb_vs_pass_defense_success,UNIT_ONLY,true,H2 int_skill=-0.001[-0.002] M3vM1=0.001[-0.002] M1vL=0.070[0.048] | H4 int_skill=-0.000[-0.002] M3vM1=-0.002[-0.003] M1vL=0.107[0.072]

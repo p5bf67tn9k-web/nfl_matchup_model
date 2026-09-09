@@ -1,0 +1,178 @@
+# Verified nflverse data-source registry (Phase 0 audit, run 2026-09-08, nflreadpy 0.1.5)
+# status: VERIFIED = loaded and profiled this run.
+# as_of_anchor: how we determine when a row's information became publicly known.
+#   game_calendar  -> inferred from schedule kickoff (+ publish lag); NO timestamp in the data itself
+#   row_timestamp  -> a real per-row timestamp column exists
+#   schedule       -> the schedule itself (known months in advance)
+
+meta:
+  run_date: "2026-09-08"
+  nflreadpy_version: "0.1.5"
+  core_era_start: 2016          # decision #1
+  baseline_era_start: 2006      # earlier data only for stable league baselines, flagged
+  gametime_timezone: "America/New_York"   # verified via pbp start_time vs time_of_day (UTC) cross-check
+  current_season_reported: 2025 # get_current_season() as of run date; 2026 data not yet published
+
+sources:
+
+  pbp:
+    fn: load_pbp
+    status: VERIFIED
+    season_min: 1999
+    core_metrics_from: 2016
+    grain: play
+    join_keys: [game_id, play_id]
+    as_of_anchor: game_calendar          # game_date (str) reliable; time_of_day (UTC) 97% populated
+    notes:
+      - "epa / success / qb_epa null on ~1.1% of rows (non-plays)."
+      - "cpoe null on 15-21% of PASS plays (sacks, scrambles, throwaways, spikes)."
+      - "air_yards null on 14-17% of pass plays."
+      - "EPA/CPOE/WP are model outputs fit on full history -> MEASUREMENT ASSUMPTION (decision #2)."
+      - "Schema stable 2016 vs 2025 (372 cols)."
+
+  player_stats_week:
+    fn: load_player_stats
+    kwargs: {summary_level: week}
+    status: VERIFIED
+    season_min: 1999
+    grain: player-week
+    join_keys: [player_id, season, week]
+    as_of_anchor: game_calendar
+    notes: ["Combined offense+defense+kicking since 2025 nflverse release. 150 cols."]
+
+  team_stats_week:
+    fn: load_team_stats
+    kwargs: {summary_level: week}
+    status: VERIFIED
+    season_min: 1999
+    grain: team-week
+    as_of_anchor: game_calendar
+    notes: ["Rebuildable from pbp; convenience only."]
+
+  snap_counts:
+    fn: load_snap_counts
+    status: VERIFIED
+    season_min: 2012
+    grain: player-game
+    join_keys: [game_id, pfr_player_id]
+    as_of_anchor: game_calendar
+    notes:
+      - "0% null on offense/defense/st snaps + pct for sampled seasons (2016/2024/2025)."
+      - "offense_pct is a fraction (1.0 = 100%). Has team + opponent + game_type."
+      - "Primary weighting input for player->unit aggregation."
+      - "Join to gsis via load_players crosswalk (pfr_id ~91% coverage)."
+
+  ngs:
+    fn: load_nextgen_stats
+    kwargs_variants: [{stat_type: passing}, {stat_type: receiving}, {stat_type: rushing}]
+    status: VERIFIED
+    season_min: 2016
+    grain: player-week
+    join_keys: [player_gsis_id, season, week]
+    as_of_anchor: game_calendar
+    notes:
+      - "week == 0 is the SEASON AGGREGATE row -> MUST filter week >= 1 for weekly use."
+      - "~28-33 qualified passers/week: NGS min-attempt thresholds drop low-volume players (selection bias, not missing-at-random)."
+      - "season_type REG/POST; playoff week numbers irregular -> map via schedules."
+      - "passing: avg_time_to_throw, aggressiveness, completion_pct_above_expectation, air-yards metrics."
+      - "receiving: avg_separation, avg_cushion, avg_yac_above_expectation."
+      - "rushing: rush_yards_over_expected, efficiency, pct_attempts_gte_eight_defenders (2018+ for RYOE)."
+
+  pfr_advstats:
+    fn: load_pfr_advstats
+    kwargs_variants: [{stat_type: pass}, {stat_type: rush}, {stat_type: rec}, {stat_type: def}]
+    status: VERIFIED
+    season_min: 2018                      # hard floor confirmed
+    grain: player-week
+    join_keys: [game_id, pfr_player_id]   # nflverse game_id present -> clean join, no date join needed
+    as_of_anchor: game_calendar
+    notes:
+      - "def file: def_targets, def_completions_allowed, def_yards_allowed, def_passer_rating_allowed,"
+      - "         def_pressures, def_sacks, def_missed_tackles, def_missed_tackle_pct, def_adot."
+      - "pass file: times_pressured(_pct), times_blitzed, times_hurried, times_hit, times_sacked, bad_throw_pct, drops."
+      - "Single-source charting (PFR). Any feature using this cannot exist before 2018."
+
+  injuries:
+    fn: load_injuries
+    status: VERIFIED
+    season_min: 2009
+    grain: player-team-week report
+    join_keys: [season, week, team, gsis_id]
+    as_of_anchor: row_timestamp           # date_modified (UTC) -- BUT see notes
+    notes:
+      - "date_modified populated 2010-2024; NULL for 2009 and for 2025 (and expected NULL for 2026 live)."
+      - "When present, date_modified < kickoff for 99.99% of rows (1 of 17,479 in 2022-24) -> reliable as-of."
+      - "FALLBACK for 2025+: use (season,week) report, assume knowable as of Saturday 23:59 ET of game week; validate retroactively vs 2022-24."
+      - "report_status ~40-55% NULL since 2016 (Probable dropped 2016; null = on report but no game-status designation)."
+      - "practice_status well populated (Full / DNP / Limited). Prefer it over report_status for signal."
+
+  depth_charts:
+    fn: load_depth_charts
+    status: VERIFIED_WITH_DISCREPANCY
+    season_min: 2001
+    grain: mixed (see notes)
+    as_of_anchor: mixed
+    notes:
+      - "TWO INCOMPATIBLE FORMATS unioned in one file:"
+      - "  OLD (<=2024): season/week/game_type populated; depth_team, position, depth_position, formation; NO dt. Weekly grain."
+      - "  NEW (>=2025, ESPN): season/week/game_type ALL NULL; dt timestamp (UTC); pos_abb, pos_rank, pos_slot, team. By-date snapshot grain, NOT weekly."
+      - "2025+ rows must be joined to the game calendar by dt (<= kickoff); no week key exists."
+      - "pos_rank (int) replaces depth_position (str) in new format -> different semantics."
+      - "Treat as LIMITED. Cross-check projected starters against schedules.away_qb_name/home_qb_name and rosters_weekly."
+
+  rosters_weekly:
+    fn: load_rosters_weekly
+    status: VERIFIED
+    season_min: 2002
+    grain: player-team-week
+    join_keys: [season, week, gsis_id]
+    as_of_anchor: game_calendar
+    notes: ["status field (ACT/RES/etc). 36 cols. Use for roster membership + basic availability."]
+
+  schedules:
+    fn: load_schedules
+    status: VERIFIED
+    season_min: 1999
+    season_max_available: 2026            # future games present
+    grain: game
+    join_keys: [game_id]
+    as_of_anchor: schedule
+    notes:
+      - "THE GAME CALENDAR. gameday (YYYY-MM-DD str) + gametime (HH:MM, ET) -> build tz-aware kickoff."
+      - "spread_line / total_line 0% null 2016-2025; 59% null for 2026 (not all lines posted). BANNED as model input (project rule); benchmark only."
+      - "away_qb_name / home_qb_name = projected starters, available pre-game (useful for 2026 live)."
+      - "temp / wind 26-36% null (domes + gaps); 100% null for future games."
+      - "Playoff weeks: WC/DIV/CON/SB map to weeks 19-22 (18-game era) -- use game_type, never hardcode week numbers."
+
+  participation:
+    fn: load_participation
+    status: VERIFIED_WITH_DISCREPANCY
+    season_min: 2016
+    grain: play
+    join_keys: [nflverse_game_id, play_id]
+    as_of_anchor: NOT_LIVE_SAFE
+    excluded_from_mvp: true               # decision #11
+    notes:
+      - "All seasons 2016-2025 present in one file (~45-50k plays/season)."
+      - "REGIME BREAK at 2023: 2016-2022 old feed has offense_personnel/box ~76% populated, routes/pressure/coverage only ~38%,"
+      - "  and defense_coverage_type 0% for 2016-2017. 2023+ FTN feed: personnel/box/pass-rushers/was_pressure/route/man-zone ~100%."
+      - "2023+ FTN participation is released ONLY AFTER THE POSTSEASON -> NOT usable for in-season live prediction."
+      - "Architecture doc correction: coverage is NOT 'dead/patchy' -- it is present but sparse pre-2023 and non-live-safe post-2023."
+
+  ftn_charting:
+    fn: load_ftn_charting
+    status: VERIFIED
+    season_min: 2022
+    grain: play
+    join_keys: [nflverse_game_id, play_id]
+    as_of_anchor: game_calendar           # date_pulled timestamp present (0% null)
+    excluded_from_mvp: true               # decision #11
+    notes: ["is_play_action, is_screen_pass, is_rpo, n_pass_rushers, n_offense_backfield. Short history."]
+
+  players:
+    fn: load_players
+    status: VERIFIED
+    grain: player (one row per player)
+    notes:
+      - "ID crosswalk: gsis_id 100%, esb_id 100%, pfr_id 91%, espn_id 67%."
+      - "pfr_id 91% coverage => ~9% of snap_counts / pfr_advstats rows will not join to gsis; document fallback."

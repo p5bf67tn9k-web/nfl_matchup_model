@@ -1,0 +1,101 @@
+{
+  "source": "ngs_receiving",
+  "seasons_requested": [
+    2016,
+    2020,
+    2024,
+    2025
+  ],
+  "n_rows": 5958,
+  "n_cols": 23,
+  "coverage": {
+    "season_min": 2016,
+    "season_max": 2025,
+    "week_min": 0,
+    "week_max": 23,
+    "has_week_zero": true
+  },
+  "rows_per_season": {
+    "2016": 1601,
+    "2020": 1520,
+    "2024": 1435,
+    "2025": 1402
+  },
+  "columns": [
+    "season",
+    "season_type",
+    "week",
+    "player_display_name",
+    "player_position",
+    "team_abbr",
+    "avg_cushion",
+    "avg_separation",
+    "avg_intended_air_yards",
+    "percent_share_of_intended_air_yards",
+    "receptions",
+    "targets",
+    "catch_percentage",
+    "yards",
+    "rec_touchdowns",
+    "avg_yac",
+    "avg_expected_yac",
+    "avg_yac_above_expectation",
+    "player_gsis_id",
+    "player_first_name",
+    "player_last_name",
+    "player_jersey_number",
+    "player_short_name"
+  ],
+  "schema": {
+    "season": "Int32",
+    "season_type": "String",
+    "week": "Int32",
+    "player_display_name": "String",
+    "player_position": "String",
+    "team_abbr": "String",
+    "avg_cushion": "Float64",
+    "avg_separation": "Float64",
+    "avg_intended_air_yards": "Float64",
+    "percent_share_of_intended_air_yards": "Float64",
+    "receptions": "Int32",
+    "targets": "Int32",
+    "catch_percentage": "Float64",
+    "yards": "Int32",
+    "rec_touchdowns": "Int32",
+    "avg_yac": "Float64",
+    "avg_expected_yac": "Float64",
+    "avg_yac_above_expectation": "Float64",
+    "player_gsis_id": "String",
+    "player_first_name": "String",
+    "player_last_name": "String",
+    "player_jersey_number": "Int32",
+    "player_short_name": "String"
+  },
+  "candidate_asof_columns": {},
+  "key_fields": {
+    "player_gsis_id": {
+      "present": true,
+      "null_pct": 0.0
+    },
+    "season": {
+      "present": true,
+      "null_pct": 0.0
+    },
+    "week": {
+      "present": true,
+      "null_pct": 0.0
+    },
+    "avg_separation": {
+      "present": true,
+      "null_pct": 0.0
+    },
+    "avg_cushion": {
+      "present": true,
+      "null_pct": 0.0
+    },
+    "avg_yac_above_expectation": {
+      "present": true,
+      "null_pct": 0.3
+    }
+  }
+}

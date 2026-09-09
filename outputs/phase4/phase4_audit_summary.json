@@ -1,0 +1,34 @@
+{
+  "generated_at": "2026-09-08T22:02:17+00:00",
+  "candidate_universe": {
+    "implemented_n": 42,
+    "approved_but_not_implemented": [],
+    "liberal_rule3_additional_set": [
+      "rb.explosive_rush_rate",
+      "team_offense.explosive_rush_rate",
+      "wr.epa_per_target"
+    ]
+  },
+  "ridge_sanity": {
+    "median_fitted_var_frac_opponent_real": 0.28400000000000003,
+    "median_fitted_var_frac_opponent_permuted": 0.289,
+    "median_opponent_coef_sd_real": 0.046935000000000004,
+    "median_opponent_coef_sd_permuted": 0.04566
+  },
+  "shrinkage_n_sensitivity": {
+    "rows_where_qualitative_conclusion_changes": 0
+  },
+  "shrinkage_k_sensitivity_file": "outputs/phase4/shrinkage_k_sensitivity.csv",
+  "excluded_metrics_shrinkage": {
+    "n_excluded_metrics_tested": 8,
+    "all_still_shrinkage_helps": true
+  },
+  "stage_b_reference_audit": {
+    "post_hoc_reference_selection_found_in_original_phase4": true,
+    "detail": "the original phase4.py chose ref = better of {raw, shrunk} using the OOS primary-cell skill_shrunk_vs_raw > 0 -- a post-hoc selection",
+    "fix_applied": "phase4.py now uses the fixed reference 'shrunk_feature' (the chain layer immediately before opponent adjustment); config updated; re-run",
+    "rows_where_verdict_changes_between_original_and_fixed": 1,
+    "impact": "immaterial -- no Phase 4 conclusion changes"
+  },
+  "all_tests_green_required": 114
+}

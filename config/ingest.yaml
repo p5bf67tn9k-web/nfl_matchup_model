@@ -1,0 +1,33 @@
+# Which nflverse sources the Phase 1 canonical layer materialises, and over which seasons.
+#
+# Season ranges: core model era is 2016+. Seasonal sources start at 2013 so that a
+# 2016 walk-forward prediction has 3 completed prior seasons for league-relative
+# normalization (decision DG). NGS starts 2016, PFR 2018 (hard floors).
+#
+# depth_charts and ftn_charting are deliberately NOT ingested in Phase 1
+# (dropped / deferred). participation IS ingested but tagged POST_SEASON_ONLY.
+
+output_root: data/processed
+cache_root: data/raw/nflreadpy_cache
+
+sources:
+  pbp:            {loader: load_pbp,            seasons: [2013, 2025], partition_by: season}
+  player_stats:   {loader: load_player_stats,   seasons: [2013, 2025], partition_by: season, kwargs: {summary_level: week}}
+  team_stats:     {loader: load_team_stats,     seasons: [2013, 2025], partition_by: season, kwargs: {summary_level: week}}
+  snap_counts:    {loader: load_snap_counts,    seasons: [2013, 2025], partition_by: season}
+  ngs_passing:    {loader: load_nextgen_stats,  seasons: [2016, 2025], partition_by: season, kwargs: {stat_type: passing}}
+  ngs_receiving:  {loader: load_nextgen_stats,  seasons: [2016, 2025], partition_by: season, kwargs: {stat_type: receiving}}
+  ngs_rushing:    {loader: load_nextgen_stats,  seasons: [2016, 2025], partition_by: season, kwargs: {stat_type: rushing}}
+  pfr_pass:       {loader: load_pfr_advstats,   seasons: [2018, 2025], partition_by: season, kwargs: {stat_type: pass, summary_level: week}}
+  pfr_rush:       {loader: load_pfr_advstats,   seasons: [2018, 2025], partition_by: season, kwargs: {stat_type: rush, summary_level: week}}
+  pfr_rec:        {loader: load_pfr_advstats,   seasons: [2018, 2025], partition_by: season, kwargs: {stat_type: rec, summary_level: week}}
+  pfr_def:        {loader: load_pfr_advstats,   seasons: [2018, 2025], partition_by: season, kwargs: {stat_type: def, summary_level: week}}
+  injuries:       {loader: load_injuries,       seasons: [2013, 2025], partition_by: season}
+  rosters_weekly: {loader: load_rosters_weekly, seasons: [2013, 2025], partition_by: season}
+  participation:  {loader: load_participation,  seasons: [2016, 2025], partition_by: season}
+  schedules:      {loader: load_schedules,      seasons: all,          partition_by: season}
+  players:        {loader: load_players,        seasons: none,         partition_by: none}
+
+# Seasons the live pipeline will additionally attempt but expects to be unpublished
+# until in-season data lands (decision DC). Ingest must degrade gracefully, not crash.
+live_seasons_probe: [2026]

@@ -1,0 +1,389 @@
+{
+  "generated_at": "2026-09-08T22:49:22+00:00",
+  "bootstrap_iters": 1000,
+  "seed": 20260908,
+  "n_matchup_definitions": 13,
+  "n_resolved": 9,
+  "dropped": [
+    {
+      "name": "rush_game_epa",
+      "reason": "dropped: off[team_offense.rush_epa_per_play]=SHRINKAGE_ADDS_VALUE; def[team_defense.rush_epa_per_play]=NOT_IN_PHASE4_UNIVERSE"
+    },
+    {
+      "name": "explosive_pass",
+      "reason": "dropped: off[team_offense.explosive_pass_rate]=SHRINKAGE_ADDS_VALUE; def[team_defense.explosive_pass_rate]=NOT_IN_PHASE4_UNIVERSE"
+    },
+    {
+      "name": "explosive_rush",
+      "reason": "dropped: off[team_offense.explosive_rush_rate]=NOT_IN_PHASE4_UNIVERSE; def[team_defense.explosive_rush_rate]=SHRINKAGE_ADDS_VALUE"
+    },
+    {
+      "name": "protection_vs_rush_sack",
+      "reason": "dropped: off[pass_protection.sack_rate_allowed]=SHRINKAGE_ADDS_VALUE; def[pass_rush.sack_rate_generated]=NOT_IN_PHASE4_UNIVERSE"
+    }
+  ],
+  "status_counts": {
+    "UNIT_ONLY": 9,
+    "UNVALIDATED": 4
+  },
+  "n_interaction_adds_value": 0,
+  "fdr": [
+    {
+      "matchup": "early_down_epa",
+      "horizon": 2,
+      "p_one_sided": 0.882,
+      "fdr_significant_q0.10": false
+    },
+    {
+      "matchup": "early_down_epa",
+      "horizon": 4,
+      "p_one_sided": 0.992,
+      "fdr_significant_q0.10": false
+    },
+    {
+      "matchup": "overall_epa",
+      "horizon": 2,
+      "p_one_sided": 1.0,
+      "fdr_significant_q0.10": false
+    },
+    {
+      "matchup": "overall_epa",
+      "horizon": 4,
+      "p_one_sided": 0.746,
+      "fdr_significant_q0.10": false
+    },
+    {
+      "matchup": "overall_success",
+      "horizon": 2,
+      "p_one_sided": 0.786,
+      "fdr_significant_q0.10": false
+    },
+    {
+      "matchup": "overall_success",
+      "horizon": 4,
+      "p_one_sided": 0.604,
+      "fdr_significant_q0.10": false
+    },
+    {
+      "matchup": "pass_game_epa",
+      "horizon": 2,
+      "p_one_sided": 0.986,
+      "fdr_significant_q0.10": false
+    },
+    {
+      "matchup": "pass_game_epa",
+      "horizon": 4,
+      "p_one_sided": 0.735,
+      "fdr_significant_q0.10": false
+    },
+    {
+      "matchup": "pass_game_success",
+      "horizon": 2,
+      "p_one_sided": 0.917,
+      "fdr_significant_q0.10": false
+    },
+    {
+      "matchup": "pass_game_success",
+      "horizon": 4,
+      "p_one_sided": 0.869,
+      "fdr_significant_q0.10": false
+    },
+    {
+      "matchup": "protection_vs_rush_hit",
+      "horizon": 2,
+      "p_one_sided": 0.211,
+      "fdr_significant_q0.10": false
+    },
+    {
+      "matchup": "protection_vs_rush_hit",
+      "horizon": 4,
+      "p_one_sided": 0.855,
+      "fdr_significant_q0.10": false
+    },
+    {
+      "matchup": "qb_vs_pass_defense_epa",
+      "horizon": 2,
+      "p_one_sided": 0.449,
+      "fdr_significant_q0.10": false
+    },
+    {
+      "matchup": "qb_vs_pass_defense_epa",
+      "horizon": 4,
+      "p_one_sided": 0.725,
+      "fdr_significant_q0.10": false
+    },
+    {
+      "matchup": "qb_vs_pass_defense_success",
+      "horizon": 2,
+      "p_one_sided": 0.86,
+      "fdr_significant_q0.10": false
+    },
+    {
+      "matchup": "qb_vs_pass_defense_success",
+      "horizon": 4,
+      "p_one_sided": 0.712,
+      "fdr_significant_q0.10": false
+    },
+    {
+      "matchup": "rush_game_success",
+      "horizon": 2,
+      "p_one_sided": 0.291,
+      "fdr_significant_q0.10": false
+    },
+    {
+      "matchup": "rush_game_success",
+      "horizon": 4,
+      "p_one_sided": 0.304,
+      "fdr_significant_q0.10": false
+    }
+  ],
+  "verdict": "STOP_NO_RELIABLE_MATCHUP_SIGNAL",
+  "config": {
+    "schema_version": 1,
+    "frozen": true,
+    "frozen_note": "pre-registered; do not change on the basis of 2019-2025 results. Implementation bugs are documented and the affected analysis re-run.",
+    "inherits": {
+      "observation_pipeline": "matchup.validation.observations.build_observations (Phase 3), + Phase 4 apply_shrinkage_walkforward",
+      "primary_feature": "shrunk_feature from the CORRECTED Phase 4 pipeline (season_to_date window)",
+      "windows_for_feature": "season_to_date",
+      "horizons": [
+        1,
+        2,
+        4
+      ],
+      "primary_status_horizons": [
+        2,
+        4
+      ],
+      "primary_weeks": [
+        5,
+        18
+      ],
+      "season_phase_buckets": {
+        "early": [
+          1,
+          4
+        ],
+        "wk5_9": [
+          5,
+          9
+        ],
+        "wk10_14": [
+          10,
+          14
+        ],
+        "wk15_18": [
+          15,
+          18
+        ]
+      },
+      "target_eligibility": "Phase 3/4 rules -- per-game min opportunities; require full horizon; same season; never impute missing with zero",
+      "bootstrap": {
+        "method": "multiplier_cluster_exponential",
+        "cluster_by": [
+          "entity_id",
+          "season"
+        ],
+        "iterations": 1000,
+        "ci": "percentile",
+        "ci_level": 0.95,
+        "seed": 20260908
+      }
+    },
+    "observation_history": {
+      "build_target_seasons": [
+        2016,
+        2025
+      ],
+      "game_metrics_from": 2013
+    },
+    "oos_evaluation_seasons": [
+      2019,
+      2025
+    ],
+    "candidate_selection": {
+      "rule": "phase4 shrinkage_status == SHRINKAGE_ADDS_VALUE AND appears in a matchup_definition below",
+      "no_previously_rejected_metrics": true
+    },
+    "matchup_definitions": [
+      {
+        "name": "pass_game_epa",
+        "off_family": "team_offense",
+        "off_metric": "pass_epa_per_dropback",
+        "def_family": "team_defense",
+        "def_metric": "pass_epa_per_dropback",
+        "interpretation": "value of a passing offense's per-dropback efficiency may depend on the opposing defense's ability to suppress it"
+      },
+      {
+        "name": "pass_game_success",
+        "off_family": "team_offense",
+        "off_metric": "pass_success_rate",
+        "def_family": "team_defense",
+        "def_metric": "pass_success_rate",
+        "interpretation": "passing success rate vs defensive passing success-rate allowed"
+      },
+      {
+        "name": "rush_game_epa",
+        "off_family": "team_offense",
+        "off_metric": "rush_epa_per_play",
+        "def_family": "team_defense",
+        "def_metric": "rush_epa_per_play",
+        "interpretation": "rushing efficiency vs run-defence efficiency allowed"
+      },
+      {
+        "name": "rush_game_success",
+        "off_family": "team_offense",
+        "off_metric": "rush_success_rate",
+        "def_family": "team_defense",
+        "def_metric": "rush_success_rate",
+        "interpretation": "rushing success rate vs run-defence success allowed"
+      },
+      {
+        "name": "overall_epa",
+        "off_family": "team_offense",
+        "off_metric": "epa_per_play",
+        "def_family": "team_defense",
+        "def_metric": "epa_per_play",
+        "interpretation": "overall offensive EPA/play vs overall defensive EPA/play allowed"
+      },
+      {
+        "name": "overall_success",
+        "off_family": "team_offense",
+        "off_metric": "success_rate",
+        "def_family": "team_defense",
+        "def_metric": "success_rate",
+        "interpretation": "overall offensive success rate vs defensive success rate allowed"
+      },
+      {
+        "name": "early_down_epa",
+        "off_family": "team_offense",
+        "off_metric": "early_down_epa_per_play",
+        "def_family": "team_defense",
+        "def_metric": "early_down_epa_per_play",
+        "interpretation": "early-down offensive EPA vs early-down defensive EPA allowed"
+      },
+      {
+        "name": "explosive_pass",
+        "off_family": "team_offense",
+        "off_metric": "explosive_pass_rate",
+        "def_family": "team_defense",
+        "def_metric": "explosive_pass_rate",
+        "interpretation": "explosive-pass rate vs explosive-pass rate allowed"
+      },
+      {
+        "name": "explosive_rush",
+        "off_family": "team_offense",
+        "off_metric": "explosive_rush_rate",
+        "def_family": "team_defense",
+        "def_metric": "explosive_rush_rate",
+        "interpretation": "explosive-rush rate vs explosive-rush rate allowed (off is SHRINKAGE_ADDS_VALUE; def is a Phase-3 NOT_RANK_PERSISTENT metric -- flagged)"
+      },
+      {
+        "name": "protection_vs_rush_sack",
+        "off_family": "pass_protection",
+        "off_metric": "sack_rate_allowed",
+        "def_family": "pass_rush",
+        "def_metric": "sack_rate_generated",
+        "interpretation": "sack rate allowed by the protection unit vs sack rate generated by the pass rush"
+      },
+      {
+        "name": "protection_vs_rush_hit",
+        "off_family": "pass_protection",
+        "off_metric": "qb_hit_rate_allowed",
+        "def_family": "pass_rush",
+        "def_metric": "qb_hit_rate_generated",
+        "interpretation": "QB-hit rate allowed vs QB-hit rate generated"
+      },
+      {
+        "name": "qb_vs_pass_defense_epa",
+        "off_family": "qb",
+        "off_metric": "epa_per_dropback",
+        "def_family": "team_defense",
+        "def_metric": "pass_epa_per_dropback",
+        "interpretation": "a QB's per-dropback EPA vs the opposing pass defence's EPA/dropback allowed"
+      },
+      {
+        "name": "qb_vs_pass_defense_success",
+        "off_family": "qb",
+        "off_metric": "dropback_success_rate",
+        "def_family": "team_defense",
+        "def_metric": "pass_success_rate",
+        "interpretation": "a QB's dropback success rate vs pass-defence success-rate allowed"
+      }
+    ],
+    "deferred_matchups": [
+      {
+        "name": "receiving_vs_coverage",
+        "reason": "no defensible separation/coverage-quality mapping in the available data (Phase 0/2); team_offense pass metrics already cover the team-level receiving game"
+      }
+    ],
+    "target_definition": "Team A's realised off_metric over the next `horizon` eligible games starting at the target game (Phase 3 target construction)",
+    "models": {
+      "M0_league_mean": "predict baseline_league (the Phase 3 as-of 3-completed-season league mean of the target metric)",
+      "M1_unit_only": "Y ~ 1 + A",
+      "M2_opp_only": "Y ~ 1 + B",
+      "M3_additive": "Y ~ 1 + A + B",
+      "M4_interaction_centered": "Y ~ 1 + A_c + B_c + A_c*B_c ; A_c = A - mean_A(train), B_c = B - mean_B(train)  [PREFERRED interaction form]",
+      "M4_interaction_raw": "Y ~ 1 + A + B + A*B  [reported alongside; not the status form]"
+    },
+    "relative_features_tested": [
+      "A_minus_B = A - B  (fit as Y ~ 1 + A_minus_B) -- reported as a sensitivity only"
+    ],
+    "scoring_metrics": [
+      "rmse",
+      "mae",
+      "bias",
+      "pearson",
+      "spearman",
+      "skill_vs_league",
+      "skill_vs_unit_only",
+      "skill_vs_additive"
+    ],
+    "primary_comparison": "interaction_skill = 1 - RMSE(M4_interaction_centered) / RMSE(M3_additive)",
+    "negative_controls": {
+      "randomized_opposing_unit": {
+        "method": "within each training fold, permute B across rows (break the A<->B pairing); refit M4; predict on the REAL test rows",
+        "n_permutations": 20,
+        "expectation": "interaction_skill_vs_additive collapses to ~0"
+      },
+      "randomized_matchup_pairing": {
+        "method": "permute B across ALL rows within season (break the true off/def pairing, preserve marginals); full walk-forward",
+        "n_permutations": 20,
+        "expectation": "real interaction_skill >> randomized interaction_skill"
+      },
+      "future_row_poison": "inject a fabricated future game; assert every earlier feature and prediction is byte-identical (Phase 3/4 canary extended)",
+      "do_not_use_for_tuning": true
+    },
+    "multiple_comparison": {
+      "n_tests": "all matchup_definitions x {H2, H4} for the centered interaction",
+      "procedure": "benjamini_hochberg",
+      "fdr_q": 0.1,
+      "p_value": "one-sided bootstrap: fraction of resamples with interaction_skill <= 0"
+    },
+    "status_taxonomy": [
+      "MATCHUP_INTERACTION_ADDS_VALUE",
+      "MATCHUP_ADDITIVE_ONLY",
+      "UNIT_ONLY",
+      "NO_INCREMENTAL_MATCHUP_VALUE",
+      "INSUFFICIENT_DATA",
+      "UNVALIDATED"
+    ],
+    "status_rules": {
+      "insufficient_data_min_n": 300,
+      "economic_floor_interaction_skill": 0.01,
+      "economic_floor_additive_skill": 0.01,
+      "matchup_interaction_adds_value_requires": [
+        "n >= insufficient_data_min_n",
+        "interaction_skill 95% CI lower bound > 0",
+        "interaction_skill point >= economic_floor_interaction_skill",
+        "FDR-significant at q = 0.10",
+        "real interaction_skill exceeds the randomized-matchup-pairing mean by >= economic_floor_interaction_skill"
+      ],
+      "matchup_additive_only_when": "skill(M3 vs M1) CI lo > 0 and point >= economic_floor_additive_skill at both horizons, but interaction fails",
+      "unit_only_when": "skill(M1 vs M0 league) CI lo > 0 at both horizons, but M3 does not beat M1",
+      "no_incremental_matchup_value_when": "M1 does not beat the league mean, or nothing beyond it adds value",
+      "ambiguous_or_one_horizon_only": "UNVALIDATED"
+    },
+    "phase_success_criterion": "Systematic evidence that matchup interactions add reliable OOS predictive value = more than one matchup with MATCHUP_INTERACTION_ADDS_VALUE, stable across seasons and horizons, controls clean. A null result (\"insufficient evidence\") is a valid, useful outcome and must not be optimised away.\n"
+  }
+}

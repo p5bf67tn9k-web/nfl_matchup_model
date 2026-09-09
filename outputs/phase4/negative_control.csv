@@ -1,0 +1,13 @@
+control,family,metric,n,placebo_skill_vs_league_mean,placebo_spearman_mean,real_oppadj_skill_vs_shrunk,randomized_oppadj_skill_vs_shrunk,expectation
+phase3_placebo_on_shrunk,team_offense,epa_per_play,2351,-0.1292775877163051,0.0027386105966862515,,,
+randomized_opponent_labels,team_offense,epa_per_play,2342,,,-0.07018660732666504,-0.07030968525055026,randomized <= real (opponent structure adds nothing real)
+phase3_placebo_on_shrunk,team_defense,epa_per_play,2351,-0.03218950519449659,0.006580499184297736,,,
+randomized_opponent_labels,team_defense,epa_per_play,2342,,,-0.029451921837068795,-0.028567728649349755,randomized <= real (opponent structure adds nothing real)
+phase3_placebo_on_shrunk,qb,epa_per_dropback,1890,-0.08483822029677245,0.004357485479492457,,,
+randomized_opponent_labels,qb,epa_per_dropback,1881,,,-0.026134487921527283,-0.024879553575466673,randomized <= real (opponent structure adds nothing real)
+phase3_placebo_on_shrunk,wr,yards_per_target,10029,-0.03448857543736702,0.0006732215439208734,,,
+randomized_opponent_labels,wr,yards_per_target,10002,,,0.008458183369141503,0.008673314632161588,randomized <= real (opponent structure adds nothing real)
+phase3_placebo_on_shrunk,rb,rush_epa_per_att,3095,-0.03303299890697087,-0.005245242701020633,,,
+randomized_opponent_labels,rb,rush_epa_per_att,3081,,,0.0017749258163375359,0.0007718024799346912,randomized <= real (opponent structure adds nothing real)
+phase3_placebo_on_shrunk,pass_protection,sack_rate_allowed,2350,-0.08242605471445899,-0.0028559344970918647,,,
+randomized_opponent_labels,pass_protection,sack_rate_allowed,2341,,,-0.03903180511439719,-0.03805355502192076,randomized <= real (opponent structure adds nothing real)

@@ -1,0 +1,170 @@
+# =============================================================================
+# PHASE 4 PRE-REGISTERED VALIDATION METHODOLOGY
+# =============================================================================
+# Written and committed BEFORE inspecting any Phase 4 result.
+#
+# TWO SEQUENTIAL research questions (evaluated in order, never combined into one
+# black box):
+#   A - SHRINKAGE:            does regression-to-the-mean shrinkage improve the
+#                             out-of-sample point prediction of future same-unit
+#                             performance, over the RAW feature?
+#   B - OPPONENT ADJUSTMENT:  after shrinkage, does chronological ridge opponent
+#                             adjustment add incremental out-of-sample information?
+#
+# Phase 4 is STILL a UNIT-PERFORMANCE validation phase. It does NOT build matchup
+# interactions, ratings, weights, expected performance, expected score, or any
+# market comparison. The strongest possible Phase 4 conclusion is:
+#   "this measurement, after [shrinkage / opponent adjustment], provides robust
+#    out-of-sample information about future SAME-UNIT performance."
+# That is a prerequisite for the eventual matchup model, not the model itself.
+# =============================================================================
+
+schema_version: 1
+frozen: true
+frozen_note: "pre-registered; do not tune k, alpha, metric selection, or structure against the 2019-2025 evaluation period"
+
+# ---- inherited unchanged from config/phase3_validation.yaml ----------------
+inherits_from_phase3:
+  - target eligibility rules (per_game_min_opportunities, require_full_horizon, same-season-only)
+  - feature windows (season_to_date / trailing_3 / trailing_5 / prior_season) + min-sample bars
+  - horizons [1, 2, 4]; PRIMARY status horizons = [2, 4]; H1 stays a diagnostic
+  - season_phase_buckets (early 1-4, wk5_9, wk10_14, wk15_18); primary weeks 5-18
+  - bootstrap: multiplier cluster (entity_id x season), 1000 iterations, 95% percentile CI
+  - Phase 3 within-season-permutation placebo negative control
+phase3_target_rules_changed: false     # spec section 9 -- no change; documented if ever discovered
+
+# ---- observation history ------------------------------------------------
+# The OOS EVALUATION period is 2019-2025 and is NEVER touched by tuning. Target
+# games from 2016-2018 are built ONLY to give the walk-forward k / alpha
+# selection a real training set for the first evaluation season (2019). This
+# extends history, not target eligibility.
+observation_history:
+  build_target_seasons: [2016, 2025]
+  game_metrics_from: 2013            # so 2016 targets get proper 3-completed-season baselines
+oos_evaluation_seasons: [2019, 2025]
+
+# ---- candidate metric universe (spec sections 2, 18) -----------------
+# SELECTION RULE (frozen): a metric enters Phase 4 iff, in Phase 3, it is
+# RANK_PERSISTENT (Spearman 95% CI lower bound > 0 AND |Spearman| >= 0.15 at BOTH
+# primary horizons) with primary_n_h4 >= 300 -- PLUS the two NGS style-trait
+# metrics named in the Phase 4 spec. NOT_RANK_PERSISTENT metrics are excluded
+# (no documented methodological reason to include essentially-unusable metrics).
+# Inclusion is NOT promotion: every candidate starts UNVALIDATED for both layers.
+candidate_selection:
+  rule: phase3_rank_persistent_plus_named_ngs
+  min_primary_n: 300
+  named_additions: [ngs_passing.avg_time_to_throw, ngs_receiving.avg_separation]
+  excluded: phase3_not_rank_persistent
+  # the resolved list is materialised at run time from outputs/phase3/metric_status.csv
+  # and written verbatim to outputs/phase4/candidate_universe.csv with a per-metric reason.
+
+# ---- STAGE A: shrinkage (spec sections 4-8) ----------------------
+shrinkage:
+  formula: "shrunk = league_mean + w * (raw - league_mean);  w = n / (n + k)"
+  n_definition: feat_n_games          # games in the feature window (comparable across families)
+  league_mean: baseline_league        # Phase 3 baseline A: 3-completed-season entity-season mean
+  k_grid: [1, 2, 4, 8, 12, 16]
+  k_granularity: one_per_metric        # NOT per team / player / position / season; NOT nonlinear
+  k_selection:
+    method: walk_forward_grid
+    training_window: "all observations with target season < OOS season S (includes 2016-2018)"
+    objective: "pooled RMSE(shrunk_k, target) over primary weeks 5-18, horizons 2 and 4"
+    freeze: "chosen k frozen before season S is scored"
+  fallback_k: 8
+  fallback_when_train_obs_below: 500
+
+# ---- STAGE B: opponent adjustment (spec sections 10-13) ----------
+opponent_adjustment:
+  applicable_families: [team_offense, team_defense, pass_protection, pass_rush, qb, rb, wr]
+  not_applicable: [ngs_passing, ngs_receiving]   # not in the per-game pipeline; style traits
+  model: "ridge regression: per-(entity, game) metric ~ entity one-hot + opponent one-hot + home"
+  adjusted_strength: "intercept + entity coefficient (opponent + home effects removed), then centred to mean 0 across entities in the fit"
+  fit_window: "completed games with data_asof < target kickoff, trailing 2 seasons"
+  min_fit_games: 200
+  alpha_grid: [1, 3, 10, 30, 100, 300]
+  alpha_granularity: one_per_family
+  alpha_selection:
+    method: walk_forward_grid
+    training_window: "target seasons 2016-2018 (all strictly before the 2019-2025 evaluation period)"
+    objective: "pooled next-game (H1) RMSE of the opponent-adjusted strength vs actual next-game metric, primary weeks"
+    freeze: "chosen alpha frozen for the entire evaluation period"
+    disclosed_deviation: >
+      alpha is selected ONCE per (family, metric) on 2016-2018 and frozen for all of
+      2019-2025, rather than re-selected before each OOS season, for tractability.
+      Still chosen strictly from pre-evaluation data. The ridge STRENGTHS are still
+      refit walk-forward every (season, week).
+
+# ---- baseline chain (spec sections 8, 13) ------------------------
+baselines_chain:
+  - league_mean
+  - prior_season
+  - raw_trailing3
+  - raw_feature
+  - shrunk_feature
+  - oppadj_raw
+  - oppadj_shrunk
+report_incremental_at_every_step: true
+skill_formula: "1 - RMSE_candidate / RMSE_reference"
+
+# ---- scoring (spec section 14) ---------------------------------
+scoring_metrics: [rmse, mae, bias, spearman, pearson,
+                  skill_vs_league, skill_vs_prior_season, skill_vs_raw_feature]
+primary_decision_metrics: [rmse, mae, skill_vs_league, skill_vs_raw_feature, skill_vs_prior_season]
+
+# ---- normalization (spec section 17) --------------------------
+normalization:
+  keep_phase2_layer: true
+  compare: [raw, normalized, shrunk_raw, shrunk_normalized]
+  note: "z-normalization is an affine transform per prediction date; it does not change rankings and is not itself a source of predictive information (confirmed Phase 3)."
+
+# ---- negative controls (spec section 22) ---------------------
+negative_controls:
+  do_not_use_for_tuning: true
+  placebo:
+    name: phase3_placebo
+    method: "within-season feature permutation (feature and target season-centred), as Phase 3"
+  randomized_opponents:
+    name: randomized_opponent_labels
+    method: "permute opponent identities in the ridge design matrix; the opponent-adjusted feature's advantage over the raw/shrunk feature must vanish"
+    n_permutations: 20
+    seed: 20260908
+
+# ---- hyperparameter discipline (spec sections 19-21) --------
+hyperparameter_rules:
+  - "k and alpha are hyperparameters; selected ONLY inside the historical training window per fold"
+  - "never choose k or alpha from aggregate 2019-2025 results"
+  - "the 2019-2025 OOS evaluation period is untouched by any tuning"
+sensitivity_reported: [by_season, by_season_phase, sensitivity_to_k, sensitivity_to_alpha, sample_size, coverage]
+
+# ---- STATUS TAXONOMY (spec section 25) ----------------------
+# Layer-specific; a metric may carry more than one result.
+status_taxonomy:
+  shrinkage: [SHRINKAGE_ADDS_VALUE, NO_INCREMENTAL_VALUE, INSUFFICIENT_DATA, UNVALIDATED]
+  opponent_adjustment: [OPPONENT_ADJUSTMENT_ADDS_VALUE, NO_INCREMENTAL_VALUE, INSUFFICIENT_DATA, UNVALIDATED, NOT_APPLICABLE]
+  combined: [BOTH_ADD_VALUE, SHRINKAGE_ONLY, OPPONENT_ADJUSTMENT_ONLY, NEITHER, INSUFFICIENT_DATA]
+status_rules:
+  insufficient_data_min_n: 300
+  economic_floor_skill: 0.02          # >= 2% RMSE reduction vs the reference layer
+  adds_value_requires:                 # must hold at BOTH primary horizons
+    - "n >= insufficient_data_min_n"
+    - "skill vs the reference layer's feature: 95% CI lower bound > 0"
+    - "skill vs the reference layer's feature: point estimate >= economic_floor_skill"
+  shrinkage_reference: raw_feature
+  opponent_adjustment_reference: shrunk_feature   # the layer immediately before B in the chain
+  # NOTE (Phase 4.1 audit): the original implementation chose ref = better of
+  # {raw, shrunk} using the OOS primary-cell skill -- a post-hoc selection. Corrected
+  # here to the fixed `shrunk_feature`. The audit showed this changes 1 of 78
+  # (metric, horizon) verdicts and none of the Phase 4 conclusions.
+  ambiguous_or_one_horizon_only: UNVALIDATED
+
+# ---- forbidden (spec sections 3, 27) -----------------------
+forbidden:
+  - matchup_interactions (offense x defense, pass rush x protection, QB x rush, run x run, explosive x explosive)
+  - player_or_unit_ratings
+  - composite_ratings
+  - metric_weights
+  - learned_metric_combinations
+  - expected_performance
+  - expected_score
+  - game_winner_or_margin_prediction
+  - any_market_data
