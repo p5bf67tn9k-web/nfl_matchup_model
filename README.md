@@ -12,10 +12,12 @@ market data. It does not collapse everything into one black-box rating: the doma
 explicit equal-weight means of oriented, shrunk z-scores, and the member metrics are always shown.
 
 **Start here:** [`reports/final_methodology.md`](reports/final_methodology.md) ·
-[`reports/2026_research_guide.md`](reports/2026_research_guide.md)
+[`reports/2026_research_guide.md`](reports/2026_research_guide.md) ·
+[`reports/matchup_cards.md`](reports/matchup_cards.md) (Substack matchup graphics)
 
 ```bash
 make weekly-research        # THE weekly command: rebuild strength + research + reports (~1 min)
+python scripts/create_matchup_card.py --away NE --home SEA --season 2026 --week 1  # -> outputs/matchups/
 ```
 
 ## Research validation record (Phases 0–5)

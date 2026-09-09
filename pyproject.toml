@@ -13,6 +13,7 @@ dependencies = [
     "scikit-learn>=1.5",
     "pydantic>=2.7",
     "pyyaml>=6.0",
+    "matplotlib>=3.9",
 ]
 
 [project.optional-dependencies]
