@@ -160,47 +160,100 @@ def _draw_strength_profile(
 # --------------------------------------------------------------------------- #
 # Section 2: matchup comparisons (6 offense-vs-defense pairs)
 # --------------------------------------------------------------------------- #
+# |gap| that fills the advantage meter to its edge. Display-only clip -- the
+# printed gap number is always the exact value.
+GAP_METER_SCALE = 2.0
+
+# column anchors for the Section 2 ledger, in axes fraction (x-axis is 0..1).
+_S2_X_LABEL = 0.0
+_S2_X_OFFENSE = 0.505
+_S2_X_DEFENSE = 0.605
+_S2_X_METER_C = 0.755
+_S2_METER_HW = 0.075
+_S2_X_EDGE_TXT = _S2_X_METER_C + _S2_METER_HW + 0.018
+
+
 def _draw_comparisons(
     ax, data: MatchupCardData, comparisons: list[UnitComparison],
     away_s: sty.TeamStyle, home_s: sty.TeamStyle,
 ) -> None:
-    scale = sty.BAR_SCALE_ABS
-    n = len(comparisons)
-    yax = ax.get_yaxis_transform()
-    ax.set_xlim(-scale, scale)
-    ax.set_ylim(-0.6, n - 0.4)
-    ax.axvline(0, color=sty.ZERO_LINE, lw=1.2, zorder=1)
-
+    """Section 2 as a compact ledger. One row per offense-vs-defense unit pair:
+    both unit index values, a centered advantage meter that fills toward the
+    favored unit, and the favored team + exact gap. No free-floating bars."""
     team_style = {"away": away_s, "home": home_s}
-    for i, c in enumerate(comparisons):
-        y = n - 1 - i
-        ax.text(-0.02, y + 0.22, c.label, fontsize=8.6, fontweight="bold",
-                color=sty.INK, va="center", ha="right", transform=yax, family=sty.FONT_FAMILY)
-
-        if c.gap is None:
-            ax.text(0, y, "N/A", fontsize=8.5, color=sty.SUBINK, va="center", ha="center",
-                    family=sty.FONT_FAMILY)
-            ax.text(-0.02, y - 0.22, "insufficient data for this comparison", fontsize=7.4,
-                    color=sty.SUBINK, va="center", ha="right", transform=yax, family=sty.FONT_FAMILY)
-            continue
-
-        favored_side = "unit_a" if c.gap >= 0 else "unit_b"
-        favored_team = c.unit_a_team if favored_side == "unit_a" else c.unit_b_team
-        color = team_style[favored_team].primary
-        g = max(-scale, min(scale, c.gap))
-        ax.barh(y, g, height=0.42, left=0, color=color, edgecolor="none", zorder=2)
-
-        a_txt = f"{team_style[c.unit_a_team].abbr} {sty.fmt_index(c.unit_a_value)}"
-        b_txt = f"{team_style[c.unit_b_team].abbr} {sty.fmt_index(c.unit_b_value)}"
-        ax.text(-0.02, y - 0.22,
-                f"{a_txt}  vs  {b_txt}   ·   gap {abs(c.gap):.2f}",
-                fontsize=7.4, color=sty.SUBINK, va="center", ha="right", transform=yax,
-                family=sty.FONT_FAMILY)
-
+    n = len(comparisons)
+    ax.set_xlim(0, 1)
+    ax.set_ylim(0, n + 1)  # top row is the column header
     ax.set_xticks([])
     ax.set_yticks([])
     for spine in ax.spines.values():
         spine.set_visible(False)
+
+    # -- column header ----------------------------------------------------- #
+    hy = n + 0.5
+    for x, txt, ha in (
+        (_S2_X_LABEL, "MATCHUP", "left"),
+        (_S2_X_OFFENSE, "OFFENSE", "center"),
+        (_S2_X_DEFENSE, "DEFENSE", "center"),
+        (_S2_X_METER_C, "ADVANTAGE", "center"),
+    ):
+        ax.text(x, hy, txt, fontsize=7.2, fontweight="bold", color=sty.SUBINK,
+                va="center", ha=ha, family=sty.FONT_FAMILY, zorder=5)
+    ax.plot([-0.01, 1.0], [n + 0.06, n + 0.06], color=sty.GRIDLINE, lw=1.0,
+            clip_on=False, zorder=1)
+
+    for i, c in enumerate(comparisons):
+        y = n - 1 - i + 0.5  # row centre
+        a_s, b_s = team_style[c.unit_a_team], team_style[c.unit_b_team]
+
+        if i % 2 == 0:
+            ax.add_patch(plt.Rectangle((-0.01, y - 0.5), 1.02, 1.0, facecolor=sty.PANEL_BG,
+                                        edgecolor="none", zorder=0))
+
+        # matchup label (two lines: pairing, then which team fields each unit)
+        ax.text(_S2_X_LABEL, y + 0.16, c.label, fontsize=8.1, fontweight="bold", color=sty.INK,
+                va="center", ha="left", family=sty.FONT_FAMILY, zorder=5)
+        ax.text(_S2_X_LABEL, y - 0.17, f"{a_s.abbr} offense  vs  {b_s.abbr} defense",
+                fontsize=6.8, color=sty.SUBINK, va="center", ha="left",
+                family=sty.FONT_FAMILY, zorder=5)
+
+        if c.gap is None:
+            for x in (_S2_X_OFFENSE, _S2_X_DEFENSE):
+                ax.text(x, y, sty.NA, fontsize=8.6, color=sty.SUBINK, va="center", ha="center",
+                        family=sty.FONT_FAMILY, zorder=5)
+            ax.text(_S2_X_METER_C, y, "insufficient data", fontsize=7.0, style="italic",
+                    color=sty.SUBINK, va="center", ha="center", family=sty.FONT_FAMILY, zorder=5)
+            continue
+
+        # unit index values
+        ax.text(_S2_X_OFFENSE, y, sty.fmt_index(c.unit_a_value), fontsize=9.4, color=sty.INK,
+                va="center", ha="center", family=sty.FONT_FAMILY, zorder=5)
+        ax.text(_S2_X_DEFENSE, y, sty.fmt_index(c.unit_b_value), fontsize=9.4, color=sty.INK,
+                va="center", ha="center", family=sty.FONT_FAMILY, zorder=5)
+
+        # advantage meter: track, then a fill growing from centre toward the
+        # favored unit (right = offense edge, left = defense edge)
+        favored_a = c.gap >= 0
+        favored_s = a_s if favored_a else b_s
+        color = favored_s.primary
+        frac = max(-1.0, min(1.0, c.gap / GAP_METER_SCALE))
+        w = frac * _S2_METER_HW
+
+        ax.add_patch(FancyBboxPatch(
+            (_S2_X_METER_C - _S2_METER_HW, y - 0.10), 2 * _S2_METER_HW, 0.20,
+            boxstyle="round,pad=0,rounding_size=0.015", linewidth=0,
+            facecolor=sty.GRIDLINE, zorder=2))
+        if abs(w) > 1e-4:
+            ax.add_patch(FancyBboxPatch(
+                (min(_S2_X_METER_C, _S2_X_METER_C + w), y - 0.10), max(abs(w), 0.004), 0.20,
+                boxstyle="round,pad=0,rounding_size=0.015", linewidth=0,
+                facecolor=color, zorder=3))
+        ax.plot([_S2_X_METER_C, _S2_X_METER_C], [y - 0.13, y + 0.13],
+                color=sty.INK, lw=1.0, zorder=4)
+
+        ax.text(_S2_X_EDGE_TXT, y, f"{favored_s.abbr}  +{abs(c.gap):.2f}",
+                fontsize=8.4, fontweight="bold", color=color, va="center", ha="left",
+                family=sty.FONT_FAMILY, zorder=5)
 
 
 # --------------------------------------------------------------------------- #
@@ -325,14 +378,14 @@ def build_figure(data: MatchupCardData):
 
     header_h = 1.40
     sec1_title_h, sec1_row_h = 0.55, 0.42
-    sec2_title_h, sec2_row_h = 0.55, 0.46
+    sec2_title_h, sec2_row_h = 0.55, 0.48
     sec3_title_h, sec3_row_h = 0.40, 0.62
     sec4_title_h, sec4_h = 0.40, 2.0
     footer_h = 1.15
     margins = 0.9
 
     sec1_h = sec1_title_h + n_domains * sec1_row_h
-    sec2_h = sec2_title_h + n_comp * sec2_row_h
+    sec2_h = sec2_title_h + (n_comp + 1) * sec2_row_h  # +1 for the ledger header row
     sec3_h = sec3_title_h + n_battles * sec3_row_h
 
     total_h = margins + header_h + sec1_h + sec2_h + sec3_h + sec4_title_h + sec4_h + footer_h
@@ -369,11 +422,12 @@ def build_figure(data: MatchupCardData):
     ax_t2.axis("off")
     ax_t2.set_xlim(0, 1); ax_t2.set_ylim(0, 1)
     _section_title(ax_t2, 0.0, 0.95, "SECTION 2 — MATCHUP COMPARISON")
-    ax_t2.text(0.0, 0.32, "offense unit vs defense unit  ·  bar = relative gap (positive favors the labeled offense)",
+    ax_t2.text(0.0, 0.32, "one row per offense-vs-defense unit pair  ·  ADVANTAGE meter fills toward the "
+               "favored unit (right = offense, left = defense); label shows the favored team and exact gap",
                fontsize=7.2, color=sty.SUBINK, family=sty.FONT_FAMILY, va="top")
 
-    y -= n_comp * sec2_row_h
-    ax_s2 = fig.add_axes([left + 0.34, y / total_h, right - left - 0.58, (n_comp * sec2_row_h) / total_h])
+    y -= (n_comp + 1) * sec2_row_h
+    ax_s2 = fig.add_axes([left, y / total_h, right - left, ((n_comp + 1) * sec2_row_h) / total_h])
     _draw_comparisons(ax_s2, data, comparisons, away_s, home_s)
 
     y -= sec3_title_h
