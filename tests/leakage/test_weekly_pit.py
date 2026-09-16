@@ -28,8 +28,13 @@ def test_results_are_completed_games_only():
     now = datetime.now(UTC)
     # every returned game has already kicked off
     assert res.filter(pl.col("data_asof") > pl.lit(now)).is_empty()
-    # 2026 has no completed games yet as of the fixture date
-    assert res.filter(pl.col("season") == 2026).is_empty()
+    # whatever 2026 results exist, none may reach past the week the
+    # repository's own point-in-time logic considers completed (evergreen --
+    # holds whether 2026 is still preseason or mid-season, unlike a fixed
+    # "must be empty" pin that only held true before Week 1 kicked off)
+    res_2026 = res.filter(pl.col("season") == 2026)
+    if not res_2026.is_empty():
+        assert res_2026.get_column("week").max() <= latest_completed_week(2026)
 
 
 def test_reference_seasons_are_completed_and_before_target():

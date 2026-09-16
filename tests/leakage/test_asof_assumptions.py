@@ -12,6 +12,8 @@ import nflreadpy as nfl
 import polars as pl
 import pytest
 
+from matchup.strength.results import latest_completed_week
+
 pytestmark = [pytest.mark.network]
 
 
@@ -183,10 +185,29 @@ def test_players_crosswalk_pfr_id_partial():
 
 
 # --------------------------------------------------------------------------- #
-# 8. Live 2026 season is not yet published (run-date dependent; documents the fact).
+# 8. Live 2026 pbp must never be ahead of the schedule's own completed-week
+#    boundary. Whether the season hasn't started (source raises / returns
+#    nothing) or is mid-season (source has real rows), the invariant is the
+#    same: no pbp week may exceed `latest_completed_week`, the repository's
+#    own point-in-time definition of "actually played" (matchup.strength.
+#    results). This stays true regardless of run date or how far the season
+#    has progressed -- unlike the old fixed "raises" expectation, which only
+#    held before Week 1 kicked off.
 # --------------------------------------------------------------------------- #
-def test_2026_in_season_sources_not_yet_available():
-    with pytest.raises((ValueError, Exception)):
-        nfl.load_pbp(seasons=[2026])
+def test_2026_pbp_never_ahead_of_completed_schedule():
+    try:
+        pbp = nfl.load_pbp(seasons=[2026])
+    except Exception:
+        pbp = pl.DataFrame()  # source has nothing published yet -- also safe
+
+    completed_through = latest_completed_week(2026)
+    if not pbp.is_empty():
+        reg = pbp.filter(pl.col("season_type") == "REG")
+        if not reg.is_empty():
+            assert reg.get_column("week").max() <= completed_through, (
+                "2026 pbp reports a week beyond what the schedule considers "
+                "completed -- a future-week leakage source has appeared"
+            )
+
     sch = nfl.load_schedules(seasons=[2026])
     assert len(sch) > 0, "schedule for 2026 should exist even before the season starts"

@@ -1,22 +1,22 @@
 {
   "season": 2026,
-  "through_week": 0,
-  "generated_at": "2026-09-09T22:15:52+00:00",
-  "mode": "preseason_baseline",
+  "through_week": 1,
+  "generated_at": "2026-09-16T01:32:02+00:00",
+  "mode": "in_season",
   "panels": {
     "seasons": [
       2016,
       2026
     ],
-    "n_metric_rows": 147524,
-    "n_domain_rows": 55008
+    "n_metric_rows": 148356,
+    "n_domain_rows": 55296
   },
   "n_teams_in_snapshot": 32,
   "pit_checks": [
     {
       "check": "no_future_week_in_snapshot",
       "passed": true,
-      "detail": "832 rows <= wk0; 0 later-week rows exist but are excluded"
+      "detail": "1664 rows <= wk1; 0 later-week rows exist but are excluded"
     },
     {
       "check": "reference_seasons_before_target",
@@ -26,12 +26,12 @@
     {
       "check": "results_are_completed_games_only",
       "passed": true,
-      "detail": "0 team-game results, 0 with future data_asof"
+      "detail": "32 team-game results, 0 with future data_asof"
     },
     {
       "check": "deterministic_rebuild",
       "passed": true,
-      "detail": "832 rows, max |\u0394shrunk| = 2.78e-17"
+      "detail": "1664 rows, max |\u0394shrunk| = 1.39e-17"
     },
     {
       "check": "no_market_columns_in_strength_frame",
@@ -57,10 +57,10 @@
     {
       "group": "offense_efficiency",
       "factor": "team_offense.epa_per_play",
-      "association_pearson": 0.8916805792861512,
-      "chronological_pearson": 0.4011759838944319,
+      "association_pearson": 0.891680579286151,
+      "chronological_pearson": 0.40117598389443176,
       "chronological_pearson_ci_lo": 0.3242771317515286,
-      "chronological_pearson_ci_hi": 0.470373352483423,
+      "chronological_pearson_ci_hi": 0.4703733524834231,
       "stability_frac_same_sign": 1.0,
       "n_chronological": 1565,
       "evidence_tier": "strong + temporally consistent"
@@ -69,9 +69,9 @@
       "group": "offense_explosiveness",
       "factor": "team_offense.explosive_pass_rate",
       "association_pearson": 0.6194222513071261,
-      "chronological_pearson": 0.3154316500789916,
-      "chronological_pearson_ci_lo": 0.2243559630666717,
-      "chronological_pearson_ci_hi": 0.3972394097759177,
+      "chronological_pearson": 0.3154316500789915,
+      "chronological_pearson_ci_lo": 0.22435596306667163,
+      "chronological_pearson_ci_hi": 0.39723940977591776,
       "stability_frac_same_sign": 1.0,
       "n_chronological": 1565,
       "evidence_tier": "strong + temporally consistent"
@@ -81,8 +81,8 @@
       "factor": "pass_protection.sack_rate_allowed",
       "association_pearson": -0.5058059184237886,
       "chronological_pearson": -0.23450398430588157,
-      "chronological_pearson_ci_lo": -0.3190071719320888,
-      "chronological_pearson_ci_hi": -0.1428129492171255,
+      "chronological_pearson_ci_lo": -0.3190071719320887,
+      "chronological_pearson_ci_hi": -0.14281294921712548,
       "stability_frac_same_sign": 1.0,
       "n_chronological": 1565,
       "evidence_tier": "moderate + temporally consistent"
@@ -90,10 +90,10 @@
     {
       "group": "offense_style",
       "factor": "team_offense.proe",
-      "association_pearson": 0.2773251655331924,
-      "chronological_pearson": 0.05247999849941249,
-      "chronological_pearson_ci_lo": -0.043679640726517144,
-      "chronological_pearson_ci_hi": 0.1517691092377432,
+      "association_pearson": 0.2773251655331925,
+      "chronological_pearson": 0.052479998499412504,
+      "chronological_pearson_ci_lo": -0.04367964072651714,
+      "chronological_pearson_ci_hi": 0.15176910923774323,
       "stability_frac_same_sign": 0.9,
       "n_chronological": 1565,
       "evidence_tier": "weak / insufficient evidence"
@@ -104,8 +104,8 @@
       "group": "defense_efficiency",
       "factor": "team_defense.epa_per_play",
       "association_pearson": 0.8039982142555576,
-      "chronological_pearson": 0.1727332970518522,
-      "chronological_pearson_ci_lo": 0.08573579693704098,
+      "chronological_pearson": 0.17273329705185222,
+      "chronological_pearson_ci_lo": 0.08573579693704099,
       "chronological_pearson_ci_hi": 0.25673607909984886,
       "stability_frac_same_sign": 1.0,
       "n_chronological": 1565,
@@ -114,10 +114,10 @@
     {
       "group": "pass_rush",
       "factor": "pass_rush.qb_hit_rate_generated",
-      "association_pearson": -0.3570102139323918,
-      "chronological_pearson": -0.13475435144474407,
-      "chronological_pearson_ci_lo": -0.21206212006722716,
-      "chronological_pearson_ci_hi": -0.053045494810162165,
+      "association_pearson": -0.35701021393239185,
+      "chronological_pearson": -0.1347543514447441,
+      "chronological_pearson_ci_lo": -0.21206212006722708,
+      "chronological_pearson_ci_hi": -0.053045494810162026,
       "stability_frac_same_sign": 1.0,
       "n_chronological": 1565,
       "evidence_tier": "weak but statistically detectable chronologically"
@@ -125,10 +125,10 @@
     {
       "group": "defense_explosiveness",
       "factor": "team_defense.explosive_rush_rate",
-      "association_pearson": 0.3418977883889049,
+      "association_pearson": 0.34189778838890494,
       "chronological_pearson": 0.1270176656335028,
-      "chronological_pearson_ci_lo": 0.041006152549343214,
-      "chronological_pearson_ci_hi": 0.2135500450569346,
+      "chronological_pearson_ci_lo": 0.04100615254934327,
+      "chronological_pearson_ci_hi": 0.21355004505693465,
       "stability_frac_same_sign": 1.0,
       "n_chronological": 1565,
       "evidence_tier": "weak but statistically detectable chronologically"
@@ -149,10 +149,10 @@
     {
       "group": "protection",
       "factor": "pass_protection.sack_rate_allowed",
-      "association_pearson": -0.4626718696876502,
+      "association_pearson": -0.46267186968765034,
       "chronological_pearson": -0.22217553609501928,
       "chronological_pearson_ci_lo": -0.3086365851220755,
-      "chronological_pearson_ci_hi": -0.12804940299941261,
+      "chronological_pearson_ci_hi": -0.12804940299941264,
       "stability_frac_same_sign": 1.0,
       "n_chronological": 1565,
       "evidence_tier": "moderate + temporally consistent"
@@ -161,9 +161,9 @@
       "group": "offense_explosiveness",
       "factor": "team_offense.explosive_pass_rate",
       "association_pearson": 0.4457156887730033,
-      "chronological_pearson": 0.21770473030491178,
-      "chronological_pearson_ci_lo": 0.12686216900637312,
-      "chronological_pearson_ci_hi": 0.3038283977564572,
+      "chronological_pearson": 0.21770473030491175,
+      "chronological_pearson_ci_lo": 0.12686216900637315,
+      "chronological_pearson_ci_hi": 0.3038283977564573,
       "stability_frac_same_sign": 1.0,
       "n_chronological": 1565,
       "evidence_tier": "moderate + temporally consistent"
@@ -171,10 +171,10 @@
     {
       "group": "defense_efficiency",
       "factor": "team_defense.epa_per_play",
-      "association_pearson": -0.5194434887643408,
-      "chronological_pearson": -0.18539180525367932,
+      "association_pearson": -0.5194434887643409,
+      "chronological_pearson": -0.18539180525367938,
       "chronological_pearson_ci_lo": -0.26708899217688115,
-      "chronological_pearson_ci_hi": -0.09533396302312823,
+      "chronological_pearson_ci_hi": -0.09533396302312828,
       "stability_frac_same_sign": 1.0,
       "n_chronological": 1565,
       "evidence_tier": "moderate + temporally consistent"
@@ -182,10 +182,10 @@
     {
       "group": "defense_explosiveness",
       "factor": "team_defense.explosive_rush_rate",
-      "association_pearson": -0.2062288362149029,
-      "chronological_pearson": -0.17001984126993444,
-      "chronological_pearson_ci_lo": -0.2608947630103112,
-      "chronological_pearson_ci_hi": -0.07515025790802365,
+      "association_pearson": -0.20622883621490284,
+      "chronological_pearson": -0.1700198412699344,
+      "chronological_pearson_ci_lo": -0.2608947630103113,
+      "chronological_pearson_ci_hi": -0.0751502579080236,
       "stability_frac_same_sign": 0.9,
       "n_chronological": 1565,
       "evidence_tier": "moderate + temporally consistent"
@@ -194,9 +194,9 @@
       "group": "pass_rush",
       "factor": "pass_rush.qb_hit_rate_generated",
       "association_pearson": 0.2907725332082004,
-      "chronological_pearson": 0.11569326550189651,
-      "chronological_pearson_ci_lo": 0.026072427466002728,
-      "chronological_pearson_ci_hi": 0.2087986250135906,
+      "chronological_pearson": 0.1156932655018966,
+      "chronological_pearson_ci_lo": 0.02607242746600279,
+      "chronological_pearson_ci_hi": 0.20879862501359064,
       "stability_frac_same_sign": 0.9,
       "n_chronological": 1565,
       "evidence_tier": "weak but statistically detectable chronologically"
@@ -205,180 +205,180 @@
   "offense_movers": {
     "risers": [
       {
-        "team": "LA",
-        "index_value": 1.5255093577954841,
-        "delta_vs_prev_week": 0.0,
-        "rank_of_league": 1,
-        "rank_change_vs_prev_week": 0
+        "team": "CLE",
+        "index_value": -0.1285159473223674,
+        "delta_vs_prev_week": 1.4421576017329876,
+        "rank_of_league": 22,
+        "rank_change_vs_prev_week": 10
       },
       {
-        "team": "NE",
-        "index_value": 1.1065724667785901,
-        "delta_vs_prev_week": 0.0,
+        "team": "LV",
+        "index_value": -0.12037870626155595,
+        "delta_vs_prev_week": 1.2171889893448147,
+        "rank_of_league": 19,
+        "rank_change_vs_prev_week": 12
+      },
+      {
+        "team": "NYJ",
+        "index_value": 0.22934539012836938,
+        "delta_vs_prev_week": 1.0350990241646894,
+        "rank_of_league": 7,
+        "rank_change_vs_prev_week": 22
+      },
+      {
+        "team": "TEN",
+        "index_value": -0.12098912746294421,
+        "delta_vs_prev_week": 1.0008186609148408,
+        "rank_of_league": 20,
+        "rank_change_vs_prev_week": 10
+      },
+      {
+        "team": "NYG",
+        "index_value": 0.5578504304272619,
+        "delta_vs_prev_week": 0.5241207409498292,
         "rank_of_league": 2,
-        "rank_change_vs_prev_week": 0
+        "rank_change_vs_prev_week": 19
       },
       {
-        "team": "BUF",
-        "index_value": 1.0963041503779152,
-        "delta_vs_prev_week": 0.0,
-        "rank_of_league": 3,
-        "rank_change_vs_prev_week": 0
-      },
-      {
-        "team": "GB",
-        "index_value": 0.8778987931866892,
-        "delta_vs_prev_week": 0.0,
-        "rank_of_league": 4,
-        "rank_change_vs_prev_week": 0
-      },
-      {
-        "team": "DAL",
-        "index_value": 0.834619060926284,
-        "delta_vs_prev_week": 0.0,
-        "rank_of_league": 5,
-        "rank_change_vs_prev_week": 0
-      },
-      {
-        "team": "SF",
-        "index_value": 0.6916590508371873,
-        "delta_vs_prev_week": 0.0,
-        "rank_of_league": 6,
-        "rank_change_vs_prev_week": 0
+        "team": "NO",
+        "index_value": 0.020374918278993324,
+        "delta_vs_prev_week": 0.4095006240503146,
+        "rank_of_league": 15,
+        "rank_change_vs_prev_week": 12
       }
     ],
     "fallers": [
       {
-        "team": "CLE",
-        "index_value": -1.570673549055355,
-        "delta_vs_prev_week": 0.0,
+        "team": "LA",
+        "index_value": -0.1462280371558752,
+        "delta_vs_prev_week": -1.6717373949513594,
+        "rank_of_league": 23,
+        "rank_change_vs_prev_week": -22
+      },
+      {
+        "team": "NE",
+        "index_value": -0.17217688222676616,
+        "delta_vs_prev_week": -1.278749349005356,
+        "rank_of_league": 25,
+        "rank_change_vs_prev_week": -23
+      },
+      {
+        "team": "GB",
+        "index_value": -0.12740736255082252,
+        "delta_vs_prev_week": -1.0053061557375118,
+        "rank_of_league": 21,
+        "rank_change_vs_prev_week": -17
+      },
+      {
+        "team": "BUF",
+        "index_value": 0.2285976989408153,
+        "delta_vs_prev_week": -0.8677064514370999,
+        "rank_of_league": 8,
+        "rank_change_vs_prev_week": -5
+      },
+      {
+        "team": "IND",
+        "index_value": -0.19768393213377022,
+        "delta_vs_prev_week": -0.8110220225021851,
+        "rank_of_league": 26,
+        "rank_change_vs_prev_week": -19
+      },
+      {
+        "team": "ATL",
+        "index_value": -0.4057556903814484,
+        "delta_vs_prev_week": -0.6600151753717733,
         "rank_of_league": 32,
-        "rank_change_vs_prev_week": 0
-      },
-      {
-        "team": "LV",
-        "index_value": -1.3375676956063707,
-        "delta_vs_prev_week": 0.0,
-        "rank_of_league": 31,
-        "rank_change_vs_prev_week": 0
-      },
-      {
-        "team": "TEN",
-        "index_value": -1.121807788377785,
-        "delta_vs_prev_week": 0.0,
-        "rank_of_league": 30,
-        "rank_change_vs_prev_week": 0
-      },
-      {
-        "team": "NYJ",
-        "index_value": -0.8057536340363202,
-        "delta_vs_prev_week": 0.0,
-        "rank_of_league": 29,
-        "rank_change_vs_prev_week": 0
-      },
-      {
-        "team": "MIN",
-        "index_value": -0.3937886852336514,
-        "delta_vs_prev_week": 0.0,
-        "rank_of_league": 28,
-        "rank_change_vs_prev_week": 0
-      },
-      {
-        "team": "NO",
-        "index_value": -0.3891257057713213,
-        "delta_vs_prev_week": 0.0,
-        "rank_of_league": 27,
-        "rank_change_vs_prev_week": 0
+        "rank_change_vs_prev_week": -18
       }
     ]
   },
   "defense_movers": {
     "risers": [
       {
-        "team": "HOU",
-        "index_value": 0.9308664650030533,
-        "delta_vs_prev_week": 0.0,
-        "rank_of_league": 1,
-        "rank_change_vs_prev_week": 0
-      },
-      {
-        "team": "SEA",
-        "index_value": 0.7381987845006508,
-        "delta_vs_prev_week": 0.0,
-        "rank_of_league": 2,
-        "rank_change_vs_prev_week": 0
-      },
-      {
-        "team": "DEN",
-        "index_value": 0.7159740965041088,
-        "delta_vs_prev_week": 0.0,
-        "rank_of_league": 3,
-        "rank_change_vs_prev_week": 0
-      },
-      {
-        "team": "MIN",
-        "index_value": 0.6214648455001569,
-        "delta_vs_prev_week": 0.0,
-        "rank_of_league": 4,
-        "rank_change_vs_prev_week": 0
-      },
-      {
-        "team": "CLE",
-        "index_value": 0.5941146479084367,
-        "delta_vs_prev_week": 0.0,
-        "rank_of_league": 5,
-        "rank_change_vs_prev_week": 0
-      },
-      {
-        "team": "LAC",
-        "index_value": 0.5709379457144674,
-        "delta_vs_prev_week": 0.0,
+        "team": "WAS",
+        "index_value": 0.13183061221647813,
+        "delta_vs_prev_week": 1.1772608964104614,
         "rank_of_league": 6,
-        "rank_change_vs_prev_week": 0
+        "rank_change_vs_prev_week": 26
+      },
+      {
+        "team": "ARI",
+        "index_value": 0.09460501397052719,
+        "delta_vs_prev_week": 0.9956227805725689,
+        "rank_of_league": 10,
+        "rank_change_vs_prev_week": 20
+      },
+      {
+        "team": "NYJ",
+        "index_value": 0.08785040242709992,
+        "delta_vs_prev_week": 0.9508256008770916,
+        "rank_of_league": 12,
+        "rank_change_vs_prev_week": 16
+      },
+      {
+        "team": "CIN",
+        "index_value": -0.02450464318273619,
+        "delta_vs_prev_week": 0.8496890005022759,
+        "rank_of_league": 20,
+        "rank_change_vs_prev_week": 9
+      },
+      {
+        "team": "MIA",
+        "index_value": 0.07955514986127672,
+        "delta_vs_prev_week": 0.8007662938530911,
+        "rank_of_league": 13,
+        "rank_change_vs_prev_week": 14
+      },
+      {
+        "team": "SF",
+        "index_value": 0.10319976598057663,
+        "delta_vs_prev_week": 0.7834708106396948,
+        "rank_of_league": 9,
+        "rank_change_vs_prev_week": 17
       }
     ],
     "fallers": [
       {
-        "team": "WAS",
-        "index_value": -1.0454302841939838,
-        "delta_vs_prev_week": 0.0,
-        "rank_of_league": 32,
-        "rank_change_vs_prev_week": 0
-      },
-      {
-        "team": "DAL",
-        "index_value": -0.9726263363160311,
-        "delta_vs_prev_week": 0.0,
-        "rank_of_league": 31,
-        "rank_change_vs_prev_week": 0
-      },
-      {
-        "team": "ARI",
-        "index_value": -0.9010177666020424,
-        "delta_vs_prev_week": 0.0,
-        "rank_of_league": 30,
-        "rank_change_vs_prev_week": 0
-      },
-      {
-        "team": "CIN",
-        "index_value": -0.8741936436850128,
-        "delta_vs_prev_week": 0.0,
-        "rank_of_league": 29,
-        "rank_change_vs_prev_week": 0
-      },
-      {
-        "team": "NYJ",
-        "index_value": -0.8629751984499924,
-        "delta_vs_prev_week": 0.0,
-        "rank_of_league": 28,
-        "rank_change_vs_prev_week": 0
-      },
-      {
-        "team": "MIA",
-        "index_value": -0.7212111439918149,
-        "delta_vs_prev_week": 0.0,
+        "team": "HOU",
+        "index_value": -0.1628765616554778,
+        "delta_vs_prev_week": -1.093743026658532,
         "rank_of_league": 27,
-        "rank_change_vs_prev_week": 0
+        "rank_change_vs_prev_week": -26
+      },
+      {
+        "team": "CLE",
+        "index_value": -0.30741710550829443,
+        "delta_vs_prev_week": -0.9015317534167318,
+        "rank_of_league": 32,
+        "rank_change_vs_prev_week": -27
+      },
+      {
+        "team": "LAC",
+        "index_value": -0.11730583165855864,
+        "delta_vs_prev_week": -0.6882437773730269,
+        "rank_of_league": 23,
+        "rank_change_vs_prev_week": -17
+      },
+      {
+        "team": "DEN",
+        "index_value": 0.029611964388021786,
+        "delta_vs_prev_week": -0.6863621321160879,
+        "rank_of_league": 15,
+        "rank_change_vs_prev_week": -12
+      },
+      {
+        "team": "LA",
+        "index_value": -0.21783126578235654,
+        "delta_vs_prev_week": -0.681152240921814,
+        "rank_of_league": 29,
+        "rank_change_vs_prev_week": -21
+      },
+      {
+        "team": "SEA",
+        "index_value": 0.10353591255959083,
+        "delta_vs_prev_week": -0.6346628719410614,
+        "rank_of_league": 8,
+        "rank_change_vs_prev_week": -6
       }
     ]
   },

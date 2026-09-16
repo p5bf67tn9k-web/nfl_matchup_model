@@ -1,1510 +1,1510 @@
-# Team Profiles — 2026 (preseason baseline)
+# Team Profiles — 2026 (through Week 1)
 
 > These indices are **transparent research indices**, not ratings, probabilities, or predictions of game outcomes. Each is an equal-weight mean of its member metrics' oriented, shrunk z-scores (reference-SD units). The member metrics are shown alongside every index. This project does not model game winners, scores, or spreads.
 
 Every profile shows the domain indices AND the underlying per-metric numbers (raw value, league reference mean/SD, sample size, shrunk value, percentile, confidence). Full detail: `outputs/team_strength/team_metrics_weekly.parquet`.
 
 ## ARI
-Record: no games yet · Points for/against: —/— · Point differential: — · Data confidence: prior_season_only
-Strongest area: **offense_overall** (-0.107) · Weakest area: **defense_overall** (-0.901)
+Record: 1-0-0 · Points for/against: 26/14 · Point differential: 12 · Data confidence: low
+Strongest area: **offense_overall** (0.219) · Weakest area: **special_teams** (-0.231)
 
 ### Domain indices
 | domain | label | index_value | rank_of_league | delta_vs_prev_week | delta_vs_preseason | min_confidence |
 | --- | --- | --- | --- | --- | --- | --- |
-| defense_overall | Defensive Strength Index | -0.901 | 30 | 0.000 | 0.000 | prior_season_only |
-| pass_rush | Pass-Rush Strength Index | -0.764 | 29 | 0.000 | 0.000 | prior_season_only |
-| passing_defense | Pass-Defense Strength Index | -0.879 | 29 | 0.000 | 0.000 | prior_season_only |
-| rushing_defense | Run-Defense Strength Index | -0.461 | 27 | 0.000 | 0.000 | prior_season_only |
-| offense_overall | Offensive Strength Index | -0.107 | 23 | 0.000 | 0.000 | prior_season_only |
-| pass_protection | Pass-Protection Strength Index | -0.524 | 24 | 0.000 | 0.000 | prior_season_only |
-| passing_offense | Passing-Offense Strength Index | -0.152 | 22 | 0.000 | 0.000 | prior_season_only |
-| rushing_offense | Rushing-Offense Strength Index | -0.460 | 28 | 0.000 | 0.000 | prior_season_only |
-| special_teams | Special-Teams Strength Index | -0.440 | 29 | 0.000 | 0.000 | prior_season_only |
+| defense_overall | Defensive Strength Index | 0.095 | 10 | 0.996 | 0.996 | low |
+| pass_rush | Pass-Rush Strength Index | 0.017 | 13 | 0.781 | 0.781 | low |
+| passing_defense | Pass-Defense Strength Index | 0.120 | 7 | 0.999 | 0.999 | low |
+| rushing_defense | Run-Defense Strength Index | 0.149 | 7 | 0.610 | 0.610 | low |
+| offense_overall | Offensive Strength Index | 0.219 | 9 | 0.326 | 0.326 | low |
+| pass_protection | Pass-Protection Strength Index | 0.149 | 7 | 0.673 | 0.673 | low |
+| passing_offense | Passing-Offense Strength Index | 0.143 | 8 | 0.295 | 0.295 | low |
+| rushing_offense | Rushing-Offense Strength Index | 0.014 | 18 | 0.474 | 0.474 | low |
+| special_teams | Special-Teams Strength Index | -0.231 | 30 | 0.209 | 0.209 | low |
 
 ### Underlying metrics
 | metric | raw_value | ref_mean | ref_sd | n_games | n_opportunities | shrunk_value | z_shrunk | oriented_z_shrunk | rank_of_league | percentile | confidence | phase3_status | delta_shrunk_vs_prev_week |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
-| pass_protection.qb_hit_rate_allowed | 0.1732 | 0.1450 | 0.0327 | 17 | 745 | 0.1641 | 0.5851 | -0.5851 | 24 | 0.2581 | prior_season_only | UNVALIDATED_RANK_PERSISTENT | 0.0000 |
-| pass_protection.rush_stuffed_rate_approx | 0.2441 | 0.2045 | 0.0323 | 17 | 745 | 0.2249 | 0.6303 | -0.6303 | 29 | 0.0968 | prior_season_only | RANK_PERSISTENT | 0.0000 |
-| pass_protection.sack_rate_allowed | 0.0792 | 0.0664 | 0.0188 | 17 | 745 | 0.0751 | 0.4631 | -0.4631 | 25 | 0.2258 | prior_season_only | UNVALIDATED_RANK_PERSISTENT | 0.0000 |
-| pass_rush.qb_hit_rate_generated | 0.1113 | 0.1442 | 0.0234 | 17 | 620 | 0.1272 | -0.7239 | -0.7239 | 29 | 0.0968 | prior_season_only | RANK_PERSISTENT | 0.0000 |
-| pass_rush.sack_rate_generated | 0.0484 | 0.0660 | 0.0121 | 17 | 620 | 0.0564 | -0.8036 | -0.8036 | 28 | 0.1290 | prior_season_only | NOT_RANK_PERSISTENT | 0.0000 |
-| special_teams.fg_pct | 0.7576 | 0.8507 | 0.0691 | 17 | 233 | 0.8027 | -0.6940 | -0.6940 | 30 | 0.0645 | prior_season_only | NOT_RANK_PERSISTENT | 0.0000 |
-| special_teams.st_epa_per_play | -0.0171 | 0.0622 | 0.0928 | 17 | 233 | 0.0214 | -0.4399 | -0.4399 | 29 | 0.0968 | prior_season_only | RANK_PERSISTENT | 0.0000 |
-| team_defense.early_down_epa_per_play | 0.1287 | -0.0013 | 0.0639 | 17 | 1102 | 0.0657 | 1.0482 | -1.0482 | 30 | 0.0645 | prior_season_only | RANK_PERSISTENT | 0.0000 |
-| team_defense.epa_per_play | 0.0897 | 0.0046 | 0.0677 | 17 | 1102 | 0.0484 | 0.6468 | -0.6468 | 26 | 0.1935 | prior_season_only | RANK_PERSISTENT | 0.0000 |
-| team_defense.explosive_pass_rate | 0.0839 | 0.0797 | 0.0112 | 17 | 1102 | 0.0820 | 0.2047 | -0.2047 | 22 | 0.3226 | prior_season_only | NOT_RANK_PERSISTENT | 0.0000 |
-| team_defense.explosive_rush_rate | 0.1242 | 0.1000 | 0.0206 | 17 | 1102 | 0.1124 | 0.6052 | -0.6052 | 29 | 0.0968 | prior_season_only | RANK_PERSISTENT | 0.0000 |
-| team_defense.pass_epa_per_dropback | 0.1654 | 0.0361 | 0.0949 | 17 | 1102 | 0.1027 | 0.7019 | -0.7019 | 26 | 0.1935 | prior_season_only | RANK_PERSISTENT | 0.0000 |
-| team_defense.pass_success_rate | 0.5194 | 0.4536 | 0.0320 | 17 | 1102 | 0.4875 | 1.0566 | -1.0566 | 31 | 0.0323 | prior_season_only | RANK_PERSISTENT | 0.0000 |
-| team_defense.rush_epa_per_play | -0.0379 | -0.0760 | 0.0649 | 17 | 1102 | -0.0551 | 0.3221 | -0.3221 | 22 | 0.3226 | prior_season_only | NOT_RANK_PERSISTENT | 0.0000 |
-| team_defense.rush_success_rate | 0.4312 | 0.4020 | 0.0330 | 17 | 1102 | 0.4170 | 0.4558 | -0.4558 | 23 | 0.2903 | prior_season_only | RANK_PERSISTENT | 0.0000 |
-| team_defense.success_rate | 0.4882 | 0.4384 | 0.0255 | 17 | 1102 | 0.4641 | 1.0080 | -1.0080 | 32 | 0.0000 | prior_season_only | RANK_PERSISTENT | 0.0000 |
-| team_offense.early_down_epa_per_play | -0.0115 | -0.0054 | 0.0784 | 17 | 1128 | -0.0095 | -0.0528 | -0.0528 | 22 | 0.3226 | prior_season_only | UNVALIDATED_RANK_PERSISTENT | 0.0000 |
-| team_offense.epa_per_play | -0.0137 | -0.0001 | 0.0921 | 17 | 1128 | -0.0094 | -0.1006 | -0.1006 | 23 | 0.2903 | prior_season_only | VALIDATED_PERSISTENCE | 0.0000 |
-| team_offense.explosive_pass_rate | 0.0658 | 0.0796 | 0.0177 | 17 | 1128 | 0.0725 | -0.4010 | -0.4010 | 27 | 0.1613 | prior_season_only | RANK_PERSISTENT | 0.0000 |
-| team_offense.explosive_rush_rate | 0.0735 | 0.0990 | 0.0195 | 17 | 1128 | 0.0859 | -0.6721 | -0.6721 | 30 | 0.0645 | prior_season_only | NOT_RANK_PERSISTENT | 0.0000 |
-| team_offense.pass_epa_per_dropback | 0.0238 | 0.0308 | 0.1280 | 17 | 1128 | 0.0260 | -0.0372 | -0.0372 | 20 | 0.3871 | prior_season_only | UNVALIDATED_RANK_PERSISTENT | 0.0000 |
-| team_offense.pass_success_rate | 0.4510 | 0.4521 | 0.0418 | 17 | 1128 | 0.4514 | -0.0174 | -0.0174 | 18 | 0.4516 | prior_season_only | UNVALIDATED_RANK_PERSISTENT | 0.0000 |
-| team_offense.proe | 0.0036 | -0.0477 | 0.0349 | 17 | 1128 | -0.0062 | 1.1904 | 0.0000 | — | — | prior_season_only | VALIDATED_PERSISTENCE | 0.0000 |
-| team_offense.rush_epa_per_play | -0.1423 | -0.0806 | 0.0754 | 17 | 1128 | -0.1124 | -0.4219 | -0.4219 | 29 | 0.0968 | prior_season_only | RANK_PERSISTENT | 0.0000 |
-| team_offense.rush_success_rate | 0.3676 | 0.4004 | 0.0385 | 17 | 1128 | 0.3812 | -0.4980 | -0.4980 | 28 | 0.1290 | prior_season_only | RANK_PERSISTENT | 0.0000 |
-| team_offense.success_rate | 0.4300 | 0.4370 | 0.0337 | 17 | 1128 | 0.4313 | -0.1678 | -0.1678 | 24 | 0.2581 | prior_season_only | VALIDATED_PERSISTENCE | 0.0000 |
+| pass_protection.qb_hit_rate_allowed | 0.1282 | 0.1450 | 0.0327 | 1 | 39 | 0.1431 | -0.0570 | 0.0570 | 13 | 0.5968 | low | UNVALIDATED_RANK_PERSISTENT | -0.0210 |
+| pass_protection.rush_stuffed_rate_approx | 0.1667 | 0.2045 | 0.0323 | 1 | 39 | 0.2023 | -0.0689 | 0.0689 | 10 | 0.7097 | low | RANK_PERSISTENT | -0.0226 |
+| pass_protection.sack_rate_allowed | 0.0256 | 0.0664 | 0.0188 | 1 | 39 | 0.0619 | -0.2412 | 0.2412 | 7 | 0.8065 | low | UNVALIDATED_RANK_PERSISTENT | -0.0132 |
+| pass_rush.qb_hit_rate_generated | 0.1143 | 0.1442 | 0.0234 | 1 | 35 | 0.1424 | -0.0751 | -0.0751 | 24 | 0.2581 | low | RANK_PERSISTENT | 0.0152 |
+| pass_rush.sack_rate_generated | 0.0857 | 0.0660 | 0.0121 | 1 | 35 | 0.0674 | 0.1088 | 0.1088 | 9 | 0.7419 | low | NOT_RANK_PERSISTENT | 0.0110 |
+| special_teams.fg_pct | 0.8000 | 0.8507 | 0.0691 | 1 | 13 | 0.8477 | -0.0432 | -0.0432 | 21 | 0.2593 | low | NOT_RANK_PERSISTENT | 0.0450 |
+| special_teams.st_epa_per_play | -0.3020 | 0.0622 | 0.0928 | 1 | 13 | 0.0408 | -0.2308 | -0.2308 | 30 | 0.0645 | low | RANK_PERSISTENT | 0.0194 |
+| team_defense.early_down_epa_per_play | -0.0516 | -0.0013 | 0.0639 | 1 | 55 | -0.0043 | -0.0463 | 0.0463 | 13 | 0.6129 | low | RANK_PERSISTENT | -0.0699 |
+| team_defense.epa_per_play | -0.1668 | 0.0046 | 0.0677 | 1 | 55 | -0.0055 | -0.1488 | 0.1488 | 9 | 0.7419 | low | RANK_PERSISTENT | -0.0539 |
+| team_defense.explosive_pass_rate | 0.0571 | 0.0797 | 0.0112 | 1 | 55 | 0.0782 | -0.1340 | 0.1340 | 13 | 0.6129 | low | NOT_RANK_PERSISTENT | -0.0038 |
+| team_defense.explosive_rush_rate | 0.0625 | 0.1000 | 0.0206 | 1 | 55 | 0.0978 | -0.1070 | 0.1070 | 8 | 0.7742 | low | RANK_PERSISTENT | -0.0147 |
+| team_defense.pass_epa_per_dropback | -0.1907 | 0.0361 | 0.0949 | 1 | 55 | 0.0228 | -0.1406 | 0.1406 | 9 | 0.7419 | low | RANK_PERSISTENT | -0.0799 |
+| team_defense.pass_success_rate | 0.4000 | 0.4536 | 0.0320 | 1 | 55 | 0.4505 | -0.0985 | 0.0985 | 10 | 0.7097 | low | RANK_PERSISTENT | -0.0370 |
+| team_defense.rush_epa_per_play | -0.3604 | -0.0760 | 0.0649 | 1 | 55 | -0.0950 | -0.2920 | 0.2920 | 4 | 0.9032 | low | NOT_RANK_PERSISTENT | -0.0399 |
+| team_defense.rush_success_rate | 0.3750 | 0.4020 | 0.0330 | 1 | 55 | 0.4004 | -0.0481 | 0.0481 | 11 | 0.6774 | low | RANK_PERSISTENT | -0.0166 |
+| team_defense.success_rate | 0.4000 | 0.4384 | 0.0255 | 1 | 55 | 0.4361 | -0.0887 | 0.0887 | 9 | 0.7419 | low | RANK_PERSISTENT | -0.0279 |
+| team_offense.early_down_epa_per_play | 0.1342 | -0.0054 | 0.0784 | 1 | 72 | 0.0101 | 0.1979 | 0.1979 | 9 | 0.7419 | low | UNVALIDATED_RANK_PERSISTENT | 0.0197 |
+| team_offense.epa_per_play | 0.1391 | -0.0001 | 0.0921 | 1 | 72 | 0.0153 | 0.1681 | 0.1681 | 8 | 0.7742 | low | VALIDATED_PERSISTENCE | 0.0247 |
+| team_offense.explosive_pass_rate | 0.0513 | 0.0796 | 0.0177 | 1 | 72 | 0.0779 | -0.0939 | -0.0939 | 22 | 0.3226 | low | RANK_PERSISTENT | 0.0054 |
+| team_offense.explosive_rush_rate | 0.0667 | 0.0990 | 0.0195 | 1 | 72 | 0.0971 | -0.0974 | -0.0974 | 22 | 0.2903 | low | NOT_RANK_PERSISTENT | 0.0112 |
+| team_offense.pass_epa_per_dropback | 0.2891 | 0.0308 | 0.1280 | 1 | 72 | 0.0595 | 0.2243 | 0.2243 | 9 | 0.7419 | low | UNVALIDATED_RANK_PERSISTENT | 0.0335 |
+| team_offense.pass_success_rate | 0.5641 | 0.4521 | 0.0418 | 1 | 72 | 0.4645 | 0.2976 | 0.2976 | 5 | 0.8710 | low | UNVALIDATED_RANK_PERSISTENT | 0.0132 |
+| team_offense.proe | -0.0466 | -0.0477 | 0.0349 | 1 | 72 | -0.0475 | 0.0066 | 0.0000 | — | — | low | VALIDATED_PERSISTENCE | -0.0413 |
+| team_offense.rush_epa_per_play | -0.0443 | -0.0806 | 0.0754 | 1 | 72 | -0.0785 | 0.0283 | 0.0283 | 11 | 0.6774 | low | RANK_PERSISTENT | 0.0339 |
+| team_offense.rush_success_rate | 0.4000 | 0.4004 | 0.0385 | 1 | 72 | 0.4003 | -0.0007 | -0.0007 | 18 | 0.4032 | low | RANK_PERSISTENT | 0.0192 |
+| team_offense.success_rate | 0.4861 | 0.4370 | 0.0337 | 1 | 72 | 0.4468 | 0.2914 | 0.2914 | 6 | 0.8387 | low | VALIDATED_PERSISTENCE | 0.0155 |
 
 ## ATL
-Record: no games yet · Points for/against: —/— · Point differential: — · Data confidence: prior_season_only
-Strongest area: **pass_protection** (0.600) · Weakest area: **special_teams** (-0.253)
+Record: 0-1-0 · Points for/against: 13/20 · Point differential: -7 · Data confidence: low
+Strongest area: **passing_defense** (0.208) · Weakest area: **offense_overall** (-0.406)
 
 ### Domain indices
 | domain | label | index_value | rank_of_league | delta_vs_prev_week | delta_vs_preseason | min_confidence |
 | --- | --- | --- | --- | --- | --- | --- |
-| defense_overall | Defensive Strength Index | -0.151 | 18 | 0.000 | 0.000 | prior_season_only |
-| pass_rush | Pass-Rush Strength Index | 0.570 | 4 | 0.000 | 0.000 | prior_season_only |
-| passing_defense | Pass-Defense Strength Index | 0.099 | 14 | 0.000 | 0.000 | prior_season_only |
-| rushing_defense | Run-Defense Strength Index | -0.201 | 22 | 0.000 | 0.000 | prior_season_only |
-| offense_overall | Offensive Strength Index | 0.254 | 14 | 0.000 | 0.000 | prior_season_only |
-| pass_protection | Pass-Protection Strength Index | 0.600 | 6 | 0.000 | 0.000 | prior_season_only |
-| passing_offense | Passing-Offense Strength Index | -0.026 | 19 | 0.000 | 0.000 | prior_season_only |
-| rushing_offense | Rushing-Offense Strength Index | 0.132 | 18 | 0.000 | 0.000 | prior_season_only |
-| special_teams | Special-Teams Strength Index | -0.253 | 28 | 0.000 | 0.000 | prior_season_only |
+| defense_overall | Defensive Strength Index | 0.196 | 3 | 0.346 | 0.346 | low |
+| pass_rush | Pass-Rush Strength Index | -0.060 | 21 | -0.630 | -0.630 | low |
+| passing_defense | Pass-Defense Strength Index | 0.208 | 3 | 0.109 | 0.109 | low |
+| rushing_defense | Run-Defense Strength Index | 0.176 | 4 | 0.377 | 0.377 | low |
+| offense_overall | Offensive Strength Index | -0.406 | 32 | -0.660 | -0.660 | low |
+| pass_protection | Pass-Protection Strength Index | -0.339 | 29 | -0.939 | -0.939 | low |
+| passing_offense | Passing-Offense Strength Index | -0.273 | 31 | -0.247 | -0.247 | low |
+| rushing_offense | Rushing-Offense Strength Index | 0.025 | 16 | -0.107 | -0.107 | low |
+| special_teams | Special-Teams Strength Index | -0.129 | 28 | 0.124 | 0.124 | low |
 
 ### Underlying metrics
 | metric | raw_value | ref_mean | ref_sd | n_games | n_opportunities | shrunk_value | z_shrunk | oriented_z_shrunk | rank_of_league | percentile | confidence | phase3_status | delta_shrunk_vs_prev_week |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
-| pass_protection.qb_hit_rate_allowed | 0.1252 | 0.1450 | 0.0327 | 17 | 583 | 0.1315 | -0.4111 | 0.4111 | 12 | 0.6452 | prior_season_only | UNVALIDATED_RANK_PERSISTENT | 0.0000 |
-| pass_protection.rush_stuffed_rate_approx | 0.1866 | 0.2045 | 0.0323 | 17 | 583 | 0.1953 | -0.2864 | 0.2864 | 13 | 0.6129 | prior_season_only | RANK_PERSISTENT | 0.0000 |
-| pass_protection.sack_rate_allowed | 0.0446 | 0.0664 | 0.0188 | 17 | 583 | 0.0516 | -0.7896 | 0.7896 | 5 | 0.8710 | prior_season_only | UNVALIDATED_RANK_PERSISTENT | 0.0000 |
-| pass_rush.qb_hit_rate_generated | 0.1440 | 0.1442 | 0.0234 | 17 | 625 | 0.1441 | -0.0038 | -0.0038 | 18 | 0.4516 | prior_season_only | RANK_PERSISTENT | 0.0000 |
-| pass_rush.sack_rate_generated | 0.0912 | 0.0660 | 0.0121 | 17 | 625 | 0.0798 | 1.1445 | 1.1445 | 4 | 0.9032 | prior_season_only | NOT_RANK_PERSISTENT | 0.0000 |
-| special_teams.fg_pct | 0.8205 | 0.8507 | 0.0691 | 17 | 227 | 0.8352 | -0.2250 | -0.2250 | 24 | 0.2581 | prior_season_only | NOT_RANK_PERSISTENT | 0.0000 |
-| special_teams.st_epa_per_play | 0.0166 | 0.0622 | 0.0928 | 17 | 227 | 0.0387 | -0.2530 | -0.2530 | 28 | 0.1290 | prior_season_only | RANK_PERSISTENT | 0.0000 |
-| team_defense.early_down_epa_per_play | 0.0166 | -0.0013 | 0.0639 | 17 | 1088 | 0.0079 | 0.1440 | -0.1440 | 19 | 0.4194 | prior_season_only | RANK_PERSISTENT | 0.0000 |
-| team_defense.epa_per_play | 0.0083 | 0.0046 | 0.0677 | 17 | 1088 | 0.0065 | 0.0282 | -0.0282 | 14 | 0.5806 | prior_season_only | RANK_PERSISTENT | 0.0000 |
-| team_defense.explosive_pass_rate | 0.0784 | 0.0797 | 0.0112 | 17 | 1088 | 0.0790 | -0.0627 | 0.0627 | 18 | 0.4516 | prior_season_only | NOT_RANK_PERSISTENT | 0.0000 |
-| team_defense.explosive_rush_rate | 0.0888 | 0.1000 | 0.0206 | 17 | 1088 | 0.0942 | -0.2794 | 0.2794 | 11 | 0.6774 | prior_season_only | RANK_PERSISTENT | 0.0000 |
-| team_defense.pass_epa_per_dropback | 0.0020 | 0.0361 | 0.0949 | 17 | 1088 | 0.0186 | -0.1850 | 0.1850 | 13 | 0.6129 | prior_season_only | RANK_PERSISTENT | 0.0000 |
-| team_defense.pass_success_rate | 0.4528 | 0.4536 | 0.0320 | 17 | 1088 | 0.4532 | -0.0135 | 0.0135 | 15 | 0.5484 | prior_season_only | RANK_PERSISTENT | 0.0000 |
-| team_defense.rush_epa_per_play | -0.0276 | -0.0760 | 0.0649 | 17 | 1088 | -0.0495 | 0.4083 | -0.4083 | 26 | 0.1935 | prior_season_only | NOT_RANK_PERSISTENT | 0.0000 |
-| team_defense.rush_success_rate | 0.4322 | 0.4020 | 0.0330 | 17 | 1088 | 0.4176 | 0.4728 | -0.4728 | 24 | 0.2581 | prior_season_only | RANK_PERSISTENT | 0.0000 |
-| team_defense.success_rate | 0.4522 | 0.4384 | 0.0255 | 17 | 1088 | 0.4455 | 0.2795 | -0.2795 | 21 | 0.3548 | prior_season_only | RANK_PERSISTENT | 0.0000 |
-| team_offense.early_down_epa_per_play | 0.0678 | -0.0054 | 0.0784 | 17 | 1075 | 0.0444 | 0.6351 | 0.6351 | 8 | 0.7742 | prior_season_only | UNVALIDATED_RANK_PERSISTENT | 0.0000 |
-| team_offense.epa_per_play | -0.0078 | -0.0001 | 0.0921 | 17 | 1075 | -0.0054 | -0.0569 | -0.0569 | 21 | 0.3548 | prior_season_only | VALIDATED_PERSISTENCE | 0.0000 |
-| team_offense.explosive_pass_rate | 0.0806 | 0.0796 | 0.0177 | 17 | 1075 | 0.0801 | 0.0303 | 0.0303 | 15 | 0.5484 | prior_season_only | RANK_PERSISTENT | 0.0000 |
-| team_offense.explosive_rush_rate | 0.1128 | 0.0990 | 0.0195 | 17 | 1075 | 0.1061 | 0.3635 | 0.3635 | 8 | 0.7742 | prior_season_only | NOT_RANK_PERSISTENT | 0.0000 |
-| team_offense.pass_epa_per_dropback | 0.0082 | 0.0308 | 0.1280 | 17 | 1075 | 0.0154 | -0.1199 | -0.1199 | 22 | 0.3226 | prior_season_only | UNVALIDATED_RANK_PERSISTENT | 0.0000 |
-| team_offense.pass_success_rate | 0.4528 | 0.4521 | 0.0418 | 17 | 1075 | 0.4526 | 0.0122 | 0.0122 | 15 | 0.5484 | prior_season_only | UNVALIDATED_RANK_PERSISTENT | 0.0000 |
-| team_offense.proe | -0.0846 | -0.0477 | 0.0349 | 17 | 1075 | -0.0775 | -0.8560 | -0.0000 | — | — | prior_season_only | VALIDATED_PERSISTENCE | 0.0000 |
-| team_offense.rush_epa_per_play | -0.0731 | -0.0806 | 0.0754 | 17 | 1075 | -0.0768 | 0.0510 | 0.0510 | 20 | 0.3871 | prior_season_only | RANK_PERSISTENT | 0.0000 |
-| team_offense.rush_success_rate | 0.4143 | 0.4004 | 0.0385 | 17 | 1075 | 0.4085 | 0.2123 | 0.2123 | 15 | 0.5484 | prior_season_only | RANK_PERSISTENT | 0.0000 |
-| team_offense.success_rate | 0.4447 | 0.4370 | 0.0337 | 17 | 1075 | 0.4432 | 0.1846 | 0.1846 | 16 | 0.5161 | prior_season_only | VALIDATED_PERSISTENCE | 0.0000 |
+| pass_protection.qb_hit_rate_allowed | 0.1923 | 0.1450 | 0.0327 | 1 | 26 | 0.1503 | 0.1607 | -0.1607 | 24 | 0.2581 | low | UNVALIDATED_RANK_PERSISTENT | 0.0187 |
+| pass_protection.rush_stuffed_rate_approx | 0.2500 | 0.2045 | 0.0323 | 1 | 26 | 0.2072 | 0.0827 | -0.0827 | 22 | 0.3065 | low | RANK_PERSISTENT | 0.0119 |
+| pass_protection.sack_rate_allowed | 0.1538 | 0.0664 | 0.0188 | 1 | 26 | 0.0761 | 0.5173 | -0.5173 | 31 | 0.0323 | low | UNVALIDATED_RANK_PERSISTENT | 0.0245 |
+| pass_rush.qb_hit_rate_generated | 0.1395 | 0.1442 | 0.0234 | 1 | 43 | 0.1439 | -0.0117 | -0.0117 | 18 | 0.4516 | low | RANK_PERSISTENT | -0.0002 |
+| pass_rush.sack_rate_generated | 0.0465 | 0.0660 | 0.0121 | 1 | 43 | 0.0647 | -0.1081 | -0.1081 | 21 | 0.3387 | low | NOT_RANK_PERSISTENT | -0.0151 |
+| special_teams.fg_pct | 0.5000 | 0.8507 | 0.0691 | 1 | 16 | 0.8301 | -0.2984 | -0.2984 | 26 | 0.0370 | low | NOT_RANK_PERSISTENT | -0.0051 |
+| special_teams.st_epa_per_play | -0.1421 | 0.0622 | 0.0928 | 1 | 16 | 0.0502 | -0.1295 | -0.1295 | 28 | 0.1290 | low | RANK_PERSISTENT | 0.0115 |
+| team_defense.early_down_epa_per_play | -0.1460 | -0.0013 | 0.0639 | 1 | 65 | -0.0098 | -0.1333 | 0.1333 | 9 | 0.7419 | low | RANK_PERSISTENT | -0.0177 |
+| team_defense.epa_per_play | -0.2515 | 0.0046 | 0.0677 | 1 | 65 | -0.0105 | -0.2223 | 0.2223 | 3 | 0.9355 | low | RANK_PERSISTENT | -0.0170 |
+| team_defense.explosive_pass_rate | 0.0698 | 0.0797 | 0.0112 | 1 | 65 | 0.0790 | -0.0589 | 0.0589 | 17 | 0.4839 | low | NOT_RANK_PERSISTENT | 0.0000 |
+| team_defense.explosive_rush_rate | 0.0556 | 0.1000 | 0.0206 | 1 | 65 | 0.0973 | -0.1268 | 0.1268 | 6 | 0.8387 | low | RANK_PERSISTENT | 0.0031 |
+| team_defense.pass_epa_per_dropback | -0.3239 | 0.0361 | 0.0949 | 1 | 65 | 0.0149 | -0.2232 | 0.2232 | 5 | 0.8710 | low | RANK_PERSISTENT | -0.0036 |
+| team_defense.pass_success_rate | 0.3488 | 0.4536 | 0.0320 | 1 | 65 | 0.4475 | -0.1924 | 0.1924 | 2 | 0.9677 | low | RANK_PERSISTENT | -0.0057 |
+| team_defense.rush_epa_per_play | -0.2522 | -0.0760 | 0.0649 | 1 | 65 | -0.0877 | -0.1809 | 0.1809 | 6 | 0.8387 | low | NOT_RANK_PERSISTENT | -0.0383 |
+| team_defense.rush_success_rate | 0.2778 | 0.4020 | 0.0330 | 1 | 65 | 0.3947 | -0.2216 | 0.2216 | 5 | 0.8710 | low | RANK_PERSISTENT | -0.0229 |
+| team_defense.success_rate | 0.3385 | 0.4384 | 0.0255 | 1 | 65 | 0.4325 | -0.2309 | 0.2309 | 1 | 1.0000 | low | RANK_PERSISTENT | -0.0130 |
+| team_offense.early_down_epa_per_play | -0.2658 | -0.0054 | 0.0784 | 1 | 60 | -0.0343 | -0.3691 | -0.3691 | 31 | 0.0323 | low | UNVALIDATED_RANK_PERSISTENT | -0.0787 |
+| team_offense.epa_per_play | -0.3577 | -0.0001 | 0.0921 | 1 | 60 | -0.0399 | -0.4315 | -0.4315 | 31 | 0.0323 | low | VALIDATED_PERSISTENCE | -0.0345 |
+| team_offense.explosive_pass_rate | 0.1154 | 0.0796 | 0.0177 | 1 | 60 | 0.0817 | 0.1188 | 0.1188 | 7 | 0.8065 | low | RANK_PERSISTENT | 0.0016 |
+| team_offense.explosive_rush_rate | 0.0938 | 0.0990 | 0.0195 | 1 | 60 | 0.0987 | -0.0159 | -0.0159 | 15 | 0.5484 | low | NOT_RANK_PERSISTENT | -0.0074 |
+| team_offense.pass_epa_per_dropback | -0.6063 | 0.0308 | 0.1280 | 1 | 60 | -0.0400 | -0.5532 | -0.5532 | 32 | 0.0000 | low | UNVALIDATED_RANK_PERSISTENT | -0.0554 |
+| team_offense.pass_success_rate | 0.3077 | 0.4521 | 0.0418 | 1 | 60 | 0.4360 | -0.3836 | -0.3836 | 32 | 0.0000 | low | UNVALIDATED_RANK_PERSISTENT | -0.0166 |
+| team_offense.proe | -0.2039 | -0.0477 | 0.0349 | 1 | 60 | -0.0790 | -0.8964 | -0.0000 | — | — | low | VALIDATED_PERSISTENCE | -0.0014 |
+| team_offense.rush_epa_per_play | -0.1126 | -0.0806 | 0.0754 | 1 | 60 | -0.0825 | -0.0250 | -0.0250 | 20 | 0.3871 | low | RANK_PERSISTENT | -0.0057 |
+| team_offense.rush_success_rate | 0.4375 | 0.4004 | 0.0385 | 1 | 60 | 0.4032 | 0.0741 | 0.0741 | 11 | 0.6613 | low | RANK_PERSISTENT | -0.0053 |
+| team_offense.success_rate | 0.3667 | 0.4370 | 0.0337 | 1 | 60 | 0.4229 | -0.4167 | -0.4167 | 28 | 0.1290 | low | VALIDATED_PERSISTENCE | -0.0203 |
 
 ## BAL
-Record: no games yet · Points for/against: —/— · Point differential: — · Data confidence: prior_season_only
-Strongest area: **rushing_offense** (0.545) · Weakest area: **pass_protection** (-0.639)
+Record: 1-0-0 · Points for/against: 41/23 · Point differential: 18 · Data confidence: low
+Strongest area: **offense_overall** (0.278) · Weakest area: **rushing_defense** (-0.264)
 
 ### Domain indices
 | domain | label | index_value | rank_of_league | delta_vs_prev_week | delta_vs_preseason | min_confidence |
 | --- | --- | --- | --- | --- | --- | --- |
-| defense_overall | Defensive Strength Index | -0.177 | 20 | 0.000 | 0.000 | prior_season_only |
-| pass_rush | Pass-Rush Strength Index | -0.576 | 27 | 0.000 | 0.000 | prior_season_only |
-| passing_defense | Pass-Defense Strength Index | -0.209 | 19 | 0.000 | 0.000 | prior_season_only |
-| rushing_defense | Run-Defense Strength Index | 0.092 | 11 | 0.000 | 0.000 | prior_season_only |
-| offense_overall | Offensive Strength Index | 0.264 | 12 | 0.000 | 0.000 | prior_season_only |
-| pass_protection | Pass-Protection Strength Index | -0.639 | 27 | 0.000 | 0.000 | prior_season_only |
-| passing_offense | Passing-Offense Strength Index | 0.108 | 12 | 0.000 | 0.000 | prior_season_only |
-| rushing_offense | Rushing-Offense Strength Index | 0.545 | 8 | 0.000 | 0.000 | prior_season_only |
-| special_teams | Special-Teams Strength Index | 0.419 | 9 | 0.000 | 0.000 | prior_season_only |
+| defense_overall | Defensive Strength Index | 0.133 | 5 | 0.309 | 0.309 | low |
+| pass_rush | Pass-Rush Strength Index | 0.132 | 7 | 0.708 | 0.708 | low |
+| passing_defense | Pass-Defense Strength Index | 0.213 | 2 | 0.423 | 0.423 | low |
+| rushing_defense | Run-Defense Strength Index | -0.264 | 32 | -0.356 | -0.356 | low |
+| offense_overall | Offensive Strength Index | 0.278 | 5 | 0.013 | 0.013 | low |
+| pass_protection | Pass-Protection Strength Index | 0.063 | 13 | 0.702 | 0.702 | low |
+| passing_offense | Passing-Offense Strength Index | 0.239 | 5 | 0.131 | 0.131 | low |
+| rushing_offense | Rushing-Offense Strength Index | 0.108 | 7 | -0.437 | -0.437 | low |
+| special_teams | Special-Teams Strength Index | 0.164 | 6 | -0.255 | -0.255 | low |
 
 ### Underlying metrics
 | metric | raw_value | ref_mean | ref_sd | n_games | n_opportunities | shrunk_value | z_shrunk | oriented_z_shrunk | rank_of_league | percentile | confidence | phase3_status | delta_shrunk_vs_prev_week |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
-| pass_protection.qb_hit_rate_allowed | 0.1657 | 0.1450 | 0.0327 | 17 | 501 | 0.1591 | 0.4296 | -0.4296 | 22 | 0.3226 | prior_season_only | UNVALIDATED_RANK_PERSISTENT | 0.0000 |
-| pass_protection.rush_stuffed_rate_approx | 0.1779 | 0.2045 | 0.0323 | 17 | 501 | 0.1908 | -0.4245 | 0.4245 | 10 | 0.7097 | prior_season_only | RANK_PERSISTENT | 0.0000 |
-| pass_protection.sack_rate_allowed | 0.0898 | 0.0664 | 0.0188 | 17 | 501 | 0.0823 | 0.8478 | -0.8478 | 29 | 0.0968 | prior_season_only | UNVALIDATED_RANK_PERSISTENT | 0.0000 |
-| pass_rush.qb_hit_rate_generated | 0.1387 | 0.1442 | 0.0234 | 17 | 692 | 0.1414 | -0.1199 | -0.1199 | 21 | 0.3548 | prior_season_only | RANK_PERSISTENT | 0.0000 |
-| pass_rush.sack_rate_generated | 0.0434 | 0.0660 | 0.0121 | 17 | 692 | 0.0536 | -1.0326 | -1.0326 | 31 | 0.0323 | prior_season_only | NOT_RANK_PERSISTENT | 0.0000 |
-| special_teams.fg_pct | 0.8824 | 0.8507 | 0.0691 | 17 | 226 | 0.8670 | 0.2358 | 0.2358 | 12 | 0.6290 | prior_season_only | NOT_RANK_PERSISTENT | 0.0000 |
-| special_teams.st_epa_per_play | 0.1377 | 0.0622 | 0.0928 | 17 | 226 | 0.1011 | 0.4189 | 0.4189 | 9 | 0.7419 | prior_season_only | RANK_PERSISTENT | 0.0000 |
-| team_defense.early_down_epa_per_play | 0.0346 | -0.0013 | 0.0639 | 17 | 1114 | 0.0172 | 0.2896 | -0.2896 | 20 | 0.3871 | prior_season_only | RANK_PERSISTENT | 0.0000 |
-| team_defense.epa_per_play | 0.0251 | 0.0046 | 0.0677 | 17 | 1114 | 0.0152 | 0.1559 | -0.1559 | 18 | 0.4516 | prior_season_only | RANK_PERSISTENT | 0.0000 |
-| team_defense.explosive_pass_rate | 0.0925 | 0.0797 | 0.0112 | 17 | 1114 | 0.0867 | 0.6258 | -0.6258 | 28 | 0.1290 | prior_season_only | NOT_RANK_PERSISTENT | 0.0000 |
-| team_defense.explosive_rush_rate | 0.1023 | 0.1000 | 0.0206 | 17 | 1114 | 0.1012 | 0.0587 | -0.0587 | 21 | 0.3548 | prior_season_only | RANK_PERSISTENT | 0.0000 |
-| team_defense.pass_epa_per_dropback | 0.0915 | 0.0361 | 0.0949 | 17 | 1114 | 0.0647 | 0.3008 | -0.3008 | 22 | 0.3226 | prior_season_only | RANK_PERSISTENT | 0.0000 |
-| team_defense.pass_success_rate | 0.4610 | 0.4536 | 0.0320 | 17 | 1114 | 0.4574 | 0.1181 | -0.1181 | 18 | 0.4516 | prior_season_only | RANK_PERSISTENT | 0.0000 |
-| team_defense.rush_epa_per_play | -0.1148 | -0.0760 | 0.0649 | 17 | 1114 | -0.0973 | -0.3272 | 0.3272 | 6 | 0.8387 | prior_season_only | NOT_RANK_PERSISTENT | 0.0000 |
-| team_defense.rush_success_rate | 0.4015 | 0.4020 | 0.0330 | 17 | 1114 | 0.4017 | -0.0069 | 0.0069 | 14 | 0.5806 | prior_season_only | RANK_PERSISTENT | 0.0000 |
-| team_defense.success_rate | 0.4425 | 0.4384 | 0.0255 | 17 | 1114 | 0.4405 | 0.0841 | -0.0841 | 16 | 0.5161 | prior_season_only | RANK_PERSISTENT | 0.0000 |
-| team_offense.early_down_epa_per_play | 0.0307 | -0.0054 | 0.0784 | 17 | 992 | 0.0191 | 0.3126 | 0.3126 | 12 | 0.6452 | prior_season_only | UNVALIDATED_RANK_PERSISTENT | 0.0000 |
-| team_offense.epa_per_play | 0.0369 | -0.0001 | 0.0921 | 17 | 992 | 0.0251 | 0.2737 | 0.2737 | 13 | 0.6129 | prior_season_only | VALIDATED_PERSISTENCE | 0.0000 |
-| team_offense.explosive_pass_rate | 0.0858 | 0.0796 | 0.0177 | 17 | 992 | 0.0828 | 0.1817 | 0.1817 | 10 | 0.7097 | prior_season_only | RANK_PERSISTENT | 0.0000 |
-| team_offense.explosive_rush_rate | 0.1280 | 0.0990 | 0.0195 | 17 | 992 | 0.1139 | 0.7639 | 0.7639 | 2 | 0.9677 | prior_season_only | NOT_RANK_PERSISTENT | 0.0000 |
-| team_offense.pass_epa_per_dropback | 0.0176 | 0.0308 | 0.1280 | 17 | 992 | 0.0218 | -0.0700 | -0.0700 | 21 | 0.3548 | prior_season_only | UNVALIDATED_RANK_PERSISTENT | 0.0000 |
-| team_offense.pass_success_rate | 0.4651 | 0.4521 | 0.0418 | 17 | 992 | 0.4609 | 0.2112 | 0.2112 | 12 | 0.6452 | prior_season_only | UNVALIDATED_RANK_PERSISTENT | 0.0000 |
-| team_offense.proe | -0.1111 | -0.0477 | 0.0349 | 17 | 992 | -0.0990 | -1.4716 | -0.0000 | — | — | prior_season_only | VALIDATED_PERSISTENCE | 0.0000 |
-| team_offense.rush_epa_per_play | 0.0382 | -0.0806 | 0.0754 | 17 | 992 | -0.0194 | 0.8121 | 0.8121 | 3 | 0.9355 | prior_season_only | RANK_PERSISTENT | 0.0000 |
-| team_offense.rush_success_rate | 0.4187 | 0.4004 | 0.0385 | 17 | 992 | 0.4111 | 0.2783 | 0.2783 | 12 | 0.6452 | prior_season_only | RANK_PERSISTENT | 0.0000 |
-| team_offense.success_rate | 0.4456 | 0.4370 | 0.0337 | 17 | 992 | 0.4439 | 0.2065 | 0.2065 | 13 | 0.6129 | prior_season_only | VALIDATED_PERSISTENCE | 0.0000 |
+| pass_protection.qb_hit_rate_allowed | 0.1034 | 0.1450 | 0.0327 | 1 | 29 | 0.1404 | -0.1411 | 0.1411 | 8 | 0.7742 | low | UNVALIDATED_RANK_PERSISTENT | -0.0187 |
+| pass_protection.rush_stuffed_rate_approx | 0.0938 | 0.2045 | 0.0323 | 1 | 29 | 0.1980 | -0.2014 | 0.2014 | 4 | 0.9032 | low | RANK_PERSISTENT | 0.0072 |
+| pass_protection.sack_rate_allowed | 0.0690 | 0.0664 | 0.0188 | 1 | 29 | 0.0667 | 0.0151 | -0.0151 | 18 | 0.4516 | low | UNVALIDATED_RANK_PERSISTENT | -0.0156 |
+| pass_rush.qb_hit_rate_generated | 0.2647 | 0.1442 | 0.0234 | 1 | 34 | 0.1513 | 0.3030 | 0.3030 | 4 | 0.9032 | low | RANK_PERSISTENT | 0.0099 |
+| pass_rush.sack_rate_generated | 0.0588 | 0.0660 | 0.0121 | 1 | 34 | 0.0656 | -0.0400 | -0.0400 | 19 | 0.4194 | low | NOT_RANK_PERSISTENT | 0.0120 |
+| special_teams.fg_pct | 1.0000 | 0.8507 | 0.0691 | 1 | 15 | 0.8595 | 0.1270 | 0.1270 | 1 | 0.6481 | low | NOT_RANK_PERSISTENT | -0.0075 |
+| special_teams.st_epa_per_play | 0.3214 | 0.0622 | 0.0928 | 1 | 15 | 0.0775 | 0.1642 | 0.1642 | 6 | 0.8387 | low | RANK_PERSISTENT | -0.0236 |
+| team_defense.early_down_epa_per_play | -0.1866 | -0.0013 | 0.0639 | 1 | 54 | -0.0122 | -0.1706 | 0.1706 | 5 | 0.8710 | low | RANK_PERSISTENT | -0.0294 |
+| team_defense.epa_per_play | -0.2246 | 0.0046 | 0.0677 | 1 | 54 | -0.0089 | -0.1990 | 0.1990 | 6 | 0.8387 | low | RANK_PERSISTENT | -0.0240 |
+| team_defense.explosive_pass_rate | 0.0588 | 0.0797 | 0.0112 | 1 | 54 | 0.0783 | -0.1240 | 0.1240 | 14 | 0.5806 | low | NOT_RANK_PERSISTENT | -0.0084 |
+| team_defense.explosive_rush_rate | 0.2632 | 0.1000 | 0.0206 | 1 | 54 | 0.1096 | 0.4661 | -0.4661 | 32 | 0.0000 | low | RANK_PERSISTENT | 0.0084 |
+| team_defense.pass_epa_per_dropback | -0.4408 | 0.0361 | 0.0949 | 1 | 54 | 0.0081 | -0.2957 | 0.2957 | 3 | 0.9355 | low | RANK_PERSISTENT | -0.0566 |
+| team_defense.pass_success_rate | 0.3824 | 0.4536 | 0.0320 | 1 | 54 | 0.4494 | -0.1309 | 0.1309 | 6 | 0.8387 | low | RANK_PERSISTENT | -0.0080 |
+| team_defense.rush_epa_per_play | 0.1160 | -0.0760 | 0.0649 | 1 | 54 | -0.0632 | 0.1970 | -0.1970 | 28 | 0.1290 | low | NOT_RANK_PERSISTENT | 0.0341 |
+| team_defense.rush_success_rate | 0.4737 | 0.4020 | 0.0330 | 1 | 54 | 0.4062 | 0.1279 | -0.1279 | 26 | 0.1935 | low | RANK_PERSISTENT | 0.0044 |
+| team_defense.success_rate | 0.4259 | 0.4384 | 0.0255 | 1 | 54 | 0.4377 | -0.0288 | 0.0288 | 13 | 0.6129 | low | RANK_PERSISTENT | -0.0029 |
+| team_offense.early_down_epa_per_play | 0.2714 | -0.0054 | 0.0784 | 1 | 64 | 0.0254 | 0.3924 | 0.3924 | 4 | 0.9032 | low | UNVALIDATED_RANK_PERSISTENT | 0.0063 |
+| team_offense.epa_per_play | 0.2087 | -0.0001 | 0.0921 | 1 | 64 | 0.0231 | 0.2520 | 0.2520 | 6 | 0.8387 | low | VALIDATED_PERSISTENCE | -0.0020 |
+| team_offense.explosive_pass_rate | 0.1034 | 0.0796 | 0.0177 | 1 | 64 | 0.0810 | 0.0792 | 0.0792 | 10 | 0.7097 | low | RANK_PERSISTENT | -0.0018 |
+| team_offense.explosive_rush_rate | 0.1250 | 0.0990 | 0.0195 | 1 | 64 | 0.1005 | 0.0782 | 0.0782 | 7 | 0.7903 | low | NOT_RANK_PERSISTENT | -0.0134 |
+| team_offense.pass_epa_per_dropback | 0.4595 | 0.0308 | 0.1280 | 1 | 64 | 0.0784 | 0.3722 | 0.3722 | 5 | 0.8710 | low | UNVALIDATED_RANK_PERSISTENT | 0.0566 |
+| team_offense.pass_success_rate | 0.5517 | 0.4521 | 0.0418 | 1 | 64 | 0.4632 | 0.2647 | 0.2647 | 6 | 0.8387 | low | UNVALIDATED_RANK_PERSISTENT | 0.0022 |
+| team_offense.proe | -0.1051 | -0.0477 | 0.0349 | 1 | 64 | -0.0592 | -0.3294 | -0.0000 | — | — | low | VALIDATED_PERSISTENCE | 0.0398 |
+| team_offense.rush_epa_per_play | 0.1015 | -0.0806 | 0.0754 | 1 | 64 | -0.0699 | 0.1421 | 0.1421 | 6 | 0.8387 | low | RANK_PERSISTENT | -0.0505 |
+| team_offense.rush_success_rate | 0.4375 | 0.4004 | 0.0385 | 1 | 64 | 0.4032 | 0.0741 | 0.0741 | 11 | 0.6613 | low | RANK_PERSISTENT | -0.0079 |
+| team_offense.success_rate | 0.4688 | 0.4370 | 0.0337 | 1 | 64 | 0.4433 | 0.1885 | 0.1885 | 12 | 0.6452 | low | VALIDATED_PERSISTENCE | -0.0006 |
 
 ## BUF
-Record: no games yet · Points for/against: —/— · Point differential: — · Data confidence: prior_season_only
-Strongest area: **offense_overall** (1.096) · Weakest area: **rushing_defense** (-0.777)
+Record: 1-0-0 · Points for/against: 36/31 · Point differential: 5 · Data confidence: low
+Strongest area: **passing_offense** (0.252) · Weakest area: **rushing_offense** (-0.156)
 
 ### Domain indices
 | domain | label | index_value | rank_of_league | delta_vs_prev_week | delta_vs_preseason | min_confidence |
 | --- | --- | --- | --- | --- | --- | --- |
-| defense_overall | Defensive Strength Index | 0.201 | 11 | 0.000 | 0.000 | prior_season_only |
-| pass_rush | Pass-Rush Strength Index | 0.242 | 10 | 0.000 | 0.000 | prior_season_only |
-| passing_defense | Pass-Defense Strength Index | 0.561 | 8 | 0.000 | 0.000 | prior_season_only |
-| rushing_defense | Run-Defense Strength Index | -0.777 | 30 | 0.000 | 0.000 | prior_season_only |
-| offense_overall | Offensive Strength Index | 1.096 | 3 | 0.000 | 0.000 | prior_season_only |
-| pass_protection | Pass-Protection Strength Index | 0.223 | 15 | 0.000 | 0.000 | prior_season_only |
-| passing_offense | Passing-Offense Strength Index | 0.790 | 5 | 0.000 | 0.000 | prior_season_only |
-| rushing_offense | Rushing-Offense Strength Index | 0.907 | 2 | 0.000 | 0.000 | prior_season_only |
-| special_teams | Special-Teams Strength Index | 0.205 | 17 | 0.000 | 0.000 | prior_season_only |
+| defense_overall | Defensive Strength Index | -0.083 | 22 | -0.284 | -0.284 | low |
+| pass_rush | Pass-Rush Strength Index | 0.103 | 10 | -0.139 | -0.139 | low |
+| passing_defense | Pass-Defense Strength Index | -0.062 | 20 | -0.622 | -0.622 | low |
+| rushing_defense | Run-Defense Strength Index | -0.044 | 21 | 0.734 | 0.734 | low |
+| offense_overall | Offensive Strength Index | 0.229 | 8 | -0.868 | -0.868 | low |
+| pass_protection | Pass-Protection Strength Index | 0.099 | 10 | -0.125 | -0.125 | low |
+| passing_offense | Passing-Offense Strength Index | 0.252 | 4 | -0.538 | -0.538 | low |
+| rushing_offense | Rushing-Offense Strength Index | -0.156 | 25 | -1.062 | -1.062 | low |
+| special_teams | Special-Teams Strength Index | 0.161 | 7 | -0.044 | -0.044 | low |
 
 ### Underlying metrics
 | metric | raw_value | ref_mean | ref_sd | n_games | n_opportunities | shrunk_value | z_shrunk | oriented_z_shrunk | rank_of_league | percentile | confidence | phase3_status | delta_shrunk_vs_prev_week |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
-| pass_protection.qb_hit_rate_allowed | 0.1199 | 0.1450 | 0.0327 | 17 | 584 | 0.1279 | -0.5223 | 0.5223 | 7 | 0.8065 | prior_season_only | UNVALIDATED_RANK_PERSISTENT | 0.0000 |
-| pass_protection.rush_stuffed_rate_approx | 0.1588 | 0.2045 | 0.0323 | 17 | 584 | 0.1810 | -0.7289 | 0.7289 | 5 | 0.8710 | prior_season_only | RANK_PERSISTENT | 0.0000 |
-| pass_protection.sack_rate_allowed | 0.0685 | 0.0664 | 0.0188 | 17 | 584 | 0.0678 | 0.0756 | -0.0756 | 19 | 0.4194 | prior_season_only | UNVALIDATED_RANK_PERSISTENT | 0.0000 |
-| pass_rush.qb_hit_rate_generated | 0.1623 | 0.1442 | 0.0234 | 17 | 530 | 0.1535 | 0.3982 | 0.3982 | 9 | 0.7419 | prior_season_only | RANK_PERSISTENT | 0.0000 |
-| pass_rush.sack_rate_generated | 0.0679 | 0.0660 | 0.0121 | 17 | 530 | 0.0671 | 0.0854 | 0.0854 | 14 | 0.5806 | prior_season_only | NOT_RANK_PERSISTENT | 0.0000 |
-| special_teams.fg_pct | 0.9048 | 0.8507 | 0.0691 | 17 | 204 | 0.8786 | 0.4028 | 0.4028 | 8 | 0.7742 | prior_season_only | NOT_RANK_PERSISTENT | 0.0000 |
-| special_teams.st_epa_per_play | 0.0992 | 0.0622 | 0.0928 | 17 | 204 | 0.0813 | 0.2049 | 0.2049 | 17 | 0.4839 | prior_season_only | RANK_PERSISTENT | 0.0000 |
-| team_defense.early_down_epa_per_play | -0.0455 | -0.0013 | 0.0639 | 17 | 971 | -0.0241 | -0.3562 | 0.3562 | 11 | 0.6774 | prior_season_only | RANK_PERSISTENT | 0.0000 |
-| team_defense.epa_per_play | -0.0068 | 0.0046 | 0.0677 | 17 | 971 | -0.0013 | -0.0867 | 0.0867 | 13 | 0.6129 | prior_season_only | RANK_PERSISTENT | 0.0000 |
-| team_defense.explosive_pass_rate | 0.0717 | 0.0797 | 0.0112 | 17 | 971 | 0.0753 | -0.3903 | 0.3903 | 10 | 0.7097 | prior_season_only | NOT_RANK_PERSISTENT | 0.0000 |
-| team_defense.explosive_rush_rate | 0.1316 | 0.1000 | 0.0206 | 17 | 971 | 0.1162 | 0.7910 | -0.7910 | 30 | 0.0645 | prior_season_only | RANK_PERSISTENT | 0.0000 |
-| team_defense.pass_epa_per_dropback | -0.0674 | 0.0361 | 0.0949 | 17 | 971 | -0.0172 | -0.5622 | 0.5622 | 8 | 0.7742 | prior_season_only | RANK_PERSISTENT | 0.0000 |
-| team_defense.pass_success_rate | 0.4189 | 0.4536 | 0.0320 | 17 | 971 | 0.4357 | -0.5591 | 0.5591 | 6 | 0.8387 | prior_season_only | RANK_PERSISTENT | 0.0000 |
-| team_defense.rush_epa_per_play | 0.0491 | -0.0760 | 0.0649 | 17 | 971 | -0.0074 | 1.0562 | -1.0562 | 31 | 0.0323 | prior_season_only | NOT_RANK_PERSISTENT | 0.0000 |
-| team_defense.rush_success_rate | 0.4330 | 0.4020 | 0.0330 | 17 | 971 | 0.4180 | 0.4849 | -0.4849 | 25 | 0.2258 | prior_season_only | RANK_PERSISTENT | 0.0000 |
-| team_defense.success_rate | 0.4305 | 0.4384 | 0.0255 | 17 | 971 | 0.4343 | -0.1601 | 0.1601 | 12 | 0.6452 | prior_season_only | RANK_PERSISTENT | 0.0000 |
-| team_offense.early_down_epa_per_play | 0.1097 | -0.0054 | 0.0784 | 17 | 1097 | 0.0729 | 0.9986 | 0.9986 | 3 | 0.9355 | prior_season_only | UNVALIDATED_RANK_PERSISTENT | 0.0000 |
-| team_offense.epa_per_play | 0.1452 | -0.0001 | 0.0921 | 17 | 1097 | 0.0987 | 1.0729 | 1.0729 | 3 | 0.9355 | prior_season_only | VALIDATED_PERSISTENCE | 0.0000 |
-| team_offense.explosive_pass_rate | 0.1045 | 0.0796 | 0.0177 | 17 | 1097 | 0.0924 | 0.7227 | 0.7227 | 6 | 0.8387 | prior_season_only | RANK_PERSISTENT | 0.0000 |
-| team_offense.explosive_rush_rate | 0.1155 | 0.0990 | 0.0195 | 17 | 1097 | 0.1075 | 0.4338 | 0.4338 | 6 | 0.8387 | prior_season_only | NOT_RANK_PERSISTENT | 0.0000 |
-| team_offense.pass_epa_per_dropback | 0.2046 | 0.0308 | 0.1280 | 17 | 1097 | 0.1490 | 0.9238 | 0.9238 | 4 | 0.9032 | prior_season_only | UNVALIDATED_RANK_PERSISTENT | 0.0000 |
-| team_offense.pass_success_rate | 0.4966 | 0.4521 | 0.0418 | 17 | 1097 | 0.4823 | 0.7234 | 0.7234 | 6 | 0.8387 | prior_season_only | UNVALIDATED_RANK_PERSISTENT | 0.0000 |
-| team_offense.proe | -0.0588 | -0.0477 | 0.0349 | 17 | 1097 | -0.0567 | -0.2577 | -0.0000 | — | — | prior_season_only | VALIDATED_PERSISTENCE | 0.0000 |
-| team_offense.rush_epa_per_play | 0.0386 | -0.0806 | 0.0754 | 17 | 1097 | -0.0192 | 0.8148 | 0.8148 | 2 | 0.9677 | prior_season_only | RANK_PERSISTENT | 0.0000 |
-| team_offense.rush_success_rate | 0.4660 | 0.4004 | 0.0385 | 17 | 1097 | 0.4388 | 0.9985 | 0.9985 | 2 | 0.9677 | prior_season_only | RANK_PERSISTENT | 0.0000 |
-| team_offense.success_rate | 0.4877 | 0.4370 | 0.0337 | 17 | 1097 | 0.4780 | 1.2174 | 1.2174 | 2 | 0.9677 | prior_season_only | VALIDATED_PERSISTENCE | 0.0000 |
+| pass_protection.qb_hit_rate_allowed | 0.0938 | 0.1450 | 0.0327 | 1 | 32 | 0.1393 | -0.1740 | 0.1740 | 7 | 0.8065 | low | UNVALIDATED_RANK_PERSISTENT | 0.0114 |
+| pass_protection.rush_stuffed_rate_approx | 0.1579 | 0.2045 | 0.0323 | 1 | 32 | 0.2018 | -0.0848 | 0.0848 | 7 | 0.7903 | low | RANK_PERSISTENT | 0.0208 |
+| pass_protection.sack_rate_allowed | 0.0625 | 0.0664 | 0.0188 | 1 | 32 | 0.0660 | -0.0231 | 0.0231 | 17 | 0.4839 | low | UNVALIDATED_RANK_PERSISTENT | -0.0019 |
+| pass_rush.qb_hit_rate_generated | 0.2143 | 0.1442 | 0.0234 | 1 | 42 | 0.1483 | 0.1762 | 0.1762 | 7 | 0.8065 | low | RANK_PERSISTENT | -0.0052 |
+| pass_rush.sack_rate_generated | 0.0714 | 0.0660 | 0.0121 | 1 | 42 | 0.0664 | 0.0298 | 0.0298 | 13 | 0.5968 | low | NOT_RANK_PERSISTENT | -0.0007 |
+| special_teams.fg_pct | 1.0000 | 0.8507 | 0.0691 | 1 | 14 | 0.8595 | 0.1270 | 0.1270 | 1 | 0.6481 | low | NOT_RANK_PERSISTENT | -0.0191 |
+| special_teams.st_epa_per_play | 0.3164 | 0.0622 | 0.0928 | 1 | 14 | 0.0772 | 0.1610 | 0.1610 | 7 | 0.8065 | low | RANK_PERSISTENT | -0.0041 |
+| team_defense.early_down_epa_per_play | 0.1003 | -0.0013 | 0.0639 | 1 | 79 | 0.0047 | 0.0935 | -0.0935 | 22 | 0.3226 | low | RANK_PERSISTENT | 0.0287 |
+| team_defense.epa_per_play | 0.0713 | 0.0046 | 0.0677 | 1 | 79 | 0.0085 | 0.0579 | -0.0579 | 20 | 0.3871 | low | RANK_PERSISTENT | 0.0098 |
+| team_defense.explosive_pass_rate | 0.0952 | 0.0797 | 0.0112 | 1 | 79 | 0.0807 | 0.0924 | -0.0924 | 20 | 0.3871 | low | NOT_RANK_PERSISTENT | 0.0054 |
+| team_defense.explosive_rush_rate | 0.0968 | 0.1000 | 0.0206 | 1 | 79 | 0.0998 | -0.0091 | 0.0091 | 20 | 0.3871 | low | RANK_PERSISTENT | -0.0165 |
+| team_defense.pass_epa_per_dropback | 0.0974 | 0.0361 | 0.0949 | 1 | 79 | 0.0397 | 0.0380 | -0.0380 | 19 | 0.4194 | low | RANK_PERSISTENT | 0.0569 |
+| team_defense.pass_success_rate | 0.5000 | 0.4536 | 0.0320 | 1 | 79 | 0.4564 | 0.0851 | -0.0851 | 22 | 0.2903 | low | RANK_PERSISTENT | 0.0206 |
+| team_defense.rush_epa_per_play | 0.0303 | -0.0760 | 0.0649 | 1 | 79 | -0.0689 | 0.1091 | -0.1091 | 24 | 0.2581 | low | NOT_RANK_PERSISTENT | -0.0615 |
+| team_defense.rush_success_rate | 0.4194 | 0.4020 | 0.0330 | 1 | 79 | 0.4030 | 0.0310 | -0.0310 | 18 | 0.4516 | low | RANK_PERSISTENT | -0.0150 |
+| team_defense.success_rate | 0.4810 | 0.4384 | 0.0255 | 1 | 79 | 0.4409 | 0.0985 | -0.0985 | 24 | 0.2581 | low | RANK_PERSISTENT | 0.0066 |
+| team_offense.early_down_epa_per_play | 0.3013 | -0.0054 | 0.0784 | 1 | 55 | 0.0287 | 0.4347 | 0.4347 | 3 | 0.9355 | low | UNVALIDATED_RANK_PERSISTENT | -0.0442 |
+| team_offense.epa_per_play | 0.3002 | -0.0001 | 0.0921 | 1 | 55 | 0.0332 | 0.3624 | 0.3624 | 4 | 0.9032 | low | VALIDATED_PERSISTENCE | -0.0654 |
+| team_offense.explosive_pass_rate | 0.1562 | 0.0796 | 0.0177 | 1 | 55 | 0.0841 | 0.2543 | 0.2543 | 2 | 0.9677 | low | RANK_PERSISTENT | -0.0083 |
+| team_offense.explosive_rush_rate | 0.1053 | 0.0990 | 0.0195 | 1 | 55 | 0.0994 | 0.0188 | 0.0188 | 12 | 0.6452 | low | NOT_RANK_PERSISTENT | -0.0081 |
+| team_offense.pass_epa_per_dropback | 0.5582 | 0.0308 | 0.1280 | 1 | 55 | 0.0894 | 0.4579 | 0.4579 | 3 | 0.9355 | low | UNVALIDATED_RANK_PERSISTENT | -0.0596 |
+| team_offense.pass_success_rate | 0.4688 | 0.4521 | 0.0418 | 1 | 55 | 0.4539 | 0.0443 | 0.0443 | 15 | 0.5484 | low | UNVALIDATED_RANK_PERSISTENT | -0.0284 |
+| team_offense.proe | -0.0361 | -0.0477 | 0.0349 | 1 | 55 | -0.0454 | 0.0664 | 0.0000 | — | — | low | VALIDATED_PERSISTENCE | 0.0113 |
+| team_offense.rush_epa_per_play | -0.2628 | -0.0806 | 0.0754 | 1 | 55 | -0.0913 | -0.1422 | -0.1422 | 28 | 0.1290 | low | RANK_PERSISTENT | -0.0721 |
+| team_offense.rush_success_rate | 0.3158 | 0.4004 | 0.0385 | 1 | 55 | 0.3939 | -0.1689 | -0.1689 | 25 | 0.2258 | low | RANK_PERSISTENT | -0.0450 |
+| team_offense.success_rate | 0.4182 | 0.4370 | 0.0337 | 1 | 55 | 0.4332 | -0.1113 | -0.1113 | 21 | 0.3548 | low | VALIDATED_PERSISTENCE | -0.0448 |
 
 ## CAR
-Record: no games yet · Points for/against: —/— · Point differential: — · Data confidence: prior_season_only
-Strongest area: **special_teams** (0.311) · Weakest area: **pass_rush** (-0.841)
+Record: 0-1-0 · Points for/against: 37/59 · Point differential: -22 · Data confidence: low
+Strongest area: **offense_overall** (0.207) · Weakest area: **passing_defense** (-0.319)
 
 ### Domain indices
 | domain | label | index_value | rank_of_league | delta_vs_prev_week | delta_vs_preseason | min_confidence |
 | --- | --- | --- | --- | --- | --- | --- |
-| defense_overall | Defensive Strength Index | -0.136 | 17 | 0.000 | 0.000 | prior_season_only |
-| pass_rush | Pass-Rush Strength Index | -0.841 | 30 | 0.000 | 0.000 | prior_season_only |
-| passing_defense | Pass-Defense Strength Index | -0.404 | 22 | 0.000 | 0.000 | prior_season_only |
-| rushing_defense | Run-Defense Strength Index | -0.025 | 17 | 0.000 | 0.000 | prior_season_only |
-| offense_overall | Offensive Strength Index | -0.180 | 25 | 0.000 | 0.000 | prior_season_only |
-| pass_protection | Pass-Protection Strength Index | 0.085 | 20 | 0.000 | 0.000 | prior_season_only |
-| passing_offense | Passing-Offense Strength Index | -0.232 | 26 | 0.000 | 0.000 | prior_season_only |
-| rushing_offense | Rushing-Offense Strength Index | 0.140 | 17 | 0.000 | 0.000 | prior_season_only |
-| special_teams | Special-Teams Strength Index | 0.311 | 16 | 0.000 | 0.000 | prior_season_only |
+| defense_overall | Defensive Strength Index | -0.276 | 30 | -0.140 | -0.140 | low |
+| pass_rush | Pass-Rush Strength Index | -0.119 | 26 | 0.722 | 0.722 | low |
+| passing_defense | Pass-Defense Strength Index | -0.319 | 30 | 0.085 | 0.085 | low |
+| rushing_defense | Run-Defense Strength Index | -0.087 | 24 | -0.062 | -0.062 | low |
+| offense_overall | Offensive Strength Index | 0.207 | 10 | 0.387 | 0.387 | low |
+| pass_protection | Pass-Protection Strength Index | 0.108 | 8 | 0.023 | 0.023 | low |
+| passing_offense | Passing-Offense Strength Index | 0.154 | 7 | 0.387 | 0.387 | low |
+| rushing_offense | Rushing-Offense Strength Index | 0.044 | 15 | -0.096 | -0.096 | low |
+| special_teams | Special-Teams Strength Index | -0.055 | 24 | -0.366 | -0.366 | low |
 
 ### Underlying metrics
 | metric | raw_value | ref_mean | ref_sd | n_games | n_opportunities | shrunk_value | z_shrunk | oriented_z_shrunk | rank_of_league | percentile | confidence | phase3_status | delta_shrunk_vs_prev_week |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
-| pass_protection.qb_hit_rate_allowed | 0.1478 | 0.1450 | 0.0327 | 17 | 582 | 0.1469 | 0.0575 | -0.0575 | 21 | 0.3548 | prior_season_only | UNVALIDATED_RANK_PERSISTENT | 0.0000 |
-| pass_protection.rush_stuffed_rate_approx | 0.1607 | 0.2045 | 0.0323 | 17 | 582 | 0.1819 | -0.6985 | 0.6985 | 6 | 0.8387 | prior_season_only | RANK_PERSISTENT | 0.0000 |
-| pass_protection.sack_rate_allowed | 0.0601 | 0.0664 | 0.0188 | 17 | 582 | 0.0621 | -0.2269 | 0.2269 | 14 | 0.5806 | prior_season_only | UNVALIDATED_RANK_PERSISTENT | 0.0000 |
-| pass_rush.qb_hit_rate_generated | 0.0941 | 0.1442 | 0.0234 | 17 | 563 | 0.1184 | -1.1014 | -1.1014 | 31 | 0.0323 | prior_season_only | RANK_PERSISTENT | 0.0000 |
-| pass_rush.sack_rate_generated | 0.0533 | 0.0660 | 0.0121 | 17 | 563 | 0.0590 | -0.5806 | -0.5806 | 27 | 0.1613 | prior_season_only | NOT_RANK_PERSISTENT | 0.0000 |
-| special_teams.fg_pct | 0.8276 | 0.8507 | 0.0691 | 17 | 206 | 0.8388 | -0.1723 | -0.1723 | 22 | 0.3226 | prior_season_only | NOT_RANK_PERSISTENT | 0.0000 |
-| special_teams.st_epa_per_play | 0.1183 | 0.0622 | 0.0928 | 17 | 206 | 0.0911 | 0.3109 | 0.3109 | 16 | 0.5161 | prior_season_only | RANK_PERSISTENT | 0.0000 |
-| team_defense.early_down_epa_per_play | -0.0113 | -0.0013 | 0.0639 | 17 | 1039 | -0.0065 | -0.0809 | 0.0809 | 15 | 0.5484 | prior_season_only | RANK_PERSISTENT | 0.0000 |
-| team_defense.epa_per_play | 0.0600 | 0.0046 | 0.0677 | 17 | 1039 | 0.0331 | 0.4214 | -0.4214 | 23 | 0.2903 | prior_season_only | RANK_PERSISTENT | 0.0000 |
-| team_defense.explosive_pass_rate | 0.0746 | 0.0797 | 0.0112 | 17 | 1039 | 0.0769 | -0.2485 | 0.2485 | 12 | 0.6452 | prior_season_only | NOT_RANK_PERSISTENT | 0.0000 |
-| team_defense.explosive_rush_rate | 0.0911 | 0.1000 | 0.0206 | 17 | 1039 | 0.0954 | -0.2212 | 0.2212 | 15 | 0.5484 | prior_season_only | RANK_PERSISTENT | 0.0000 |
-| team_defense.pass_epa_per_dropback | 0.1187 | 0.0361 | 0.0949 | 17 | 1039 | 0.0787 | 0.4486 | -0.4486 | 24 | 0.2581 | prior_season_only | RANK_PERSISTENT | 0.0000 |
-| team_defense.pass_success_rate | 0.4760 | 0.4536 | 0.0320 | 17 | 1039 | 0.4652 | 0.3599 | -0.3599 | 21 | 0.3548 | prior_season_only | RANK_PERSISTENT | 0.0000 |
-| team_defense.rush_epa_per_play | -0.0248 | -0.0760 | 0.0649 | 17 | 1039 | -0.0479 | 0.4327 | -0.4327 | 27 | 0.1613 | prior_season_only | NOT_RANK_PERSISTENT | 0.0000 |
-| team_defense.rush_success_rate | 0.3933 | 0.4020 | 0.0330 | 17 | 1039 | 0.3975 | -0.1350 | 0.1350 | 10 | 0.7097 | prior_season_only | RANK_PERSISTENT | 0.0000 |
-| team_defense.success_rate | 0.4418 | 0.4384 | 0.0255 | 17 | 1039 | 0.4401 | 0.0683 | -0.0683 | 15 | 0.5484 | prior_season_only | RANK_PERSISTENT | 0.0000 |
-| team_offense.early_down_epa_per_play | -0.0460 | -0.0054 | 0.0784 | 17 | 1035 | -0.0330 | -0.3521 | -0.3521 | 27 | 0.1613 | prior_season_only | UNVALIDATED_RANK_PERSISTENT | 0.0000 |
-| team_offense.epa_per_play | -0.0247 | -0.0001 | 0.0921 | 17 | 1035 | -0.0168 | -0.1813 | -0.1813 | 26 | 0.1935 | prior_season_only | VALIDATED_PERSISTENCE | 0.0000 |
-| team_offense.explosive_pass_rate | 0.0739 | 0.0796 | 0.0177 | 17 | 1035 | 0.0766 | -0.1653 | -0.1653 | 18 | 0.4516 | prior_season_only | RANK_PERSISTENT | 0.0000 |
-| team_offense.explosive_rush_rate | 0.0911 | 0.0990 | 0.0195 | 17 | 1035 | 0.0950 | -0.2080 | -0.2080 | 22 | 0.3226 | prior_season_only | NOT_RANK_PERSISTENT | 0.0000 |
-| team_offense.pass_epa_per_dropback | -0.0267 | 0.0308 | 0.1280 | 17 | 1035 | -0.0083 | -0.3055 | -0.3055 | 26 | 0.1935 | prior_season_only | UNVALIDATED_RANK_PERSISTENT | 0.0000 |
-| team_offense.pass_success_rate | 0.4381 | 0.4521 | 0.0418 | 17 | 1035 | 0.4426 | -0.2266 | -0.2266 | 25 | 0.2258 | prior_season_only | UNVALIDATED_RANK_PERSISTENT | 0.0000 |
-| team_offense.proe | -0.0870 | -0.0477 | 0.0349 | 17 | 1035 | -0.0795 | -0.9125 | -0.0000 | — | — | prior_season_only | VALIDATED_PERSISTENCE | 0.0000 |
-| team_offense.rush_epa_per_play | -0.0720 | -0.0806 | 0.0754 | 17 | 1035 | -0.0762 | 0.0586 | 0.0586 | 18 | 0.4516 | prior_season_only | RANK_PERSISTENT | 0.0000 |
-| team_offense.rush_success_rate | 0.4149 | 0.4004 | 0.0385 | 17 | 1035 | 0.4089 | 0.2207 | 0.2207 | 14 | 0.5806 | prior_season_only | RANK_PERSISTENT | 0.0000 |
-| team_offense.success_rate | 0.4367 | 0.4370 | 0.0337 | 17 | 1035 | 0.4368 | -0.0058 | -0.0058 | 18 | 0.4516 | prior_season_only | VALIDATED_PERSISTENCE | 0.0000 |
+| pass_protection.qb_hit_rate_allowed | 0.1163 | 0.1450 | 0.0327 | 1 | 43 | 0.1418 | -0.0975 | 0.0975 | 10 | 0.7097 | low | UNVALIDATED_RANK_PERSISTENT | -0.0051 |
+| pass_protection.rush_stuffed_rate_approx | 0.1818 | 0.2045 | 0.0323 | 1 | 43 | 0.2032 | -0.0413 | 0.0413 | 14 | 0.5806 | low | RANK_PERSISTENT | 0.0213 |
+| pass_protection.sack_rate_allowed | 0.0465 | 0.0664 | 0.0188 | 1 | 43 | 0.0642 | -0.1177 | 0.1177 | 11 | 0.6613 | low | UNVALIDATED_RANK_PERSISTENT | 0.0021 |
+| pass_rush.qb_hit_rate_generated | 0.0789 | 0.1442 | 0.0234 | 1 | 38 | 0.1403 | -0.1639 | -0.1639 | 28 | 0.1290 | low | RANK_PERSISTENT | 0.0219 |
+| pass_rush.sack_rate_generated | 0.0526 | 0.0660 | 0.0121 | 1 | 38 | 0.0652 | -0.0742 | -0.0742 | 20 | 0.3871 | low | NOT_RANK_PERSISTENT | 0.0061 |
+| special_teams.fg_pct | 1.0000 | 0.8507 | 0.0691 | 1 | 19 | 0.8595 | 0.1270 | 0.1270 | 1 | 0.6481 | low | NOT_RANK_PERSISTENT | 0.0207 |
+| special_teams.st_epa_per_play | -0.0245 | 0.0622 | 0.0928 | 1 | 19 | 0.0571 | -0.0549 | -0.0549 | 24 | 0.2581 | low | RANK_PERSISTENT | -0.0340 |
+| team_defense.early_down_epa_per_play | 0.3233 | -0.0013 | 0.0639 | 1 | 75 | 0.0178 | 0.2989 | -0.2989 | 31 | 0.0323 | low | RANK_PERSISTENT | 0.0243 |
+| team_defense.epa_per_play | 0.3605 | 0.0046 | 0.0677 | 1 | 75 | 0.0255 | 0.3090 | -0.3090 | 31 | 0.0323 | low | RANK_PERSISTENT | -0.0076 |
+| team_defense.explosive_pass_rate | 0.1053 | 0.0797 | 0.0112 | 1 | 75 | 0.0814 | 0.1520 | -0.1520 | 24 | 0.2581 | low | NOT_RANK_PERSISTENT | 0.0045 |
+| team_defense.explosive_rush_rate | 0.1143 | 0.1000 | 0.0206 | 1 | 75 | 0.1008 | 0.0409 | -0.0409 | 22 | 0.3226 | low | RANK_PERSISTENT | 0.0054 |
+| team_defense.pass_epa_per_dropback | 0.5378 | 0.0361 | 0.0949 | 1 | 75 | 0.0656 | 0.3111 | -0.3111 | 29 | 0.0968 | low | RANK_PERSISTENT | -0.0131 |
+| team_defense.pass_success_rate | 0.6316 | 0.4536 | 0.0320 | 1 | 75 | 0.4641 | 0.3267 | -0.3267 | 30 | 0.0645 | low | RANK_PERSISTENT | -0.0011 |
+| team_defense.rush_epa_per_play | 0.1428 | -0.0760 | 0.0649 | 1 | 75 | -0.0614 | 0.2246 | -0.2246 | 31 | 0.0323 | low | NOT_RANK_PERSISTENT | -0.0135 |
+| team_defense.rush_success_rate | 0.4000 | 0.4020 | 0.0330 | 1 | 75 | 0.4019 | -0.0035 | 0.0035 | 12 | 0.5968 | low | RANK_PERSISTENT | 0.0043 |
+| team_defense.success_rate | 0.5333 | 0.4384 | 0.0255 | 1 | 75 | 0.4440 | 0.2194 | -0.2194 | 29 | 0.0968 | low | RANK_PERSISTENT | 0.0038 |
+| team_offense.early_down_epa_per_play | 0.1826 | -0.0054 | 0.0784 | 1 | 68 | 0.0155 | 0.2664 | 0.2664 | 7 | 0.8065 | low | UNVALIDATED_RANK_PERSISTENT | 0.0485 |
+| team_offense.epa_per_play | 0.1296 | -0.0001 | 0.0921 | 1 | 68 | 0.0143 | 0.1566 | 0.1566 | 9 | 0.7419 | low | VALIDATED_PERSISTENCE | 0.0311 |
+| team_offense.explosive_pass_rate | 0.1163 | 0.0796 | 0.0177 | 1 | 68 | 0.0817 | 0.1218 | 0.1218 | 6 | 0.8387 | low | RANK_PERSISTENT | 0.0051 |
+| team_offense.explosive_rush_rate | 0.0909 | 0.0990 | 0.0195 | 1 | 68 | 0.0985 | -0.0244 | -0.0244 | 16 | 0.5000 | low | NOT_RANK_PERSISTENT | 0.0036 |
+| team_offense.pass_epa_per_dropback | 0.3118 | 0.0308 | 0.1280 | 1 | 68 | 0.0620 | 0.2440 | 0.2440 | 8 | 0.7742 | low | UNVALIDATED_RANK_PERSISTENT | 0.0703 |
+| team_offense.pass_success_rate | 0.4884 | 0.4521 | 0.0418 | 1 | 68 | 0.4561 | 0.0964 | 0.0964 | 12 | 0.6452 | low | UNVALIDATED_RANK_PERSISTENT | 0.0135 |
+| team_offense.proe | -0.0133 | -0.0477 | 0.0349 | 1 | 68 | -0.0408 | 0.1973 | 0.0000 | — | — | low | VALIDATED_PERSISTENCE | 0.0387 |
+| team_offense.rush_epa_per_play | -0.1062 | -0.0806 | 0.0754 | 1 | 68 | -0.0821 | -0.0200 | -0.0200 | 19 | 0.4194 | low | RANK_PERSISTENT | -0.0059 |
+| team_offense.rush_success_rate | 0.4545 | 0.4004 | 0.0385 | 1 | 68 | 0.4045 | 0.1082 | 0.1082 | 10 | 0.7097 | low | RANK_PERSISTENT | -0.0043 |
+| team_offense.success_rate | 0.4706 | 0.4370 | 0.0337 | 1 | 68 | 0.4437 | 0.1994 | 0.1994 | 11 | 0.6774 | low | VALIDATED_PERSISTENCE | 0.0069 |
 
 ## CHI
-Record: no games yet · Points for/against: —/— · Point differential: — · Data confidence: prior_season_only
-Strongest area: **pass_protection** (0.942) · Weakest area: **defense_overall** (-0.491)
+Record: 1-0-0 · Points for/against: 59/37 · Point differential: 22 · Data confidence: low
+Strongest area: **offense_overall** (0.491) · Weakest area: **defense_overall** (-0.117)
 
 ### Domain indices
 | domain | label | index_value | rank_of_league | delta_vs_prev_week | delta_vs_preseason | min_confidence |
 | --- | --- | --- | --- | --- | --- | --- |
-| defense_overall | Defensive Strength Index | -0.491 | 23 | 0.000 | 0.000 | prior_season_only |
-| pass_rush | Pass-Rush Strength Index | -0.257 | 23 | 0.000 | 0.000 | prior_season_only |
-| passing_defense | Pass-Defense Strength Index | -0.277 | 21 | 0.000 | 0.000 | prior_season_only |
-| rushing_defense | Run-Defense Strength Index | -0.421 | 26 | 0.000 | 0.000 | prior_season_only |
-| offense_overall | Offensive Strength Index | 0.575 | 8 | 0.000 | 0.000 | prior_season_only |
-| pass_protection | Pass-Protection Strength Index | 0.942 | 2 | 0.000 | 0.000 | prior_season_only |
-| passing_offense | Passing-Offense Strength Index | 0.283 | 10 | 0.000 | 0.000 | prior_season_only |
-| rushing_offense | Rushing-Offense Strength Index | 0.765 | 4 | 0.000 | 0.000 | prior_season_only |
-| special_teams | Special-Teams Strength Index | 0.015 | 21 | 0.000 | 0.000 | prior_season_only |
+| defense_overall | Defensive Strength Index | -0.117 | 24 | 0.374 | 0.374 | low |
+| pass_rush | Pass-Rush Strength Index | -0.089 | 24 | 0.168 | 0.168 | low |
+| passing_defense | Pass-Defense Strength Index | -0.117 | 24 | 0.159 | 0.159 | low |
+| rushing_defense | Run-Defense Strength Index | -0.012 | 17 | 0.408 | 0.408 | low |
+| offense_overall | Offensive Strength Index | 0.491 | 3 | -0.084 | -0.084 | low |
+| pass_protection | Pass-Protection Strength Index | 0.153 | 6 | -0.789 | -0.789 | low |
+| passing_offense | Passing-Offense Strength Index | 0.334 | 2 | 0.051 | 0.051 | low |
+| rushing_offense | Rushing-Offense Strength Index | 0.087 | 11 | -0.678 | -0.678 | low |
+| special_teams | Special-Teams Strength Index | 0.188 | 5 | 0.173 | 0.173 | low |
 
 ### Underlying metrics
 | metric | raw_value | ref_mean | ref_sd | n_games | n_opportunities | shrunk_value | z_shrunk | oriented_z_shrunk | rank_of_league | percentile | confidence | phase3_status | delta_shrunk_vs_prev_week |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
-| pass_protection.qb_hit_rate_allowed | 0.1047 | 0.1450 | 0.0327 | 17 | 640 | 0.1176 | -0.8377 | 0.8377 | 4 | 0.9032 | prior_season_only | UNVALIDATED_RANK_PERSISTENT | 0.0000 |
-| pass_protection.rush_stuffed_rate_approx | 0.1663 | 0.2045 | 0.0323 | 17 | 640 | 0.1848 | -0.6088 | 0.6088 | 7 | 0.8065 | prior_season_only | RANK_PERSISTENT | 0.0000 |
-| pass_protection.sack_rate_allowed | 0.0375 | 0.0664 | 0.0188 | 17 | 640 | 0.0467 | -1.0466 | 1.0466 | 3 | 0.9355 | prior_season_only | UNVALIDATED_RANK_PERSISTENT | 0.0000 |
-| pass_rush.qb_hit_rate_generated | 0.1351 | 0.1442 | 0.0234 | 17 | 592 | 0.1395 | -0.1990 | -0.1990 | 23 | 0.2903 | prior_season_only | RANK_PERSISTENT | 0.0000 |
-| pass_rush.sack_rate_generated | 0.0591 | 0.0660 | 0.0121 | 17 | 592 | 0.0622 | -0.3151 | -0.3151 | 21 | 0.3548 | prior_season_only | NOT_RANK_PERSISTENT | 0.0000 |
-| special_teams.fg_pct | 0.8462 | 0.8507 | 0.0691 | 17 | 230 | 0.8484 | -0.0340 | -0.0340 | 18 | 0.4516 | prior_season_only | NOT_RANK_PERSISTENT | 0.0000 |
-| special_teams.st_epa_per_play | 0.0649 | 0.0622 | 0.0928 | 17 | 230 | 0.0636 | 0.0147 | 0.0147 | 21 | 0.3548 | prior_season_only | RANK_PERSISTENT | 0.0000 |
-| team_defense.early_down_epa_per_play | 0.0706 | -0.0013 | 0.0639 | 17 | 1059 | 0.0357 | 0.5797 | -0.5797 | 23 | 0.2903 | prior_season_only | RANK_PERSISTENT | 0.0000 |
-| team_defense.epa_per_play | 0.0348 | 0.0046 | 0.0677 | 17 | 1059 | 0.0201 | 0.2294 | -0.2294 | 21 | 0.3548 | prior_season_only | RANK_PERSISTENT | 0.0000 |
-| team_defense.explosive_pass_rate | 0.1030 | 0.0797 | 0.0112 | 17 | 1059 | 0.0925 | 1.1418 | -1.1418 | 32 | 0.0000 | prior_season_only | NOT_RANK_PERSISTENT | 0.0000 |
-| team_defense.explosive_rush_rate | 0.1152 | 0.1000 | 0.0206 | 17 | 1059 | 0.1078 | 0.3815 | -0.3815 | 25 | 0.2258 | prior_season_only | RANK_PERSISTENT | 0.0000 |
-| team_defense.pass_epa_per_dropback | 0.0507 | 0.0361 | 0.0949 | 17 | 1059 | 0.0437 | 0.0794 | -0.0794 | 17 | 0.4839 | prior_season_only | RANK_PERSISTENT | 0.0000 |
-| team_defense.pass_success_rate | 0.4831 | 0.4536 | 0.0320 | 17 | 1059 | 0.4688 | 0.4738 | -0.4738 | 23 | 0.2903 | prior_season_only | RANK_PERSISTENT | 0.0000 |
-| team_defense.rush_epa_per_play | -0.0422 | -0.0760 | 0.0649 | 17 | 1059 | -0.0575 | 0.2852 | -0.2852 | 21 | 0.3548 | prior_season_only | NOT_RANK_PERSISTENT | 0.0000 |
-| team_defense.rush_success_rate | 0.4401 | 0.4020 | 0.0330 | 17 | 1059 | 0.4216 | 0.5954 | -0.5954 | 27 | 0.1613 | prior_season_only | RANK_PERSISTENT | 0.0000 |
-| team_defense.success_rate | 0.4712 | 0.4384 | 0.0255 | 17 | 1059 | 0.4553 | 0.6639 | -0.6639 | 26 | 0.1935 | prior_season_only | RANK_PERSISTENT | 0.0000 |
-| team_offense.early_down_epa_per_play | 0.0741 | -0.0054 | 0.0784 | 17 | 1134 | 0.0487 | 0.6894 | 0.6894 | 6 | 0.8387 | prior_season_only | UNVALIDATED_RANK_PERSISTENT | 0.0000 |
-| team_offense.epa_per_play | 0.0758 | -0.0001 | 0.0921 | 17 | 1134 | 0.0515 | 0.5605 | 0.5605 | 8 | 0.7742 | prior_season_only | VALIDATED_PERSISTENCE | 0.0000 |
-| team_offense.explosive_pass_rate | 0.0938 | 0.0796 | 0.0177 | 17 | 1134 | 0.0869 | 0.4118 | 0.4118 | 7 | 0.8065 | prior_season_only | RANK_PERSISTENT | 0.0000 |
-| team_offense.explosive_rush_rate | 0.1160 | 0.0990 | 0.0195 | 17 | 1134 | 0.1078 | 0.4472 | 0.4472 | 5 | 0.8710 | prior_season_only | NOT_RANK_PERSISTENT | 0.0000 |
-| team_offense.pass_epa_per_dropback | 0.1196 | 0.0308 | 0.1280 | 17 | 1134 | 0.0912 | 0.4721 | 0.4721 | 8 | 0.7742 | prior_season_only | UNVALIDATED_RANK_PERSISTENT | 0.0000 |
-| team_offense.pass_success_rate | 0.4500 | 0.4521 | 0.0418 | 17 | 1134 | 0.4507 | -0.0338 | -0.0338 | 19 | 0.4194 | prior_season_only | UNVALIDATED_RANK_PERSISTENT | 0.0000 |
-| team_offense.proe | -0.0654 | -0.0477 | 0.0349 | 17 | 1134 | -0.0621 | -0.4119 | -0.0000 | — | — | prior_season_only | VALIDATED_PERSISTENCE | 0.0000 |
-| team_offense.rush_epa_per_play | 0.0067 | -0.0806 | 0.0754 | 17 | 1134 | -0.0356 | 0.5970 | 0.5970 | 6 | 0.8387 | prior_season_only | RANK_PERSISTENT | 0.0000 |
-| team_offense.rush_success_rate | 0.4617 | 0.4004 | 0.0385 | 17 | 1134 | 0.4363 | 0.9335 | 0.9335 | 3 | 0.9355 | prior_season_only | RANK_PERSISTENT | 0.0000 |
-| team_offense.success_rate | 0.4568 | 0.4370 | 0.0337 | 17 | 1134 | 0.4530 | 0.4759 | 0.4759 | 11 | 0.6774 | prior_season_only | VALIDATED_PERSISTENCE | 0.0000 |
+| pass_protection.qb_hit_rate_allowed | 0.0789 | 0.1450 | 0.0327 | 1 | 38 | 0.1377 | -0.2243 | 0.2243 | 5 | 0.8710 | low | UNVALIDATED_RANK_PERSISTENT | 0.0201 |
+| pass_protection.rush_stuffed_rate_approx | 0.2000 | 0.2045 | 0.0323 | 1 | 38 | 0.2043 | -0.0082 | 0.0082 | 17 | 0.4677 | low | RANK_PERSISTENT | 0.0194 |
+| pass_protection.sack_rate_allowed | 0.0526 | 0.0664 | 0.0188 | 1 | 38 | 0.0649 | -0.0815 | 0.0815 | 13 | 0.6129 | low | UNVALIDATED_RANK_PERSISTENT | 0.0181 |
+| pass_rush.qb_hit_rate_generated | 0.1163 | 0.1442 | 0.0234 | 1 | 43 | 0.1425 | -0.0701 | -0.0701 | 23 | 0.2903 | low | RANK_PERSISTENT | 0.0030 |
+| pass_rush.sack_rate_generated | 0.0465 | 0.0660 | 0.0121 | 1 | 43 | 0.0647 | -0.1081 | -0.1081 | 21 | 0.3387 | low | NOT_RANK_PERSISTENT | 0.0025 |
+| special_teams.fg_pct | 1.0000 | 0.8507 | 0.0691 | 1 | 18 | 0.8595 | 0.1270 | 0.1270 | 1 | 0.6481 | low | NOT_RANK_PERSISTENT | 0.0111 |
+| special_teams.st_epa_per_play | 0.3582 | 0.0622 | 0.0928 | 1 | 18 | 0.0796 | 0.1875 | 0.1875 | 5 | 0.8710 | low | RANK_PERSISTENT | 0.0160 |
+| team_defense.early_down_epa_per_play | 0.1826 | -0.0013 | 0.0639 | 1 | 68 | 0.0095 | 0.1693 | -0.1693 | 26 | 0.1935 | low | RANK_PERSISTENT | -0.0262 |
+| team_defense.epa_per_play | 0.1296 | 0.0046 | 0.0677 | 1 | 68 | 0.0119 | 0.1086 | -0.1086 | 24 | 0.2581 | low | RANK_PERSISTENT | -0.0082 |
+| team_defense.explosive_pass_rate | 0.1163 | 0.0797 | 0.0112 | 1 | 68 | 0.0821 | 0.2175 | -0.2175 | 27 | 0.1613 | low | NOT_RANK_PERSISTENT | -0.0104 |
+| team_defense.explosive_rush_rate | 0.0909 | 0.1000 | 0.0206 | 1 | 68 | 0.0994 | -0.0258 | 0.0258 | 16 | 0.5000 | low | RANK_PERSISTENT | -0.0084 |
+| team_defense.pass_epa_per_dropback | 0.3118 | 0.0361 | 0.0949 | 1 | 68 | 0.0523 | 0.1709 | -0.1709 | 25 | 0.2258 | low | RANK_PERSISTENT | 0.0087 |
+| team_defense.pass_success_rate | 0.4884 | 0.4536 | 0.0320 | 1 | 68 | 0.4557 | 0.0638 | -0.0638 | 21 | 0.3548 | low | RANK_PERSISTENT | -0.0131 |
+| team_defense.rush_epa_per_play | -0.1062 | -0.0760 | 0.0649 | 1 | 68 | -0.0780 | -0.0310 | 0.0310 | 14 | 0.5806 | low | NOT_RANK_PERSISTENT | -0.0205 |
+| team_defense.rush_success_rate | 0.4545 | 0.4020 | 0.0330 | 1 | 68 | 0.4051 | 0.0938 | -0.0938 | 23 | 0.2903 | low | RANK_PERSISTENT | -0.0165 |
+| team_defense.success_rate | 0.4706 | 0.4384 | 0.0255 | 1 | 68 | 0.4403 | 0.0744 | -0.0744 | 22 | 0.3226 | low | RANK_PERSISTENT | -0.0150 |
+| team_offense.early_down_epa_per_play | 0.3233 | -0.0054 | 0.0784 | 1 | 75 | 0.0311 | 0.4658 | 0.4658 | 2 | 0.9677 | low | UNVALIDATED_RANK_PERSISTENT | -0.0175 |
+| team_offense.epa_per_play | 0.3605 | -0.0001 | 0.0921 | 1 | 75 | 0.0399 | 0.4352 | 0.4352 | 2 | 0.9677 | low | VALIDATED_PERSISTENCE | -0.0115 |
+| team_offense.explosive_pass_rate | 0.1053 | 0.0796 | 0.0177 | 1 | 75 | 0.0811 | 0.0852 | 0.0852 | 9 | 0.7419 | low | RANK_PERSISTENT | -0.0058 |
+| team_offense.explosive_rush_rate | 0.1143 | 0.0990 | 0.0195 | 1 | 75 | 0.0999 | 0.0460 | 0.0460 | 11 | 0.6774 | low | NOT_RANK_PERSISTENT | -0.0078 |
+| team_offense.pass_epa_per_dropback | 0.5378 | 0.0308 | 0.1280 | 1 | 75 | 0.0871 | 0.4402 | 0.4402 | 4 | 0.9032 | low | UNVALIDATED_RANK_PERSISTENT | -0.0041 |
+| team_offense.pass_success_rate | 0.6316 | 0.4521 | 0.0418 | 1 | 75 | 0.4720 | 0.4769 | 0.4769 | 3 | 0.9355 | low | UNVALIDATED_RANK_PERSISTENT | 0.0214 |
+| team_offense.proe | -0.0437 | -0.0477 | 0.0349 | 1 | 75 | -0.0469 | 0.0227 | 0.0000 | — | — | low | VALIDATED_PERSISTENCE | 0.0152 |
+| team_offense.rush_epa_per_play | 0.1428 | -0.0806 | 0.0754 | 1 | 75 | -0.0675 | 0.1744 | 0.1744 | 2 | 0.9677 | low | RANK_PERSISTENT | -0.0319 |
+| team_offense.rush_success_rate | 0.4000 | 0.4004 | 0.0385 | 1 | 75 | 0.4003 | -0.0007 | -0.0007 | 18 | 0.4032 | low | RANK_PERSISTENT | -0.0360 |
+| team_offense.success_rate | 0.5333 | 0.4370 | 0.0337 | 1 | 75 | 0.4562 | 0.5713 | 0.5713 | 4 | 0.9032 | low | VALIDATED_PERSISTENCE | 0.0032 |
 
 ## CIN
-Record: no games yet · Points for/against: —/— · Point differential: — · Data confidence: prior_season_only
-Strongest area: **rushing_offense** (0.724) · Weakest area: **defense_overall** (-0.874)
+Record: 1-0-0 · Points for/against: 33/27 · Point differential: 6 · Data confidence: low
+Strongest area: **special_teams** (0.214) · Weakest area: **rushing_defense** (-0.068)
 
 ### Domain indices
 | domain | label | index_value | rank_of_league | delta_vs_prev_week | delta_vs_preseason | min_confidence |
 | --- | --- | --- | --- | --- | --- | --- |
-| defense_overall | Defensive Strength Index | -0.874 | 29 | 0.000 | 0.000 | prior_season_only |
-| pass_rush | Pass-Rush Strength Index | -0.363 | 26 | 0.000 | 0.000 | prior_season_only |
-| passing_defense | Pass-Defense Strength Index | -0.767 | 27 | 0.000 | 0.000 | prior_season_only |
-| rushing_defense | Run-Defense Strength Index | -0.634 | 28 | 0.000 | 0.000 | prior_season_only |
-| offense_overall | Offensive Strength Index | 0.147 | 17 | 0.000 | 0.000 | prior_season_only |
-| pass_protection | Pass-Protection Strength Index | 0.248 | 13 | 0.000 | 0.000 | prior_season_only |
-| passing_offense | Passing-Offense Strength Index | -0.180 | 24 | 0.000 | 0.000 | prior_season_only |
-| rushing_offense | Rushing-Offense Strength Index | 0.724 | 5 | 0.000 | 0.000 | prior_season_only |
-| special_teams | Special-Teams Strength Index | 0.718 | 5 | 0.000 | 0.000 | prior_season_only |
+| defense_overall | Defensive Strength Index | -0.025 | 20 | 0.850 | 0.850 | low |
+| pass_rush | Pass-Rush Strength Index | 0.153 | 6 | 0.516 | 0.516 | low |
+| passing_defense | Pass-Defense Strength Index | 0.059 | 11 | 0.826 | 0.826 | low |
+| rushing_defense | Run-Defense Strength Index | -0.068 | 22 | 0.566 | 0.566 | low |
+| offense_overall | Offensive Strength Index | 0.119 | 12 | -0.027 | -0.027 | low |
+| pass_protection | Pass-Protection Strength Index | 0.087 | 11 | -0.160 | -0.160 | low |
+| passing_offense | Passing-Offense Strength Index | 0.037 | 12 | 0.217 | 0.217 | low |
+| rushing_offense | Rushing-Offense Strength Index | 0.050 | 13 | -0.674 | -0.674 | low |
+| special_teams | Special-Teams Strength Index | 0.214 | 3 | -0.504 | -0.504 | low |
 
 ### Underlying metrics
 | metric | raw_value | ref_mean | ref_sd | n_games | n_opportunities | shrunk_value | z_shrunk | oriented_z_shrunk | rank_of_league | percentile | confidence | phase3_status | delta_shrunk_vs_prev_week |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
-| pass_protection.qb_hit_rate_allowed | 0.1456 | 0.1450 | 0.0327 | 17 | 687 | 0.1454 | 0.0117 | -0.0117 | 19 | 0.4194 | prior_season_only | UNVALIDATED_RANK_PERSISTENT | 0.0000 |
-| pass_protection.rush_stuffed_rate_approx | 0.1378 | 0.2045 | 0.0323 | 17 | 687 | 0.1702 | -1.0621 | 1.0621 | 1 | 1.0000 | prior_season_only | RANK_PERSISTENT | 0.0000 |
-| pass_protection.sack_rate_allowed | 0.0524 | 0.0664 | 0.0188 | 17 | 687 | 0.0569 | -0.5070 | 0.5070 | 10 | 0.7097 | prior_season_only | UNVALIDATED_RANK_PERSISTENT | 0.0000 |
-| pass_rush.qb_hit_rate_generated | 0.1285 | 0.1442 | 0.0234 | 17 | 607 | 0.1361 | -0.3450 | -0.3450 | 27 | 0.1613 | prior_season_only | RANK_PERSISTENT | 0.0000 |
-| pass_rush.sack_rate_generated | 0.0577 | 0.0660 | 0.0121 | 17 | 607 | 0.0614 | -0.3816 | -0.3816 | 24 | 0.2581 | prior_season_only | NOT_RANK_PERSISTENT | 0.0000 |
-| special_teams.fg_pct | 0.8929 | 0.8507 | 0.0691 | 17 | 236 | 0.8724 | 0.3140 | 0.3140 | 9 | 0.7419 | prior_season_only | NOT_RANK_PERSISTENT | 0.0000 |
-| special_teams.st_epa_per_play | 0.1916 | 0.0622 | 0.0928 | 17 | 236 | 0.1289 | 0.7178 | 0.7178 | 5 | 0.8710 | prior_season_only | RANK_PERSISTENT | 0.0000 |
-| team_defense.early_down_epa_per_play | 0.1195 | -0.0013 | 0.0639 | 17 | 1068 | 0.0609 | 0.9740 | -0.9740 | 29 | 0.0968 | prior_season_only | RANK_PERSISTENT | 0.0000 |
-| team_defense.epa_per_play | 0.1222 | 0.0046 | 0.0677 | 17 | 1068 | 0.0652 | 0.8946 | -0.8946 | 29 | 0.0968 | prior_season_only | RANK_PERSISTENT | 0.0000 |
-| team_defense.explosive_pass_rate | 0.0988 | 0.0797 | 0.0112 | 17 | 1068 | 0.0902 | 0.9368 | -0.9368 | 31 | 0.0323 | prior_season_only | NOT_RANK_PERSISTENT | 0.0000 |
-| team_defense.explosive_rush_rate | 0.1181 | 0.1000 | 0.0206 | 17 | 1068 | 0.1093 | 0.4527 | -0.4527 | 27 | 0.1613 | prior_season_only | RANK_PERSISTENT | 0.0000 |
-| team_defense.pass_epa_per_dropback | 0.1788 | 0.0361 | 0.0949 | 17 | 1068 | 0.1096 | 0.7748 | -0.7748 | 28 | 0.1290 | prior_season_only | RANK_PERSISTENT | 0.0000 |
-| team_defense.pass_success_rate | 0.5008 | 0.4536 | 0.0320 | 17 | 1068 | 0.4779 | 0.7586 | -0.7586 | 29 | 0.0968 | prior_season_only | RANK_PERSISTENT | 0.0000 |
-| team_defense.rush_epa_per_play | 0.0343 | -0.0760 | 0.0649 | 17 | 1068 | -0.0155 | 0.9311 | -0.9311 | 30 | 0.0645 | prior_season_only | NOT_RANK_PERSISTENT | 0.0000 |
-| team_defense.rush_success_rate | 0.4352 | 0.4020 | 0.0330 | 17 | 1068 | 0.4191 | 0.5188 | -0.5188 | 26 | 0.1935 | prior_season_only | RANK_PERSISTENT | 0.0000 |
-| team_defense.success_rate | 0.4757 | 0.4384 | 0.0255 | 17 | 1068 | 0.4576 | 0.7541 | -0.7541 | 27 | 0.1613 | prior_season_only | RANK_PERSISTENT | 0.0000 |
-| team_offense.early_down_epa_per_play | -0.0406 | -0.0054 | 0.0784 | 17 | 1092 | -0.0293 | -0.3055 | -0.3055 | 25 | 0.2258 | prior_season_only | UNVALIDATED_RANK_PERSISTENT | 0.0000 |
-| team_offense.epa_per_play | 0.0120 | -0.0001 | 0.0921 | 17 | 1092 | 0.0081 | 0.0896 | 0.0896 | 19 | 0.4194 | prior_season_only | VALIDATED_PERSISTENCE | 0.0000 |
-| team_offense.explosive_pass_rate | 0.0684 | 0.0796 | 0.0177 | 17 | 1092 | 0.0738 | -0.3242 | -0.3242 | 24 | 0.2581 | prior_season_only | RANK_PERSISTENT | 0.0000 |
-| team_offense.explosive_rush_rate | 0.0919 | 0.0990 | 0.0195 | 17 | 1092 | 0.0953 | -0.1879 | -0.1879 | 21 | 0.3548 | prior_season_only | NOT_RANK_PERSISTENT | 0.0000 |
-| team_offense.pass_epa_per_dropback | -0.0206 | 0.0308 | 0.1280 | 17 | 1092 | -0.0042 | -0.2731 | -0.2731 | 25 | 0.2258 | prior_season_only | UNVALIDATED_RANK_PERSISTENT | 0.0000 |
-| team_offense.pass_success_rate | 0.4556 | 0.4521 | 0.0418 | 17 | 1092 | 0.4545 | 0.0573 | 0.0573 | 14 | 0.5806 | prior_season_only | UNVALIDATED_RANK_PERSISTENT | 0.0000 |
-| team_offense.proe | -0.0115 | -0.0477 | 0.0349 | 17 | 1092 | -0.0184 | 0.8415 | 0.0000 | — | — | prior_season_only | VALIDATED_PERSISTENCE | 0.0000 |
-| team_offense.rush_epa_per_play | 0.0117 | -0.0806 | 0.0754 | 17 | 1092 | -0.0331 | 0.6309 | 0.6309 | 5 | 0.8710 | prior_season_only | RANK_PERSISTENT | 0.0000 |
-| team_offense.rush_success_rate | 0.4541 | 0.4004 | 0.0385 | 17 | 1092 | 0.4318 | 0.8170 | 0.8170 | 4 | 0.9032 | prior_season_only | RANK_PERSISTENT | 0.0000 |
-| team_offense.success_rate | 0.4643 | 0.4370 | 0.0337 | 17 | 1092 | 0.4591 | 0.6557 | 0.6557 | 10 | 0.7097 | prior_season_only | VALIDATED_PERSISTENCE | 0.0000 |
+| pass_protection.qb_hit_rate_allowed | 0.1622 | 0.1450 | 0.0327 | 1 | 37 | 0.1469 | 0.0583 | -0.0583 | 21 | 0.3548 | low | UNVALIDATED_RANK_PERSISTENT | 0.0015 |
+| pass_protection.rush_stuffed_rate_approx | 0.1600 | 0.2045 | 0.0323 | 1 | 37 | 0.2019 | -0.0810 | 0.0810 | 9 | 0.7419 | low | RANK_PERSISTENT | 0.0317 |
+| pass_protection.sack_rate_allowed | 0.0270 | 0.0664 | 0.0188 | 1 | 37 | 0.0620 | -0.2330 | 0.2330 | 9 | 0.7419 | low | UNVALIDATED_RANK_PERSISTENT | 0.0051 |
+| pass_rush.qb_hit_rate_generated | 0.1667 | 0.1442 | 0.0234 | 1 | 36 | 0.1455 | 0.0565 | 0.0565 | 10 | 0.6935 | low | RANK_PERSISTENT | 0.0094 |
+| pass_rush.sack_rate_generated | 0.1111 | 0.0660 | 0.0121 | 1 | 36 | 0.0691 | 0.2493 | 0.2493 | 5 | 0.8710 | low | NOT_RANK_PERSISTENT | 0.0076 |
+| special_teams.fg_pct | 1.0000 | 0.8507 | 0.0691 | 1 | 14 | 0.8595 | 0.1270 | 0.1270 | 1 | 0.6481 | low | NOT_RANK_PERSISTENT | -0.0129 |
+| special_teams.st_epa_per_play | 0.4002 | 0.0622 | 0.0928 | 1 | 14 | 0.0821 | 0.2141 | 0.2141 | 3 | 0.9355 | low | RANK_PERSISTENT | -0.0468 |
+| team_defense.early_down_epa_per_play | -0.0398 | -0.0013 | 0.0639 | 1 | 56 | -0.0036 | -0.0355 | 0.0355 | 16 | 0.5161 | low | RANK_PERSISTENT | -0.0645 |
+| team_defense.epa_per_play | -0.0814 | 0.0046 | 0.0677 | 1 | 56 | -0.0005 | -0.0746 | 0.0746 | 12 | 0.6452 | low | RANK_PERSISTENT | -0.0657 |
+| team_defense.explosive_pass_rate | 0.0556 | 0.0797 | 0.0112 | 1 | 56 | 0.0781 | -0.1434 | 0.1434 | 12 | 0.6452 | low | NOT_RANK_PERSISTENT | -0.0121 |
+| team_defense.explosive_rush_rate | 0.0588 | 0.1000 | 0.0206 | 1 | 56 | 0.0975 | -0.1175 | 0.1175 | 7 | 0.8065 | low | RANK_PERSISTENT | -0.0117 |
+| team_defense.pass_epa_per_dropback | -0.2925 | 0.0361 | 0.0949 | 1 | 56 | 0.0168 | -0.2037 | 0.2037 | 6 | 0.8387 | low | RANK_PERSISTENT | -0.0928 |
+| team_defense.pass_success_rate | 0.5000 | 0.4536 | 0.0320 | 1 | 56 | 0.4564 | 0.0851 | -0.0851 | 22 | 0.2903 | low | RANK_PERSISTENT | -0.0216 |
+| team_defense.rush_epa_per_play | 0.1183 | -0.0760 | 0.0649 | 1 | 56 | -0.0630 | 0.1995 | -0.1995 | 29 | 0.0968 | low | NOT_RANK_PERSISTENT | -0.0475 |
+| team_defense.rush_success_rate | 0.4706 | 0.4020 | 0.0330 | 1 | 56 | 0.4060 | 0.1224 | -0.1224 | 24 | 0.2581 | low | RANK_PERSISTENT | -0.0131 |
+| team_defense.success_rate | 0.5179 | 0.4384 | 0.0255 | 1 | 56 | 0.4431 | 0.1836 | -0.1836 | 28 | 0.1290 | low | RANK_PERSISTENT | -0.0145 |
+| team_offense.early_down_epa_per_play | 0.0821 | -0.0054 | 0.0784 | 1 | 63 | 0.0043 | 0.1240 | 0.1240 | 12 | 0.6452 | low | UNVALIDATED_RANK_PERSISTENT | 0.0337 |
+| team_offense.epa_per_play | 0.0013 | -0.0001 | 0.0921 | 1 | 63 | 0.0000 | 0.0018 | 0.0018 | 18 | 0.4516 | low | VALIDATED_PERSISTENCE | -0.0081 |
+| team_offense.explosive_pass_rate | 0.0811 | 0.0796 | 0.0177 | 1 | 63 | 0.0797 | 0.0050 | 0.0050 | 15 | 0.5484 | low | RANK_PERSISTENT | 0.0058 |
+| team_offense.explosive_rush_rate | 0.1600 | 0.0990 | 0.0195 | 1 | 63 | 0.1026 | 0.1836 | 0.1836 | 5 | 0.8710 | low | NOT_RANK_PERSISTENT | 0.0073 |
+| team_offense.pass_epa_per_dropback | -0.0361 | 0.0308 | 0.1280 | 1 | 63 | 0.0234 | -0.0580 | -0.0580 | 21 | 0.3548 | low | UNVALIDATED_RANK_PERSISTENT | 0.0275 |
+| team_offense.pass_success_rate | 0.5135 | 0.4521 | 0.0418 | 1 | 63 | 0.4589 | 0.1632 | 0.1632 | 8 | 0.7742 | low | UNVALIDATED_RANK_PERSISTENT | 0.0044 |
+| team_offense.proe | 0.0413 | -0.0477 | 0.0349 | 1 | 63 | -0.0299 | 0.5106 | 0.0000 | — | — | low | VALIDATED_PERSISTENCE | -0.0115 |
+| team_offense.rush_epa_per_play | 0.0495 | -0.0806 | 0.0754 | 1 | 63 | -0.0729 | 0.1016 | 0.1016 | 8 | 0.7742 | low | RANK_PERSISTENT | -0.0399 |
+| team_offense.rush_success_rate | 0.4000 | 0.4004 | 0.0385 | 1 | 63 | 0.4003 | -0.0007 | -0.0007 | 18 | 0.4032 | low | RANK_PERSISTENT | -0.0315 |
+| team_offense.success_rate | 0.4762 | 0.4370 | 0.0337 | 1 | 63 | 0.4448 | 0.2326 | 0.2326 | 10 | 0.7097 | low | VALIDATED_PERSISTENCE | -0.0143 |
 
 ## CLE
-Record: no games yet · Points for/against: —/— · Point differential: — · Data confidence: prior_season_only
-Strongest area: **pass_rush** (1.073) · Weakest area: **offense_overall** (-1.571)
+Record: 0-1-0 · Points for/against: 10/34 · Point differential: -24 · Data confidence: low
+Strongest area: **special_teams** (0.280) · Weakest area: **pass_protection** (-0.503)
 
 ### Domain indices
 | domain | label | index_value | rank_of_league | delta_vs_prev_week | delta_vs_preseason | min_confidence |
 | --- | --- | --- | --- | --- | --- | --- |
-| defense_overall | Defensive Strength Index | 0.594 | 5 | 0.000 | 0.000 | prior_season_only |
-| pass_rush | Pass-Rush Strength Index | 1.073 | 2 | 0.000 | 0.000 | prior_season_only |
-| passing_defense | Pass-Defense Strength Index | 0.623 | 5 | 0.000 | 0.000 | prior_season_only |
-| rushing_defense | Run-Defense Strength Index | 0.220 | 9 | 0.000 | 0.000 | prior_season_only |
-| offense_overall | Offensive Strength Index | -1.571 | 32 | 0.000 | 0.000 | prior_season_only |
-| pass_protection | Pass-Protection Strength Index | -0.915 | 28 | 0.000 | 0.000 | prior_season_only |
-| passing_offense | Passing-Offense Strength Index | -1.322 | 32 | 0.000 | 0.000 | prior_season_only |
-| rushing_offense | Rushing-Offense Strength Index | -0.583 | 31 | 0.000 | 0.000 | prior_season_only |
-| special_teams | Special-Teams Strength Index | -0.635 | 31 | 0.000 | 0.000 | prior_season_only |
+| defense_overall | Defensive Strength Index | -0.307 | 32 | -0.902 | -0.902 | low |
+| pass_rush | Pass-Rush Strength Index | -0.092 | 25 | -1.165 | -1.165 | low |
+| passing_defense | Pass-Defense Strength Index | -0.468 | 32 | -1.092 | -1.092 | low |
+| rushing_defense | Run-Defense Strength Index | -0.145 | 29 | -0.365 | -0.365 | low |
+| offense_overall | Offensive Strength Index | -0.129 | 22 | 1.442 | 1.442 | low |
+| pass_protection | Pass-Protection Strength Index | -0.503 | 32 | 0.412 | 0.412 | low |
+| passing_offense | Passing-Offense Strength Index | -0.039 | 18 | 1.283 | 1.283 | low |
+| rushing_offense | Rushing-Offense Strength Index | 0.006 | 19 | 0.588 | 0.588 | low |
+| special_teams | Special-Teams Strength Index | 0.280 | 1 | 0.915 | 0.915 | low |
 
 ### Underlying metrics
 | metric | raw_value | ref_mean | ref_sd | n_games | n_opportunities | shrunk_value | z_shrunk | oriented_z_shrunk | rank_of_league | percentile | confidence | phase3_status | delta_shrunk_vs_prev_week |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
-| pass_protection.qb_hit_rate_allowed | 0.2097 | 0.1450 | 0.0327 | 17 | 639 | 0.1890 | 1.3447 | -1.3447 | 31 | 0.0323 | prior_season_only | UNVALIDATED_RANK_PERSISTENT | 0.0000 |
-| pass_protection.rush_stuffed_rate_approx | 0.2405 | 0.2045 | 0.0323 | 17 | 639 | 0.2231 | 0.5728 | -0.5728 | 28 | 0.1290 | prior_season_only | RANK_PERSISTENT | 0.0000 |
-| pass_protection.sack_rate_allowed | 0.0798 | 0.0664 | 0.0188 | 17 | 639 | 0.0755 | 0.4854 | -0.4854 | 26 | 0.1935 | prior_season_only | UNVALIDATED_RANK_PERSISTENT | 0.0000 |
-| pass_rush.qb_hit_rate_generated | 0.1833 | 0.1442 | 0.0234 | 17 | 562 | 0.1643 | 0.8607 | 0.8607 | 2 | 0.9677 | prior_season_only | RANK_PERSISTENT | 0.0000 |
-| pass_rush.sack_rate_generated | 0.0943 | 0.0660 | 0.0121 | 17 | 562 | 0.0815 | 1.2859 | 1.2859 | 2 | 0.9677 | prior_season_only | NOT_RANK_PERSISTENT | 0.0000 |
-| special_teams.fg_pct | 0.8889 | 0.8507 | 0.0691 | 17 | 229 | 0.8704 | 0.2845 | 0.2845 | 10 | 0.7097 | prior_season_only | NOT_RANK_PERSISTENT | 0.0000 |
-| special_teams.st_epa_per_play | -0.0522 | 0.0622 | 0.0928 | 17 | 229 | 0.0033 | -0.6352 | -0.6352 | 31 | 0.0323 | prior_season_only | RANK_PERSISTENT | 0.0000 |
-| team_defense.early_down_epa_per_play | -0.0649 | -0.0013 | 0.0639 | 17 | 1030 | -0.0341 | -0.5129 | 0.5129 | 5 | 0.8710 | prior_season_only | RANK_PERSISTENT | 0.0000 |
-| team_defense.epa_per_play | -0.0834 | 0.0046 | 0.0677 | 17 | 1030 | -0.0407 | -0.6693 | 0.6693 | 4 | 0.9032 | prior_season_only | RANK_PERSISTENT | 0.0000 |
-| team_defense.explosive_pass_rate | 0.0765 | 0.0797 | 0.0112 | 17 | 1030 | 0.0779 | -0.1550 | 0.1550 | 14 | 0.5806 | prior_season_only | NOT_RANK_PERSISTENT | 0.0000 |
-| team_defense.explosive_rush_rate | 0.0913 | 0.1000 | 0.0206 | 17 | 1030 | 0.0955 | -0.2159 | 0.2159 | 16 | 0.5161 | prior_season_only | RANK_PERSISTENT | 0.0000 |
-| team_defense.pass_epa_per_dropback | -0.1095 | 0.0361 | 0.0949 | 17 | 1030 | -0.0389 | -0.7908 | 0.7908 | 4 | 0.9032 | prior_season_only | RANK_PERSISTENT | 0.0000 |
-| team_defense.pass_success_rate | 0.4253 | 0.4536 | 0.0320 | 17 | 1030 | 0.4390 | -0.4562 | 0.4562 | 9 | 0.7419 | prior_season_only | RANK_PERSISTENT | 0.0000 |
-| team_defense.rush_epa_per_play | -0.0776 | -0.0760 | 0.0649 | 17 | 1030 | -0.0769 | -0.0138 | 0.0138 | 15 | 0.5484 | prior_season_only | NOT_RANK_PERSISTENT | 0.0000 |
-| team_defense.rush_success_rate | 0.3744 | 0.4020 | 0.0330 | 17 | 1030 | 0.3878 | -0.4304 | 0.4304 | 5 | 0.8710 | prior_season_only | RANK_PERSISTENT | 0.0000 |
-| team_defense.success_rate | 0.4087 | 0.4384 | 0.0255 | 17 | 1030 | 0.4231 | -0.6002 | 0.6002 | 4 | 0.9032 | prior_season_only | RANK_PERSISTENT | 0.0000 |
-| team_offense.early_down_epa_per_play | -0.1637 | -0.0054 | 0.0784 | 17 | 1074 | -0.1130 | -1.3730 | -1.3730 | 32 | 0.0000 | prior_season_only | UNVALIDATED_RANK_PERSISTENT | 0.0000 |
-| team_offense.epa_per_play | -0.1761 | -0.0001 | 0.0921 | 17 | 1074 | -0.1198 | -1.2994 | -1.2994 | 31 | 0.0323 | prior_season_only | VALIDATED_PERSISTENCE | 0.0000 |
-| team_offense.explosive_pass_rate | 0.0548 | 0.0796 | 0.0177 | 17 | 1074 | 0.0668 | -0.7205 | -0.7205 | 30 | 0.0645 | prior_season_only | RANK_PERSISTENT | 0.0000 |
-| team_offense.explosive_rush_rate | 0.0785 | 0.0990 | 0.0195 | 17 | 1074 | 0.0884 | -0.5415 | -0.5415 | 26 | 0.1935 | prior_season_only | NOT_RANK_PERSISTENT | 0.0000 |
-| team_offense.pass_epa_per_dropback | -0.2499 | 0.0308 | 0.1280 | 17 | 1074 | -0.1601 | -1.4917 | -1.4917 | 32 | 0.0000 | prior_season_only | UNVALIDATED_RANK_PERSISTENT | 0.0000 |
-| team_offense.pass_success_rate | 0.3443 | 0.4521 | 0.0418 | 17 | 1074 | 0.3788 | -1.7526 | -1.7526 | 32 | 0.0000 | prior_season_only | UNVALIDATED_RANK_PERSISTENT | 0.0000 |
-| team_offense.proe | -0.0688 | -0.0477 | 0.0349 | 17 | 1074 | -0.0648 | -0.4903 | -0.0000 | — | — | prior_season_only | VALIDATED_PERSISTENCE | 0.0000 |
-| team_offense.rush_epa_per_play | -0.1149 | -0.0806 | 0.0754 | 17 | 1074 | -0.0983 | -0.2348 | -0.2348 | 26 | 0.1935 | prior_season_only | RANK_PERSISTENT | 0.0000 |
-| team_offense.rush_success_rate | 0.3392 | 0.4004 | 0.0385 | 17 | 1074 | 0.3645 | -0.9303 | -0.9303 | 31 | 0.0323 | prior_season_only | RANK_PERSISTENT | 0.0000 |
-| team_offense.success_rate | 0.3520 | 0.4370 | 0.0337 | 17 | 1074 | 0.3681 | -2.0397 | -2.0397 | 32 | 0.0000 | prior_season_only | VALIDATED_PERSISTENCE | 0.0000 |
+| pass_protection.qb_hit_rate_allowed | 0.2667 | 0.1450 | 0.0327 | 1 | 30 | 0.1585 | 0.4132 | -0.4132 | 30 | 0.0645 | low | UNVALIDATED_RANK_PERSISTENT | -0.0305 |
+| pass_protection.rush_stuffed_rate_approx | 0.1579 | 0.2045 | 0.0323 | 1 | 30 | 0.2018 | -0.0848 | 0.0848 | 7 | 0.7903 | low | RANK_PERSISTENT | -0.0213 |
+| pass_protection.sack_rate_allowed | 0.1667 | 0.0664 | 0.0188 | 1 | 30 | 0.0775 | 0.5932 | -0.5932 | 32 | 0.0000 | low | UNVALIDATED_RANK_PERSISTENT | 0.0020 |
+| pass_rush.qb_hit_rate_generated | 0.1250 | 0.1442 | 0.0234 | 1 | 24 | 0.1430 | -0.0482 | -0.0482 | 21 | 0.3548 | low | RANK_PERSISTENT | -0.0213 |
+| pass_rush.sack_rate_generated | 0.0417 | 0.0660 | 0.0121 | 1 | 24 | 0.0644 | -0.1349 | -0.1349 | 23 | 0.2903 | low | NOT_RANK_PERSISTENT | -0.0171 |
+| special_teams.fg_pct | 1.0000 | 0.8507 | 0.0691 | 1 | 12 | 0.8595 | 0.1270 | 0.1270 | 1 | 0.6481 | low | NOT_RANK_PERSISTENT | -0.0109 |
+| special_teams.st_epa_per_play | 0.5044 | 0.0622 | 0.0928 | 1 | 12 | 0.0882 | 0.2801 | 0.2801 | 1 | 1.0000 | low | RANK_PERSISTENT | 0.0850 |
+| team_defense.early_down_epa_per_play | 0.3255 | -0.0013 | 0.0639 | 1 | 54 | 0.0179 | 0.3009 | -0.3009 | 32 | 0.0000 | low | RANK_PERSISTENT | 0.0520 |
+| team_defense.epa_per_play | 0.3098 | 0.0046 | 0.0677 | 1 | 54 | 0.0225 | 0.2650 | -0.2650 | 30 | 0.0645 | low | RANK_PERSISTENT | 0.0633 |
+| team_defense.explosive_pass_rate | 0.1667 | 0.0797 | 0.0112 | 1 | 54 | 0.0855 | 0.5169 | -0.5169 | 32 | 0.0000 | low | NOT_RANK_PERSISTENT | 0.0075 |
+| team_defense.explosive_rush_rate | 0.1724 | 0.1000 | 0.0206 | 1 | 54 | 0.1042 | 0.2069 | -0.2069 | 29 | 0.0968 | low | RANK_PERSISTENT | 0.0087 |
+| team_defense.pass_epa_per_dropback | 0.7926 | 0.0361 | 0.0949 | 1 | 54 | 0.0806 | 0.4690 | -0.4690 | 32 | 0.0000 | low | RANK_PERSISTENT | 0.1195 |
+| team_defense.pass_success_rate | 0.7083 | 0.4536 | 0.0320 | 1 | 54 | 0.4686 | 0.4676 | -0.4676 | 32 | 0.0000 | low | RANK_PERSISTENT | 0.0296 |
+| team_defense.rush_epa_per_play | -0.0530 | -0.0760 | 0.0649 | 1 | 54 | -0.0745 | 0.0236 | -0.0236 | 20 | 0.3871 | low | NOT_RANK_PERSISTENT | 0.0024 |
+| team_defense.rush_success_rate | 0.5172 | 0.4020 | 0.0330 | 1 | 54 | 0.4088 | 0.2056 | -0.2056 | 31 | 0.0323 | low | RANK_PERSISTENT | 0.0210 |
+| team_defense.success_rate | 0.5926 | 0.4384 | 0.0255 | 1 | 54 | 0.4475 | 0.3563 | -0.3563 | 32 | 0.0000 | low | RANK_PERSISTENT | 0.0243 |
+| team_offense.early_down_epa_per_play | -0.0791 | -0.0054 | 0.0784 | 1 | 51 | -0.0136 | -0.1044 | -0.1044 | 21 | 0.3548 | low | UNVALIDATED_RANK_PERSISTENT | 0.0994 |
+| team_offense.epa_per_play | -0.2057 | -0.0001 | 0.0921 | 1 | 51 | -0.0230 | -0.2480 | -0.2480 | 26 | 0.1935 | low | VALIDATED_PERSISTENCE | 0.0968 |
+| team_offense.explosive_pass_rate | 0.1000 | 0.0796 | 0.0177 | 1 | 51 | 0.0808 | 0.0678 | 0.0678 | 11 | 0.6774 | low | RANK_PERSISTENT | 0.0140 |
+| team_offense.explosive_rush_rate | 0.0526 | 0.0990 | 0.0195 | 1 | 51 | 0.0963 | -0.1397 | -0.1397 | 28 | 0.1129 | low | NOT_RANK_PERSISTENT | 0.0078 |
+| team_offense.pass_epa_per_dropback | -0.2254 | 0.0308 | 0.1280 | 1 | 51 | 0.0023 | -0.2224 | -0.2224 | 26 | 0.1935 | low | UNVALIDATED_RANK_PERSISTENT | 0.1624 |
+| team_offense.pass_success_rate | 0.4667 | 0.4521 | 0.0418 | 1 | 51 | 0.4537 | 0.0388 | 0.0388 | 17 | 0.4839 | low | UNVALIDATED_RANK_PERSISTENT | 0.0749 |
+| team_offense.proe | -0.1360 | -0.0477 | 0.0349 | 1 | 51 | -0.0654 | -0.5068 | -0.0000 | — | — | low | VALIDATED_PERSISTENCE | -0.0006 |
+| team_offense.rush_epa_per_play | -0.1194 | -0.0806 | 0.0754 | 1 | 51 | -0.0829 | -0.0303 | -0.0303 | 21 | 0.3548 | low | RANK_PERSISTENT | 0.0154 |
+| team_offense.rush_success_rate | 0.4211 | 0.4004 | 0.0385 | 1 | 51 | 0.4020 | 0.0413 | 0.0413 | 14 | 0.5806 | low | RANK_PERSISTENT | 0.0374 |
+| team_offense.success_rate | 0.4314 | 0.4370 | 0.0337 | 1 | 51 | 0.4358 | -0.0331 | -0.0331 | 18 | 0.4516 | low | VALIDATED_PERSISTENCE | 0.0677 |
 
 ## DAL
-Record: no games yet · Points for/against: —/— · Point differential: — · Data confidence: prior_season_only
-Strongest area: **offense_overall** (0.835) · Weakest area: **passing_defense** (-0.999)
+Record: 0-1-0 · Points for/against: 20/28 · Point differential: -8 · Data confidence: low
+Strongest area: **pass_protection** (0.301) · Weakest area: **passing_defense** (-0.419)
 
 ### Domain indices
 | domain | label | index_value | rank_of_league | delta_vs_prev_week | delta_vs_preseason | min_confidence |
 | --- | --- | --- | --- | --- | --- | --- |
-| defense_overall | Defensive Strength Index | -0.973 | 31 | 0.000 | 0.000 | prior_season_only |
-| pass_rush | Pass-Rush Strength Index | 0.004 | 18 | 0.000 | 0.000 | prior_season_only |
-| passing_defense | Pass-Defense Strength Index | -0.999 | 32 | 0.000 | 0.000 | prior_season_only |
-| rushing_defense | Run-Defense Strength Index | -0.858 | 31 | 0.000 | 0.000 | prior_season_only |
-| offense_overall | Offensive Strength Index | 0.835 | 5 | 0.000 | 0.000 | prior_season_only |
-| pass_protection | Pass-Protection Strength Index | 0.420 | 11 | 0.000 | 0.000 | prior_season_only |
-| passing_offense | Passing-Offense Strength Index | 0.416 | 8 | 0.000 | 0.000 | prior_season_only |
-| rushing_offense | Rushing-Offense Strength Index | 0.548 | 7 | 0.000 | 0.000 | prior_season_only |
-| special_teams | Special-Teams Strength Index | 0.667 | 6 | 0.000 | 0.000 | prior_season_only |
+| defense_overall | Defensive Strength Index | -0.290 | 31 | 0.683 | 0.683 | low |
+| pass_rush | Pass-Rush Strength Index | -0.006 | 15 | -0.010 | -0.010 | low |
+| passing_defense | Pass-Defense Strength Index | -0.419 | 31 | 0.580 | 0.580 | low |
+| rushing_defense | Run-Defense Strength Index | -0.116 | 27 | 0.743 | 0.743 | low |
+| offense_overall | Offensive Strength Index | 0.233 | 6 | -0.602 | -0.602 | low |
+| pass_protection | Pass-Protection Strength Index | 0.301 | 4 | -0.119 | -0.119 | low |
+| passing_offense | Passing-Offense Strength Index | 0.012 | 15 | -0.404 | -0.404 | low |
+| rushing_offense | Rushing-Offense Strength Index | 0.004 | 20 | -0.544 | -0.544 | low |
+| special_teams | Special-Teams Strength Index | -0.111 | 27 | -0.778 | -0.778 | low |
 
 ### Underlying metrics
 | metric | raw_value | ref_mean | ref_sd | n_games | n_opportunities | shrunk_value | z_shrunk | oriented_z_shrunk | rank_of_league | percentile | confidence | phase3_status | delta_shrunk_vs_prev_week |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
-| pass_protection.qb_hit_rate_allowed | 0.1410 | 0.1450 | 0.0327 | 17 | 681 | 0.1423 | -0.0837 | 0.0837 | 17 | 0.4839 | prior_season_only | UNVALIDATED_RANK_PERSISTENT | 0.0000 |
-| pass_protection.rush_stuffed_rate_approx | 0.1535 | 0.2045 | 0.0323 | 17 | 681 | 0.1782 | -0.8129 | 0.8129 | 3 | 0.9355 | prior_season_only | RANK_PERSISTENT | 0.0000 |
-| pass_protection.sack_rate_allowed | 0.0455 | 0.0664 | 0.0188 | 17 | 681 | 0.0522 | -0.7561 | 0.7561 | 6 | 0.8387 | prior_season_only | UNVALIDATED_RANK_PERSISTENT | 0.0000 |
-| pass_rush.qb_hit_rate_generated | 0.1664 | 0.1442 | 0.0234 | 17 | 631 | 0.1556 | 0.4893 | 0.4893 | 6 | 0.8387 | prior_season_only | RANK_PERSISTENT | 0.0000 |
-| pass_rush.sack_rate_generated | 0.0555 | 0.0660 | 0.0121 | 17 | 631 | 0.0602 | -0.4814 | -0.4814 | 26 | 0.1935 | prior_season_only | NOT_RANK_PERSISTENT | 0.0000 |
-| special_teams.fg_pct | 0.8571 | 0.8507 | 0.0691 | 17 | 238 | 0.8540 | 0.0479 | 0.0479 | 16 | 0.5161 | prior_season_only | NOT_RANK_PERSISTENT | 0.0000 |
-| special_teams.st_epa_per_play | 0.1825 | 0.0622 | 0.0928 | 17 | 238 | 0.1242 | 0.6673 | 0.6673 | 6 | 0.8387 | prior_season_only | RANK_PERSISTENT | 0.0000 |
-| team_defense.early_down_epa_per_play | 0.0925 | -0.0013 | 0.0639 | 17 | 1078 | 0.0470 | 0.7564 | -0.7564 | 28 | 0.1290 | prior_season_only | RANK_PERSISTENT | 0.0000 |
-| team_defense.epa_per_play | 0.1619 | 0.0046 | 0.0677 | 17 | 1078 | 0.0856 | 1.1963 | -1.1963 | 32 | 0.0000 | prior_season_only | RANK_PERSISTENT | 0.0000 |
-| team_defense.explosive_pass_rate | 0.0919 | 0.0797 | 0.0112 | 17 | 1078 | 0.0864 | 0.5981 | -0.5981 | 27 | 0.1613 | prior_season_only | NOT_RANK_PERSISTENT | 0.0000 |
-| team_defense.explosive_rush_rate | 0.1365 | 0.1000 | 0.0206 | 17 | 1078 | 0.1188 | 0.9134 | -0.9134 | 31 | 0.0323 | prior_season_only | RANK_PERSISTENT | 0.0000 |
-| team_defense.pass_epa_per_dropback | 0.2411 | 0.0361 | 0.0949 | 17 | 1078 | 0.1417 | 1.1129 | -1.1129 | 31 | 0.0323 | prior_season_only | RANK_PERSISTENT | 0.0000 |
-| team_defense.pass_success_rate | 0.5087 | 0.4536 | 0.0320 | 17 | 1078 | 0.4820 | 0.8855 | -0.8855 | 30 | 0.0645 | prior_season_only | RANK_PERSISTENT | 0.0000 |
-| team_defense.rush_epa_per_play | 0.0335 | -0.0760 | 0.0649 | 17 | 1078 | -0.0159 | 0.9246 | -0.9246 | 29 | 0.0968 | prior_season_only | NOT_RANK_PERSISTENT | 0.0000 |
-| team_defense.rush_success_rate | 0.4491 | 0.4020 | 0.0330 | 17 | 1078 | 0.4263 | 0.7367 | -0.7367 | 30 | 0.0645 | prior_season_only | RANK_PERSISTENT | 0.0000 |
-| team_defense.success_rate | 0.4861 | 0.4384 | 0.0255 | 17 | 1078 | 0.4630 | 0.9652 | -0.9652 | 31 | 0.0323 | prior_season_only | RANK_PERSISTENT | 0.0000 |
-| team_offense.early_down_epa_per_play | 0.0947 | -0.0054 | 0.0784 | 17 | 1164 | 0.0627 | 0.8685 | 0.8685 | 4 | 0.9032 | prior_season_only | UNVALIDATED_RANK_PERSISTENT | 0.0000 |
-| team_offense.epa_per_play | 0.1086 | -0.0001 | 0.0921 | 17 | 1164 | 0.0738 | 0.8029 | 0.8029 | 5 | 0.8710 | prior_season_only | VALIDATED_PERSISTENCE | 0.0000 |
-| team_offense.explosive_pass_rate | 0.0822 | 0.0796 | 0.0177 | 17 | 1164 | 0.0809 | 0.0772 | 0.0772 | 12 | 0.6452 | prior_season_only | RANK_PERSISTENT | 0.0000 |
-| team_offense.explosive_rush_rate | 0.0930 | 0.0990 | 0.0195 | 17 | 1164 | 0.0959 | -0.1580 | -0.1580 | 19 | 0.4194 | prior_season_only | NOT_RANK_PERSISTENT | 0.0000 |
-| team_offense.pass_epa_per_dropback | 0.1559 | 0.0308 | 0.1280 | 17 | 1164 | 0.1159 | 0.6648 | 0.6648 | 7 | 0.8065 | prior_season_only | UNVALIDATED_RANK_PERSISTENT | 0.0000 |
-| team_offense.pass_success_rate | 0.4831 | 0.4521 | 0.0418 | 17 | 1164 | 0.4732 | 0.5046 | 0.5046 | 8 | 0.7742 | prior_season_only | UNVALIDATED_RANK_PERSISTENT | 0.0000 |
-| team_offense.proe | -0.0474 | -0.0477 | 0.0349 | 17 | 1164 | -0.0475 | 0.0071 | 0.0000 | — | — | prior_season_only | VALIDATED_PERSISTENCE | 0.0000 |
-| team_offense.rush_epa_per_play | -0.0075 | -0.0806 | 0.0754 | 17 | 1164 | -0.0430 | 0.4995 | 0.4995 | 8 | 0.7742 | prior_season_only | RANK_PERSISTENT | 0.0000 |
-| team_offense.rush_success_rate | 0.4395 | 0.4004 | 0.0385 | 17 | 1164 | 0.4233 | 0.5960 | 0.5960 | 7 | 0.8065 | prior_season_only | RANK_PERSISTENT | 0.0000 |
-| team_offense.success_rate | 0.4716 | 0.4370 | 0.0337 | 17 | 1164 | 0.4650 | 0.8324 | 0.8324 | 6 | 0.8387 | prior_season_only | VALIDATED_PERSISTENCE | 0.0000 |
+| pass_protection.qb_hit_rate_allowed | 0.0833 | 0.1450 | 0.0327 | 1 | 36 | 0.1381 | -0.2094 | 0.2094 | 6 | 0.8387 | low | UNVALIDATED_RANK_PERSISTENT | -0.0041 |
+| pass_protection.rush_stuffed_rate_approx | 0.2353 | 0.2045 | 0.0323 | 1 | 36 | 0.2063 | 0.0559 | -0.0559 | 20 | 0.3871 | low | RANK_PERSISTENT | 0.0281 |
+| pass_protection.sack_rate_allowed | 0.0000 | 0.0664 | 0.0188 | 1 | 36 | 0.0590 | -0.3929 | 0.3929 | 1 | 0.9355 | low | UNVALIDATED_RANK_PERSISTENT | 0.0068 |
+| pass_rush.qb_hit_rate_generated | 0.1515 | 0.1442 | 0.0234 | 1 | 33 | 0.1446 | 0.0185 | 0.0185 | 13 | 0.5645 | low | RANK_PERSISTENT | -0.0110 |
+| pass_rush.sack_rate_generated | 0.0606 | 0.0660 | 0.0121 | 1 | 33 | 0.0657 | -0.0301 | -0.0301 | 17 | 0.4677 | low | NOT_RANK_PERSISTENT | 0.0054 |
+| special_teams.fg_pct | — | 0.8507 | 0.0691 | 1 | 10 | — | — | — | — | — | low | NOT_RANK_PERSISTENT | — |
+| special_teams.st_epa_per_play | -0.1130 | 0.0622 | 0.0928 | 1 | 10 | 0.0519 | -0.1110 | -0.1110 | 27 | 0.1613 | low | RANK_PERSISTENT | -0.0723 |
+| team_defense.early_down_epa_per_play | 0.2224 | -0.0013 | 0.0639 | 1 | 66 | 0.0119 | 0.2060 | -0.2060 | 28 | 0.1290 | low | RANK_PERSISTENT | -0.0352 |
+| team_defense.epa_per_play | 0.3629 | 0.0046 | 0.0677 | 1 | 66 | 0.0257 | 0.3111 | -0.3111 | 32 | 0.0000 | low | RANK_PERSISTENT | -0.0600 |
+| team_defense.explosive_pass_rate | 0.0000 | 0.0797 | 0.0112 | 1 | 66 | 0.0744 | -0.4735 | 0.4735 | 1 | 0.9355 | low | NOT_RANK_PERSISTENT | -0.0120 |
+| team_defense.explosive_rush_rate | 0.1212 | 0.1000 | 0.0206 | 1 | 66 | 0.1012 | 0.0607 | -0.0607 | 23 | 0.2742 | low | RANK_PERSISTENT | -0.0176 |
+| team_defense.pass_epa_per_dropback | 0.6670 | 0.0361 | 0.0949 | 1 | 66 | 0.0732 | 0.3912 | -0.3912 | 31 | 0.0323 | low | RANK_PERSISTENT | -0.0685 |
+| team_defense.pass_success_rate | 0.6970 | 0.4536 | 0.0320 | 1 | 66 | 0.4680 | 0.4467 | -0.4467 | 31 | 0.0323 | low | RANK_PERSISTENT | -0.0141 |
+| team_defense.rush_epa_per_play | 0.0587 | -0.0760 | 0.0649 | 1 | 66 | -0.0670 | 0.1383 | -0.1383 | 26 | 0.1935 | low | NOT_RANK_PERSISTENT | -0.0511 |
+| team_defense.rush_success_rate | 0.4848 | 0.4020 | 0.0330 | 1 | 66 | 0.4069 | 0.1478 | -0.1478 | 29 | 0.0968 | low | RANK_PERSISTENT | -0.0194 |
+| team_defense.success_rate | 0.5909 | 0.4384 | 0.0255 | 1 | 66 | 0.4474 | 0.3524 | -0.3524 | 31 | 0.0323 | low | RANK_PERSISTENT | -0.0156 |
+| team_offense.early_down_epa_per_play | 0.0655 | -0.0054 | 0.0784 | 1 | 58 | 0.0025 | 0.1005 | 0.1005 | 14 | 0.5806 | low | UNVALIDATED_RANK_PERSISTENT | -0.0602 |
+| team_offense.epa_per_play | 0.2709 | -0.0001 | 0.0921 | 1 | 58 | 0.0300 | 0.3270 | 0.3270 | 5 | 0.8710 | low | VALIDATED_PERSISTENCE | -0.0438 |
+| team_offense.explosive_pass_rate | 0.0000 | 0.0796 | 0.0177 | 1 | 58 | 0.0749 | -0.2640 | -0.2640 | 28 | 0.0645 | low | RANK_PERSISTENT | -0.0060 |
+| team_offense.explosive_rush_rate | 0.0000 | 0.0990 | 0.0195 | 1 | 58 | 0.0932 | -0.2982 | -0.2982 | 32 | 0.0000 | low | NOT_RANK_PERSISTENT | -0.0027 |
+| team_offense.pass_epa_per_dropback | 0.3144 | 0.0308 | 0.1280 | 1 | 58 | 0.0623 | 0.2462 | 0.2462 | 7 | 0.8065 | low | UNVALIDATED_RANK_PERSISTENT | -0.0536 |
+| team_offense.pass_success_rate | 0.4722 | 0.4521 | 0.0418 | 1 | 58 | 0.4543 | 0.0535 | 0.0535 | 14 | 0.5806 | low | UNVALIDATED_RANK_PERSISTENT | -0.0189 |
+| team_offense.proe | -0.0633 | -0.0477 | 0.0349 | 1 | 58 | -0.0508 | -0.0896 | -0.0000 | — | — | low | VALIDATED_PERSISTENCE | -0.0034 |
+| team_offense.rush_epa_per_play | -0.0999 | -0.0806 | 0.0754 | 1 | 58 | -0.0817 | -0.0150 | -0.0150 | 18 | 0.4516 | low | RANK_PERSISTENT | -0.0388 |
+| team_offense.rush_success_rate | 0.4118 | 0.4004 | 0.0385 | 1 | 58 | 0.4012 | 0.0228 | 0.0228 | 16 | 0.5161 | low | RANK_PERSISTENT | -0.0221 |
+| team_offense.success_rate | 0.4828 | 0.4370 | 0.0337 | 1 | 58 | 0.4461 | 0.2715 | 0.2715 | 8 | 0.7742 | low | VALIDATED_PERSISTENCE | -0.0189 |
 
 ## DEN
-Record: no games yet · Points for/against: —/— · Point differential: — · Data confidence: prior_season_only
-Strongest area: **pass_rush** (1.509) · Weakest area: **special_teams** (-0.028)
+Record: 0-1-0 · Points for/against: 10/31 · Point differential: -21 · Data confidence: low
+Strongest area: **special_teams** (0.126) · Weakest area: **offense_overall** (-0.373)
 
 ### Domain indices
 | domain | label | index_value | rank_of_league | delta_vs_prev_week | delta_vs_preseason | min_confidence |
 | --- | --- | --- | --- | --- | --- | --- |
-| defense_overall | Defensive Strength Index | 0.716 | 3 | 0.000 | 0.000 | prior_season_only |
-| pass_rush | Pass-Rush Strength Index | 1.509 | 1 | 0.000 | 0.000 | prior_season_only |
-| passing_defense | Pass-Defense Strength Index | 0.977 | 2 | 0.000 | 0.000 | prior_season_only |
-| rushing_defense | Run-Defense Strength Index | 0.626 | 3 | 0.000 | 0.000 | prior_season_only |
-| offense_overall | Offensive Strength Index | 0.163 | 16 | 0.000 | 0.000 | prior_season_only |
-| pass_protection | Pass-Protection Strength Index | 1.004 | 1 | 0.000 | 0.000 | prior_season_only |
-| passing_offense | Passing-Offense Strength Index | 0.015 | 16 | 0.000 | 0.000 | prior_season_only |
-| rushing_offense | Rushing-Offense Strength Index | 0.213 | 13 | 0.000 | 0.000 | prior_season_only |
-| special_teams | Special-Teams Strength Index | -0.028 | 22 | 0.000 | 0.000 | prior_season_only |
+| defense_overall | Defensive Strength Index | 0.030 | 15 | -0.686 | -0.686 | low |
+| pass_rush | Pass-Rush Strength Index | -0.006 | 15 | -1.515 | -1.515 | low |
+| passing_defense | Pass-Defense Strength Index | 0.030 | 15 | -0.947 | -0.947 | low |
+| rushing_defense | Run-Defense Strength Index | -0.141 | 28 | -0.767 | -0.767 | low |
+| offense_overall | Offensive Strength Index | -0.373 | 31 | -0.536 | -0.536 | low |
+| pass_protection | Pass-Protection Strength Index | -0.173 | 27 | -1.177 | -1.177 | low |
+| passing_offense | Passing-Offense Strength Index | -0.277 | 32 | -0.292 | -0.292 | low |
+| rushing_offense | Rushing-Offense Strength Index | -0.191 | 29 | -0.404 | -0.404 | low |
+| special_teams | Special-Teams Strength Index | 0.126 | 12 | 0.153 | 0.153 | low |
 
 ### Underlying metrics
 | metric | raw_value | ref_mean | ref_sd | n_games | n_opportunities | shrunk_value | z_shrunk | oriented_z_shrunk | rank_of_league | percentile | confidence | phase3_status | delta_shrunk_vs_prev_week |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
-| pass_protection.qb_hit_rate_allowed | 0.1043 | 0.1450 | 0.0327 | 17 | 671 | 0.1173 | -0.8453 | 0.8453 | 3 | 0.9355 | prior_season_only | UNVALIDATED_RANK_PERSISTENT | 0.0000 |
-| pass_protection.rush_stuffed_rate_approx | 0.1946 | 0.2045 | 0.0323 | 17 | 671 | 0.1994 | -0.1574 | 0.1574 | 16 | 0.5161 | prior_season_only | RANK_PERSISTENT | 0.0000 |
-| pass_protection.sack_rate_allowed | 0.0343 | 0.0664 | 0.0188 | 17 | 671 | 0.0446 | -1.1633 | 1.1633 | 1 | 1.0000 | prior_season_only | UNVALIDATED_RANK_PERSISTENT | 0.0000 |
-| pass_rush.qb_hit_rate_generated | 0.2150 | 0.1442 | 0.0234 | 17 | 693 | 0.1807 | 1.5592 | 1.5592 | 1 | 1.0000 | prior_season_only | RANK_PERSISTENT | 0.0000 |
-| pass_rush.sack_rate_generated | 0.0981 | 0.0660 | 0.0121 | 17 | 693 | 0.0836 | 1.4596 | 1.4596 | 1 | 1.0000 | prior_season_only | NOT_RANK_PERSISTENT | 0.0000 |
-| special_teams.fg_pct | 0.8750 | 0.8507 | 0.0691 | 17 | 223 | 0.8632 | 0.1810 | 0.1810 | 14 | 0.5806 | prior_season_only | NOT_RANK_PERSISTENT | 0.0000 |
-| special_teams.st_epa_per_play | 0.0572 | 0.0622 | 0.0928 | 17 | 223 | 0.0597 | -0.0277 | -0.0277 | 22 | 0.3226 | prior_season_only | RANK_PERSISTENT | 0.0000 |
-| team_defense.early_down_epa_per_play | -0.0556 | -0.0013 | 0.0639 | 17 | 1115 | -0.0293 | -0.4379 | 0.4379 | 7 | 0.8065 | prior_season_only | RANK_PERSISTENT | 0.0000 |
-| team_defense.epa_per_play | -0.0584 | 0.0046 | 0.0677 | 17 | 1115 | -0.0279 | -0.4792 | 0.4792 | 8 | 0.7742 | prior_season_only | RANK_PERSISTENT | 0.0000 |
-| team_defense.explosive_pass_rate | 0.0577 | 0.0797 | 0.0112 | 17 | 1115 | 0.0676 | -1.0736 | 1.0736 | 1 | 1.0000 | prior_season_only | NOT_RANK_PERSISTENT | 0.0000 |
-| team_defense.explosive_rush_rate | 0.0591 | 0.1000 | 0.0206 | 17 | 1115 | 0.0789 | -1.0209 | 1.0209 | 3 | 0.9355 | prior_season_only | RANK_PERSISTENT | 0.0000 |
-| team_defense.pass_epa_per_dropback | -0.0785 | 0.0361 | 0.0949 | 17 | 1115 | -0.0229 | -0.6221 | 0.6221 | 5 | 0.8710 | prior_season_only | RANK_PERSISTENT | 0.0000 |
-| team_defense.pass_success_rate | 0.3709 | 0.4536 | 0.0320 | 17 | 1115 | 0.4110 | -1.3311 | 1.3311 | 1 | 1.0000 | prior_season_only | RANK_PERSISTENT | 0.0000 |
-| team_defense.rush_epa_per_play | -0.1053 | -0.0760 | 0.0649 | 17 | 1115 | -0.0921 | -0.2478 | 0.2478 | 8 | 0.7742 | prior_season_only | NOT_RANK_PERSISTENT | 0.0000 |
-| team_defense.rush_success_rate | 0.3629 | 0.4020 | 0.0330 | 17 | 1115 | 0.3818 | -0.6104 | 0.6104 | 2 | 0.9677 | prior_season_only | RANK_PERSISTENT | 0.0000 |
-| team_defense.success_rate | 0.3776 | 0.4384 | 0.0255 | 17 | 1115 | 0.4071 | -1.2308 | 1.2308 | 1 | 1.0000 | prior_season_only | RANK_PERSISTENT | 0.0000 |
-| team_offense.early_down_epa_per_play | 0.0222 | -0.0054 | 0.0784 | 17 | 1116 | 0.0134 | 0.2396 | 0.2396 | 15 | 0.5484 | prior_season_only | UNVALIDATED_RANK_PERSISTENT | 0.0000 |
-| team_offense.epa_per_play | 0.0355 | -0.0001 | 0.0921 | 17 | 1116 | 0.0241 | 0.2630 | 0.2630 | 15 | 0.5484 | prior_season_only | VALIDATED_PERSISTENCE | 0.0000 |
-| team_offense.explosive_pass_rate | 0.0700 | 0.0796 | 0.0177 | 17 | 1116 | 0.0747 | -0.2768 | -0.2768 | 22 | 0.3226 | prior_season_only | RANK_PERSISTENT | 0.0000 |
-| team_offense.explosive_rush_rate | 0.0973 | 0.0990 | 0.0195 | 17 | 1116 | 0.0981 | -0.0446 | -0.0446 | 16 | 0.5161 | prior_season_only | NOT_RANK_PERSISTENT | 0.0000 |
-| team_offense.pass_epa_per_dropback | 0.1067 | 0.0308 | 0.1280 | 17 | 1116 | 0.0824 | 0.4035 | 0.4035 | 10 | 0.7097 | prior_season_only | UNVALIDATED_RANK_PERSISTENT | 0.0000 |
-| team_offense.pass_success_rate | 0.4471 | 0.4521 | 0.0418 | 17 | 1116 | 0.4487 | -0.0811 | -0.0811 | 21 | 0.3548 | prior_season_only | UNVALIDATED_RANK_PERSISTENT | 0.0000 |
-| team_offense.proe | -0.0096 | -0.0477 | 0.0349 | 17 | 1116 | -0.0168 | 0.8860 | 0.0000 | — | — | prior_season_only | VALIDATED_PERSISTENCE | 0.0000 |
-| team_offense.rush_epa_per_play | -0.0694 | -0.0806 | 0.0754 | 17 | 1116 | -0.0748 | 0.0768 | 0.0768 | 16 | 0.5161 | prior_season_only | RANK_PERSISTENT | 0.0000 |
-| team_offense.rush_success_rate | 0.4234 | 0.4004 | 0.0385 | 17 | 1116 | 0.4138 | 0.3499 | 0.3499 | 11 | 0.6774 | prior_season_only | RANK_PERSISTENT | 0.0000 |
-| team_offense.success_rate | 0.4364 | 0.4370 | 0.0337 | 17 | 1116 | 0.4365 | -0.0139 | -0.0139 | 19 | 0.4194 | prior_season_only | VALIDATED_PERSISTENCE | 0.0000 |
+| pass_protection.qb_hit_rate_allowed | 0.1515 | 0.1450 | 0.0327 | 1 | 33 | 0.1457 | 0.0221 | -0.0221 | 17 | 0.4355 | low | UNVALIDATED_RANK_PERSISTENT | 0.0284 |
+| pass_protection.rush_stuffed_rate_approx | 0.2000 | 0.2045 | 0.0323 | 1 | 33 | 0.2043 | -0.0082 | 0.0082 | 17 | 0.4677 | low | RANK_PERSISTENT | 0.0048 |
+| pass_protection.sack_rate_allowed | 0.1212 | 0.0664 | 0.0188 | 1 | 33 | 0.0725 | 0.3242 | -0.3242 | 29 | 0.0968 | low | UNVALIDATED_RANK_PERSISTENT | 0.0279 |
+| pass_rush.qb_hit_rate_generated | 0.1515 | 0.1442 | 0.0234 | 1 | 33 | 0.1446 | 0.0185 | 0.0185 | 13 | 0.5645 | low | RANK_PERSISTENT | -0.0361 |
+| pass_rush.sack_rate_generated | 0.0606 | 0.0660 | 0.0121 | 1 | 33 | 0.0657 | -0.0301 | -0.0301 | 17 | 0.4677 | low | NOT_RANK_PERSISTENT | -0.0180 |
+| special_teams.fg_pct | 1.0000 | 0.8507 | 0.0691 | 1 | 14 | 0.8595 | 0.1270 | 0.1270 | 1 | 0.6481 | low | NOT_RANK_PERSISTENT | -0.0037 |
+| special_teams.st_epa_per_play | 0.2605 | 0.0622 | 0.0928 | 1 | 14 | 0.0739 | 0.1256 | 0.1256 | 12 | 0.6452 | low | RANK_PERSISTENT | 0.0142 |
+| team_defense.early_down_epa_per_play | -0.1314 | -0.0013 | 0.0639 | 1 | 66 | -0.0090 | -0.1198 | 0.1198 | 10 | 0.7097 | low | RANK_PERSISTENT | 0.0203 |
+| team_defense.epa_per_play | 0.1183 | 0.0046 | 0.0677 | 1 | 66 | 0.0113 | 0.0987 | -0.0987 | 22 | 0.3226 | low | RANK_PERSISTENT | 0.0392 |
+| team_defense.explosive_pass_rate | 0.0606 | 0.0797 | 0.0112 | 1 | 66 | 0.0784 | -0.1134 | 0.1134 | 15 | 0.5484 | low | NOT_RANK_PERSISTENT | 0.0108 |
+| team_defense.explosive_rush_rate | 0.1250 | 0.1000 | 0.0206 | 1 | 66 | 0.1014 | 0.0715 | -0.0715 | 25 | 0.2097 | low | RANK_PERSISTENT | 0.0225 |
+| team_defense.pass_epa_per_dropback | 0.0263 | 0.0361 | 0.0949 | 1 | 66 | 0.0355 | -0.0061 | 0.0061 | 16 | 0.5161 | low | RANK_PERSISTENT | 0.0584 |
+| team_defense.pass_success_rate | 0.4242 | 0.4536 | 0.0320 | 1 | 66 | 0.4519 | -0.0540 | 0.0540 | 14 | 0.5806 | low | RANK_PERSISTENT | 0.0409 |
+| team_defense.rush_epa_per_play | 0.2585 | -0.0760 | 0.0649 | 1 | 66 | -0.0537 | 0.3434 | -0.3434 | 32 | 0.0000 | low | NOT_RANK_PERSISTENT | 0.0384 |
+| team_defense.rush_success_rate | 0.4062 | 0.4020 | 0.0330 | 1 | 66 | 0.4022 | 0.0076 | -0.0076 | 16 | 0.5161 | low | RANK_PERSISTENT | 0.0204 |
+| team_defense.success_rate | 0.4091 | 0.4384 | 0.0255 | 1 | 66 | 0.4367 | -0.0677 | 0.0677 | 11 | 0.6774 | low | RANK_PERSISTENT | 0.0296 |
+| team_offense.early_down_epa_per_play | -0.1524 | -0.0054 | 0.0784 | 1 | 50 | -0.0217 | -0.2083 | -0.2083 | 25 | 0.2258 | low | UNVALIDATED_RANK_PERSISTENT | -0.0351 |
+| team_offense.epa_per_play | -0.3777 | -0.0001 | 0.0921 | 1 | 50 | -0.0421 | -0.4556 | -0.4556 | 32 | 0.0000 | low | VALIDATED_PERSISTENCE | -0.0662 |
+| team_offense.explosive_pass_rate | 0.0000 | 0.0796 | 0.0177 | 1 | 50 | 0.0749 | -0.2640 | -0.2640 | 28 | 0.0645 | low | RANK_PERSISTENT | 0.0002 |
+| team_offense.explosive_rush_rate | 0.0667 | 0.0990 | 0.0195 | 1 | 50 | 0.0971 | -0.0974 | -0.0974 | 22 | 0.2903 | low | NOT_RANK_PERSISTENT | -0.0010 |
+| team_offense.pass_epa_per_dropback | -0.4429 | 0.0308 | 0.1280 | 1 | 50 | -0.0219 | -0.4113 | -0.4113 | 31 | 0.0323 | low | UNVALIDATED_RANK_PERSISTENT | -0.1043 |
+| team_offense.pass_success_rate | 0.3939 | 0.4521 | 0.0418 | 1 | 50 | 0.4456 | -0.1545 | -0.1545 | 25 | 0.2097 | low | UNVALIDATED_RANK_PERSISTENT | -0.0031 |
+| team_offense.proe | -0.0226 | -0.0477 | 0.0349 | 1 | 50 | -0.0427 | 0.1441 | 0.0000 | — | — | low | VALIDATED_PERSISTENCE | -0.0259 |
+| team_offense.rush_epa_per_play | -0.2283 | -0.0806 | 0.0754 | 1 | 50 | -0.0893 | -0.1153 | -0.1153 | 26 | 0.1935 | low | RANK_PERSISTENT | -0.0145 |
+| team_offense.rush_success_rate | 0.2667 | 0.4004 | 0.0385 | 1 | 50 | 0.3901 | -0.2670 | -0.2670 | 29 | 0.0968 | low | RANK_PERSISTENT | -0.0238 |
+| team_offense.success_rate | 0.3600 | 0.4370 | 0.0337 | 1 | 50 | 0.4216 | -0.4562 | -0.4562 | 29 | 0.0968 | low | VALIDATED_PERSISTENCE | -0.0149 |
 
 ## DET
-Record: no games yet · Points for/against: —/— · Point differential: — · Data confidence: prior_season_only
-Strongest area: **passing_offense** (0.674) · Weakest area: **pass_protection** (-0.404)
+Record: 1-0-0 · Points for/against: 31/30 · Point differential: 1 · Data confidence: low
+Strongest area: **rushing_offense** (0.103) · Weakest area: **passing_offense** (-0.100)
 
 ### Domain indices
 | domain | label | index_value | rank_of_league | delta_vs_prev_week | delta_vs_preseason | min_confidence |
 | --- | --- | --- | --- | --- | --- | --- |
-| defense_overall | Defensive Strength Index | 0.152 | 12 | 0.000 | 0.000 | prior_season_only |
-| pass_rush | Pass-Rush Strength Index | 0.382 | 6 | 0.000 | 0.000 | prior_season_only |
-| passing_defense | Pass-Defense Strength Index | 0.332 | 11 | 0.000 | 0.000 | prior_season_only |
-| rushing_defense | Run-Defense Strength Index | -0.256 | 23 | 0.000 | 0.000 | prior_season_only |
-| offense_overall | Offensive Strength Index | 0.532 | 9 | 0.000 | 0.000 | prior_season_only |
-| pass_protection | Pass-Protection Strength Index | -0.404 | 23 | 0.000 | 0.000 | prior_season_only |
-| passing_offense | Passing-Offense Strength Index | 0.674 | 6 | 0.000 | 0.000 | prior_season_only |
-| rushing_offense | Rushing-Offense Strength Index | 0.016 | 20 | 0.000 | 0.000 | prior_season_only |
-| special_teams | Special-Teams Strength Index | 0.398 | 11 | 0.000 | 0.000 | prior_season_only |
+| defense_overall | Defensive Strength Index | -0.007 | 19 | -0.159 | -0.159 | low |
+| pass_rush | Pass-Rush Strength Index | 0.042 | 12 | -0.340 | -0.340 | low |
+| passing_defense | Pass-Defense Strength Index | -0.002 | 18 | -0.334 | -0.334 | low |
+| rushing_defense | Run-Defense Strength Index | 0.070 | 12 | 0.327 | 0.327 | low |
+| offense_overall | Offensive Strength Index | 0.023 | 14 | -0.508 | -0.508 | low |
+| pass_protection | Pass-Protection Strength Index | 0.039 | 14 | 0.443 | 0.443 | low |
+| passing_offense | Passing-Offense Strength Index | -0.100 | 24 | -0.773 | -0.773 | low |
+| rushing_offense | Rushing-Offense Strength Index | 0.103 | 8 | 0.086 | 0.086 | low |
+| special_teams | Special-Teams Strength Index | -0.037 | 23 | -0.435 | -0.435 | low |
 
 ### Underlying metrics
 | metric | raw_value | ref_mean | ref_sd | n_games | n_opportunities | shrunk_value | z_shrunk | oriented_z_shrunk | rank_of_league | percentile | confidence | phase3_status | delta_shrunk_vs_prev_week |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
-| pass_protection.qb_hit_rate_allowed | 0.1907 | 0.1450 | 0.0327 | 17 | 624 | 0.1761 | 0.9499 | -0.9499 | 28 | 0.1290 | prior_season_only | UNVALIDATED_RANK_PERSISTENT | 0.0000 |
-| pass_protection.rush_stuffed_rate_approx | 0.2014 | 0.2045 | 0.0323 | 17 | 624 | 0.2029 | -0.0503 | 0.0503 | 19 | 0.4194 | prior_season_only | RANK_PERSISTENT | 0.0000 |
-| pass_protection.sack_rate_allowed | 0.0625 | 0.0664 | 0.0188 | 17 | 624 | 0.0637 | -0.1414 | 0.1414 | 16 | 0.5161 | prior_season_only | UNVALIDATED_RANK_PERSISTENT | 0.0000 |
-| pass_rush.qb_hit_rate_generated | 0.1559 | 0.1442 | 0.0234 | 17 | 635 | 0.1502 | 0.2582 | 0.2582 | 12 | 0.6452 | prior_season_only | RANK_PERSISTENT | 0.0000 |
-| pass_rush.sack_rate_generated | 0.0772 | 0.0660 | 0.0121 | 17 | 635 | 0.0721 | 0.5059 | 0.5059 | 6 | 0.8387 | prior_season_only | NOT_RANK_PERSISTENT | 0.0000 |
-| special_teams.fg_pct | 0.7941 | 0.8507 | 0.0691 | 17 | 237 | 0.8216 | -0.4217 | -0.4217 | 27 | 0.1613 | prior_season_only | NOT_RANK_PERSISTENT | 0.0000 |
-| special_teams.st_epa_per_play | 0.1340 | 0.0622 | 0.0928 | 17 | 237 | 0.0992 | 0.3981 | 0.3981 | 11 | 0.6774 | prior_season_only | RANK_PERSISTENT | 0.0000 |
-| team_defense.early_down_epa_per_play | -0.0307 | -0.0013 | 0.0639 | 17 | 1080 | -0.0165 | -0.2371 | 0.2371 | 12 | 0.6452 | prior_season_only | RANK_PERSISTENT | 0.0000 |
-| team_defense.epa_per_play | 0.0116 | 0.0046 | 0.0677 | 17 | 1080 | 0.0082 | 0.0533 | -0.0533 | 15 | 0.5484 | prior_season_only | RANK_PERSISTENT | 0.0000 |
-| team_defense.explosive_pass_rate | 0.0913 | 0.0797 | 0.0112 | 17 | 1080 | 0.0861 | 0.5698 | -0.5698 | 26 | 0.1935 | prior_season_only | NOT_RANK_PERSISTENT | 0.0000 |
-| team_defense.explosive_rush_rate | 0.1125 | 0.1000 | 0.0206 | 17 | 1080 | 0.1064 | 0.3137 | -0.3137 | 24 | 0.2581 | prior_season_only | RANK_PERSISTENT | 0.0000 |
-| team_defense.pass_epa_per_dropback | 0.0074 | 0.0361 | 0.0949 | 17 | 1080 | 0.0213 | -0.1558 | 0.1558 | 14 | 0.5806 | prior_season_only | RANK_PERSISTENT | 0.0000 |
-| team_defense.pass_success_rate | 0.4220 | 0.4536 | 0.0320 | 17 | 1080 | 0.4374 | -0.5079 | 0.5079 | 7 | 0.8065 | prior_season_only | RANK_PERSISTENT | 0.0000 |
-| team_defense.rush_epa_per_play | -0.0369 | -0.0760 | 0.0649 | 17 | 1080 | -0.0546 | 0.3302 | -0.3302 | 23 | 0.2903 | prior_season_only | NOT_RANK_PERSISTENT | 0.0000 |
-| team_defense.rush_success_rate | 0.4100 | 0.4020 | 0.0330 | 17 | 1080 | 0.4061 | 0.1253 | -0.1253 | 16 | 0.5161 | prior_season_only | RANK_PERSISTENT | 0.0000 |
-| team_defense.success_rate | 0.4250 | 0.4384 | 0.0255 | 17 | 1080 | 0.4315 | -0.2711 | 0.2711 | 10 | 0.7097 | prior_season_only | RANK_PERSISTENT | 0.0000 |
-| team_offense.early_down_epa_per_play | 0.0820 | -0.0054 | 0.0784 | 17 | 1087 | 0.0541 | 0.7582 | 0.7582 | 5 | 0.8710 | prior_season_only | UNVALIDATED_RANK_PERSISTENT | 0.0000 |
-| team_offense.epa_per_play | 0.0712 | -0.0001 | 0.0921 | 17 | 1087 | 0.0484 | 0.5267 | 0.5267 | 9 | 0.7419 | prior_season_only | VALIDATED_PERSISTENCE | 0.0000 |
-| team_offense.explosive_pass_rate | 0.1058 | 0.0796 | 0.0177 | 17 | 1087 | 0.0931 | 0.7610 | 0.7610 | 4 | 0.9032 | prior_season_only | RANK_PERSISTENT | 0.0000 |
-| team_offense.explosive_rush_rate | 0.0984 | 0.0990 | 0.0195 | 17 | 1087 | 0.0987 | -0.0163 | -0.0163 | 13 | 0.6129 | prior_season_only | NOT_RANK_PERSISTENT | 0.0000 |
-| team_offense.pass_epa_per_dropback | 0.1703 | 0.0308 | 0.1280 | 17 | 1087 | 0.1257 | 0.7414 | 0.7414 | 5 | 0.8710 | prior_season_only | UNVALIDATED_RANK_PERSISTENT | 0.0000 |
-| team_offense.pass_success_rate | 0.4840 | 0.4521 | 0.0418 | 17 | 1087 | 0.4738 | 0.5186 | 0.5186 | 7 | 0.8065 | prior_season_only | UNVALIDATED_RANK_PERSISTENT | 0.0000 |
-| team_offense.proe | -0.0664 | -0.0477 | 0.0349 | 17 | 1087 | -0.0629 | -0.4350 | -0.0000 | — | — | prior_season_only | VALIDATED_PERSISTENCE | 0.0000 |
-| team_offense.rush_epa_per_play | -0.0709 | -0.0806 | 0.0754 | 17 | 1087 | -0.0756 | 0.0663 | 0.0663 | 17 | 0.4839 | prior_season_only | RANK_PERSISTENT | 0.0000 |
-| team_offense.rush_success_rate | 0.3982 | 0.4004 | 0.0385 | 17 | 1087 | 0.3991 | -0.0335 | -0.0335 | 22 | 0.3226 | prior_season_only | RANK_PERSISTENT | 0.0000 |
-| team_offense.success_rate | 0.4499 | 0.4370 | 0.0337 | 17 | 1087 | 0.4474 | 0.3096 | 0.3096 | 12 | 0.6452 | prior_season_only | VALIDATED_PERSISTENCE | 0.0000 |
+| pass_protection.qb_hit_rate_allowed | 0.1951 | 0.1450 | 0.0327 | 1 | 41 | 0.1506 | 0.1702 | -0.1702 | 25 | 0.2258 | low | UNVALIDATED_RANK_PERSISTENT | -0.0255 |
+| pass_protection.rush_stuffed_rate_approx | 0.2222 | 0.2045 | 0.0323 | 1 | 41 | 0.2056 | 0.0322 | -0.0322 | 19 | 0.4194 | low | RANK_PERSISTENT | 0.0027 |
+| pass_protection.sack_rate_allowed | 0.0244 | 0.0664 | 0.0188 | 1 | 41 | 0.0617 | -0.2486 | 0.2486 | 6 | 0.8387 | low | UNVALIDATED_RANK_PERSISTENT | -0.0020 |
+| pass_rush.qb_hit_rate_generated | 0.1452 | 0.1442 | 0.0234 | 1 | 62 | 0.1442 | 0.0025 | 0.0025 | 17 | 0.4839 | low | RANK_PERSISTENT | -0.0060 |
+| pass_rush.sack_rate_generated | 0.0806 | 0.0660 | 0.0121 | 1 | 62 | 0.0670 | 0.0808 | 0.0808 | 10 | 0.7097 | low | NOT_RANK_PERSISTENT | -0.0051 |
+| special_teams.fg_pct | 1.0000 | 0.8507 | 0.0691 | 1 | 18 | 0.8595 | 0.1270 | 0.1270 | 1 | 0.6481 | low | NOT_RANK_PERSISTENT | 0.0379 |
+| special_teams.st_epa_per_play | 0.0034 | 0.0622 | 0.0928 | 1 | 18 | 0.0588 | -0.0373 | -0.0373 | 23 | 0.2903 | low | RANK_PERSISTENT | -0.0404 |
+| team_defense.early_down_epa_per_play | -0.0138 | -0.0013 | 0.0639 | 1 | 88 | -0.0020 | -0.0115 | 0.0115 | 17 | 0.4839 | low | RANK_PERSISTENT | 0.0144 |
+| team_defense.epa_per_play | 0.0299 | 0.0046 | 0.0677 | 1 | 88 | 0.0061 | 0.0220 | -0.0220 | 18 | 0.4516 | low | RANK_PERSISTENT | -0.0021 |
+| team_defense.explosive_pass_rate | 0.0968 | 0.0797 | 0.0112 | 1 | 88 | 0.0808 | 0.1016 | -0.1016 | 21 | 0.3548 | low | NOT_RANK_PERSISTENT | -0.0053 |
+| team_defense.explosive_rush_rate | 0.0870 | 0.1000 | 0.0206 | 1 | 88 | 0.0992 | -0.0371 | 0.0371 | 15 | 0.5484 | low | RANK_PERSISTENT | -0.0072 |
+| team_defense.pass_epa_per_dropback | 0.0006 | 0.0361 | 0.0949 | 1 | 88 | 0.0340 | -0.0220 | 0.0220 | 13 | 0.6129 | low | RANK_PERSISTENT | 0.0127 |
+| team_defense.pass_success_rate | 0.4677 | 0.4536 | 0.0320 | 1 | 88 | 0.4545 | 0.0259 | -0.0259 | 17 | 0.4839 | low | RANK_PERSISTENT | 0.0171 |
+| team_defense.rush_epa_per_play | -0.0751 | -0.0760 | 0.0649 | 1 | 88 | -0.0759 | 0.0010 | -0.0010 | 18 | 0.4516 | low | NOT_RANK_PERSISTENT | -0.0214 |
+| team_defense.rush_success_rate | 0.3043 | 0.4020 | 0.0330 | 1 | 88 | 0.3962 | -0.1742 | 0.1742 | 7 | 0.8065 | low | RANK_PERSISTENT | -0.0099 |
+| team_defense.success_rate | 0.4432 | 0.4384 | 0.0255 | 1 | 88 | 0.4387 | 0.0111 | -0.0111 | 19 | 0.4194 | low | RANK_PERSISTENT | 0.0072 |
+| team_offense.early_down_epa_per_play | -0.0070 | -0.0054 | 0.0784 | 1 | 77 | -0.0056 | -0.0023 | -0.0023 | 15 | 0.5484 | low | UNVALIDATED_RANK_PERSISTENT | -0.0596 |
+| team_offense.epa_per_play | -0.0272 | -0.0001 | 0.0921 | 1 | 77 | -0.0031 | -0.0327 | -0.0327 | 19 | 0.4194 | low | VALIDATED_PERSISTENCE | -0.0515 |
+| team_offense.explosive_pass_rate | 0.0244 | 0.0796 | 0.0177 | 1 | 77 | 0.0763 | -0.1831 | -0.1831 | 27 | 0.1613 | low | RANK_PERSISTENT | -0.0167 |
+| team_offense.explosive_rush_rate | 0.1944 | 0.0990 | 0.0195 | 1 | 77 | 0.1046 | 0.2874 | 0.2874 | 3 | 0.9355 | low | NOT_RANK_PERSISTENT | 0.0059 |
+| team_offense.pass_epa_per_dropback | 0.0122 | 0.0308 | 0.1280 | 1 | 77 | 0.0287 | -0.0161 | -0.0161 | 18 | 0.4516 | low | UNVALIDATED_RANK_PERSISTENT | -0.0969 |
+| team_offense.pass_success_rate | 0.4146 | 0.4521 | 0.0418 | 1 | 77 | 0.4479 | -0.0995 | -0.0995 | 21 | 0.3548 | low | UNVALIDATED_RANK_PERSISTENT | -0.0258 |
+| team_offense.proe | -0.0240 | -0.0477 | 0.0349 | 1 | 77 | -0.0430 | 0.1359 | 0.0000 | — | — | low | VALIDATED_PERSISTENCE | 0.0199 |
+| team_offense.rush_epa_per_play | -0.0720 | -0.0806 | 0.0754 | 1 | 77 | -0.0801 | 0.0067 | 0.0067 | 14 | 0.5806 | low | RANK_PERSISTENT | -0.0045 |
+| team_offense.rush_success_rate | 0.5000 | 0.4004 | 0.0385 | 1 | 77 | 0.4080 | 0.1990 | 0.1990 | 3 | 0.9355 | low | RANK_PERSISTENT | 0.0090 |
+| team_offense.success_rate | 0.4545 | 0.4370 | 0.0337 | 1 | 77 | 0.4405 | 0.1043 | 0.1043 | 13 | 0.6129 | low | VALIDATED_PERSISTENCE | -0.0069 |
 
 ## GB
-Record: no games yet · Points for/against: —/— · Point differential: — · Data confidence: prior_season_only
-Strongest area: **passing_offense** (0.929) · Weakest area: **defense_overall** (-0.299)
+Record: 0-1-0 · Points for/against: 22/39 · Point differential: -17 · Data confidence: low
+Strongest area: **rushing_defense** (0.126) · Weakest area: **pass_protection** (-0.368)
 
 ### Domain indices
 | domain | label | index_value | rank_of_league | delta_vs_prev_week | delta_vs_preseason | min_confidence |
 | --- | --- | --- | --- | --- | --- | --- |
-| defense_overall | Defensive Strength Index | -0.299 | 22 | 0.000 | 0.000 | prior_season_only |
-| pass_rush | Pass-Rush Strength Index | 0.039 | 16 | 0.000 | 0.000 | prior_season_only |
-| passing_defense | Pass-Defense Strength Index | -0.083 | 17 | 0.000 | 0.000 | prior_season_only |
-| rushing_defense | Run-Defense Strength Index | -0.061 | 19 | 0.000 | 0.000 | prior_season_only |
-| offense_overall | Offensive Strength Index | 0.878 | 4 | 0.000 | 0.000 | prior_season_only |
-| pass_protection | Pass-Protection Strength Index | 0.233 | 14 | 0.000 | 0.000 | prior_season_only |
-| passing_offense | Passing-Offense Strength Index | 0.929 | 3 | 0.000 | 0.000 | prior_season_only |
-| rushing_offense | Rushing-Offense Strength Index | 0.270 | 12 | 0.000 | 0.000 | prior_season_only |
-| special_teams | Special-Teams Strength Index | 0.177 | 18 | 0.000 | 0.000 | prior_season_only |
+| defense_overall | Defensive Strength Index | 0.118 | 7 | 0.417 | 0.417 | low |
+| pass_rush | Pass-Rush Strength Index | 0.122 | 8 | 0.083 | 0.083 | low |
+| passing_defense | Pass-Defense Strength Index | 0.078 | 8 | 0.161 | 0.161 | low |
+| rushing_defense | Run-Defense Strength Index | 0.126 | 8 | 0.187 | 0.187 | low |
+| offense_overall | Offensive Strength Index | -0.127 | 21 | -1.005 | -1.005 | low |
+| pass_protection | Pass-Protection Strength Index | -0.368 | 30 | -0.601 | -0.601 | low |
+| passing_offense | Passing-Offense Strength Index | 0.020 | 14 | -0.909 | -0.909 | low |
+| rushing_offense | Rushing-Offense Strength Index | -0.221 | 30 | -0.492 | -0.492 | low |
+| special_teams | Special-Teams Strength Index | 0.108 | 14 | -0.069 | -0.069 | low |
 
 ### Underlying metrics
 | metric | raw_value | ref_mean | ref_sd | n_games | n_opportunities | shrunk_value | z_shrunk | oriented_z_shrunk | rank_of_league | percentile | confidence | phase3_status | delta_shrunk_vs_prev_week |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
-| pass_protection.qb_hit_rate_allowed | 0.1467 | 0.1450 | 0.0327 | 17 | 552 | 0.1462 | 0.0362 | -0.0362 | 20 | 0.3871 | prior_season_only | UNVALIDATED_RANK_PERSISTENT | 0.0000 |
-| pass_protection.rush_stuffed_rate_approx | 0.1708 | 0.2045 | 0.0323 | 17 | 552 | 0.1871 | -0.5374 | 0.5374 | 8 | 0.7742 | prior_season_only | RANK_PERSISTENT | 0.0000 |
-| pass_protection.sack_rate_allowed | 0.0525 | 0.0664 | 0.0188 | 17 | 552 | 0.0570 | -0.5022 | 0.5022 | 12 | 0.6452 | prior_season_only | UNVALIDATED_RANK_PERSISTENT | 0.0000 |
-| pass_rush.qb_hit_rate_generated | 0.1623 | 0.1442 | 0.0234 | 17 | 610 | 0.1535 | 0.3989 | 0.3989 | 8 | 0.7742 | prior_season_only | RANK_PERSISTENT | 0.0000 |
-| pass_rush.sack_rate_generated | 0.0590 | 0.0660 | 0.0121 | 17 | 610 | 0.0622 | -0.3199 | -0.3199 | 22 | 0.3226 | prior_season_only | NOT_RANK_PERSISTENT | 0.0000 |
-| special_teams.fg_pct | 0.8235 | 0.8507 | 0.0691 | 17 | 208 | 0.8367 | -0.2026 | -0.2026 | 23 | 0.2903 | prior_season_only | NOT_RANK_PERSISTENT | 0.0000 |
-| special_teams.st_epa_per_play | 0.0941 | 0.0622 | 0.0928 | 17 | 208 | 0.0787 | 0.1769 | 0.1769 | 18 | 0.4516 | prior_season_only | RANK_PERSISTENT | 0.0000 |
-| team_defense.early_down_epa_per_play | 0.0429 | -0.0013 | 0.0639 | 17 | 1106 | 0.0215 | 0.3568 | -0.3568 | 21 | 0.3548 | prior_season_only | RANK_PERSISTENT | 0.0000 |
-| team_defense.epa_per_play | 0.0416 | 0.0046 | 0.0677 | 17 | 1106 | 0.0237 | 0.2817 | -0.2817 | 22 | 0.3226 | prior_season_only | RANK_PERSISTENT | 0.0000 |
-| team_defense.explosive_pass_rate | 0.0672 | 0.0797 | 0.0112 | 17 | 1106 | 0.0728 | -0.6096 | 0.6096 | 7 | 0.8065 | prior_season_only | NOT_RANK_PERSISTENT | 0.0000 |
-| team_defense.explosive_rush_rate | 0.0789 | 0.1000 | 0.0206 | 17 | 1106 | 0.0891 | -0.5255 | 0.5255 | 6 | 0.8387 | prior_season_only | RANK_PERSISTENT | 0.0000 |
-| team_defense.pass_epa_per_dropback | 0.0895 | 0.0361 | 0.0949 | 17 | 1106 | 0.0636 | 0.2901 | -0.2901 | 21 | 0.3548 | prior_season_only | RANK_PERSISTENT | 0.0000 |
-| team_defense.pass_success_rate | 0.4459 | 0.4536 | 0.0320 | 17 | 1106 | 0.4497 | -0.1244 | 0.1244 | 13 | 0.6129 | prior_season_only | RANK_PERSISTENT | 0.0000 |
-| team_defense.rush_epa_per_play | -0.0639 | -0.0760 | 0.0649 | 17 | 1106 | -0.0693 | 0.1024 | -0.1024 | 18 | 0.4516 | prior_season_only | NOT_RANK_PERSISTENT | 0.0000 |
-| team_defense.rush_success_rate | 0.4408 | 0.4020 | 0.0330 | 17 | 1106 | 0.4220 | 0.6063 | -0.6063 | 28 | 0.1290 | prior_season_only | RANK_PERSISTENT | 0.0000 |
-| team_defense.success_rate | 0.4512 | 0.4384 | 0.0255 | 17 | 1106 | 0.4450 | 0.2586 | -0.2586 | 19 | 0.4194 | prior_season_only | RANK_PERSISTENT | 0.0000 |
-| team_offense.early_down_epa_per_play | 0.0734 | -0.0054 | 0.0784 | 17 | 1028 | 0.0482 | 0.6837 | 0.6837 | 7 | 0.8065 | prior_season_only | UNVALIDATED_RANK_PERSISTENT | 0.0000 |
-| team_offense.epa_per_play | 0.1223 | -0.0001 | 0.0921 | 17 | 1028 | 0.0831 | 0.9042 | 0.9042 | 4 | 0.9032 | prior_season_only | VALIDATED_PERSISTENCE | 0.0000 |
-| team_offense.explosive_pass_rate | 0.1051 | 0.0796 | 0.0177 | 17 | 1028 | 0.0927 | 0.7407 | 0.7407 | 5 | 0.8710 | prior_season_only | RANK_PERSISTENT | 0.0000 |
-| team_offense.explosive_rush_rate | 0.1034 | 0.0990 | 0.0195 | 17 | 1028 | 0.1013 | 0.1149 | 0.1149 | 12 | 0.6452 | prior_season_only | NOT_RANK_PERSISTENT | 0.0000 |
-| team_offense.pass_epa_per_dropback | 0.2527 | 0.0308 | 0.1280 | 17 | 1028 | 0.1817 | 1.1793 | 1.1793 | 2 | 0.9677 | prior_season_only | UNVALIDATED_RANK_PERSISTENT | 0.0000 |
-| team_offense.pass_success_rate | 0.5054 | 0.4521 | 0.0418 | 17 | 1028 | 0.4884 | 0.8675 | 0.8675 | 5 | 0.8710 | prior_season_only | UNVALIDATED_RANK_PERSISTENT | 0.0000 |
-| team_offense.proe | -0.0651 | -0.0477 | 0.0349 | 17 | 1028 | -0.0618 | -0.4049 | -0.0000 | — | — | prior_season_only | VALIDATED_PERSISTENCE | 0.0000 |
-| team_offense.rush_epa_per_play | -0.0757 | -0.0806 | 0.0754 | 17 | 1028 | -0.0781 | 0.0334 | 0.0334 | 21 | 0.3548 | prior_season_only | RANK_PERSISTENT | 0.0000 |
-| team_offense.rush_success_rate | 0.4337 | 0.4004 | 0.0385 | 17 | 1028 | 0.4199 | 0.5074 | 0.5074 | 9 | 0.7419 | prior_season_only | RANK_PERSISTENT | 0.0000 |
-| team_offense.success_rate | 0.4805 | 0.4370 | 0.0337 | 17 | 1028 | 0.4722 | 1.0459 | 1.0459 | 5 | 0.8710 | prior_season_only | VALIDATED_PERSISTENCE | 0.0000 |
+| pass_protection.qb_hit_rate_allowed | 0.3261 | 0.1450 | 0.0327 | 1 | 46 | 0.1651 | 0.6149 | -0.6149 | 32 | 0.0000 | low | UNVALIDATED_RANK_PERSISTENT | 0.0189 |
+| pass_protection.rush_stuffed_rate_approx | 0.2727 | 0.2045 | 0.0323 | 1 | 46 | 0.2085 | 0.1240 | -0.1240 | 27 | 0.1452 | low | RANK_PERSISTENT | 0.0214 |
+| pass_protection.sack_rate_allowed | 0.0870 | 0.0664 | 0.0188 | 1 | 46 | 0.0687 | 0.1216 | -0.1216 | 25 | 0.2258 | low | UNVALIDATED_RANK_PERSISTENT | 0.0117 |
+| pass_rush.qb_hit_rate_generated | 0.1667 | 0.1442 | 0.0234 | 1 | 30 | 0.1455 | 0.0565 | 0.0565 | 10 | 0.6935 | low | RANK_PERSISTENT | -0.0080 |
+| pass_rush.sack_rate_generated | 0.1000 | 0.0660 | 0.0121 | 1 | 30 | 0.0683 | 0.1878 | 0.1878 | 6 | 0.8387 | low | NOT_RANK_PERSISTENT | 0.0061 |
+| special_teams.fg_pct | 1.0000 | 0.8507 | 0.0691 | 1 | 15 | 0.8595 | 0.1270 | 0.1270 | 1 | 0.6481 | low | NOT_RANK_PERSISTENT | 0.0228 |
+| special_teams.st_epa_per_play | 0.2331 | 0.0622 | 0.0928 | 1 | 15 | 0.0723 | 0.1083 | 0.1083 | 14 | 0.5806 | low | RANK_PERSISTENT | -0.0064 |
+| team_defense.early_down_epa_per_play | -0.2792 | -0.0013 | 0.0639 | 1 | 61 | -0.0177 | -0.2559 | 0.2559 | 1 | 1.0000 | low | RANK_PERSISTENT | -0.0391 |
+| team_defense.epa_per_play | 0.0553 | 0.0046 | 0.0677 | 1 | 61 | 0.0076 | 0.0441 | -0.0441 | 19 | 0.4194 | low | RANK_PERSISTENT | -0.0161 |
+| team_defense.explosive_pass_rate | 0.0333 | 0.0797 | 0.0112 | 1 | 61 | 0.0766 | -0.2754 | 0.2754 | 10 | 0.7097 | low | NOT_RANK_PERSISTENT | 0.0037 |
+| team_defense.explosive_rush_rate | 0.0357 | 0.1000 | 0.0206 | 1 | 61 | 0.0962 | -0.1835 | 0.1835 | 2 | 0.9677 | low | RANK_PERSISTENT | 0.0070 |
+| team_defense.pass_epa_per_dropback | 0.0426 | 0.0361 | 0.0949 | 1 | 61 | 0.0365 | 0.0040 | -0.0040 | 17 | 0.4839 | low | RANK_PERSISTENT | -0.0271 |
+| team_defense.pass_success_rate | 0.3667 | 0.4536 | 0.0320 | 1 | 61 | 0.4485 | -0.1597 | 0.1597 | 3 | 0.9355 | low | RANK_PERSISTENT | -0.0011 |
+| team_defense.rush_epa_per_play | -0.1245 | -0.0760 | 0.0649 | 1 | 61 | -0.0792 | -0.0498 | 0.0498 | 11 | 0.6774 | low | NOT_RANK_PERSISTENT | -0.0099 |
+| team_defense.rush_success_rate | 0.3214 | 0.4020 | 0.0330 | 1 | 61 | 0.3972 | -0.1437 | 0.1437 | 10 | 0.7097 | low | RANK_PERSISTENT | -0.0247 |
+| team_defense.success_rate | 0.3770 | 0.4384 | 0.0255 | 1 | 61 | 0.4348 | -0.1418 | 0.1418 | 6 | 0.8387 | low | RANK_PERSISTENT | -0.0102 |
+| team_offense.early_down_epa_per_play | 0.1076 | -0.0054 | 0.0784 | 1 | 68 | 0.0072 | 0.1601 | 0.1601 | 10 | 0.7097 | low | UNVALIDATED_RANK_PERSISTENT | -0.0410 |
+| team_offense.epa_per_play | -0.1813 | -0.0001 | 0.0921 | 1 | 68 | -0.0203 | -0.2186 | -0.2186 | 25 | 0.2258 | low | VALIDATED_PERSISTENCE | -0.1034 |
+| team_offense.explosive_pass_rate | 0.1522 | 0.0796 | 0.0177 | 1 | 68 | 0.0838 | 0.2408 | 0.2408 | 4 | 0.9032 | low | RANK_PERSISTENT | -0.0089 |
+| team_offense.explosive_rush_rate | 0.0909 | 0.0990 | 0.0195 | 1 | 68 | 0.0985 | -0.0244 | -0.0244 | 16 | 0.5000 | low | NOT_RANK_PERSISTENT | -0.0027 |
+| team_offense.pass_epa_per_dropback | -0.0588 | 0.0308 | 0.1280 | 1 | 68 | 0.0208 | -0.0778 | -0.0778 | 22 | 0.3226 | low | UNVALIDATED_RANK_PERSISTENT | -0.1609 |
+| team_offense.pass_success_rate | 0.4130 | 0.4521 | 0.0418 | 1 | 68 | 0.4477 | -0.1037 | -0.1037 | 22 | 0.3226 | low | UNVALIDATED_RANK_PERSISTENT | -0.0406 |
+| team_offense.proe | -0.0303 | -0.0477 | 0.0349 | 1 | 68 | -0.0442 | 0.1000 | 0.0000 | — | — | low | VALIDATED_PERSISTENCE | 0.0176 |
+| team_offense.rush_epa_per_play | -0.4376 | -0.0806 | 0.0754 | 1 | 68 | -0.1016 | -0.2786 | -0.2786 | 31 | 0.0323 | low | RANK_PERSISTENT | -0.0235 |
+| team_offense.rush_success_rate | 0.3182 | 0.4004 | 0.0385 | 1 | 68 | 0.3940 | -0.1641 | -0.1641 | 24 | 0.2581 | low | RANK_PERSISTENT | -0.0259 |
+| team_offense.success_rate | 0.3824 | 0.4370 | 0.0337 | 1 | 68 | 0.4260 | -0.3237 | -0.3237 | 26 | 0.1935 | low | VALIDATED_PERSISTENCE | -0.0462 |
 
 ## HOU
-Record: no games yet · Points for/against: —/— · Point differential: — · Data confidence: prior_season_only
-Strongest area: **passing_defense** (0.977) · Weakest area: **rushing_offense** (-0.574)
+Record: 0-1-0 · Points for/against: 31/36 · Point differential: -5 · Data confidence: low
+Strongest area: **offense_overall** (0.166) · Weakest area: **passing_defense** (-0.176)
 
 ### Domain indices
 | domain | label | index_value | rank_of_league | delta_vs_prev_week | delta_vs_preseason | min_confidence |
 | --- | --- | --- | --- | --- | --- | --- |
-| defense_overall | Defensive Strength Index | 0.931 | 1 | 0.000 | 0.000 | prior_season_only |
-| pass_rush | Pass-Rush Strength Index | 0.226 | 12 | 0.000 | 0.000 | prior_season_only |
-| passing_defense | Pass-Defense Strength Index | 0.977 | 1 | 0.000 | 0.000 | prior_season_only |
-| rushing_defense | Run-Defense Strength Index | 0.663 | 2 | 0.000 | 0.000 | prior_season_only |
-| offense_overall | Offensive Strength Index | -0.197 | 26 | 0.000 | 0.000 | prior_season_only |
-| pass_protection | Pass-Protection Strength Index | 0.576 | 7 | 0.000 | 0.000 | prior_season_only |
-| passing_offense | Passing-Offense Strength Index | -0.006 | 17 | 0.000 | 0.000 | prior_season_only |
-| rushing_offense | Rushing-Offense Strength Index | -0.574 | 30 | 0.000 | 0.000 | prior_season_only |
-| special_teams | Special-Teams Strength Index | 0.368 | 12 | 0.000 | 0.000 | prior_season_only |
+| defense_overall | Defensive Strength Index | -0.163 | 27 | -1.094 | -1.094 | low |
+| pass_rush | Pass-Rush Strength Index | -0.073 | 22 | -0.299 | -0.299 | low |
+| passing_defense | Pass-Defense Strength Index | -0.176 | 27 | -1.153 | -1.153 | low |
+| rushing_defense | Run-Defense Strength Index | 0.110 | 10 | -0.553 | -0.553 | low |
+| offense_overall | Offensive Strength Index | 0.166 | 11 | 0.363 | 0.363 | low |
+| pass_protection | Pass-Protection Strength Index | -0.132 | 23 | -0.708 | -0.708 | low |
+| passing_offense | Passing-Offense Strength Index | 0.079 | 11 | 0.085 | 0.085 | low |
+| rushing_offense | Rushing-Offense Strength Index | 0.062 | 12 | 0.637 | 0.637 | low |
+| special_teams | Special-Teams Strength Index | 0.121 | 13 | -0.247 | -0.247 | low |
 
 ### Underlying metrics
 | metric | raw_value | ref_mean | ref_sd | n_games | n_opportunities | shrunk_value | z_shrunk | oriented_z_shrunk | rank_of_league | percentile | confidence | phase3_status | delta_shrunk_vs_prev_week |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
-| pass_protection.qb_hit_rate_allowed | 0.1213 | 0.1450 | 0.0327 | 17 | 643 | 0.1289 | -0.4923 | 0.4923 | 8 | 0.7742 | prior_season_only | UNVALIDATED_RANK_PERSISTENT | 0.0000 |
-| pass_protection.rush_stuffed_rate_approx | 0.2371 | 0.2045 | 0.0323 | 17 | 643 | 0.2213 | 0.5192 | -0.5192 | 27 | 0.1613 | prior_season_only | RANK_PERSISTENT | 0.0000 |
-| pass_protection.sack_rate_allowed | 0.0482 | 0.0664 | 0.0188 | 17 | 643 | 0.0540 | -0.6587 | 0.6587 | 7 | 0.8065 | prior_season_only | UNVALIDATED_RANK_PERSISTENT | 0.0000 |
-| pass_rush.qb_hit_rate_generated | 0.1440 | 0.1442 | 0.0234 | 17 | 618 | 0.1441 | -0.0035 | -0.0035 | 17 | 0.4839 | prior_season_only | RANK_PERSISTENT | 0.0000 |
-| pass_rush.sack_rate_generated | 0.0761 | 0.0660 | 0.0121 | 17 | 618 | 0.0715 | 0.4553 | 0.4553 | 8 | 0.7742 | prior_season_only | NOT_RANK_PERSISTENT | 0.0000 |
-| special_teams.fg_pct | 0.9231 | 0.8507 | 0.0691 | 17 | 223 | 0.8880 | 0.5392 | 0.5392 | 6 | 0.8387 | prior_season_only | NOT_RANK_PERSISTENT | 0.0000 |
-| special_teams.st_epa_per_play | 0.1285 | 0.0622 | 0.0928 | 17 | 223 | 0.0964 | 0.3678 | 0.3678 | 12 | 0.6452 | prior_season_only | RANK_PERSISTENT | 0.0000 |
-| team_defense.early_down_epa_per_play | -0.1329 | -0.0013 | 0.0639 | 17 | 1027 | -0.0691 | -1.0613 | 1.0613 | 1 | 1.0000 | prior_season_only | RANK_PERSISTENT | 0.0000 |
-| team_defense.epa_per_play | -0.1085 | 0.0046 | 0.0677 | 17 | 1027 | -0.0536 | -0.8596 | 0.8596 | 2 | 0.9677 | prior_season_only | RANK_PERSISTENT | 0.0000 |
-| team_defense.explosive_pass_rate | 0.0761 | 0.0797 | 0.0112 | 17 | 1027 | 0.0777 | -0.1775 | 0.1775 | 13 | 0.6129 | prior_season_only | NOT_RANK_PERSISTENT | 0.0000 |
-| team_defense.explosive_rush_rate | 0.0542 | 0.1000 | 0.0206 | 17 | 1027 | 0.0764 | -1.1445 | 1.1445 | 2 | 0.9677 | prior_season_only | RANK_PERSISTENT | 0.0000 |
-| team_defense.pass_epa_per_dropback | -0.1304 | 0.0361 | 0.0949 | 17 | 1027 | -0.0497 | -0.9043 | 0.9043 | 1 | 1.0000 | prior_season_only | RANK_PERSISTENT | 0.0000 |
-| team_defense.pass_success_rate | 0.3883 | 0.4536 | 0.0320 | 17 | 1027 | 0.4200 | -1.0497 | 1.0497 | 2 | 0.9677 | prior_season_only | RANK_PERSISTENT | 0.0000 |
-| team_defense.rush_epa_per_play | -0.1292 | -0.0760 | 0.0649 | 17 | 1027 | -0.1052 | -0.4493 | 0.4493 | 3 | 0.9355 | prior_season_only | NOT_RANK_PERSISTENT | 0.0000 |
-| team_defense.rush_success_rate | 0.3767 | 0.4020 | 0.0330 | 17 | 1027 | 0.3890 | -0.3950 | 0.3950 | 7 | 0.8065 | prior_season_only | RANK_PERSISTENT | 0.0000 |
-| team_defense.success_rate | 0.3953 | 0.4384 | 0.0255 | 17 | 1027 | 0.4162 | -0.8716 | 0.8716 | 2 | 0.9677 | prior_season_only | RANK_PERSISTENT | 0.0000 |
-| team_offense.early_down_epa_per_play | -0.0125 | -0.0054 | 0.0784 | 17 | 1138 | -0.0102 | -0.0616 | -0.0616 | 23 | 0.2903 | prior_season_only | UNVALIDATED_RANK_PERSISTENT | 0.0000 |
-| team_offense.epa_per_play | -0.0084 | -0.0001 | 0.0921 | 17 | 1138 | -0.0057 | -0.0610 | -0.0610 | 22 | 0.3226 | prior_season_only | VALIDATED_PERSISTENCE | 0.0000 |
-| team_offense.explosive_pass_rate | 0.0747 | 0.0796 | 0.0177 | 17 | 1138 | 0.0770 | -0.1431 | -0.1431 | 17 | 0.4839 | prior_season_only | RANK_PERSISTENT | 0.0000 |
-| team_offense.explosive_rush_rate | 0.0738 | 0.0990 | 0.0195 | 17 | 1138 | 0.0860 | -0.6643 | -0.6643 | 29 | 0.0968 | prior_season_only | NOT_RANK_PERSISTENT | 0.0000 |
-| team_offense.pass_epa_per_dropback | 0.0669 | 0.0308 | 0.1280 | 17 | 1138 | 0.0554 | 0.1921 | 0.1921 | 15 | 0.5484 | prior_season_only | UNVALIDATED_RANK_PERSISTENT | 0.0000 |
-| team_offense.pass_success_rate | 0.4479 | 0.4521 | 0.0418 | 17 | 1138 | 0.4492 | -0.0679 | -0.0679 | 20 | 0.3871 | prior_season_only | UNVALIDATED_RANK_PERSISTENT | 0.0000 |
-| team_offense.proe | -0.0465 | -0.0477 | 0.0349 | 17 | 1138 | -0.0468 | 0.0273 | 0.0000 | — | — | prior_season_only | VALIDATED_PERSISTENCE | 0.0000 |
-| team_offense.rush_epa_per_play | -0.1492 | -0.0806 | 0.0754 | 17 | 1138 | -0.1159 | -0.4690 | -0.4690 | 30 | 0.0645 | prior_season_only | RANK_PERSISTENT | 0.0000 |
-| team_offense.rush_success_rate | 0.3557 | 0.4004 | 0.0385 | 17 | 1138 | 0.3742 | -0.6797 | -0.6797 | 30 | 0.0645 | prior_season_only | RANK_PERSISTENT | 0.0000 |
-| team_offense.success_rate | 0.4174 | 0.4370 | 0.0337 | 17 | 1138 | 0.4211 | -0.4693 | -0.4693 | 28 | 0.1290 | prior_season_only | VALIDATED_PERSISTENCE | 0.0000 |
+| pass_protection.qb_hit_rate_allowed | 0.2143 | 0.1450 | 0.0327 | 1 | 42 | 0.1527 | 0.2353 | -0.2353 | 26 | 0.1935 | low | UNVALIDATED_RANK_PERSISTENT | 0.0238 |
+| pass_protection.rush_stuffed_rate_approx | 0.2581 | 0.2045 | 0.0323 | 1 | 42 | 0.2077 | 0.0973 | -0.0973 | 24 | 0.2581 | low | RANK_PERSISTENT | -0.0136 |
+| pass_protection.sack_rate_allowed | 0.0714 | 0.0664 | 0.0188 | 1 | 42 | 0.0670 | 0.0297 | -0.0297 | 19 | 0.4032 | low | UNVALIDATED_RANK_PERSISTENT | 0.0129 |
+| pass_rush.qb_hit_rate_generated | 0.0938 | 0.1442 | 0.0234 | 1 | 32 | 0.1412 | -0.1267 | -0.1267 | 26 | 0.1935 | low | RANK_PERSISTENT | -0.0029 |
+| pass_rush.sack_rate_generated | 0.0625 | 0.0660 | 0.0121 | 1 | 32 | 0.0658 | -0.0196 | -0.0196 | 16 | 0.5161 | low | NOT_RANK_PERSISTENT | -0.0057 |
+| special_teams.fg_pct | 1.0000 | 0.8507 | 0.0691 | 1 | 17 | 0.8595 | 0.1270 | 0.1270 | 1 | 0.6481 | low | NOT_RANK_PERSISTENT | -0.0285 |
+| special_teams.st_epa_per_play | 0.2524 | 0.0622 | 0.0928 | 1 | 17 | 0.0734 | 0.1205 | 0.1205 | 13 | 0.6129 | low | RANK_PERSISTENT | -0.0230 |
+| team_defense.early_down_epa_per_play | 0.3013 | -0.0013 | 0.0639 | 1 | 55 | 0.0165 | 0.2786 | -0.2786 | 30 | 0.0645 | low | RANK_PERSISTENT | 0.0856 |
+| team_defense.epa_per_play | 0.3002 | 0.0046 | 0.0677 | 1 | 55 | 0.0220 | 0.2567 | -0.2567 | 29 | 0.0968 | low | RANK_PERSISTENT | 0.0756 |
+| team_defense.explosive_pass_rate | 0.1562 | 0.0797 | 0.0112 | 1 | 55 | 0.0848 | 0.4550 | -0.4550 | 31 | 0.0323 | low | NOT_RANK_PERSISTENT | 0.0071 |
+| team_defense.explosive_rush_rate | 0.1053 | 0.1000 | 0.0206 | 1 | 55 | 0.1003 | 0.0152 | -0.0152 | 21 | 0.3548 | low | RANK_PERSISTENT | 0.0239 |
+| team_defense.pass_epa_per_dropback | 0.5582 | 0.0361 | 0.0949 | 1 | 55 | 0.0668 | 0.3237 | -0.3237 | 30 | 0.0645 | low | RANK_PERSISTENT | 0.1165 |
+| team_defense.pass_success_rate | 0.4688 | 0.4536 | 0.0320 | 1 | 55 | 0.4545 | 0.0277 | -0.0277 | 18 | 0.4516 | low | RANK_PERSISTENT | 0.0345 |
+| team_defense.rush_epa_per_play | -0.2628 | -0.0760 | 0.0649 | 1 | 55 | -0.0885 | -0.1918 | 0.1918 | 5 | 0.8710 | low | NOT_RANK_PERSISTENT | 0.0167 |
+| team_defense.rush_success_rate | 0.3158 | 0.4020 | 0.0330 | 1 | 55 | 0.3969 | -0.1537 | 0.1537 | 8 | 0.7742 | low | RANK_PERSISTENT | 0.0080 |
+| team_defense.success_rate | 0.4182 | 0.4384 | 0.0255 | 1 | 55 | 0.4372 | -0.0467 | 0.0467 | 12 | 0.6452 | low | RANK_PERSISTENT | 0.0210 |
+| team_offense.early_down_epa_per_play | 0.1003 | -0.0054 | 0.0784 | 1 | 79 | 0.0064 | 0.1498 | 0.1498 | 11 | 0.6774 | low | UNVALIDATED_RANK_PERSISTENT | 0.0166 |
+| team_offense.epa_per_play | 0.0713 | -0.0001 | 0.0921 | 1 | 79 | 0.0078 | 0.0861 | 0.0861 | 13 | 0.6129 | low | VALIDATED_PERSISTENCE | 0.0135 |
+| team_offense.explosive_pass_rate | 0.0952 | 0.0796 | 0.0177 | 1 | 79 | 0.0805 | 0.0520 | 0.0520 | 13 | 0.6129 | low | RANK_PERSISTENT | 0.0035 |
+| team_offense.explosive_rush_rate | 0.0968 | 0.0990 | 0.0195 | 1 | 79 | 0.0989 | -0.0067 | -0.0067 | 13 | 0.6129 | low | NOT_RANK_PERSISTENT | 0.0128 |
+| team_offense.pass_epa_per_dropback | 0.0974 | 0.0308 | 0.1280 | 1 | 79 | 0.0382 | 0.0578 | 0.0578 | 14 | 0.5806 | low | UNVALIDATED_RANK_PERSISTENT | -0.0172 |
+| team_offense.pass_success_rate | 0.5000 | 0.4521 | 0.0418 | 1 | 79 | 0.4574 | 0.1273 | 0.1273 | 9 | 0.7097 | low | UNVALIDATED_RANK_PERSISTENT | 0.0082 |
+| team_offense.proe | -0.1236 | -0.0477 | 0.0349 | 1 | 79 | -0.0629 | -0.4352 | -0.0000 | — | — | low | VALIDATED_PERSISTENCE | -0.0161 |
+| team_offense.rush_epa_per_play | 0.0303 | -0.0806 | 0.0754 | 1 | 79 | -0.0741 | 0.0866 | 0.0866 | 9 | 0.7419 | low | RANK_PERSISTENT | 0.0419 |
+| team_offense.rush_success_rate | 0.4194 | 0.4004 | 0.0385 | 1 | 79 | 0.4018 | 0.0379 | 0.0379 | 15 | 0.5484 | low | RANK_PERSISTENT | 0.0276 |
+| team_offense.success_rate | 0.4810 | 0.4370 | 0.0337 | 1 | 79 | 0.4458 | 0.2612 | 0.2612 | 9 | 0.7419 | low | VALIDATED_PERSISTENCE | 0.0246 |
 
 ## IND
-Record: no games yet · Points for/against: —/— · Point differential: — · Data confidence: prior_season_only
-Strongest area: **rushing_offense** (0.820) · Weakest area: **pass_rush** (-0.324)
+Record: 0-1-0 · Points for/against: 23/41 · Point differential: -18 · Data confidence: low
+Strongest area: **rushing_offense** (0.150) · Weakest area: **passing_defense** (-0.221)
 
 ### Domain indices
 | domain | label | index_value | rank_of_league | delta_vs_prev_week | delta_vs_preseason | min_confidence |
 | --- | --- | --- | --- | --- | --- | --- |
-| defense_overall | Defensive Strength Index | -0.158 | 19 | 0.000 | 0.000 | prior_season_only |
-| pass_rush | Pass-Rush Strength Index | -0.324 | 25 | 0.000 | 0.000 | prior_season_only |
-| passing_defense | Pass-Defense Strength Index | -0.212 | 20 | 0.000 | 0.000 | prior_season_only |
-| rushing_defense | Run-Defense Strength Index | 0.082 | 12 | 0.000 | 0.000 | prior_season_only |
-| offense_overall | Offensive Strength Index | 0.613 | 7 | 0.000 | 0.000 | prior_season_only |
-| pass_protection | Pass-Protection Strength Index | 0.410 | 12 | 0.000 | 0.000 | prior_season_only |
-| passing_offense | Passing-Offense Strength Index | 0.152 | 11 | 0.000 | 0.000 | prior_season_only |
-| rushing_offense | Rushing-Offense Strength Index | 0.820 | 3 | 0.000 | 0.000 | prior_season_only |
-| special_teams | Special-Teams Strength Index | 0.661 | 7 | 0.000 | 0.000 | prior_season_only |
+| defense_overall | Defensive Strength Index | -0.166 | 28 | -0.008 | -0.008 | low |
+| pass_rush | Pass-Rush Strength Index | -0.043 | 19 | 0.281 | 0.281 | low |
+| passing_defense | Pass-Defense Strength Index | -0.221 | 29 | -0.009 | -0.009 | low |
+| rushing_defense | Run-Defense Strength Index | -0.106 | 26 | -0.187 | -0.187 | low |
+| offense_overall | Offensive Strength Index | -0.198 | 26 | -0.811 | -0.811 | low |
+| pass_protection | Pass-Protection Strength Index | -0.181 | 28 | -0.591 | -0.591 | low |
+| passing_offense | Passing-Offense Strength Index | -0.221 | 30 | -0.373 | -0.373 | low |
+| rushing_offense | Rushing-Offense Strength Index | 0.150 | 2 | -0.670 | -0.670 | low |
+| special_teams | Special-Teams Strength Index | 0.134 | 10 | -0.527 | -0.527 | low |
 
 ### Underlying metrics
 | metric | raw_value | ref_mean | ref_sd | n_games | n_opportunities | shrunk_value | z_shrunk | oriented_z_shrunk | rank_of_league | percentile | confidence | phase3_status | delta_shrunk_vs_prev_week |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
-| pass_protection.qb_hit_rate_allowed | 0.1369 | 0.1450 | 0.0327 | 17 | 599 | 0.1395 | -0.1684 | 0.1684 | 16 | 0.5161 | prior_season_only | UNVALIDATED_RANK_PERSISTENT | 0.0000 |
-| pass_protection.rush_stuffed_rate_approx | 0.1838 | 0.2045 | 0.0323 | 17 | 599 | 0.1938 | -0.3306 | 0.3306 | 11 | 0.6774 | prior_season_only | RANK_PERSISTENT | 0.0000 |
-| pass_protection.sack_rate_allowed | 0.0484 | 0.0664 | 0.0188 | 17 | 599 | 0.0542 | -0.6514 | 0.6514 | 8 | 0.7742 | prior_season_only | UNVALIDATED_RANK_PERSISTENT | 0.0000 |
-| pass_rush.qb_hit_rate_generated | 0.1346 | 0.1442 | 0.0234 | 17 | 691 | 0.1392 | -0.2110 | -0.2110 | 24 | 0.2581 | prior_season_only | RANK_PERSISTENT | 0.0000 |
-| pass_rush.sack_rate_generated | 0.0564 | 0.0660 | 0.0121 | 17 | 691 | 0.0608 | -0.4371 | -0.4371 | 25 | 0.2258 | prior_season_only | NOT_RANK_PERSISTENT | 0.0000 |
-| special_teams.fg_pct | 0.9444 | 0.8507 | 0.0691 | 17 | 218 | 0.8990 | 0.6985 | 0.6985 | 2 | 0.9677 | prior_season_only | NOT_RANK_PERSISTENT | 0.0000 |
-| special_teams.st_epa_per_play | 0.1813 | 0.0622 | 0.0928 | 17 | 218 | 0.1236 | 0.6607 | 0.6607 | 7 | 0.8065 | prior_season_only | RANK_PERSISTENT | 0.0000 |
-| team_defense.early_down_epa_per_play | 0.0023 | -0.0013 | 0.0639 | 17 | 1144 | 0.0005 | 0.0287 | -0.0287 | 17 | 0.4839 | prior_season_only | RANK_PERSISTENT | 0.0000 |
-| team_defense.epa_per_play | 0.0133 | 0.0046 | 0.0677 | 17 | 1144 | 0.0091 | 0.0662 | -0.0662 | 16 | 0.5161 | prior_season_only | RANK_PERSISTENT | 0.0000 |
-| team_defense.explosive_pass_rate | 0.0825 | 0.0797 | 0.0112 | 17 | 1144 | 0.0812 | 0.1372 | -0.1372 | 21 | 0.3548 | prior_season_only | NOT_RANK_PERSISTENT | 0.0000 |
-| team_defense.explosive_rush_rate | 0.0896 | 0.1000 | 0.0206 | 17 | 1144 | 0.0946 | -0.2593 | 0.2593 | 12 | 0.6452 | prior_season_only | RANK_PERSISTENT | 0.0000 |
-| team_defense.pass_epa_per_dropback | 0.0563 | 0.0361 | 0.0949 | 17 | 1144 | 0.0465 | 0.1097 | -0.1097 | 19 | 0.4194 | prior_season_only | RANK_PERSISTENT | 0.0000 |
-| team_defense.pass_success_rate | 0.4732 | 0.4536 | 0.0320 | 17 | 1144 | 0.4637 | 0.3149 | -0.3149 | 20 | 0.3871 | prior_season_only | RANK_PERSISTENT | 0.0000 |
-| team_defense.rush_epa_per_play | -0.1011 | -0.0760 | 0.0649 | 17 | 1144 | -0.0898 | -0.2123 | 0.2123 | 10 | 0.7097 | prior_season_only | NOT_RANK_PERSISTENT | 0.0000 |
-| team_defense.rush_success_rate | 0.4165 | 0.4020 | 0.0330 | 17 | 1144 | 0.4094 | 0.2263 | -0.2263 | 19 | 0.4194 | prior_season_only | RANK_PERSISTENT | 0.0000 |
-| team_defense.success_rate | 0.4572 | 0.4384 | 0.0255 | 17 | 1144 | 0.4481 | 0.3799 | -0.3799 | 23 | 0.2903 | prior_season_only | RANK_PERSISTENT | 0.0000 |
-| team_offense.early_down_epa_per_play | 0.0546 | -0.0054 | 0.0784 | 17 | 1053 | 0.0354 | 0.5201 | 0.5201 | 9 | 0.7419 | prior_season_only | UNVALIDATED_RANK_PERSISTENT | 0.0000 |
-| team_offense.epa_per_play | 0.0833 | -0.0001 | 0.0921 | 17 | 1053 | 0.0566 | 0.6161 | 0.6161 | 7 | 0.8065 | prior_season_only | VALIDATED_PERSISTENCE | 0.0000 |
-| team_offense.explosive_pass_rate | 0.0735 | 0.0796 | 0.0177 | 17 | 1053 | 0.0764 | -0.1777 | -0.1777 | 19 | 0.4194 | prior_season_only | RANK_PERSISTENT | 0.0000 |
-| team_offense.explosive_rush_rate | 0.0979 | 0.0990 | 0.0195 | 17 | 1053 | 0.0984 | -0.0307 | -0.0307 | 14 | 0.5806 | prior_season_only | NOT_RANK_PERSISTENT | 0.0000 |
-| team_offense.pass_epa_per_dropback | 0.0827 | 0.0308 | 0.1280 | 17 | 1053 | 0.0661 | 0.2760 | 0.2760 | 12 | 0.6452 | prior_season_only | UNVALIDATED_RANK_PERSISTENT | 0.0000 |
-| team_offense.pass_success_rate | 0.4741 | 0.4521 | 0.0418 | 17 | 1053 | 0.4671 | 0.3584 | 0.3584 | 10 | 0.7097 | prior_season_only | UNVALIDATED_RANK_PERSISTENT | 0.0000 |
-| team_offense.proe | -0.0390 | -0.0477 | 0.0349 | 17 | 1053 | -0.0406 | 0.2027 | 0.0000 | — | — | prior_season_only | VALIDATED_PERSISTENCE | 0.0000 |
-| team_offense.rush_epa_per_play | 0.0516 | -0.0806 | 0.0754 | 17 | 1053 | -0.0125 | 0.9040 | 0.9040 | 1 | 1.0000 | prior_season_only | RANK_PERSISTENT | 0.0000 |
-| team_offense.rush_success_rate | 0.4487 | 0.4004 | 0.0385 | 17 | 1053 | 0.4287 | 0.7353 | 0.7353 | 5 | 0.8710 | prior_season_only | RANK_PERSISTENT | 0.0000 |
-| team_offense.success_rate | 0.4663 | 0.4370 | 0.0337 | 17 | 1053 | 0.4607 | 0.7037 | 0.7037 | 7 | 0.8065 | prior_season_only | VALIDATED_PERSISTENCE | 0.0000 |
+| pass_protection.qb_hit_rate_allowed | 0.2647 | 0.1450 | 0.0327 | 1 | 34 | 0.1583 | 0.4065 | -0.4065 | 29 | 0.0968 | low | UNVALIDATED_RANK_PERSISTENT | 0.0188 |
+| pass_protection.rush_stuffed_rate_approx | 0.2632 | 0.2045 | 0.0323 | 1 | 34 | 0.2080 | 0.1066 | -0.1066 | 25 | 0.2097 | low | RANK_PERSISTENT | 0.0141 |
+| pass_protection.sack_rate_allowed | 0.0588 | 0.0664 | 0.0188 | 1 | 34 | 0.0656 | -0.0449 | 0.0449 | 14 | 0.5806 | low | UNVALIDATED_RANK_PERSISTENT | 0.0114 |
+| pass_rush.qb_hit_rate_generated | 0.1034 | 0.1442 | 0.0234 | 1 | 29 | 0.1418 | -0.1024 | -0.1024 | 25 | 0.2258 | low | RANK_PERSISTENT | 0.0025 |
+| pass_rush.sack_rate_generated | 0.0690 | 0.0660 | 0.0121 | 1 | 29 | 0.0662 | 0.0161 | 0.0161 | 15 | 0.5484 | low | NOT_RANK_PERSISTENT | 0.0055 |
+| special_teams.fg_pct | 1.0000 | 0.8507 | 0.0691 | 1 | 16 | 0.8595 | 0.1270 | 0.1270 | 1 | 0.6481 | low | NOT_RANK_PERSISTENT | -0.0395 |
+| special_teams.st_epa_per_play | 0.2736 | 0.0622 | 0.0928 | 1 | 16 | 0.0747 | 0.1339 | 0.1339 | 10 | 0.7097 | low | RANK_PERSISTENT | -0.0489 |
+| team_defense.early_down_epa_per_play | 0.2714 | -0.0013 | 0.0639 | 1 | 64 | 0.0147 | 0.2512 | -0.2512 | 29 | 0.0968 | low | RANK_PERSISTENT | 0.0142 |
+| team_defense.epa_per_play | 0.2087 | 0.0046 | 0.0677 | 1 | 64 | 0.0166 | 0.1772 | -0.1772 | 27 | 0.1613 | low | RANK_PERSISTENT | 0.0075 |
+| team_defense.explosive_pass_rate | 0.1034 | 0.0797 | 0.0112 | 1 | 64 | 0.0813 | 0.1412 | -0.1412 | 23 | 0.2903 | low | NOT_RANK_PERSISTENT | 0.0000 |
+| team_defense.explosive_rush_rate | 0.1250 | 0.1000 | 0.0206 | 1 | 64 | 0.1014 | 0.0715 | -0.0715 | 25 | 0.2097 | low | RANK_PERSISTENT | 0.0068 |
+| team_defense.pass_epa_per_dropback | 0.4595 | 0.0361 | 0.0949 | 1 | 64 | 0.0610 | 0.2625 | -0.2625 | 28 | 0.1290 | low | RANK_PERSISTENT | 0.0145 |
+| team_defense.pass_success_rate | 0.5517 | 0.4536 | 0.0320 | 1 | 64 | 0.4594 | 0.1801 | -0.1801 | 27 | 0.1613 | low | RANK_PERSISTENT | -0.0043 |
+| team_defense.rush_epa_per_play | 0.1015 | -0.0760 | 0.0649 | 1 | 64 | -0.0642 | 0.1822 | -0.1822 | 27 | 0.1613 | low | NOT_RANK_PERSISTENT | 0.0256 |
+| team_defense.rush_success_rate | 0.4375 | 0.4020 | 0.0330 | 1 | 64 | 0.4041 | 0.0634 | -0.0634 | 21 | 0.3387 | low | RANK_PERSISTENT | -0.0054 |
+| team_defense.success_rate | 0.4688 | 0.4384 | 0.0255 | 1 | 64 | 0.4402 | 0.0701 | -0.0701 | 21 | 0.3548 | low | RANK_PERSISTENT | -0.0079 |
+| team_offense.early_down_epa_per_play | -0.1866 | -0.0054 | 0.0784 | 1 | 54 | -0.0255 | -0.2568 | -0.2568 | 28 | 0.1290 | low | UNVALIDATED_RANK_PERSISTENT | -0.0609 |
+| team_offense.epa_per_play | -0.2246 | -0.0001 | 0.0921 | 1 | 54 | -0.0251 | -0.2709 | -0.2709 | 27 | 0.1613 | low | VALIDATED_PERSISTENCE | -0.0817 |
+| team_offense.explosive_pass_rate | 0.0588 | 0.0796 | 0.0177 | 1 | 54 | 0.0784 | -0.0688 | -0.0688 | 19 | 0.4194 | low | RANK_PERSISTENT | 0.0019 |
+| team_offense.explosive_rush_rate | 0.2632 | 0.0990 | 0.0195 | 1 | 54 | 0.1087 | 0.4943 | 0.4943 | 1 | 1.0000 | low | NOT_RANK_PERSISTENT | 0.0103 |
+| team_offense.pass_epa_per_dropback | -0.4408 | 0.0308 | 0.1280 | 1 | 54 | -0.0216 | -0.4095 | -0.4095 | 30 | 0.0645 | low | UNVALIDATED_RANK_PERSISTENT | -0.0877 |
+| team_offense.pass_success_rate | 0.3824 | 0.4521 | 0.0418 | 1 | 54 | 0.4443 | -0.1852 | -0.1852 | 27 | 0.1613 | low | UNVALIDATED_RANK_PERSISTENT | -0.0227 |
+| team_offense.proe | -0.0592 | -0.0477 | 0.0349 | 1 | 54 | -0.0500 | -0.0662 | -0.0000 | — | — | low | VALIDATED_PERSISTENCE | -0.0094 |
+| team_offense.rush_epa_per_play | 0.1160 | -0.0806 | 0.0754 | 1 | 54 | -0.0690 | 0.1534 | 0.1534 | 5 | 0.8710 | low | RANK_PERSISTENT | -0.0566 |
+| team_offense.rush_success_rate | 0.4737 | 0.4004 | 0.0385 | 1 | 54 | 0.4060 | 0.1464 | 0.1464 | 7 | 0.8065 | low | RANK_PERSISTENT | -0.0227 |
+| team_offense.success_rate | 0.4259 | 0.4370 | 0.0337 | 1 | 54 | 0.4348 | -0.0654 | -0.0654 | 20 | 0.3871 | low | VALIDATED_PERSISTENCE | -0.0259 |
 
 ## JAX
-Record: no games yet · Points for/against: —/— · Point differential: — · Data confidence: prior_season_only
-Strongest area: **special_teams** (0.744) · Weakest area: **pass_rush** (-0.622)
+Record: 1-0-0 · Points for/against: 34/10 · Point differential: 24 · Data confidence: low
+Strongest area: **offense_overall** (0.589) · Weakest area: **rushing_defense** (0.049)
 
 ### Domain indices
 | domain | label | index_value | rank_of_league | delta_vs_prev_week | delta_vs_preseason | min_confidence |
 | --- | --- | --- | --- | --- | --- | --- |
-| defense_overall | Defensive Strength Index | 0.466 | 7 | 0.000 | 0.000 | prior_season_only |
-| pass_rush | Pass-Rush Strength Index | -0.622 | 28 | 0.000 | 0.000 | prior_season_only |
-| passing_defense | Pass-Defense Strength Index | 0.576 | 7 | 0.000 | 0.000 | prior_season_only |
-| rushing_defense | Run-Defense Strength Index | 0.484 | 4 | 0.000 | 0.000 | prior_season_only |
-| offense_overall | Offensive Strength Index | 0.240 | 15 | 0.000 | 0.000 | prior_season_only |
-| pass_protection | Pass-Protection Strength Index | 0.217 | 16 | 0.000 | 0.000 | prior_season_only |
-| passing_offense | Passing-Offense Strength Index | 0.294 | 9 | 0.000 | 0.000 | prior_season_only |
-| rushing_offense | Rushing-Offense Strength Index | -0.032 | 24 | 0.000 | 0.000 | prior_season_only |
-| special_teams | Special-Teams Strength Index | 0.744 | 4 | 0.000 | 0.000 | prior_season_only |
+| defense_overall | Defensive Strength Index | 0.090 | 11 | -0.376 | -0.376 | low |
+| pass_rush | Pass-Rush Strength Index | 0.432 | 1 | 1.054 | 1.054 | low |
+| passing_defense | Pass-Defense Strength Index | 0.069 | 9 | -0.507 | -0.507 | low |
+| rushing_defense | Run-Defense Strength Index | 0.049 | 13 | -0.436 | -0.436 | low |
+| offense_overall | Offensive Strength Index | 0.589 | 1 | 0.348 | 0.348 | low |
+| pass_protection | Pass-Protection Strength Index | 0.107 | 9 | -0.110 | -0.110 | low |
+| passing_offense | Passing-Offense Strength Index | 0.544 | 1 | 0.249 | 0.249 | low |
+| rushing_offense | Rushing-Offense Strength Index | 0.127 | 6 | 0.160 | 0.160 | low |
+| special_teams | Special-Teams Strength Index | 0.134 | 11 | -0.610 | -0.610 | low |
 
 ### Underlying metrics
 | metric | raw_value | ref_mean | ref_sd | n_games | n_opportunities | shrunk_value | z_shrunk | oriented_z_shrunk | rank_of_league | percentile | confidence | phase3_status | delta_shrunk_vs_prev_week |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
-| pass_protection.qb_hit_rate_allowed | 0.1289 | 0.1450 | 0.0327 | 17 | 644 | 0.1340 | -0.3349 | 0.3349 | 13 | 0.6129 | prior_season_only | UNVALIDATED_RANK_PERSISTENT | 0.0000 |
-| pass_protection.rush_stuffed_rate_approx | 0.2078 | 0.2045 | 0.0323 | 17 | 644 | 0.2062 | 0.0514 | -0.0514 | 20 | 0.3871 | prior_season_only | RANK_PERSISTENT | 0.0000 |
-| pass_protection.sack_rate_allowed | 0.0637 | 0.0664 | 0.0188 | 17 | 644 | 0.0645 | -0.0992 | 0.0992 | 17 | 0.4839 | prior_season_only | UNVALIDATED_RANK_PERSISTENT | 0.0000 |
-| pass_rush.qb_hit_rate_generated | 0.1298 | 0.1442 | 0.0234 | 17 | 701 | 0.1368 | -0.3161 | -0.3161 | 26 | 0.1935 | prior_season_only | RANK_PERSISTENT | 0.0000 |
-| pass_rush.sack_rate_generated | 0.0456 | 0.0660 | 0.0121 | 17 | 701 | 0.0549 | -0.9281 | -0.9281 | 29 | 0.0968 | prior_season_only | NOT_RANK_PERSISTENT | 0.0000 |
-| special_teams.fg_pct | 0.8824 | 0.8507 | 0.0691 | 17 | 223 | 0.8670 | 0.2358 | 0.2358 | 12 | 0.6290 | prior_season_only | NOT_RANK_PERSISTENT | 0.0000 |
-| special_teams.st_epa_per_play | 0.1962 | 0.0622 | 0.0928 | 17 | 223 | 0.1313 | 0.7436 | 0.7436 | 4 | 0.9032 | prior_season_only | RANK_PERSISTENT | 0.0000 |
-| team_defense.early_down_epa_per_play | -0.0589 | -0.0013 | 0.0639 | 17 | 1079 | -0.0310 | -0.4646 | 0.4646 | 6 | 0.8387 | prior_season_only | RANK_PERSISTENT | 0.0000 |
-| team_defense.epa_per_play | -0.0788 | 0.0046 | 0.0677 | 17 | 1079 | -0.0384 | -0.6339 | 0.6339 | 5 | 0.8710 | prior_season_only | RANK_PERSISTENT | 0.0000 |
-| team_defense.explosive_pass_rate | 0.0656 | 0.0797 | 0.0112 | 17 | 1079 | 0.0720 | -0.6874 | 0.6874 | 6 | 0.8387 | prior_season_only | NOT_RANK_PERSISTENT | 0.0000 |
-| team_defense.explosive_rush_rate | 0.0753 | 0.1000 | 0.0206 | 17 | 1079 | 0.0873 | -0.6167 | 0.6167 | 5 | 0.8710 | prior_season_only | RANK_PERSISTENT | 0.0000 |
-| team_defense.pass_epa_per_dropback | -0.1128 | 0.0361 | 0.0949 | 17 | 1079 | -0.0406 | -0.8084 | 0.8084 | 3 | 0.9355 | prior_season_only | RANK_PERSISTENT | 0.0000 |
-| team_defense.pass_success_rate | 0.4322 | 0.4536 | 0.0320 | 17 | 1079 | 0.4426 | -0.3441 | 0.3441 | 10 | 0.7097 | prior_season_only | RANK_PERSISTENT | 0.0000 |
-| team_defense.rush_epa_per_play | -0.1057 | -0.0760 | 0.0649 | 17 | 1079 | -0.0923 | -0.2505 | 0.2505 | 7 | 0.8065 | prior_season_only | NOT_RANK_PERSISTENT | 0.0000 |
-| team_defense.rush_success_rate | 0.3645 | 0.4020 | 0.0330 | 17 | 1079 | 0.3826 | -0.5862 | 0.5862 | 3 | 0.9355 | prior_season_only | RANK_PERSISTENT | 0.0000 |
-| team_defense.success_rate | 0.4235 | 0.4384 | 0.0255 | 17 | 1079 | 0.4307 | -0.3006 | 0.3006 | 9 | 0.7419 | prior_season_only | RANK_PERSISTENT | 0.0000 |
-| team_offense.early_down_epa_per_play | 0.0219 | -0.0054 | 0.0784 | 17 | 1121 | 0.0132 | 0.2366 | 0.2366 | 16 | 0.5161 | prior_season_only | UNVALIDATED_RANK_PERSISTENT | 0.0000 |
-| team_offense.epa_per_play | 0.0388 | -0.0001 | 0.0921 | 17 | 1121 | 0.0263 | 0.2872 | 0.2872 | 12 | 0.6452 | prior_season_only | VALIDATED_PERSISTENCE | 0.0000 |
-| team_offense.explosive_pass_rate | 0.0885 | 0.0796 | 0.0177 | 17 | 1121 | 0.0842 | 0.2596 | 0.2596 | 8 | 0.7742 | prior_season_only | RANK_PERSISTENT | 0.0000 |
-| team_offense.explosive_rush_rate | 0.0776 | 0.0990 | 0.0195 | 17 | 1121 | 0.0880 | -0.5641 | -0.5641 | 28 | 0.1290 | prior_season_only | NOT_RANK_PERSISTENT | 0.0000 |
-| team_offense.pass_epa_per_dropback | 0.0871 | 0.0308 | 0.1280 | 17 | 1121 | 0.0691 | 0.2991 | 0.2991 | 11 | 0.6774 | prior_season_only | UNVALIDATED_RANK_PERSISTENT | 0.0000 |
-| team_offense.pass_success_rate | 0.4720 | 0.4521 | 0.0418 | 17 | 1121 | 0.4657 | 0.3247 | 0.3247 | 11 | 0.6774 | prior_season_only | UNVALIDATED_RANK_PERSISTENT | 0.0000 |
-| team_offense.proe | -0.0147 | -0.0477 | 0.0349 | 17 | 1121 | -0.0210 | 0.7663 | 0.0000 | — | — | prior_season_only | VALIDATED_PERSISTENCE | 0.0000 |
-| team_offense.rush_epa_per_play | -0.0730 | -0.0806 | 0.0754 | 17 | 1121 | -0.0767 | 0.0522 | 0.0522 | 19 | 0.4194 | prior_season_only | RANK_PERSISTENT | 0.0000 |
-| team_offense.rush_success_rate | 0.3927 | 0.4004 | 0.0385 | 17 | 1121 | 0.3959 | -0.1168 | -0.1168 | 24 | 0.2581 | prior_season_only | RANK_PERSISTENT | 0.0000 |
-| team_offense.success_rate | 0.4451 | 0.4370 | 0.0337 | 17 | 1121 | 0.4436 | 0.1963 | 0.1963 | 15 | 0.5484 | prior_season_only | VALIDATED_PERSISTENCE | 0.0000 |
+| pass_protection.qb_hit_rate_allowed | 0.1250 | 0.1450 | 0.0327 | 1 | 24 | 0.1428 | -0.0679 | 0.0679 | 12 | 0.6452 | low | UNVALIDATED_RANK_PERSISTENT | 0.0087 |
+| pass_protection.rush_stuffed_rate_approx | 0.2414 | 0.2045 | 0.0323 | 1 | 24 | 0.2067 | 0.0670 | -0.0670 | 21 | 0.3548 | low | RANK_PERSISTENT | 0.0005 |
+| pass_protection.sack_rate_allowed | 0.0417 | 0.0664 | 0.0188 | 1 | 24 | 0.0637 | -0.1464 | 0.1464 | 10 | 0.7097 | low | UNVALIDATED_RANK_PERSISTENT | -0.0009 |
+| pass_rush.qb_hit_rate_generated | 0.2667 | 0.1442 | 0.0234 | 1 | 30 | 0.1514 | 0.3079 | 0.3079 | 3 | 0.9355 | low | RANK_PERSISTENT | 0.0146 |
+| pass_rush.sack_rate_generated | 0.1667 | 0.0660 | 0.0121 | 1 | 30 | 0.0728 | 0.5566 | 0.5566 | 1 | 1.0000 | low | NOT_RANK_PERSISTENT | 0.0179 |
+| special_teams.fg_pct | 1.0000 | 0.8507 | 0.0691 | 1 | 11 | 0.8595 | 0.1270 | 0.1270 | 1 | 0.6481 | low | NOT_RANK_PERSISTENT | -0.0075 |
+| special_teams.st_epa_per_play | 0.2731 | 0.0622 | 0.0928 | 1 | 11 | 0.0746 | 0.1336 | 0.1336 | 11 | 0.6774 | low | RANK_PERSISTENT | -0.0566 |
+| team_defense.early_down_epa_per_play | -0.0791 | -0.0013 | 0.0639 | 1 | 51 | -0.0059 | -0.0716 | 0.0716 | 12 | 0.6452 | low | RANK_PERSISTENT | 0.0251 |
+| team_defense.epa_per_play | -0.2057 | 0.0046 | 0.0677 | 1 | 51 | -0.0078 | -0.1826 | 0.1826 | 7 | 0.8065 | low | RANK_PERSISTENT | 0.0306 |
+| team_defense.explosive_pass_rate | 0.1000 | 0.0797 | 0.0112 | 1 | 51 | 0.0810 | 0.1207 | -0.1207 | 22 | 0.3226 | low | NOT_RANK_PERSISTENT | 0.0091 |
+| team_defense.explosive_rush_rate | 0.0526 | 0.1000 | 0.0206 | 1 | 51 | 0.0972 | -0.1352 | 0.1352 | 4 | 0.8871 | low | RANK_PERSISTENT | 0.0099 |
+| team_defense.pass_epa_per_dropback | -0.2254 | 0.0361 | 0.0949 | 1 | 51 | 0.0207 | -0.1621 | 0.1621 | 7 | 0.8065 | low | RANK_PERSISTENT | 0.0613 |
+| team_defense.pass_success_rate | 0.4667 | 0.4536 | 0.0320 | 1 | 51 | 0.4544 | 0.0239 | -0.0239 | 16 | 0.5161 | low | RANK_PERSISTENT | 0.0118 |
+| team_defense.rush_epa_per_play | -0.1194 | -0.0760 | 0.0649 | 1 | 51 | -0.0789 | -0.0445 | 0.0445 | 12 | 0.6452 | low | NOT_RANK_PERSISTENT | 0.0134 |
+| team_defense.rush_success_rate | 0.4211 | 0.4020 | 0.0330 | 1 | 51 | 0.4031 | 0.0340 | -0.0340 | 19 | 0.4194 | low | RANK_PERSISTENT | 0.0205 |
+| team_defense.success_rate | 0.4314 | 0.4384 | 0.0255 | 1 | 51 | 0.4380 | -0.0162 | 0.0162 | 15 | 0.5484 | low | RANK_PERSISTENT | 0.0072 |
+| team_offense.early_down_epa_per_play | 0.3255 | -0.0054 | 0.0784 | 1 | 54 | 0.0314 | 0.4689 | 0.4689 | 1 | 1.0000 | low | UNVALIDATED_RANK_PERSISTENT | 0.0182 |
+| team_offense.epa_per_play | 0.3098 | -0.0001 | 0.0921 | 1 | 54 | 0.0343 | 0.3740 | 0.3740 | 3 | 0.9355 | low | VALIDATED_PERSISTENCE | 0.0080 |
+| team_offense.explosive_pass_rate | 0.1667 | 0.0796 | 0.0177 | 1 | 54 | 0.0847 | 0.2889 | 0.2889 | 1 | 1.0000 | low | RANK_PERSISTENT | 0.0005 |
+| team_offense.explosive_rush_rate | 0.1724 | 0.0990 | 0.0195 | 1 | 54 | 0.1033 | 0.2210 | 0.2210 | 4 | 0.9032 | low | NOT_RANK_PERSISTENT | 0.0153 |
+| team_offense.pass_epa_per_dropback | 0.7926 | 0.0308 | 0.1280 | 1 | 54 | 0.1154 | 0.6614 | 0.6614 | 1 | 1.0000 | low | UNVALIDATED_RANK_PERSISTENT | 0.0464 |
+| team_offense.pass_success_rate | 0.7083 | 0.4521 | 0.0418 | 1 | 54 | 0.4806 | 0.6808 | 0.6808 | 1 | 1.0000 | low | UNVALIDATED_RANK_PERSISTENT | 0.0149 |
+| team_offense.proe | -0.0614 | -0.0477 | 0.0349 | 1 | 54 | -0.0504 | -0.0786 | -0.0000 | — | — | low | VALIDATED_PERSISTENCE | -0.0294 |
+| team_offense.rush_epa_per_play | -0.0530 | -0.0806 | 0.0754 | 1 | 54 | -0.0790 | 0.0215 | 0.0215 | 13 | 0.6129 | low | RANK_PERSISTENT | -0.0023 |
+| team_offense.rush_success_rate | 0.5172 | 0.4004 | 0.0385 | 1 | 54 | 0.4094 | 0.2334 | 0.2334 | 2 | 0.9677 | low | RANK_PERSISTENT | 0.0135 |
+| team_offense.success_rate | 0.5926 | 0.4370 | 0.0337 | 1 | 54 | 0.4681 | 0.9226 | 0.9226 | 1 | 1.0000 | low | VALIDATED_PERSISTENCE | 0.0245 |
 
 ## KC
-Record: no games yet · Points for/against: —/— · Point differential: — · Data confidence: prior_season_only
-Strongest area: **rushing_defense** (0.327) · Weakest area: **pass_protection** (-0.379)
+Record: 1-0-0 · Points for/against: 31/10 · Point differential: 21 · Data confidence: low
+Strongest area: **defense_overall** (0.217) · Weakest area: **offense_overall** (-0.067)
 
 ### Domain indices
 | domain | label | index_value | rank_of_league | delta_vs_prev_week | delta_vs_preseason | min_confidence |
 | --- | --- | --- | --- | --- | --- | --- |
-| defense_overall | Defensive Strength Index | 0.024 | 15 | 0.000 | 0.000 | prior_season_only |
-| pass_rush | Pass-Rush Strength Index | 0.132 | 15 | 0.000 | 0.000 | prior_season_only |
-| passing_defense | Pass-Defense Strength Index | -0.044 | 16 | 0.000 | 0.000 | prior_season_only |
-| rushing_defense | Run-Defense Strength Index | 0.327 | 8 | 0.000 | 0.000 | prior_season_only |
-| offense_overall | Offensive Strength Index | 0.258 | 13 | 0.000 | 0.000 | prior_season_only |
-| pass_protection | Pass-Protection Strength Index | -0.379 | 22 | 0.000 | 0.000 | prior_season_only |
-| passing_offense | Passing-Offense Strength Index | 0.092 | 13 | 0.000 | 0.000 | prior_season_only |
-| rushing_offense | Rushing-Offense Strength Index | 0.128 | 19 | 0.000 | 0.000 | prior_season_only |
-| special_teams | Special-Teams Strength Index | 0.170 | 19 | 0.000 | 0.000 | prior_season_only |
+| defense_overall | Defensive Strength Index | 0.217 | 2 | 0.193 | 0.193 | low |
+| pass_rush | Pass-Rush Strength Index | 0.162 | 5 | 0.030 | 0.030 | low |
+| passing_defense | Pass-Defense Strength Index | 0.203 | 4 | 0.247 | 0.247 | low |
+| rushing_defense | Run-Defense Strength Index | 0.164 | 5 | -0.163 | -0.163 | low |
+| offense_overall | Offensive Strength Index | -0.067 | 18 | -0.325 | -0.325 | low |
+| pass_protection | Pass-Protection Strength Index | 0.006 | 16 | 0.386 | 0.386 | low |
+| passing_offense | Passing-Offense Strength Index | -0.047 | 19 | -0.138 | -0.138 | low |
+| rushing_offense | Rushing-Offense Strength Index | 0.138 | 5 | 0.010 | 0.010 | low |
+| special_teams | Special-Teams Strength Index | 0.136 | 9 | -0.034 | -0.034 | low |
 
 ### Underlying metrics
 | metric | raw_value | ref_mean | ref_sd | n_games | n_opportunities | shrunk_value | z_shrunk | oriented_z_shrunk | rank_of_league | percentile | confidence | phase3_status | delta_shrunk_vs_prev_week |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
-| pass_protection.qb_hit_rate_allowed | 0.1778 | 0.1450 | 0.0327 | 17 | 686 | 0.1673 | 0.6826 | -0.6826 | 25 | 0.2258 | prior_season_only | UNVALIDATED_RANK_PERSISTENT | 0.0000 |
-| pass_protection.rush_stuffed_rate_approx | 0.1515 | 0.2045 | 0.0323 | 17 | 686 | 0.1772 | -0.8443 | 0.8443 | 2 | 0.9677 | prior_season_only | RANK_PERSISTENT | 0.0000 |
-| pass_protection.sack_rate_allowed | 0.0685 | 0.0664 | 0.0188 | 17 | 686 | 0.0678 | 0.0763 | -0.0763 | 20 | 0.3871 | prior_season_only | UNVALIDATED_RANK_PERSISTENT | 0.0000 |
-| pass_rush.qb_hit_rate_generated | 0.1684 | 0.1442 | 0.0234 | 17 | 582 | 0.1566 | 0.5329 | 0.5329 | 5 | 0.8710 | prior_season_only | RANK_PERSISTENT | 0.0000 |
-| pass_rush.sack_rate_generated | 0.0601 | 0.0660 | 0.0121 | 17 | 582 | 0.0628 | -0.2689 | -0.2689 | 19 | 0.4194 | prior_season_only | NOT_RANK_PERSISTENT | 0.0000 |
-| special_teams.fg_pct | 0.8684 | 0.8507 | 0.0691 | 17 | 208 | 0.8598 | 0.1320 | 0.1320 | 15 | 0.5484 | prior_season_only | NOT_RANK_PERSISTENT | 0.0000 |
-| special_teams.st_epa_per_play | 0.0928 | 0.0622 | 0.0928 | 17 | 208 | 0.0780 | 0.1696 | 0.1696 | 19 | 0.4194 | prior_season_only | RANK_PERSISTENT | 0.0000 |
-| team_defense.early_down_epa_per_play | -0.0040 | -0.0013 | 0.0639 | 17 | 1024 | -0.0027 | -0.0220 | 0.0220 | 16 | 0.5161 | prior_season_only | RANK_PERSISTENT | 0.0000 |
-| team_defense.epa_per_play | -0.0076 | 0.0046 | 0.0677 | 17 | 1024 | -0.0017 | -0.0924 | 0.0924 | 12 | 0.6452 | prior_season_only | RANK_PERSISTENT | 0.0000 |
-| team_defense.explosive_pass_rate | 0.0773 | 0.0797 | 0.0112 | 17 | 1024 | 0.0784 | -0.1155 | 0.1155 | 15 | 0.5484 | prior_season_only | NOT_RANK_PERSISTENT | 0.0000 |
-| team_defense.explosive_rush_rate | 0.0735 | 0.1000 | 0.0206 | 17 | 1024 | 0.0863 | -0.6610 | 0.6610 | 4 | 0.9032 | prior_season_only | RANK_PERSISTENT | 0.0000 |
-| team_defense.pass_epa_per_dropback | 0.0269 | 0.0361 | 0.0949 | 17 | 1024 | 0.0314 | -0.0499 | 0.0499 | 15 | 0.5484 | prior_season_only | RANK_PERSISTENT | 0.0000 |
-| team_defense.pass_success_rate | 0.4622 | 0.4536 | 0.0320 | 17 | 1024 | 0.4580 | 0.1376 | -0.1376 | 19 | 0.4194 | prior_season_only | RANK_PERSISTENT | 0.0000 |
-| team_defense.rush_epa_per_play | -0.1002 | -0.0760 | 0.0649 | 17 | 1024 | -0.0893 | -0.2045 | 0.2045 | 11 | 0.6774 | prior_season_only | NOT_RANK_PERSISTENT | 0.0000 |
-| team_defense.rush_success_rate | 0.3946 | 0.4020 | 0.0330 | 17 | 1024 | 0.3982 | -0.1151 | 0.1151 | 11 | 0.6774 | prior_season_only | RANK_PERSISTENT | 0.0000 |
-| team_defense.success_rate | 0.4404 | 0.4384 | 0.0255 | 17 | 1024 | 0.4394 | 0.0412 | -0.0412 | 14 | 0.5806 | prior_season_only | RANK_PERSISTENT | 0.0000 |
-| team_offense.early_down_epa_per_play | 0.0252 | -0.0054 | 0.0784 | 17 | 1094 | 0.0154 | 0.2650 | 0.2650 | 13 | 0.6129 | prior_season_only | UNVALIDATED_RANK_PERSISTENT | 0.0000 |
-| team_offense.epa_per_play | 0.0421 | -0.0001 | 0.0921 | 17 | 1094 | 0.0286 | 0.3116 | 0.3116 | 11 | 0.6774 | prior_season_only | VALIDATED_PERSISTENCE | 0.0000 |
-| team_offense.explosive_pass_rate | 0.0758 | 0.0796 | 0.0177 | 17 | 1094 | 0.0776 | -0.1096 | -0.1096 | 16 | 0.5161 | prior_season_only | RANK_PERSISTENT | 0.0000 |
-| team_offense.explosive_rush_rate | 0.0716 | 0.0990 | 0.0195 | 17 | 1094 | 0.0849 | -0.7223 | -0.7223 | 31 | 0.0323 | prior_season_only | NOT_RANK_PERSISTENT | 0.0000 |
-| team_offense.pass_epa_per_dropback | 0.0769 | 0.0308 | 0.1280 | 17 | 1094 | 0.0621 | 0.2450 | 0.2450 | 13 | 0.6129 | prior_season_only | UNVALIDATED_RANK_PERSISTENT | 0.0000 |
-| team_offense.pass_success_rate | 0.4606 | 0.4521 | 0.0418 | 17 | 1094 | 0.4579 | 0.1392 | 0.1392 | 13 | 0.6129 | prior_season_only | UNVALIDATED_RANK_PERSISTENT | 0.0000 |
-| team_offense.proe | 0.0050 | -0.0477 | 0.0349 | 17 | 1094 | -0.0051 | 1.2229 | 0.0000 | — | — | prior_season_only | VALIDATED_PERSISTENCE | 0.0000 |
-| team_offense.rush_epa_per_play | -0.0596 | -0.0806 | 0.0754 | 17 | 1094 | -0.0698 | 0.1437 | 0.1437 | 14 | 0.5806 | prior_season_only | RANK_PERSISTENT | 0.0000 |
-| team_offense.rush_success_rate | 0.4077 | 0.4004 | 0.0385 | 17 | 1094 | 0.4047 | 0.1118 | 0.1118 | 18 | 0.4516 | prior_season_only | RANK_PERSISTENT | 0.0000 |
-| team_offense.success_rate | 0.4452 | 0.4370 | 0.0337 | 17 | 1094 | 0.4436 | 0.1967 | 0.1967 | 14 | 0.5806 | prior_season_only | VALIDATED_PERSISTENCE | 0.0000 |
+| pass_protection.qb_hit_rate_allowed | 0.1515 | 0.1450 | 0.0327 | 1 | 33 | 0.1457 | 0.0221 | -0.0221 | 17 | 0.4355 | low | UNVALIDATED_RANK_PERSISTENT | -0.0216 |
+| pass_protection.rush_stuffed_rate_approx | 0.1250 | 0.2045 | 0.0323 | 1 | 33 | 0.1999 | -0.1446 | 0.1446 | 5 | 0.8710 | low | RANK_PERSISTENT | 0.0226 |
+| pass_protection.sack_rate_allowed | 0.0606 | 0.0664 | 0.0188 | 1 | 33 | 0.0658 | -0.0343 | 0.0343 | 15 | 0.5323 | low | UNVALIDATED_RANK_PERSISTENT | -0.0021 |
+| pass_rush.qb_hit_rate_generated | 0.1515 | 0.1442 | 0.0234 | 1 | 33 | 0.1446 | 0.0185 | 0.0185 | 13 | 0.5645 | low | RANK_PERSISTENT | -0.0120 |
+| pass_rush.sack_rate_generated | 0.1212 | 0.0660 | 0.0121 | 1 | 33 | 0.0697 | 0.3052 | 0.3052 | 4 | 0.9032 | low | NOT_RANK_PERSISTENT | 0.0069 |
+| special_teams.fg_pct | 1.0000 | 0.8507 | 0.0691 | 1 | 12 | 0.8595 | 0.1270 | 0.1270 | 1 | 0.6481 | low | NOT_RANK_PERSISTENT | -0.0003 |
+| special_teams.st_epa_per_play | 0.2765 | 0.0622 | 0.0928 | 1 | 12 | 0.0748 | 0.1358 | 0.1358 | 9 | 0.7419 | low | RANK_PERSISTENT | -0.0031 |
+| team_defense.early_down_epa_per_play | -0.1524 | -0.0013 | 0.0639 | 1 | 50 | -0.0102 | -0.1391 | 0.1391 | 8 | 0.7742 | low | RANK_PERSISTENT | -0.0075 |
+| team_defense.epa_per_play | -0.3777 | 0.0046 | 0.0677 | 1 | 50 | -0.0179 | -0.3319 | 0.3319 | 1 | 1.0000 | low | RANK_PERSISTENT | -0.0162 |
+| team_defense.explosive_pass_rate | 0.0000 | 0.0797 | 0.0112 | 1 | 50 | 0.0744 | -0.4735 | 0.4735 | 1 | 0.9355 | low | NOT_RANK_PERSISTENT | -0.0040 |
+| team_defense.explosive_rush_rate | 0.0667 | 0.1000 | 0.0206 | 1 | 50 | 0.0980 | -0.0951 | 0.0951 | 9 | 0.7097 | low | RANK_PERSISTENT | 0.0117 |
+| team_defense.pass_epa_per_dropback | -0.4429 | 0.0361 | 0.0949 | 1 | 50 | 0.0079 | -0.2970 | 0.2970 | 2 | 0.9677 | low | RANK_PERSISTENT | -0.0234 |
+| team_defense.pass_success_rate | 0.3939 | 0.4536 | 0.0320 | 1 | 50 | 0.4501 | -0.1096 | 0.1096 | 7 | 0.7903 | low | RANK_PERSISTENT | -0.0079 |
+| team_defense.rush_epa_per_play | -0.2283 | -0.0760 | 0.0649 | 1 | 50 | -0.0862 | -0.1564 | 0.1564 | 7 | 0.8065 | low | NOT_RANK_PERSISTENT | 0.0031 |
+| team_defense.rush_success_rate | 0.2667 | 0.4020 | 0.0330 | 1 | 50 | 0.3940 | -0.2414 | 0.2414 | 4 | 0.9032 | low | RANK_PERSISTENT | -0.0042 |
+| team_defense.success_rate | 0.3600 | 0.4384 | 0.0255 | 1 | 50 | 0.4338 | -0.1812 | 0.1812 | 4 | 0.9032 | low | RANK_PERSISTENT | -0.0057 |
+| team_offense.early_down_epa_per_play | -0.1314 | -0.0054 | 0.0784 | 1 | 66 | -0.0194 | -0.1787 | -0.1787 | 23 | 0.2903 | low | UNVALIDATED_RANK_PERSISTENT | -0.0348 |
+| team_offense.epa_per_play | 0.1183 | -0.0001 | 0.0921 | 1 | 66 | 0.0130 | 0.1428 | 0.1428 | 11 | 0.6774 | low | VALIDATED_PERSISTENCE | -0.0155 |
+| team_offense.explosive_pass_rate | 0.0606 | 0.0796 | 0.0177 | 1 | 66 | 0.0785 | -0.0629 | -0.0629 | 18 | 0.4516 | low | RANK_PERSISTENT | 0.0008 |
+| team_offense.explosive_rush_rate | 0.1250 | 0.0990 | 0.0195 | 1 | 66 | 0.1005 | 0.0782 | 0.0782 | 7 | 0.7903 | low | NOT_RANK_PERSISTENT | 0.0156 |
+| team_offense.pass_epa_per_dropback | 0.0263 | 0.0308 | 0.1280 | 1 | 66 | 0.0303 | -0.0039 | -0.0039 | 17 | 0.4839 | low | UNVALIDATED_RANK_PERSISTENT | -0.0318 |
+| team_offense.pass_success_rate | 0.4242 | 0.4521 | 0.0418 | 1 | 66 | 0.4490 | -0.0740 | -0.0740 | 19 | 0.4194 | low | UNVALIDATED_RANK_PERSISTENT | -0.0089 |
+| team_offense.proe | -0.0114 | -0.0477 | 0.0349 | 1 | 66 | -0.0404 | 0.2085 | 0.0000 | — | — | low | VALIDATED_PERSISTENCE | -0.0354 |
+| team_offense.rush_epa_per_play | 0.2585 | -0.0806 | 0.0754 | 1 | 66 | -0.0607 | 0.2647 | 0.2647 | 1 | 1.0000 | low | RANK_PERSISTENT | 0.0091 |
+| team_offense.rush_success_rate | 0.4062 | 0.4004 | 0.0385 | 1 | 66 | 0.4008 | 0.0117 | 0.0117 | 17 | 0.4839 | low | RANK_PERSISTENT | -0.0039 |
+| team_offense.success_rate | 0.4091 | 0.4370 | 0.0337 | 1 | 66 | 0.4314 | -0.1652 | -0.1652 | 22 | 0.3226 | low | VALIDATED_PERSISTENCE | -0.0122 |
 
 ## LA
-Record: no games yet · Points for/against: —/— · Point differential: — · Data confidence: prior_season_only
-Strongest area: **offense_overall** (1.526) · Weakest area: **special_teams** (-0.455)
+Record: 0-1-0 · Points for/against: 7/27 · Point differential: -20 · Data confidence: low
+Strongest area: **rushing_offense** (0.046) · Weakest area: **pass_rush** (-0.294)
 
 ### Domain indices
 | domain | label | index_value | rank_of_league | delta_vs_prev_week | delta_vs_preseason | min_confidence |
 | --- | --- | --- | --- | --- | --- | --- |
-| defense_overall | Defensive Strength Index | 0.463 | 8 | 0.000 | 0.000 | prior_season_only |
-| pass_rush | Pass-Rush Strength Index | 0.459 | 5 | 0.000 | 0.000 | prior_season_only |
-| passing_defense | Pass-Defense Strength Index | 0.354 | 10 | 0.000 | 0.000 | prior_season_only |
-| rushing_defense | Run-Defense Strength Index | 0.367 | 6 | 0.000 | 0.000 | prior_season_only |
-| offense_overall | Offensive Strength Index | 1.526 | 1 | 0.000 | 0.000 | prior_season_only |
-| pass_protection | Pass-Protection Strength Index | 0.759 | 3 | 0.000 | 0.000 | prior_season_only |
-| passing_offense | Passing-Offense Strength Index | 1.095 | 2 | 0.000 | 0.000 | prior_season_only |
-| rushing_offense | Rushing-Offense Strength Index | 1.115 | 1 | 0.000 | 0.000 | prior_season_only |
-| special_teams | Special-Teams Strength Index | -0.455 | 30 | 0.000 | 0.000 | prior_season_only |
+| defense_overall | Defensive Strength Index | -0.218 | 29 | -0.681 | -0.681 | low |
+| pass_rush | Pass-Rush Strength Index | -0.294 | 31 | -0.753 | -0.753 | low |
+| passing_defense | Pass-Defense Strength Index | -0.172 | 26 | -0.527 | -0.527 | low |
+| rushing_defense | Run-Defense Strength Index | -0.195 | 31 | -0.562 | -0.562 | low |
+| offense_overall | Offensive Strength Index | -0.146 | 23 | -1.672 | -1.672 | low |
+| pass_protection | Pass-Protection Strength Index | -0.026 | 20 | -0.785 | -0.785 | low |
+| passing_offense | Passing-Offense Strength Index | -0.187 | 28 | -1.282 | -1.282 | low |
+| rushing_offense | Rushing-Offense Strength Index | 0.046 | 14 | -1.069 | -1.069 | low |
+| special_teams | Special-Teams Strength Index | -0.035 | 22 | 0.421 | 0.421 | low |
 
 ### Underlying metrics
 | metric | raw_value | ref_mean | ref_sd | n_games | n_opportunities | shrunk_value | z_shrunk | oriented_z_shrunk | rank_of_league | percentile | confidence | phase3_status | delta_shrunk_vs_prev_week |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
-| pass_protection.qb_hit_rate_allowed | 0.1234 | 0.1450 | 0.0327 | 17 | 624 | 0.1303 | -0.4489 | 0.4489 | 11 | 0.6774 | prior_season_only | UNVALIDATED_RANK_PERSISTENT | 0.0000 |
-| pass_protection.rush_stuffed_rate_approx | 0.1573 | 0.2045 | 0.0323 | 17 | 624 | 0.1802 | -0.7521 | 0.7521 | 4 | 0.9032 | prior_season_only | RANK_PERSISTENT | 0.0000 |
-| pass_protection.sack_rate_allowed | 0.0369 | 0.0664 | 0.0188 | 17 | 624 | 0.0463 | -1.0698 | 1.0698 | 2 | 0.9677 | prior_season_only | UNVALIDATED_RANK_PERSISTENT | 0.0000 |
-| pass_rush.qb_hit_rate_generated | 0.1748 | 0.1442 | 0.0234 | 17 | 658 | 0.1599 | 0.6735 | 0.6735 | 4 | 0.9032 | prior_season_only | RANK_PERSISTENT | 0.0000 |
-| pass_rush.sack_rate_generated | 0.0714 | 0.0660 | 0.0121 | 17 | 658 | 0.0690 | 0.2449 | 0.2449 | 9 | 0.7419 | prior_season_only | NOT_RANK_PERSISTENT | 0.0000 |
-| special_teams.fg_pct | 0.7857 | 0.8507 | 0.0691 | 17 | 220 | 0.8172 | -0.4843 | -0.4843 | 28 | 0.1290 | prior_season_only | NOT_RANK_PERSISTENT | 0.0000 |
-| special_teams.st_epa_per_play | -0.0198 | 0.0622 | 0.0928 | 17 | 220 | 0.0200 | -0.4553 | -0.4553 | 30 | 0.0645 | prior_season_only | RANK_PERSISTENT | 0.0000 |
-| team_defense.early_down_epa_per_play | -0.0544 | -0.0013 | 0.0639 | 17 | 1109 | -0.0287 | -0.4282 | 0.4282 | 8 | 0.7742 | prior_season_only | RANK_PERSISTENT | 0.0000 |
-| team_defense.epa_per_play | -0.0687 | 0.0046 | 0.0677 | 17 | 1109 | -0.0331 | -0.5570 | 0.5570 | 7 | 0.8065 | prior_season_only | RANK_PERSISTENT | 0.0000 |
-| team_defense.explosive_pass_rate | 0.0805 | 0.0797 | 0.0112 | 17 | 1109 | 0.0802 | 0.0422 | -0.0422 | 20 | 0.3871 | prior_season_only | NOT_RANK_PERSISTENT | 0.0000 |
-| team_defense.explosive_rush_rate | 0.0791 | 0.1000 | 0.0206 | 17 | 1109 | 0.0892 | -0.5207 | 0.5207 | 7 | 0.8065 | prior_season_only | RANK_PERSISTENT | 0.0000 |
-| team_defense.pass_epa_per_dropback | -0.0562 | 0.0361 | 0.0949 | 17 | 1109 | -0.0114 | -0.5013 | 0.5013 | 10 | 0.7097 | prior_season_only | RANK_PERSISTENT | 0.0000 |
-| team_defense.pass_success_rate | 0.4407 | 0.4536 | 0.0320 | 17 | 1109 | 0.4470 | -0.2076 | 0.2076 | 12 | 0.6452 | prior_season_only | RANK_PERSISTENT | 0.0000 |
-| team_defense.rush_epa_per_play | -0.0976 | -0.0760 | 0.0649 | 17 | 1109 | -0.0878 | -0.1824 | 0.1824 | 12 | 0.6452 | prior_season_only | NOT_RANK_PERSISTENT | 0.0000 |
-| team_defense.rush_success_rate | 0.3765 | 0.4020 | 0.0330 | 17 | 1109 | 0.3889 | -0.3980 | 0.3980 | 6 | 0.8387 | prior_season_only | RANK_PERSISTENT | 0.0000 |
-| team_defense.success_rate | 0.4184 | 0.4384 | 0.0255 | 17 | 1109 | 0.4281 | -0.4048 | 0.4048 | 7 | 0.8065 | prior_season_only | RANK_PERSISTENT | 0.0000 |
-| team_offense.early_down_epa_per_play | 0.1594 | -0.0054 | 0.0784 | 17 | 1105 | 0.1067 | 1.4298 | 1.4298 | 1 | 1.0000 | prior_season_only | UNVALIDATED_RANK_PERSISTENT | 0.0000 |
-| team_offense.epa_per_play | 0.1491 | -0.0001 | 0.0921 | 17 | 1105 | 0.1013 | 1.1020 | 1.1020 | 2 | 0.9677 | prior_season_only | VALIDATED_PERSISTENCE | 0.0000 |
-| team_offense.explosive_pass_rate | 0.1154 | 0.0796 | 0.0177 | 17 | 1105 | 0.0980 | 1.0403 | 1.0403 | 1 | 1.0000 | prior_season_only | RANK_PERSISTENT | 0.0000 |
-| team_offense.explosive_rush_rate | 0.1191 | 0.0990 | 0.0195 | 17 | 1105 | 0.1094 | 0.5297 | 0.5297 | 3 | 0.9355 | prior_season_only | NOT_RANK_PERSISTENT | 0.0000 |
-| team_offense.pass_epa_per_dropback | 0.2231 | 0.0308 | 0.1280 | 17 | 1105 | 0.1616 | 1.0221 | 1.0221 | 3 | 0.9355 | prior_season_only | UNVALIDATED_RANK_PERSISTENT | 0.0000 |
-| team_offense.pass_success_rate | 0.5272 | 0.4521 | 0.0418 | 17 | 1105 | 0.5032 | 1.2221 | 1.2221 | 2 | 0.9516 | prior_season_only | UNVALIDATED_RANK_PERSISTENT | 0.0000 |
-| team_offense.proe | 0.0028 | -0.0477 | 0.0349 | 17 | 1105 | -0.0068 | 1.1733 | 0.0000 | — | — | prior_season_only | VALIDATED_PERSISTENCE | 0.0000 |
-| team_offense.rush_epa_per_play | 0.0212 | -0.0806 | 0.0754 | 17 | 1105 | -0.0281 | 0.6961 | 0.6961 | 4 | 0.9032 | prior_season_only | RANK_PERSISTENT | 0.0000 |
-| team_offense.rush_success_rate | 0.5011 | 0.4004 | 0.0385 | 17 | 1105 | 0.4594 | 1.5333 | 1.5333 | 1 | 1.0000 | prior_season_only | RANK_PERSISTENT | 0.0000 |
-| team_offense.success_rate | 0.5222 | 0.4370 | 0.0337 | 17 | 1105 | 0.5059 | 2.0447 | 2.0447 | 1 | 1.0000 | prior_season_only | VALIDATED_PERSISTENCE | 0.0000 |
+| pass_protection.qb_hit_rate_allowed | 0.2759 | 0.1450 | 0.0327 | 1 | 29 | 0.1595 | 0.4444 | -0.4444 | 31 | 0.0323 | low | UNVALIDATED_RANK_PERSISTENT | 0.0292 |
+| pass_protection.rush_stuffed_rate_approx | 0.1481 | 0.2045 | 0.0323 | 1 | 29 | 0.2012 | -0.1025 | 0.1025 | 6 | 0.8387 | low | RANK_PERSISTENT | 0.0210 |
+| pass_protection.sack_rate_allowed | 0.0000 | 0.0664 | 0.0188 | 1 | 29 | 0.0590 | -0.3929 | 0.3929 | 1 | 0.9355 | low | UNVALIDATED_RANK_PERSISTENT | 0.0127 |
+| pass_rush.qb_hit_rate_generated | 0.0556 | 0.1442 | 0.0234 | 1 | 36 | 0.1390 | -0.2227 | -0.2227 | 30 | 0.0645 | low | RANK_PERSISTENT | -0.0210 |
+| pass_rush.sack_rate_generated | 0.0000 | 0.0660 | 0.0121 | 1 | 36 | 0.0616 | -0.3654 | -0.3654 | 28 | 0.0645 | low | NOT_RANK_PERSISTENT | -0.0074 |
+| special_teams.fg_pct | — | 0.8507 | 0.0691 | 1 | 10 | — | — | — | — | — | low | NOT_RANK_PERSISTENT | — |
+| special_teams.st_epa_per_play | 0.0075 | 0.0622 | 0.0928 | 1 | 10 | 0.0590 | -0.0347 | -0.0347 | 22 | 0.3226 | low | RANK_PERSISTENT | 0.0390 |
+| team_defense.early_down_epa_per_play | 0.2050 | -0.0013 | 0.0639 | 1 | 65 | 0.0108 | 0.1900 | -0.1900 | 27 | 0.1613 | low | RANK_PERSISTENT | 0.0395 |
+| team_defense.epa_per_play | 0.1902 | 0.0046 | 0.0677 | 1 | 65 | 0.0155 | 0.1611 | -0.1611 | 26 | 0.1935 | low | RANK_PERSISTENT | 0.0487 |
+| team_defense.explosive_pass_rate | 0.0278 | 0.0797 | 0.0112 | 1 | 65 | 0.0762 | -0.3085 | 0.3085 | 8 | 0.7742 | low | NOT_RANK_PERSISTENT | -0.0039 |
+| team_defense.explosive_rush_rate | 0.1429 | 0.1000 | 0.0206 | 1 | 65 | 0.1025 | 0.1225 | -0.1225 | 27 | 0.1613 | low | RANK_PERSISTENT | 0.0132 |
+| team_defense.pass_epa_per_dropback | 0.2077 | 0.0361 | 0.0949 | 1 | 65 | 0.0462 | 0.1064 | -0.1064 | 22 | 0.3226 | low | RANK_PERSISTENT | 0.0577 |
+| team_defense.pass_success_rate | 0.5833 | 0.4536 | 0.0320 | 1 | 65 | 0.4613 | 0.2381 | -0.2381 | 29 | 0.0968 | low | RANK_PERSISTENT | 0.0143 |
+| team_defense.rush_epa_per_play | 0.1416 | -0.0760 | 0.0649 | 1 | 65 | -0.0615 | 0.2233 | -0.2233 | 30 | 0.0645 | low | NOT_RANK_PERSISTENT | 0.0264 |
+| team_defense.rush_success_rate | 0.5357 | 0.4020 | 0.0330 | 1 | 65 | 0.4098 | 0.2386 | -0.2386 | 32 | 0.0000 | low | RANK_PERSISTENT | 0.0210 |
+| team_defense.success_rate | 0.5692 | 0.4384 | 0.0255 | 1 | 65 | 0.4461 | 0.3024 | -0.3024 | 30 | 0.0645 | low | RANK_PERSISTENT | 0.0180 |
+| team_offense.early_down_epa_per_play | -0.1079 | -0.0054 | 0.0784 | 1 | 60 | -0.0168 | -0.1452 | -0.1452 | 22 | 0.3226 | low | UNVALIDATED_RANK_PERSISTENT | -0.1235 |
+| team_offense.epa_per_play | -0.2255 | -0.0001 | 0.0921 | 1 | 60 | -0.0252 | -0.2720 | -0.2720 | 28 | 0.1290 | low | VALIDATED_PERSISTENCE | -0.1265 |
+| team_offense.explosive_pass_rate | 0.0690 | 0.0796 | 0.0177 | 1 | 60 | 0.0790 | -0.0352 | -0.0352 | 17 | 0.4839 | low | RANK_PERSISTENT | -0.0191 |
+| team_offense.explosive_rush_rate | 0.0741 | 0.0990 | 0.0195 | 1 | 60 | 0.0975 | -0.0751 | -0.0751 | 20 | 0.3871 | low | NOT_RANK_PERSISTENT | -0.0118 |
+| team_offense.pass_epa_per_dropback | -0.3516 | 0.0308 | 0.1280 | 1 | 60 | -0.0117 | -0.3320 | -0.3320 | 29 | 0.0968 | low | UNVALIDATED_RANK_PERSISTENT | -0.1733 |
+| team_offense.pass_success_rate | 0.3793 | 0.4521 | 0.0418 | 1 | 60 | 0.4440 | -0.1933 | -0.1933 | 28 | 0.1290 | low | UNVALIDATED_RANK_PERSISTENT | -0.0592 |
+| team_offense.proe | -0.2147 | -0.0477 | 0.0349 | 1 | 60 | -0.0811 | -0.9584 | -0.0000 | — | — | low | VALIDATED_PERSISTENCE | -0.0743 |
+| team_offense.rush_epa_per_play | -0.1713 | -0.0806 | 0.0754 | 1 | 60 | -0.0859 | -0.0708 | -0.0708 | 24 | 0.2581 | low | RANK_PERSISTENT | -0.0578 |
+| team_offense.rush_success_rate | 0.4815 | 0.4004 | 0.0385 | 1 | 60 | 0.4066 | 0.1620 | 0.1620 | 6 | 0.8387 | low | RANK_PERSISTENT | -0.0528 |
+| team_offense.success_rate | 0.4333 | 0.4370 | 0.0337 | 1 | 60 | 0.4362 | -0.0215 | -0.0215 | 17 | 0.4839 | low | VALIDATED_PERSISTENCE | -0.0697 |
 
 ## LAC
-Record: no games yet · Points for/against: —/— · Point differential: — · Data confidence: prior_season_only
-Strongest area: **defense_overall** (0.571) · Weakest area: **pass_protection** (-0.977)
+Record: 0-1-0 · Points for/against: 14/26 · Point differential: -12 · Data confidence: low
+Strongest area: **rushing_defense** (0.022) · Weakest area: **special_teams** (-0.286)
 
 ### Domain indices
 | domain | label | index_value | rank_of_league | delta_vs_prev_week | delta_vs_preseason | min_confidence |
 | --- | --- | --- | --- | --- | --- | --- |
-| defense_overall | Defensive Strength Index | 0.571 | 6 | 0.000 | 0.000 | prior_season_only |
-| pass_rush | Pass-Rush Strength Index | 0.310 | 7 | 0.000 | 0.000 | prior_season_only |
-| passing_defense | Pass-Defense Strength Index | 0.501 | 9 | 0.000 | 0.000 | prior_season_only |
-| rushing_defense | Run-Defense Strength Index | 0.103 | 10 | 0.000 | 0.000 | prior_season_only |
-| offense_overall | Offensive Strength Index | -0.165 | 24 | 0.000 | 0.000 | prior_season_only |
-| pass_protection | Pass-Protection Strength Index | -0.977 | 29 | 0.000 | 0.000 | prior_season_only |
-| passing_offense | Passing-Offense Strength Index | -0.182 | 25 | 0.000 | 0.000 | prior_season_only |
-| rushing_offense | Rushing-Offense Strength Index | -0.071 | 25 | 0.000 | 0.000 | prior_season_only |
-| special_teams | Special-Teams Strength Index | 0.152 | 20 | 0.000 | 0.000 | prior_season_only |
+| defense_overall | Defensive Strength Index | -0.117 | 23 | -0.688 | -0.688 | low |
+| pass_rush | Pass-Rush Strength Index | -0.132 | 27 | -0.442 | -0.442 | low |
+| passing_defense | Pass-Defense Strength Index | -0.180 | 28 | -0.681 | -0.681 | low |
+| rushing_defense | Run-Defense Strength Index | 0.022 | 14 | -0.081 | -0.081 | low |
+| offense_overall | Offensive Strength Index | -0.162 | 24 | 0.003 | 0.003 | low |
+| pass_protection | Pass-Protection Strength Index | -0.005 | 19 | 0.972 | 0.972 | low |
+| passing_offense | Passing-Offense Strength Index | -0.135 | 27 | 0.047 | 0.047 | low |
+| rushing_offense | Rushing-Offense Strength Index | -0.135 | 24 | -0.063 | -0.063 | low |
+| special_teams | Special-Teams Strength Index | -0.286 | 32 | -0.438 | -0.438 | low |
 
 ### Underlying metrics
 | metric | raw_value | ref_mean | ref_sd | n_games | n_opportunities | shrunk_value | z_shrunk | oriented_z_shrunk | rank_of_league | percentile | confidence | phase3_status | delta_shrunk_vs_prev_week |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
-| pass_protection.qb_hit_rate_allowed | 0.2012 | 0.1450 | 0.0327 | 17 | 681 | 0.1832 | 1.1675 | -1.1675 | 30 | 0.0645 | prior_season_only | UNVALIDATED_RANK_PERSISTENT | 0.0000 |
-| pass_protection.rush_stuffed_rate_approx | 0.2500 | 0.2045 | 0.0323 | 17 | 681 | 0.2280 | 0.7240 | -0.7240 | 30 | 0.0645 | prior_season_only | RANK_PERSISTENT | 0.0000 |
-| pass_protection.sack_rate_allowed | 0.0881 | 0.0664 | 0.0188 | 17 | 681 | 0.0812 | 0.7857 | -0.7857 | 28 | 0.1290 | prior_season_only | UNVALIDATED_RANK_PERSISTENT | 0.0000 |
-| pass_rush.qb_hit_rate_generated | 0.1502 | 0.1442 | 0.0234 | 17 | 586 | 0.1473 | 0.1320 | 0.1320 | 14 | 0.5806 | prior_season_only | RANK_PERSISTENT | 0.0000 |
-| pass_rush.sack_rate_generated | 0.0768 | 0.0660 | 0.0121 | 17 | 586 | 0.0719 | 0.4889 | 0.4889 | 7 | 0.8065 | prior_season_only | NOT_RANK_PERSISTENT | 0.0000 |
-| special_teams.fg_pct | 0.9268 | 0.8507 | 0.0691 | 17 | 220 | 0.8899 | 0.5672 | 0.5672 | 5 | 0.8710 | prior_season_only | NOT_RANK_PERSISTENT | 0.0000 |
-| special_teams.st_epa_per_play | 0.0897 | 0.0622 | 0.0928 | 17 | 220 | 0.0764 | 0.1524 | 0.1524 | 20 | 0.3871 | prior_season_only | RANK_PERSISTENT | 0.0000 |
-| team_defense.early_down_epa_per_play | -0.0793 | -0.0013 | 0.0639 | 17 | 1001 | -0.0415 | -0.6289 | 0.6289 | 3 | 0.9355 | prior_season_only | RANK_PERSISTENT | 0.0000 |
-| team_defense.epa_per_play | -0.0772 | 0.0046 | 0.0677 | 17 | 1001 | -0.0376 | -0.6223 | 0.6223 | 6 | 0.8387 | prior_season_only | RANK_PERSISTENT | 0.0000 |
-| team_defense.explosive_pass_rate | 0.0631 | 0.0797 | 0.0112 | 17 | 1001 | 0.0706 | -0.8087 | 0.8087 | 4 | 0.9032 | prior_season_only | NOT_RANK_PERSISTENT | 0.0000 |
-| team_defense.explosive_rush_rate | 0.1058 | 0.1000 | 0.0206 | 17 | 1001 | 0.1030 | 0.1467 | -0.1467 | 22 | 0.3226 | prior_season_only | RANK_PERSISTENT | 0.0000 |
-| team_defense.pass_epa_per_dropback | -0.0634 | 0.0361 | 0.0949 | 17 | 1001 | -0.0152 | -0.5406 | 0.5406 | 9 | 0.7419 | prior_season_only | RANK_PERSISTENT | 0.0000 |
-| team_defense.pass_success_rate | 0.4249 | 0.4536 | 0.0320 | 17 | 1001 | 0.4388 | -0.4618 | 0.4618 | 8 | 0.7742 | prior_season_only | RANK_PERSISTENT | 0.0000 |
-| team_defense.rush_epa_per_play | -0.1206 | -0.0760 | 0.0649 | 17 | 1001 | -0.1004 | -0.3762 | 0.3762 | 4 | 0.9032 | prior_season_only | NOT_RANK_PERSISTENT | 0.0000 |
-| team_defense.rush_success_rate | 0.3968 | 0.4020 | 0.0330 | 17 | 1001 | 0.3993 | -0.0805 | 0.0805 | 12 | 0.6452 | prior_season_only | RANK_PERSISTENT | 0.0000 |
-| team_defense.success_rate | 0.4156 | 0.4384 | 0.0255 | 17 | 1001 | 0.4266 | -0.4617 | 0.4617 | 5 | 0.8710 | prior_season_only | RANK_PERSISTENT | 0.0000 |
-| team_offense.early_down_epa_per_play | -0.0451 | -0.0054 | 0.0784 | 17 | 1125 | -0.0324 | -0.3449 | -0.3449 | 26 | 0.1935 | prior_season_only | UNVALIDATED_RANK_PERSISTENT | 0.0000 |
-| team_offense.epa_per_play | -0.0160 | -0.0001 | 0.0921 | 17 | 1125 | -0.0109 | -0.1173 | -0.1173 | 24 | 0.2581 | prior_season_only | VALIDATED_PERSISTENCE | 0.0000 |
-| team_offense.explosive_pass_rate | 0.0661 | 0.0796 | 0.0177 | 17 | 1125 | 0.0726 | -0.3920 | -0.3920 | 26 | 0.1935 | prior_season_only | RANK_PERSISTENT | 0.0000 |
-| team_offense.explosive_rush_rate | 0.0777 | 0.0990 | 0.0195 | 17 | 1125 | 0.0880 | -0.5629 | -0.5629 | 27 | 0.1613 | prior_season_only | NOT_RANK_PERSISTENT | 0.0000 |
-| team_offense.pass_epa_per_dropback | 0.0012 | 0.0308 | 0.1280 | 17 | 1125 | 0.0106 | -0.1574 | -0.1574 | 23 | 0.2903 | prior_season_only | UNVALIDATED_RANK_PERSISTENT | 0.0000 |
-| team_offense.pass_success_rate | 0.4523 | 0.4521 | 0.0418 | 17 | 1125 | 0.4522 | 0.0032 | 0.0032 | 16 | 0.5161 | prior_season_only | UNVALIDATED_RANK_PERSISTENT | 0.0000 |
-| team_offense.proe | -0.0216 | -0.0477 | 0.0349 | 17 | 1125 | -0.0265 | 0.6073 | 0.0000 | — | — | prior_season_only | VALIDATED_PERSISTENCE | 0.0000 |
-| team_offense.rush_epa_per_play | -0.0800 | -0.0806 | 0.0754 | 17 | 1125 | -0.0803 | 0.0038 | 0.0038 | 23 | 0.2903 | prior_season_only | RANK_PERSISTENT | 0.0000 |
-| team_offense.rush_success_rate | 0.3908 | 0.4004 | 0.0385 | 17 | 1125 | 0.3947 | -0.1460 | -0.1460 | 25 | 0.2258 | prior_season_only | RANK_PERSISTENT | 0.0000 |
-| team_offense.success_rate | 0.4356 | 0.4370 | 0.0337 | 17 | 1125 | 0.4358 | -0.0337 | -0.0337 | 20 | 0.3871 | prior_season_only | VALIDATED_PERSISTENCE | 0.0000 |
+| pass_protection.qb_hit_rate_allowed | 0.1143 | 0.1450 | 0.0327 | 1 | 35 | 0.1416 | -0.1043 | 0.1043 | 9 | 0.7419 | low | UNVALIDATED_RANK_PERSISTENT | -0.0416 |
+| pass_protection.rush_stuffed_rate_approx | 0.2500 | 0.2045 | 0.0323 | 1 | 35 | 0.2072 | 0.0827 | -0.0827 | 22 | 0.3065 | low | RANK_PERSISTENT | -0.0207 |
+| pass_protection.sack_rate_allowed | 0.0857 | 0.0664 | 0.0188 | 1 | 35 | 0.0686 | 0.1142 | -0.1142 | 24 | 0.2581 | low | UNVALIDATED_RANK_PERSISTENT | -0.0126 |
+| pass_rush.qb_hit_rate_generated | 0.1282 | 0.1442 | 0.0234 | 1 | 39 | 0.1432 | -0.0401 | -0.0401 | 19 | 0.4032 | low | RANK_PERSISTENT | -0.0040 |
+| pass_rush.sack_rate_generated | 0.0256 | 0.0660 | 0.0121 | 1 | 39 | 0.0634 | -0.2235 | -0.2235 | 26 | 0.1935 | low | NOT_RANK_PERSISTENT | -0.0086 |
+| special_teams.fg_pct | — | 0.8507 | 0.0691 | 1 | 11 | — | — | — | — | — | low | NOT_RANK_PERSISTENT | — |
+| special_teams.st_epa_per_play | -0.3890 | 0.0622 | 0.0928 | 1 | 11 | 0.0357 | -0.2859 | -0.2859 | 32 | 0.0000 | low | RANK_PERSISTENT | -0.0407 |
+| team_defense.early_down_epa_per_play | 0.1342 | -0.0013 | 0.0639 | 1 | 72 | 0.0067 | 0.1248 | -0.1248 | 24 | 0.2581 | low | RANK_PERSISTENT | 0.0481 |
+| team_defense.epa_per_play | 0.1391 | 0.0046 | 0.0677 | 1 | 72 | 0.0125 | 0.1168 | -0.1168 | 25 | 0.2258 | low | RANK_PERSISTENT | 0.0501 |
+| team_defense.explosive_pass_rate | 0.0513 | 0.0797 | 0.0112 | 1 | 72 | 0.0778 | -0.1688 | 0.1688 | 11 | 0.6774 | low | NOT_RANK_PERSISTENT | 0.0072 |
+| team_defense.explosive_rush_rate | 0.0667 | 0.1000 | 0.0206 | 1 | 72 | 0.0980 | -0.0951 | 0.0951 | 9 | 0.7097 | low | RANK_PERSISTENT | -0.0050 |
+| team_defense.pass_epa_per_dropback | 0.2891 | 0.0361 | 0.0949 | 1 | 72 | 0.0510 | 0.1568 | -0.1568 | 24 | 0.2581 | low | RANK_PERSISTENT | 0.0662 |
+| team_defense.pass_success_rate | 0.5641 | 0.4536 | 0.0320 | 1 | 72 | 0.4601 | 0.2028 | -0.2028 | 28 | 0.1290 | low | RANK_PERSISTENT | 0.0213 |
+| team_defense.rush_epa_per_play | -0.0443 | -0.0760 | 0.0649 | 1 | 72 | -0.0739 | 0.0325 | -0.0325 | 22 | 0.3226 | low | NOT_RANK_PERSISTENT | 0.0265 |
+| team_defense.rush_success_rate | 0.4000 | 0.4020 | 0.0330 | 1 | 72 | 0.4019 | -0.0035 | 0.0035 | 12 | 0.5968 | low | RANK_PERSISTENT | 0.0025 |
+| team_defense.success_rate | 0.4861 | 0.4384 | 0.0255 | 1 | 72 | 0.4412 | 0.1103 | -0.1103 | 27 | 0.1613 | low | RANK_PERSISTENT | 0.0146 |
+| team_offense.early_down_epa_per_play | -0.0516 | -0.0054 | 0.0784 | 1 | 55 | -0.0105 | -0.0655 | -0.0655 | 20 | 0.3871 | low | UNVALIDATED_RANK_PERSISTENT | 0.0219 |
+| team_offense.epa_per_play | -0.1668 | -0.0001 | 0.0921 | 1 | 55 | -0.0186 | -0.2011 | -0.2011 | 24 | 0.2581 | low | VALIDATED_PERSISTENCE | -0.0077 |
+| team_offense.explosive_pass_rate | 0.0571 | 0.0796 | 0.0177 | 1 | 55 | 0.0783 | -0.0744 | -0.0744 | 20 | 0.3871 | low | RANK_PERSISTENT | 0.0056 |
+| team_offense.explosive_rush_rate | 0.0625 | 0.0990 | 0.0195 | 1 | 55 | 0.0969 | -0.1100 | -0.1100 | 25 | 0.2258 | low | NOT_RANK_PERSISTENT | 0.0088 |
+| team_offense.pass_epa_per_dropback | -0.1907 | 0.0308 | 0.1280 | 1 | 55 | 0.0062 | -0.1923 | -0.1923 | 24 | 0.2581 | low | UNVALIDATED_RANK_PERSISTENT | -0.0045 |
+| team_offense.pass_success_rate | 0.4000 | 0.4521 | 0.0418 | 1 | 55 | 0.4463 | -0.1384 | -0.1384 | 23 | 0.2903 | low | UNVALIDATED_RANK_PERSISTENT | -0.0059 |
+| team_offense.proe | -0.0702 | -0.0477 | 0.0349 | 1 | 55 | -0.0522 | -0.1290 | -0.0000 | — | — | low | VALIDATED_PERSISTENCE | -0.0257 |
+| team_offense.rush_epa_per_play | -0.3604 | -0.0806 | 0.0754 | 1 | 55 | -0.0971 | -0.2184 | -0.2184 | 29 | 0.0968 | low | RANK_PERSISTENT | -0.0168 |
+| team_offense.rush_success_rate | 0.3750 | 0.4004 | 0.0385 | 1 | 55 | 0.3984 | -0.0507 | -0.0507 | 22 | 0.3226 | low | RANK_PERSISTENT | 0.0037 |
+| team_offense.success_rate | 0.4000 | 0.4370 | 0.0337 | 1 | 55 | 0.4296 | -0.2191 | -0.2191 | 24 | 0.2581 | low | VALIDATED_PERSISTENCE | -0.0063 |
 
 ## LV
-Record: no games yet · Points for/against: —/— · Point differential: — · Data confidence: prior_season_only
-Strongest area: **rushing_defense** (0.030) · Weakest area: **rushing_offense** (-1.441)
+Record: 1-0-0 · Points for/against: 27/13 · Point differential: 14 · Data confidence: low
+Strongest area: **pass_protection** (0.333) · Weakest area: **offense_overall** (-0.120)
 
 ### Domain indices
 | domain | label | index_value | rank_of_league | delta_vs_prev_week | delta_vs_preseason | min_confidence |
 | --- | --- | --- | --- | --- | --- | --- |
-| defense_overall | Defensive Strength Index | -0.070 | 16 | 0.000 | 0.000 | prior_season_only |
-| pass_rush | Pass-Rush Strength Index | -0.152 | 21 | 0.000 | 0.000 | prior_season_only |
-| passing_defense | Pass-Defense Strength Index | -0.412 | 23 | 0.000 | 0.000 | prior_season_only |
-| rushing_defense | Run-Defense Strength Index | 0.030 | 14 | 0.000 | 0.000 | prior_season_only |
-| offense_overall | Offensive Strength Index | -1.338 | 31 | 0.000 | 0.000 | prior_season_only |
-| pass_protection | Pass-Protection Strength Index | -1.192 | 31 | 0.000 | 0.000 | prior_season_only |
-| passing_offense | Passing-Offense Strength Index | -0.740 | 29 | 0.000 | 0.000 | prior_season_only |
-| rushing_offense | Rushing-Offense Strength Index | -1.441 | 32 | 0.000 | 0.000 | prior_season_only |
-| special_teams | Special-Teams Strength Index | -0.142 | 24 | 0.000 | 0.000 | prior_season_only |
+| defense_overall | Defensive Strength Index | 0.155 | 4 | 0.225 | 0.225 | low |
+| pass_rush | Pass-Rush Strength Index | 0.316 | 2 | 0.467 | 0.467 | low |
+| passing_defense | Pass-Defense Strength Index | 0.144 | 6 | 0.556 | 0.556 | low |
+| rushing_defense | Run-Defense Strength Index | 0.262 | 2 | 0.233 | 0.233 | low |
+| offense_overall | Offensive Strength Index | -0.120 | 19 | 1.217 | 1.217 | low |
+| pass_protection | Pass-Protection Strength Index | 0.333 | 3 | 1.525 | 1.525 | low |
+| passing_offense | Passing-Offense Strength Index | -0.088 | 23 | 0.652 | 0.652 | low |
+| rushing_offense | Rushing-Offense Strength Index | 0.023 | 17 | 1.464 | 1.464 | low |
+| special_teams | Special-Teams Strength Index | 0.247 | 2 | 0.390 | 0.390 | low |
 
 ### Underlying metrics
 | metric | raw_value | ref_mean | ref_sd | n_games | n_opportunities | shrunk_value | z_shrunk | oriented_z_shrunk | rank_of_league | percentile | confidence | phase3_status | delta_shrunk_vs_prev_week |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
-| pass_protection.qb_hit_rate_allowed | 0.1890 | 0.1450 | 0.0327 | 17 | 598 | 0.1749 | 0.9137 | -0.9137 | 27 | 0.1613 | prior_season_only | UNVALIDATED_RANK_PERSISTENT | 0.0000 |
-| pass_protection.rush_stuffed_rate_approx | 0.2886 | 0.2045 | 0.0323 | 17 | 598 | 0.2478 | 1.3382 | -1.3382 | 32 | 0.0000 | prior_season_only | RANK_PERSISTENT | 0.0000 |
-| pass_protection.sack_rate_allowed | 0.1070 | 0.0664 | 0.0188 | 17 | 598 | 0.0940 | 1.4706 | -1.4706 | 32 | 0.0000 | prior_season_only | UNVALIDATED_RANK_PERSISTENT | 0.0000 |
-| pass_rush.qb_hit_rate_generated | 0.1373 | 0.1442 | 0.0234 | 17 | 590 | 0.1406 | -0.1516 | -0.1516 | 22 | 0.3226 | prior_season_only | RANK_PERSISTENT | 0.0000 |
-| pass_rush.sack_rate_generated | 0.0627 | 0.0660 | 0.0121 | 17 | 590 | 0.0642 | -0.1517 | -0.1517 | 18 | 0.4516 | prior_season_only | NOT_RANK_PERSISTENT | 0.0000 |
-| special_teams.fg_pct | 0.8148 | 0.8507 | 0.0691 | 17 | 217 | 0.8322 | -0.2675 | -0.2675 | 25 | 0.2258 | prior_season_only | NOT_RANK_PERSISTENT | 0.0000 |
-| special_teams.st_epa_per_play | 0.0366 | 0.0622 | 0.0928 | 17 | 217 | 0.0490 | -0.1425 | -0.1425 | 24 | 0.2581 | prior_season_only | RANK_PERSISTENT | 0.0000 |
-| team_defense.early_down_epa_per_play | -0.0259 | -0.0013 | 0.0639 | 17 | 1096 | -0.0140 | -0.1984 | 0.1984 | 13 | 0.6129 | prior_season_only | RANK_PERSISTENT | 0.0000 |
-| team_defense.epa_per_play | 0.0304 | 0.0046 | 0.0677 | 17 | 1096 | 0.0179 | 0.1963 | -0.1963 | 20 | 0.3871 | prior_season_only | RANK_PERSISTENT | 0.0000 |
-| team_defense.explosive_pass_rate | 0.0627 | 0.0797 | 0.0112 | 17 | 1096 | 0.0704 | -0.8296 | 0.8296 | 3 | 0.9355 | prior_season_only | NOT_RANK_PERSISTENT | 0.0000 |
-| team_defense.explosive_rush_rate | 0.0977 | 0.1000 | 0.0206 | 17 | 1096 | 0.0988 | -0.0573 | 0.0573 | 19 | 0.4194 | prior_season_only | RANK_PERSISTENT | 0.0000 |
-| team_defense.pass_epa_per_dropback | 0.1057 | 0.0361 | 0.0949 | 17 | 1096 | 0.0719 | 0.3775 | -0.3775 | 23 | 0.2903 | prior_season_only | RANK_PERSISTENT | 0.0000 |
-| team_defense.pass_success_rate | 0.4814 | 0.4536 | 0.0320 | 17 | 1096 | 0.4679 | 0.4456 | -0.4456 | 22 | 0.3226 | prior_season_only | RANK_PERSISTENT | 0.0000 |
-| team_defense.rush_epa_per_play | -0.0902 | -0.0760 | 0.0649 | 17 | 1096 | -0.0838 | -0.1199 | 0.1199 | 13 | 0.6129 | prior_season_only | NOT_RANK_PERSISTENT | 0.0000 |
-| team_defense.rush_success_rate | 0.4076 | 0.4020 | 0.0330 | 17 | 1096 | 0.4049 | 0.0885 | -0.0885 | 15 | 0.5484 | prior_season_only | RANK_PERSISTENT | 0.0000 |
-| team_defense.success_rate | 0.4489 | 0.4384 | 0.0255 | 17 | 1096 | 0.4438 | 0.2127 | -0.2127 | 17 | 0.4839 | prior_season_only | RANK_PERSISTENT | 0.0000 |
-| team_offense.early_down_epa_per_play | -0.1635 | -0.0054 | 0.0784 | 17 | 982 | -0.1129 | -1.3715 | -1.3715 | 31 | 0.0323 | prior_season_only | UNVALIDATED_RANK_PERSISTENT | 0.0000 |
-| team_offense.epa_per_play | -0.1920 | -0.0001 | 0.0921 | 17 | 982 | -0.1306 | -1.4172 | -1.4172 | 32 | 0.0000 | prior_season_only | VALIDATED_PERSISTENCE | 0.0000 |
-| team_offense.explosive_pass_rate | 0.0619 | 0.0796 | 0.0177 | 17 | 982 | 0.0705 | -0.5142 | -0.5142 | 29 | 0.0968 | prior_season_only | RANK_PERSISTENT | 0.0000 |
-| team_offense.explosive_rush_rate | 0.0800 | 0.0990 | 0.0195 | 17 | 982 | 0.0892 | -0.5015 | -0.5015 | 24 | 0.2581 | prior_season_only | NOT_RANK_PERSISTENT | 0.0000 |
-| team_offense.pass_epa_per_dropback | -0.1658 | 0.0308 | 0.1280 | 17 | 982 | -0.1029 | -1.0446 | -1.0446 | 30 | 0.0645 | prior_season_only | UNVALIDATED_RANK_PERSISTENT | 0.0000 |
-| team_offense.pass_success_rate | 0.4114 | 0.4521 | 0.0418 | 17 | 982 | 0.4244 | -0.6619 | -0.6619 | 29 | 0.0968 | prior_season_only | UNVALIDATED_RANK_PERSISTENT | 0.0000 |
-| team_offense.proe | -0.0513 | -0.0477 | 0.0349 | 17 | 982 | -0.0506 | -0.0835 | -0.0000 | — | — | prior_season_only | VALIDATED_PERSISTENCE | 0.0000 |
-| team_offense.rush_epa_per_play | -0.3041 | -0.0806 | 0.0754 | 17 | 982 | -0.1958 | -1.5280 | -1.5280 | 32 | 0.0000 | prior_season_only | RANK_PERSISTENT | 0.0000 |
-| team_offense.rush_success_rate | 0.3114 | 0.4004 | 0.0385 | 17 | 982 | 0.3482 | -1.3535 | -1.3535 | 32 | 0.0000 | prior_season_only | RANK_PERSISTENT | 0.0000 |
-| team_offense.success_rate | 0.3859 | 0.4370 | 0.0337 | 17 | 982 | 0.3957 | -1.2240 | -1.2240 | 30 | 0.0645 | prior_season_only | VALIDATED_PERSISTENCE | 0.0000 |
+| pass_protection.qb_hit_rate_allowed | 0.0645 | 0.1450 | 0.0327 | 1 | 31 | 0.1361 | -0.2733 | 0.2733 | 4 | 0.9032 | low | UNVALIDATED_RANK_PERSISTENT | -0.0388 |
+| pass_protection.rush_stuffed_rate_approx | 0.2727 | 0.2045 | 0.0323 | 1 | 31 | 0.2085 | 0.1240 | -0.1240 | 27 | 0.1452 | low | RANK_PERSISTENT | -0.0393 |
+| pass_protection.sack_rate_allowed | 0.0000 | 0.0664 | 0.0188 | 1 | 31 | 0.0590 | -0.3929 | 0.3929 | 1 | 0.9355 | low | UNVALIDATED_RANK_PERSISTENT | -0.0350 |
+| pass_rush.qb_hit_rate_generated | 0.2432 | 0.1442 | 0.0234 | 1 | 37 | 0.1500 | 0.2490 | 0.2490 | 5 | 0.8710 | low | RANK_PERSISTENT | 0.0094 |
+| pass_rush.sack_rate_generated | 0.1351 | 0.0660 | 0.0121 | 1 | 37 | 0.0707 | 0.3822 | 0.3822 | 3 | 0.9355 | low | NOT_RANK_PERSISTENT | 0.0064 |
+| special_teams.fg_pct | 1.0000 | 0.8507 | 0.0691 | 1 | 11 | 0.8595 | 0.1270 | 0.1270 | 1 | 0.6481 | low | NOT_RANK_PERSISTENT | 0.0273 |
+| special_teams.st_epa_per_play | 0.4525 | 0.0622 | 0.0928 | 1 | 11 | 0.0852 | 0.2473 | 0.2473 | 2 | 0.9677 | low | RANK_PERSISTENT | 0.0362 |
+| team_defense.early_down_epa_per_play | -0.0413 | -0.0013 | 0.0639 | 1 | 55 | -0.0037 | -0.0368 | 0.0368 | 15 | 0.5484 | low | RANK_PERSISTENT | 0.0103 |
+| team_defense.epa_per_play | -0.2421 | 0.0046 | 0.0677 | 1 | 55 | -0.0099 | -0.2142 | 0.2142 | 4 | 0.9032 | low | RANK_PERSISTENT | -0.0278 |
+| team_defense.explosive_pass_rate | 0.1351 | 0.0797 | 0.0112 | 1 | 55 | 0.0834 | 0.3295 | -0.3295 | 28 | 0.1290 | low | NOT_RANK_PERSISTENT | 0.0130 |
+| team_defense.explosive_rush_rate | 0.0667 | 0.1000 | 0.0206 | 1 | 55 | 0.0980 | -0.0951 | 0.0951 | 9 | 0.7097 | low | RANK_PERSISTENT | -0.0008 |
+| team_defense.pass_epa_per_dropback | -0.2059 | 0.0361 | 0.0949 | 1 | 55 | 0.0219 | -0.1501 | 0.1501 | 8 | 0.7742 | low | RANK_PERSISTENT | -0.0501 |
+| team_defense.pass_success_rate | 0.3784 | 0.4536 | 0.0320 | 1 | 55 | 0.4492 | -0.1382 | 0.1382 | 4 | 0.9032 | low | RANK_PERSISTENT | -0.0187 |
+| team_defense.rush_epa_per_play | -0.3987 | -0.0760 | 0.0649 | 1 | 55 | -0.0975 | -0.3313 | 0.3313 | 3 | 0.9355 | low | NOT_RANK_PERSISTENT | -0.0137 |
+| team_defense.rush_success_rate | 0.2000 | 0.4020 | 0.0330 | 1 | 55 | 0.3901 | -0.3603 | 0.3603 | 1 | 1.0000 | low | RANK_PERSISTENT | -0.0148 |
+| team_defense.success_rate | 0.3455 | 0.4384 | 0.0255 | 1 | 55 | 0.4329 | -0.2148 | 0.2148 | 3 | 0.9355 | low | RANK_PERSISTENT | -0.0109 |
+| team_offense.early_down_epa_per_play | -0.2099 | -0.0054 | 0.0784 | 1 | 65 | -0.0281 | -0.2899 | -0.2899 | 30 | 0.0645 | low | UNVALIDATED_RANK_PERSISTENT | 0.0848 |
+| team_offense.epa_per_play | -0.0288 | -0.0001 | 0.0921 | 1 | 65 | -0.0033 | -0.0346 | -0.0346 | 20 | 0.3871 | low | VALIDATED_PERSISTENCE | 0.1273 |
+| team_offense.explosive_pass_rate | 0.0323 | 0.0796 | 0.0177 | 1 | 65 | 0.0768 | -0.1570 | -0.1570 | 24 | 0.2581 | low | RANK_PERSISTENT | 0.0063 |
+| team_offense.explosive_rush_rate | 0.1212 | 0.0990 | 0.0195 | 1 | 65 | 0.1003 | 0.0668 | 0.0668 | 9 | 0.7258 | low | NOT_RANK_PERSISTENT | 0.0111 |
+| team_offense.pass_epa_per_dropback | 0.0073 | 0.0308 | 0.1280 | 1 | 65 | 0.0282 | -0.0204 | -0.0204 | 19 | 0.4194 | low | UNVALIDATED_RANK_PERSISTENT | 0.1311 |
+| team_offense.pass_success_rate | 0.4194 | 0.4521 | 0.0418 | 1 | 65 | 0.4484 | -0.0869 | -0.0869 | 20 | 0.3871 | low | UNVALIDATED_RANK_PERSISTENT | 0.0240 |
+| team_offense.proe | -0.0713 | -0.0477 | 0.0349 | 1 | 65 | -0.0524 | -0.1355 | -0.0000 | — | — | low | VALIDATED_PERSISTENCE | -0.0018 |
+| team_offense.rush_epa_per_play | -0.0828 | -0.0806 | 0.0754 | 1 | 65 | -0.0807 | -0.0017 | -0.0017 | 16 | 0.5161 | low | RANK_PERSISTENT | 0.1150 |
+| team_offense.rush_success_rate | 0.4242 | 0.4004 | 0.0385 | 1 | 65 | 0.4022 | 0.0477 | 0.0477 | 13 | 0.6129 | low | RANK_PERSISTENT | 0.0540 |
+| team_offense.success_rate | 0.4308 | 0.4370 | 0.0337 | 1 | 65 | 0.4357 | -0.0367 | -0.0367 | 19 | 0.4194 | low | VALIDATED_PERSISTENCE | 0.0401 |
 
 ## MIA
-Record: no games yet · Points for/against: —/— · Point differential: — · Data confidence: prior_season_only
-Strongest area: **special_teams** (0.771) · Weakest area: **passing_defense** (-0.941)
+Record: 0-1-0 · Points for/against: 13/27 · Point differential: -14 · Data confidence: low
+Strongest area: **defense_overall** (0.080) · Weakest area: **pass_protection** (-0.370)
 
 ### Domain indices
 | domain | label | index_value | rank_of_league | delta_vs_prev_week | delta_vs_preseason | min_confidence |
 | --- | --- | --- | --- | --- | --- | --- |
-| defense_overall | Defensive Strength Index | -0.721 | 27 | 0.000 | 0.000 | prior_season_only |
-| pass_rush | Pass-Rush Strength Index | -0.191 | 22 | 0.000 | 0.000 | prior_season_only |
-| passing_defense | Pass-Defense Strength Index | -0.941 | 30 | 0.000 | 0.000 | prior_season_only |
-| rushing_defense | Run-Defense Strength Index | -0.351 | 25 | 0.000 | 0.000 | prior_season_only |
-| offense_overall | Offensive Strength Index | -0.105 | 22 | 0.000 | 0.000 | prior_season_only |
-| pass_protection | Pass-Protection Strength Index | 0.136 | 17 | 0.000 | 0.000 | prior_season_only |
-| passing_offense | Passing-Offense Strength Index | -0.150 | 21 | 0.000 | 0.000 | prior_season_only |
-| rushing_offense | Rushing-Offense Strength Index | 0.201 | 14 | 0.000 | 0.000 | prior_season_only |
-| special_teams | Special-Teams Strength Index | 0.771 | 3 | 0.000 | 0.000 | prior_season_only |
+| defense_overall | Defensive Strength Index | 0.080 | 13 | 0.801 | 0.801 | low |
+| pass_rush | Pass-Rush Strength Index | -0.283 | 30 | -0.091 | -0.091 | low |
+| passing_defense | Pass-Defense Strength Index | 0.040 | 14 | 0.981 | 0.981 | low |
+| rushing_defense | Run-Defense Strength Index | -0.031 | 19 | 0.320 | 0.320 | low |
+| offense_overall | Offensive Strength Index | -0.295 | 29 | -0.190 | -0.190 | low |
+| pass_protection | Pass-Protection Strength Index | -0.370 | 31 | -0.507 | -0.507 | low |
+| passing_offense | Passing-Offense Strength Index | -0.072 | 21 | 0.078 | 0.078 | low |
+| rushing_offense | Rushing-Offense Strength Index | -0.324 | 32 | -0.526 | -0.526 | low |
+| special_teams | Special-Teams Strength Index | -0.093 | 26 | -0.864 | -0.864 | low |
 
 ### Underlying metrics
 | metric | raw_value | ref_mean | ref_sd | n_games | n_opportunities | shrunk_value | z_shrunk | oriented_z_shrunk | rank_of_league | percentile | confidence | phase3_status | delta_shrunk_vs_prev_week |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
-| pass_protection.qb_hit_rate_allowed | 0.1226 | 0.1450 | 0.0327 | 17 | 530 | 0.1298 | -0.4646 | 0.4646 | 10 | 0.7097 | prior_season_only | UNVALIDATED_RANK_PERSISTENT | 0.0000 |
-| pass_protection.rush_stuffed_rate_approx | 0.2295 | 0.2045 | 0.0323 | 17 | 530 | 0.2174 | 0.3971 | -0.3971 | 25 | 0.2258 | prior_season_only | RANK_PERSISTENT | 0.0000 |
-| pass_protection.sack_rate_allowed | 0.0717 | 0.0664 | 0.0188 | 17 | 530 | 0.0700 | 0.1916 | -0.1916 | 21 | 0.3548 | prior_season_only | UNVALIDATED_RANK_PERSISTENT | 0.0000 |
-| pass_rush.qb_hit_rate_generated | 0.1269 | 0.1442 | 0.0234 | 17 | 591 | 0.1353 | -0.3802 | -0.3802 | 28 | 0.1290 | prior_season_only | RANK_PERSISTENT | 0.0000 |
-| pass_rush.sack_rate_generated | 0.0660 | 0.0660 | 0.0121 | 17 | 591 | 0.0660 | -0.0026 | -0.0026 | 16 | 0.5161 | prior_season_only | NOT_RANK_PERSISTENT | 0.0000 |
-| special_teams.fg_pct | 0.9310 | 0.8507 | 0.0691 | 17 | 214 | 0.8921 | 0.5985 | 0.5985 | 4 | 0.9032 | prior_season_only | NOT_RANK_PERSISTENT | 0.0000 |
-| special_teams.st_epa_per_play | 0.2012 | 0.0622 | 0.0928 | 17 | 214 | 0.1338 | 0.7710 | 0.7710 | 3 | 0.9355 | prior_season_only | RANK_PERSISTENT | 0.0000 |
-| team_defense.early_down_epa_per_play | 0.0790 | -0.0013 | 0.0639 | 17 | 1055 | 0.0401 | 0.6480 | -0.6480 | 26 | 0.1935 | prior_season_only | RANK_PERSISTENT | 0.0000 |
-| team_defense.epa_per_play | 0.0866 | 0.0046 | 0.0677 | 17 | 1055 | 0.0469 | 0.6238 | -0.6238 | 25 | 0.2258 | prior_season_only | RANK_PERSISTENT | 0.0000 |
-| team_defense.explosive_pass_rate | 0.0846 | 0.0797 | 0.0112 | 17 | 1055 | 0.0824 | 0.2405 | -0.2405 | 23 | 0.2903 | prior_season_only | NOT_RANK_PERSISTENT | 0.0000 |
-| team_defense.explosive_rush_rate | 0.1186 | 0.1000 | 0.0206 | 17 | 1055 | 0.1096 | 0.4664 | -0.4664 | 28 | 0.1290 | prior_season_only | RANK_PERSISTENT | 0.0000 |
-| team_defense.pass_epa_per_dropback | 0.1727 | 0.0361 | 0.0949 | 17 | 1055 | 0.1065 | 0.7415 | -0.7415 | 27 | 0.1613 | prior_season_only | RANK_PERSISTENT | 0.0000 |
-| team_defense.pass_success_rate | 0.5245 | 0.4536 | 0.0320 | 17 | 1055 | 0.4902 | 1.1399 | -1.1399 | 32 | 0.0000 | prior_season_only | RANK_PERSISTENT | 0.0000 |
-| team_defense.rush_epa_per_play | -0.0459 | -0.0760 | 0.0649 | 17 | 1055 | -0.0595 | 0.2541 | -0.2541 | 19 | 0.4194 | prior_season_only | NOT_RANK_PERSISTENT | 0.0000 |
-| team_defense.rush_success_rate | 0.4233 | 0.4020 | 0.0330 | 17 | 1055 | 0.4129 | 0.3324 | -0.3324 | 21 | 0.3548 | prior_season_only | RANK_PERSISTENT | 0.0000 |
-| team_defense.success_rate | 0.4825 | 0.4384 | 0.0255 | 17 | 1055 | 0.4611 | 0.8919 | -0.8919 | 29 | 0.0968 | prior_season_only | RANK_PERSISTENT | 0.0000 |
-| team_offense.early_down_epa_per_play | 0.0203 | -0.0054 | 0.0784 | 17 | 969 | 0.0121 | 0.2224 | 0.2224 | 17 | 0.4839 | prior_season_only | UNVALIDATED_RANK_PERSISTENT | 0.0000 |
-| team_offense.epa_per_play | -0.0212 | -0.0001 | 0.0921 | 17 | 969 | -0.0145 | -0.1559 | -0.1559 | 25 | 0.2258 | prior_season_only | VALIDATED_PERSISTENCE | 0.0000 |
-| team_offense.explosive_pass_rate | 0.0811 | 0.0796 | 0.0177 | 17 | 969 | 0.0804 | 0.0452 | 0.0452 | 14 | 0.5806 | prior_season_only | RANK_PERSISTENT | 0.0000 |
-| team_offense.explosive_rush_rate | 0.1329 | 0.0990 | 0.0195 | 17 | 969 | 0.1164 | 0.8923 | 0.8923 | 1 | 1.0000 | prior_season_only | NOT_RANK_PERSISTENT | 0.0000 |
-| team_offense.pass_epa_per_dropback | -0.0070 | 0.0308 | 0.1280 | 17 | 969 | 0.0051 | -0.2005 | -0.2005 | 24 | 0.2581 | prior_season_only | UNVALIDATED_RANK_PERSISTENT | 0.0000 |
-| team_offense.pass_success_rate | 0.4340 | 0.4521 | 0.0418 | 17 | 969 | 0.4398 | -0.2946 | -0.2946 | 26 | 0.1935 | prior_season_only | UNVALIDATED_RANK_PERSISTENT | 0.0000 |
-| team_offense.proe | -0.0779 | -0.0477 | 0.0349 | 17 | 969 | -0.0722 | -0.7019 | -0.0000 | — | — | prior_season_only | VALIDATED_PERSISTENCE | 0.0000 |
-| team_offense.rush_epa_per_play | -0.0284 | -0.0806 | 0.0754 | 17 | 969 | -0.0537 | 0.3568 | 0.3568 | 9 | 0.7419 | prior_season_only | RANK_PERSISTENT | 0.0000 |
-| team_offense.rush_success_rate | 0.4034 | 0.4004 | 0.0385 | 17 | 969 | 0.4021 | 0.0459 | 0.0459 | 20 | 0.3871 | prior_season_only | RANK_PERSISTENT | 0.0000 |
-| team_offense.success_rate | 0.4211 | 0.4370 | 0.0337 | 17 | 969 | 0.4241 | -0.3817 | -0.3817 | 27 | 0.1613 | prior_season_only | VALIDATED_PERSISTENCE | 0.0000 |
+| pass_protection.qb_hit_rate_allowed | 0.2432 | 0.1450 | 0.0327 | 1 | 37 | 0.1559 | 0.3336 | -0.3336 | 28 | 0.1290 | low | UNVALIDATED_RANK_PERSISTENT | 0.0261 |
+| pass_protection.rush_stuffed_rate_approx | 0.4000 | 0.2045 | 0.0323 | 1 | 37 | 0.2160 | 0.3554 | -0.3554 | 32 | 0.0000 | low | RANK_PERSISTENT | -0.0013 |
+| pass_protection.sack_rate_allowed | 0.1351 | 0.0664 | 0.0188 | 1 | 37 | 0.0740 | 0.4066 | -0.4066 | 30 | 0.0645 | low | UNVALIDATED_RANK_PERSISTENT | 0.0040 |
+| pass_rush.qb_hit_rate_generated | 0.0645 | 0.1442 | 0.0234 | 1 | 31 | 0.1395 | -0.2002 | -0.2002 | 29 | 0.0968 | low | RANK_PERSISTENT | 0.0042 |
+| pass_rush.sack_rate_generated | 0.0000 | 0.0660 | 0.0121 | 1 | 31 | 0.0616 | -0.3654 | -0.3654 | 28 | 0.0645 | low | NOT_RANK_PERSISTENT | -0.0044 |
+| special_teams.fg_pct | 0.6667 | 0.8507 | 0.0691 | 1 | 14 | 0.8399 | -0.1566 | -0.1566 | 23 | 0.1481 | low | NOT_RANK_PERSISTENT | -0.0522 |
+| special_teams.st_epa_per_play | -0.0850 | 0.0622 | 0.0928 | 1 | 14 | 0.0536 | -0.0933 | -0.0933 | 26 | 0.1935 | low | RANK_PERSISTENT | -0.0802 |
+| team_defense.early_down_epa_per_play | -0.2099 | -0.0013 | 0.0639 | 1 | 65 | -0.0136 | -0.1921 | 0.1921 | 3 | 0.9355 | low | RANK_PERSISTENT | -0.0537 |
+| team_defense.epa_per_play | -0.0288 | 0.0046 | 0.0677 | 1 | 65 | 0.0026 | -0.0290 | 0.0290 | 13 | 0.6129 | low | RANK_PERSISTENT | -0.0442 |
+| team_defense.explosive_pass_rate | 0.0323 | 0.0797 | 0.0112 | 1 | 65 | 0.0765 | -0.2818 | 0.2818 | 9 | 0.7419 | low | NOT_RANK_PERSISTENT | -0.0059 |
+| team_defense.explosive_rush_rate | 0.1212 | 0.1000 | 0.0206 | 1 | 65 | 0.1012 | 0.0607 | -0.0607 | 23 | 0.2742 | low | RANK_PERSISTENT | -0.0084 |
+| team_defense.pass_epa_per_dropback | 0.0073 | 0.0361 | 0.0949 | 1 | 65 | 0.0344 | -0.0179 | 0.0179 | 14 | 0.5806 | low | RANK_PERSISTENT | -0.0720 |
+| team_defense.pass_success_rate | 0.4194 | 0.4536 | 0.0320 | 1 | 65 | 0.4516 | -0.0629 | 0.0629 | 13 | 0.6129 | low | RANK_PERSISTENT | -0.0385 |
+| team_defense.rush_epa_per_play | -0.0828 | -0.0760 | 0.0649 | 1 | 65 | -0.0765 | -0.0070 | 0.0070 | 17 | 0.4839 | low | NOT_RANK_PERSISTENT | -0.0170 |
+| team_defense.rush_success_rate | 0.4242 | 0.4020 | 0.0330 | 1 | 65 | 0.4033 | 0.0397 | -0.0397 | 20 | 0.3871 | low | RANK_PERSISTENT | -0.0097 |
+| team_defense.success_rate | 0.4308 | 0.4384 | 0.0255 | 1 | 65 | 0.4379 | -0.0176 | 0.0176 | 14 | 0.5806 | low | RANK_PERSISTENT | -0.0232 |
+| team_offense.early_down_epa_per_play | -0.0413 | -0.0054 | 0.0784 | 1 | 55 | -0.0094 | -0.0509 | -0.0509 | 18 | 0.4516 | low | UNVALIDATED_RANK_PERSISTENT | -0.0214 |
+| team_offense.epa_per_play | -0.2421 | -0.0001 | 0.0921 | 1 | 55 | -0.0270 | -0.2919 | -0.2919 | 29 | 0.0968 | low | VALIDATED_PERSISTENCE | -0.0125 |
+| team_offense.explosive_pass_rate | 0.1351 | 0.0796 | 0.0177 | 1 | 55 | 0.0828 | 0.1843 | 0.1843 | 5 | 0.8710 | low | RANK_PERSISTENT | 0.0025 |
+| team_offense.explosive_rush_rate | 0.0667 | 0.0990 | 0.0195 | 1 | 55 | 0.0971 | -0.0974 | -0.0974 | 22 | 0.2903 | low | NOT_RANK_PERSISTENT | -0.0193 |
+| team_offense.pass_epa_per_dropback | -0.2059 | 0.0308 | 0.1280 | 1 | 55 | 0.0045 | -0.2055 | -0.2055 | 25 | 0.2258 | low | UNVALIDATED_RANK_PERSISTENT | -0.0006 |
+| team_offense.pass_success_rate | 0.3784 | 0.4521 | 0.0418 | 1 | 55 | 0.4439 | -0.1958 | -0.1958 | 29 | 0.0968 | low | UNVALIDATED_RANK_PERSISTENT | 0.0041 |
+| team_offense.proe | -0.0812 | -0.0477 | 0.0349 | 1 | 55 | -0.0544 | -0.1922 | -0.0000 | — | — | low | VALIDATED_PERSISTENCE | 0.0178 |
+| team_offense.rush_epa_per_play | -0.3987 | -0.0806 | 0.0754 | 1 | 55 | -0.0993 | -0.2483 | -0.2483 | 30 | 0.0645 | low | RANK_PERSISTENT | -0.0456 |
+| team_offense.rush_success_rate | 0.2000 | 0.4004 | 0.0385 | 1 | 55 | 0.3850 | -0.4001 | -0.4001 | 32 | 0.0000 | low | RANK_PERSISTENT | -0.0172 |
+| team_offense.success_rate | 0.3455 | 0.4370 | 0.0337 | 1 | 55 | 0.4187 | -0.5425 | -0.5425 | 30 | 0.0645 | low | VALIDATED_PERSISTENCE | -0.0054 |
 
 ## MIN
-Record: no games yet · Points for/against: —/— · Point differential: — · Data confidence: prior_season_only
-Strongest area: **pass_rush** (1.026) · Weakest area: **pass_protection** (-1.414)
+Record: 1-0-0 · Points for/against: 39/22 · Point differential: 17 · Data confidence: low
+Strongest area: **pass_rush** (0.286) · Weakest area: **offense_overall** (-0.225)
 
 ### Domain indices
 | domain | label | index_value | rank_of_league | delta_vs_prev_week | delta_vs_preseason | min_confidence |
 | --- | --- | --- | --- | --- | --- | --- |
-| defense_overall | Defensive Strength Index | 0.621 | 4 | 0.000 | 0.000 | prior_season_only |
-| pass_rush | Pass-Rush Strength Index | 1.026 | 3 | 0.000 | 0.000 | prior_season_only |
-| passing_defense | Pass-Defense Strength Index | 0.876 | 3 | 0.000 | 0.000 | prior_season_only |
-| rushing_defense | Run-Defense Strength Index | 0.023 | 15 | 0.000 | 0.000 | prior_season_only |
-| offense_overall | Offensive Strength Index | -0.394 | 28 | 0.000 | 0.000 | prior_season_only |
-| pass_protection | Pass-Protection Strength Index | -1.414 | 32 | 0.000 | 0.000 | prior_season_only |
-| passing_offense | Passing-Offense Strength Index | -0.622 | 28 | 0.000 | 0.000 | prior_season_only |
-| rushing_offense | Rushing-Offense Strength Index | 0.340 | 10 | 0.000 | 0.000 | prior_season_only |
-| special_teams | Special-Teams Strength Index | 0.320 | 14 | 0.000 | 0.000 | prior_season_only |
+| defense_overall | Defensive Strength Index | 0.064 | 14 | -0.558 | -0.558 | low |
+| pass_rush | Pass-Rush Strength Index | 0.286 | 4 | -0.739 | -0.739 | low |
+| passing_defense | Pass-Defense Strength Index | 0.067 | 10 | -0.809 | -0.809 | low |
+| rushing_defense | Run-Defense Strength Index | 0.182 | 3 | 0.159 | 0.159 | low |
+| offense_overall | Offensive Strength Index | -0.225 | 27 | 0.168 | 0.168 | low |
+| pass_protection | Pass-Protection Strength Index | -0.136 | 24 | 1.277 | 1.277 | low |
+| passing_offense | Passing-Offense Strength Index | -0.123 | 25 | 0.498 | 0.498 | low |
+| rushing_offense | Rushing-Offense Strength Index | -0.096 | 23 | -0.436 | -0.436 | low |
+| special_teams | Special-Teams Strength Index | 0.089 | 15 | -0.231 | -0.231 | low |
 
 ### Underlying metrics
 | metric | raw_value | ref_mean | ref_sd | n_games | n_opportunities | shrunk_value | z_shrunk | oriented_z_shrunk | rank_of_league | percentile | confidence | phase3_status | delta_shrunk_vs_prev_week |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
-| pass_protection.qb_hit_rate_allowed | 0.2137 | 0.1450 | 0.0327 | 17 | 571 | 0.1917 | 1.4269 | -1.4269 | 32 | 0.0000 | prior_season_only | UNVALIDATED_RANK_PERSISTENT | 0.0000 |
-| pass_protection.rush_stuffed_rate_approx | 0.1958 | 0.2045 | 0.0323 | 17 | 571 | 0.2000 | -0.1396 | 0.1396 | 18 | 0.4516 | prior_season_only | RANK_PERSISTENT | 0.0000 |
-| pass_protection.sack_rate_allowed | 0.1051 | 0.0664 | 0.0188 | 17 | 571 | 0.0927 | 1.4002 | -1.4002 | 31 | 0.0323 | prior_season_only | UNVALIDATED_RANK_PERSISTENT | 0.0000 |
-| pass_rush.qb_hit_rate_generated | 0.1810 | 0.1442 | 0.0234 | 17 | 525 | 0.1631 | 0.8096 | 0.8096 | 3 | 0.9355 | prior_season_only | RANK_PERSISTENT | 0.0000 |
-| pass_rush.sack_rate_generated | 0.0933 | 0.0660 | 0.0121 | 17 | 525 | 0.0810 | 1.2416 | 1.2416 | 3 | 0.9355 | prior_season_only | NOT_RANK_PERSISTENT | 0.0000 |
-| special_teams.fg_pct | 0.9429 | 0.8507 | 0.0691 | 17 | 214 | 0.8982 | 0.6866 | 0.6866 | 3 | 0.9355 | prior_season_only | NOT_RANK_PERSISTENT | 0.0000 |
-| special_teams.st_epa_per_play | 0.1200 | 0.0622 | 0.0928 | 17 | 214 | 0.0920 | 0.3204 | 0.3204 | 14 | 0.5806 | prior_season_only | RANK_PERSISTENT | 0.0000 |
-| team_defense.early_down_epa_per_play | -0.0904 | -0.0013 | 0.0639 | 17 | 1060 | -0.0472 | -0.7188 | 0.7188 | 2 | 0.9677 | prior_season_only | RANK_PERSISTENT | 0.0000 |
-| team_defense.epa_per_play | -0.0866 | 0.0046 | 0.0677 | 17 | 1060 | -0.0424 | -0.6931 | 0.6931 | 3 | 0.9355 | prior_season_only | RANK_PERSISTENT | 0.0000 |
-| team_defense.explosive_pass_rate | 0.0610 | 0.0797 | 0.0112 | 17 | 1060 | 0.0694 | -0.9156 | 0.9156 | 2 | 0.9677 | prior_season_only | NOT_RANK_PERSISTENT | 0.0000 |
-| team_defense.explosive_rush_rate | 0.0906 | 0.1000 | 0.0206 | 17 | 1060 | 0.0951 | -0.2352 | 0.2352 | 14 | 0.5806 | prior_season_only | RANK_PERSISTENT | 0.0000 |
-| team_defense.pass_epa_per_dropback | -0.1220 | 0.0361 | 0.0949 | 17 | 1060 | -0.0453 | -0.8585 | 0.8585 | 2 | 0.9677 | prior_season_only | RANK_PERSISTENT | 0.0000 |
-| team_defense.pass_success_rate | 0.3981 | 0.4536 | 0.0320 | 17 | 1060 | 0.4250 | -0.8930 | 0.8930 | 3 | 0.9355 | prior_season_only | RANK_PERSISTENT | 0.0000 |
-| team_defense.rush_epa_per_play | -0.0849 | -0.0760 | 0.0649 | 17 | 1060 | -0.0809 | -0.0747 | 0.0747 | 14 | 0.5806 | prior_season_only | NOT_RANK_PERSISTENT | 0.0000 |
-| team_defense.rush_success_rate | 0.4173 | 0.4020 | 0.0330 | 17 | 1060 | 0.4099 | 0.2397 | -0.2397 | 20 | 0.3871 | prior_season_only | RANK_PERSISTENT | 0.0000 |
-| team_defense.success_rate | 0.4160 | 0.4384 | 0.0255 | 17 | 1060 | 0.4269 | -0.4525 | 0.4525 | 6 | 0.8387 | prior_season_only | RANK_PERSISTENT | 0.0000 |
-| team_offense.early_down_epa_per_play | -0.0499 | -0.0054 | 0.0784 | 17 | 982 | -0.0356 | -0.3861 | -0.3861 | 28 | 0.1290 | prior_season_only | UNVALIDATED_RANK_PERSISTENT | 0.0000 |
-| team_offense.epa_per_play | -0.0943 | -0.0001 | 0.0921 | 17 | 982 | -0.0642 | -0.6952 | -0.6952 | 28 | 0.1290 | prior_season_only | VALIDATED_PERSISTENCE | 0.0000 |
-| team_offense.explosive_pass_rate | 0.0683 | 0.0796 | 0.0177 | 17 | 982 | 0.0738 | -0.3275 | -0.3275 | 25 | 0.2258 | prior_season_only | RANK_PERSISTENT | 0.0000 |
-| team_offense.explosive_rush_rate | 0.1138 | 0.0990 | 0.0195 | 17 | 982 | 0.1066 | 0.3887 | 0.3887 | 7 | 0.8065 | prior_season_only | NOT_RANK_PERSISTENT | 0.0000 |
-| team_offense.pass_epa_per_dropback | -0.1560 | 0.0308 | 0.1280 | 17 | 982 | -0.0962 | -0.9926 | -0.9926 | 29 | 0.0968 | prior_season_only | UNVALIDATED_RANK_PERSISTENT | 0.0000 |
-| team_offense.pass_success_rate | 0.4186 | 0.4521 | 0.0418 | 17 | 982 | 0.4293 | -0.5449 | -0.5449 | 28 | 0.1290 | prior_season_only | UNVALIDATED_RANK_PERSISTENT | 0.0000 |
-| team_offense.proe | -0.0382 | -0.0477 | 0.0349 | 17 | 982 | -0.0400 | 0.2200 | 0.0000 | — | — | prior_season_only | VALIDATED_PERSISTENCE | 0.0000 |
-| team_offense.rush_epa_per_play | -0.0616 | -0.0806 | 0.0754 | 17 | 982 | -0.0708 | 0.1298 | 0.1298 | 15 | 0.5484 | prior_season_only | RANK_PERSISTENT | 0.0000 |
-| team_offense.rush_success_rate | 0.4365 | 0.4004 | 0.0385 | 17 | 982 | 0.4216 | 0.5500 | 0.5500 | 8 | 0.7742 | prior_season_only | RANK_PERSISTENT | 0.0000 |
-| team_offense.success_rate | 0.4328 | 0.4370 | 0.0337 | 17 | 982 | 0.4336 | -0.1000 | -0.1000 | 22 | 0.3226 | prior_season_only | VALIDATED_PERSISTENCE | 0.0000 |
+| pass_protection.qb_hit_rate_allowed | 0.1667 | 0.1450 | 0.0327 | 1 | 30 | 0.1474 | 0.0736 | -0.0736 | 22 | 0.3065 | low | UNVALIDATED_RANK_PERSISTENT | -0.0443 |
+| pass_protection.rush_stuffed_rate_approx | 0.1786 | 0.2045 | 0.0323 | 1 | 30 | 0.2030 | -0.0472 | 0.0472 | 13 | 0.6129 | low | RANK_PERSISTENT | 0.0030 |
+| pass_protection.sack_rate_allowed | 0.1000 | 0.0664 | 0.0188 | 1 | 30 | 0.0701 | 0.1987 | -0.1987 | 27 | 0.1613 | low | UNVALIDATED_RANK_PERSISTENT | -0.0226 |
+| pass_rush.qb_hit_rate_generated | 0.3261 | 0.1442 | 0.0234 | 1 | 46 | 0.1549 | 0.4572 | 0.4572 | 1 | 1.0000 | low | RANK_PERSISTENT | -0.0082 |
+| pass_rush.sack_rate_generated | 0.0870 | 0.0660 | 0.0121 | 1 | 46 | 0.0674 | 0.1157 | 0.1157 | 8 | 0.7742 | low | NOT_RANK_PERSISTENT | -0.0136 |
+| special_teams.fg_pct | 1.0000 | 0.8507 | 0.0691 | 1 | 15 | 0.8595 | 0.1270 | 0.1270 | 1 | 0.6481 | low | NOT_RANK_PERSISTENT | -0.0387 |
+| special_teams.st_epa_per_play | 0.2031 | 0.0622 | 0.0928 | 1 | 15 | 0.0705 | 0.0893 | 0.0893 | 15 | 0.5484 | low | RANK_PERSISTENT | -0.0215 |
+| team_defense.early_down_epa_per_play | 0.1076 | -0.0013 | 0.0639 | 1 | 68 | 0.0051 | 0.1003 | -0.1003 | 23 | 0.2903 | low | RANK_PERSISTENT | 0.0523 |
+| team_defense.epa_per_play | -0.1813 | 0.0046 | 0.0677 | 1 | 68 | -0.0063 | -0.1614 | 0.1614 | 8 | 0.7742 | low | RANK_PERSISTENT | 0.0360 |
+| team_defense.explosive_pass_rate | 0.1522 | 0.0797 | 0.0112 | 1 | 68 | 0.0845 | 0.4308 | -0.4308 | 29 | 0.0968 | low | NOT_RANK_PERSISTENT | 0.0151 |
+| team_defense.explosive_rush_rate | 0.0909 | 0.1000 | 0.0206 | 1 | 68 | 0.0994 | -0.0258 | 0.0258 | 16 | 0.5000 | low | RANK_PERSISTENT | 0.0043 |
+| team_defense.pass_epa_per_dropback | -0.0588 | 0.0361 | 0.0949 | 1 | 68 | 0.0305 | -0.0588 | 0.0588 | 11 | 0.6774 | low | RANK_PERSISTENT | 0.0759 |
+| team_defense.pass_success_rate | 0.4130 | 0.4536 | 0.0320 | 1 | 68 | 0.4513 | -0.0745 | 0.0745 | 11 | 0.6774 | low | RANK_PERSISTENT | 0.0262 |
+| team_defense.rush_epa_per_play | -0.4376 | -0.0760 | 0.0649 | 1 | 68 | -0.1001 | -0.3711 | 0.3711 | 2 | 0.9677 | low | NOT_RANK_PERSISTENT | -0.0193 |
+| team_defense.rush_success_rate | 0.3182 | 0.4020 | 0.0330 | 1 | 68 | 0.3970 | -0.1495 | 0.1495 | 9 | 0.7419 | low | RANK_PERSISTENT | -0.0128 |
+| team_defense.success_rate | 0.3824 | 0.4384 | 0.0255 | 1 | 68 | 0.4351 | -0.1295 | 0.1295 | 7 | 0.8065 | low | RANK_PERSISTENT | 0.0082 |
+| team_offense.early_down_epa_per_play | -0.2792 | -0.0054 | 0.0784 | 1 | 61 | -0.0358 | -0.3881 | -0.3881 | 32 | 0.0000 | low | UNVALIDATED_RANK_PERSISTENT | -0.0002 |
+| team_offense.epa_per_play | 0.0553 | -0.0001 | 0.0921 | 1 | 61 | 0.0060 | 0.0669 | 0.0669 | 14 | 0.5806 | low | VALIDATED_PERSISTENCE | 0.0702 |
+| team_offense.explosive_pass_rate | 0.0333 | 0.0796 | 0.0177 | 1 | 61 | 0.0769 | -0.1534 | -0.1534 | 23 | 0.2903 | low | RANK_PERSISTENT | 0.0031 |
+| team_offense.explosive_rush_rate | 0.0357 | 0.0990 | 0.0195 | 1 | 61 | 0.0953 | -0.1906 | -0.1906 | 31 | 0.0323 | low | NOT_RANK_PERSISTENT | -0.0113 |
+| team_offense.pass_epa_per_dropback | 0.0426 | 0.0308 | 0.1280 | 1 | 61 | 0.0321 | 0.0103 | 0.0103 | 16 | 0.5161 | low | UNVALIDATED_RANK_PERSISTENT | 0.1283 |
+| team_offense.pass_success_rate | 0.3667 | 0.4521 | 0.0418 | 1 | 61 | 0.4426 | -0.2269 | -0.2269 | 30 | 0.0645 | low | UNVALIDATED_RANK_PERSISTENT | 0.0133 |
+| team_offense.proe | -0.1288 | -0.0477 | 0.0349 | 1 | 61 | -0.0639 | -0.4652 | -0.0000 | — | — | low | VALIDATED_PERSISTENCE | -0.0239 |
+| team_offense.rush_epa_per_play | -0.1245 | -0.0806 | 0.0754 | 1 | 61 | -0.0832 | -0.0343 | -0.0343 | 22 | 0.3226 | low | RANK_PERSISTENT | -0.0124 |
+| team_offense.rush_success_rate | 0.3214 | 0.4004 | 0.0385 | 1 | 61 | 0.3943 | -0.1576 | -0.1576 | 23 | 0.2903 | low | RANK_PERSISTENT | -0.0273 |
+| team_offense.success_rate | 0.3770 | 0.4370 | 0.0337 | 1 | 61 | 0.4250 | -0.3552 | -0.3552 | 27 | 0.1613 | low | VALIDATED_PERSISTENCE | -0.0086 |
 
 ## NE
-Record: no games yet · Points for/against: —/— · Point differential: — · Data confidence: prior_season_only
-Strongest area: **passing_offense** (1.316) · Weakest area: **pass_protection** (-0.217)
+Record: 0-1-0 · Points for/against: 10/13 · Point differential: -3 · Data confidence: low
+Strongest area: **pass_rush** (0.120) · Weakest area: **rushing_offense** (-0.322)
 
 ### Domain indices
 | domain | label | index_value | rank_of_league | delta_vs_prev_week | delta_vs_preseason | min_confidence |
 | --- | --- | --- | --- | --- | --- | --- |
-| defense_overall | Defensive Strength Index | 0.025 | 14 | 0.000 | 0.000 | prior_season_only |
-| pass_rush | Pass-Rush Strength Index | -0.130 | 20 | 0.000 | 0.000 | prior_season_only |
-| passing_defense | Pass-Defense Strength Index | 0.218 | 13 | 0.000 | 0.000 | prior_season_only |
-| rushing_defense | Run-Defense Strength Index | -0.046 | 18 | 0.000 | 0.000 | prior_season_only |
-| offense_overall | Offensive Strength Index | 1.107 | 2 | 0.000 | 0.000 | prior_season_only |
-| pass_protection | Pass-Protection Strength Index | -0.217 | 21 | 0.000 | 0.000 | prior_season_only |
-| passing_offense | Passing-Offense Strength Index | 1.316 | 1 | 0.000 | 0.000 | prior_season_only |
-| rushing_offense | Rushing-Offense Strength Index | -0.180 | 26 | 0.000 | 0.000 | prior_season_only |
-| special_teams | Special-Teams Strength Index | -0.069 | 23 | 0.000 | 0.000 | prior_season_only |
+| defense_overall | Defensive Strength Index | 0.009 | 16 | -0.016 | -0.016 | low |
+| pass_rush | Pass-Rush Strength Index | 0.120 | 9 | 0.251 | 0.251 | low |
+| passing_defense | Pass-Defense Strength Index | -0.084 | 22 | -0.302 | -0.302 | low |
+| rushing_defense | Run-Defense Strength Index | 0.114 | 9 | 0.160 | 0.160 | low |
+| offense_overall | Offensive Strength Index | -0.172 | 25 | -1.279 | -1.279 | low |
+| pass_protection | Pass-Protection Strength Index | 0.029 | 15 | 0.247 | 0.247 | low |
+| passing_offense | Passing-Offense Strength Index | -0.014 | 17 | -1.330 | -1.330 | low |
+| rushing_offense | Rushing-Offense Strength Index | -0.322 | 31 | -0.142 | -0.142 | low |
+| special_teams | Special-Teams Strength Index | 0.027 | 17 | 0.096 | 0.096 | low |
 
 ### Underlying metrics
 | metric | raw_value | ref_mean | ref_sd | n_games | n_opportunities | shrunk_value | z_shrunk | oriented_z_shrunk | rank_of_league | percentile | confidence | phase3_status | delta_shrunk_vs_prev_week |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
-| pass_protection.qb_hit_rate_allowed | 0.1452 | 0.1450 | 0.0327 | 17 | 613 | 0.1451 | 0.0040 | -0.0040 | 18 | 0.4516 | prior_season_only | UNVALIDATED_RANK_PERSISTENT | 0.0000 |
-| pass_protection.rush_stuffed_rate_approx | 0.2244 | 0.2045 | 0.0323 | 17 | 613 | 0.2148 | 0.3162 | -0.3162 | 24 | 0.2581 | prior_season_only | RANK_PERSISTENT | 0.0000 |
-| pass_protection.sack_rate_allowed | 0.0783 | 0.0664 | 0.0188 | 17 | 613 | 0.0745 | 0.4308 | -0.4308 | 24 | 0.2581 | prior_season_only | UNVALIDATED_RANK_PERSISTENT | 0.0000 |
-| pass_rush.qb_hit_rate_generated | 0.1460 | 0.1442 | 0.0234 | 17 | 589 | 0.1451 | 0.0404 | 0.0404 | 16 | 0.5161 | prior_season_only | RANK_PERSISTENT | 0.0000 |
-| pass_rush.sack_rate_generated | 0.0594 | 0.0660 | 0.0121 | 17 | 589 | 0.0624 | -0.3014 | -0.3014 | 20 | 0.3871 | prior_season_only | NOT_RANK_PERSISTENT | 0.0000 |
-| special_teams.fg_pct | 0.8438 | 0.8507 | 0.0691 | 17 | 212 | 0.8471 | -0.0519 | -0.0519 | 19 | 0.4032 | prior_season_only | NOT_RANK_PERSISTENT | 0.0000 |
-| special_teams.st_epa_per_play | 0.0498 | 0.0622 | 0.0928 | 17 | 212 | 0.0558 | -0.0693 | -0.0693 | 23 | 0.2903 | prior_season_only | RANK_PERSISTENT | 0.0000 |
-| team_defense.early_down_epa_per_play | 0.0040 | -0.0013 | 0.0639 | 17 | 1008 | 0.0014 | 0.0427 | -0.0427 | 18 | 0.4516 | prior_season_only | RANK_PERSISTENT | 0.0000 |
-| team_defense.epa_per_play | -0.0403 | 0.0046 | 0.0677 | 17 | 1008 | -0.0186 | -0.3416 | 0.3416 | 11 | 0.6774 | prior_season_only | RANK_PERSISTENT | 0.0000 |
-| team_defense.explosive_pass_rate | 0.0713 | 0.0797 | 0.0112 | 17 | 1008 | 0.0751 | -0.4094 | 0.4094 | 8 | 0.7742 | prior_season_only | NOT_RANK_PERSISTENT | 0.0000 |
-| team_defense.explosive_rush_rate | 0.0885 | 0.1000 | 0.0206 | 17 | 1008 | 0.0941 | -0.2855 | 0.2855 | 10 | 0.7097 | prior_season_only | RANK_PERSISTENT | 0.0000 |
-| team_defense.pass_epa_per_dropback | -0.0381 | 0.0361 | 0.0949 | 17 | 1008 | -0.0021 | -0.4032 | 0.4032 | 11 | 0.6774 | prior_season_only | RANK_PERSISTENT | 0.0000 |
-| team_defense.pass_success_rate | 0.4516 | 0.4536 | 0.0320 | 17 | 1008 | 0.4526 | -0.0326 | 0.0326 | 14 | 0.5806 | prior_season_only | RANK_PERSISTENT | 0.0000 |
-| team_defense.rush_epa_per_play | -0.0770 | -0.0760 | 0.0649 | 17 | 1008 | -0.0766 | -0.0088 | 0.0088 | 16 | 0.5161 | prior_season_only | NOT_RANK_PERSISTENT | 0.0000 |
-| team_defense.rush_success_rate | 0.4297 | 0.4020 | 0.0330 | 17 | 1008 | 0.4163 | 0.4329 | -0.4329 | 22 | 0.3226 | prior_season_only | RANK_PERSISTENT | 0.0000 |
-| team_defense.success_rate | 0.4494 | 0.4384 | 0.0255 | 17 | 1008 | 0.4441 | 0.2228 | -0.2228 | 18 | 0.4516 | prior_season_only | RANK_PERSISTENT | 0.0000 |
-| team_offense.early_down_epa_per_play | 0.1209 | -0.0054 | 0.0784 | 17 | 1060 | 0.0805 | 1.0950 | 1.0950 | 2 | 0.9677 | prior_season_only | UNVALIDATED_RANK_PERSISTENT | 0.0000 |
-| team_offense.epa_per_play | 0.1545 | -0.0001 | 0.0921 | 17 | 1060 | 0.1050 | 1.1421 | 1.1421 | 1 | 1.0000 | prior_season_only | VALIDATED_PERSISTENCE | 0.0000 |
-| team_offense.explosive_pass_rate | 0.1126 | 0.0796 | 0.0177 | 17 | 1060 | 0.0966 | 0.9583 | 0.9583 | 2 | 0.9677 | prior_season_only | RANK_PERSISTENT | 0.0000 |
-| team_offense.explosive_rush_rate | 0.0976 | 0.0990 | 0.0195 | 17 | 1060 | 0.0983 | -0.0384 | -0.0384 | 15 | 0.5484 | prior_season_only | NOT_RANK_PERSISTENT | 0.0000 |
-| team_offense.pass_epa_per_dropback | 0.3045 | 0.0308 | 0.1280 | 17 | 1060 | 0.2169 | 1.4544 | 1.4544 | 1 | 1.0000 | prior_season_only | UNVALIDATED_RANK_PERSISTENT | 0.0000 |
-| team_offense.pass_success_rate | 0.5465 | 0.4521 | 0.0418 | 17 | 1060 | 0.5163 | 1.5350 | 1.5350 | 1 | 1.0000 | prior_season_only | UNVALIDATED_RANK_PERSISTENT | 0.0000 |
-| team_offense.proe | -0.0055 | -0.0477 | 0.0349 | 17 | 1060 | -0.0135 | 0.9808 | 0.0000 | — | — | prior_season_only | VALIDATED_PERSISTENCE | 0.0000 |
-| team_offense.rush_epa_per_play | -0.0891 | -0.0806 | 0.0754 | 17 | 1060 | -0.0850 | -0.0580 | -0.0580 | 25 | 0.2258 | prior_season_only | RANK_PERSISTENT | 0.0000 |
-| team_offense.rush_success_rate | 0.3805 | 0.4004 | 0.0385 | 17 | 1060 | 0.3887 | -0.3025 | -0.3025 | 26 | 0.1935 | prior_season_only | RANK_PERSISTENT | 0.0000 |
-| team_offense.success_rate | 0.4821 | 0.4370 | 0.0337 | 17 | 1060 | 0.4735 | 1.0826 | 1.0826 | 4 | 0.9032 | prior_season_only | VALIDATED_PERSISTENCE | 0.0000 |
+| pass_protection.qb_hit_rate_allowed | 0.1190 | 0.1450 | 0.0327 | 1 | 42 | 0.1421 | -0.0881 | 0.0881 | 11 | 0.6774 | low | UNVALIDATED_RANK_PERSISTENT | -0.0030 |
+| pass_protection.rush_stuffed_rate_approx | 0.3333 | 0.2045 | 0.0323 | 1 | 42 | 0.2121 | 0.2342 | -0.2342 | 31 | 0.0323 | low | RANK_PERSISTENT | -0.0027 |
+| pass_protection.sack_rate_allowed | 0.0714 | 0.0664 | 0.0188 | 1 | 42 | 0.0670 | 0.0297 | -0.0297 | 19 | 0.4032 | low | UNVALIDATED_RANK_PERSISTENT | -0.0075 |
+| pass_rush.qb_hit_rate_generated | 0.2222 | 0.1442 | 0.0234 | 1 | 27 | 0.1488 | 0.1962 | 0.1962 | 6 | 0.8387 | low | RANK_PERSISTENT | 0.0036 |
+| pass_rush.sack_rate_generated | 0.0741 | 0.0660 | 0.0121 | 1 | 27 | 0.0666 | 0.0444 | 0.0444 | 12 | 0.6452 | low | NOT_RANK_PERSISTENT | 0.0042 |
+| special_teams.fg_pct | 1.0000 | 0.8507 | 0.0691 | 1 | 10 | 0.8595 | 0.1270 | 0.1270 | 1 | 0.6481 | low | NOT_RANK_PERSISTENT | 0.0124 |
+| special_teams.st_epa_per_play | 0.1045 | 0.0622 | 0.0928 | 1 | 10 | 0.0647 | 0.0268 | 0.0268 | 17 | 0.4839 | low | RANK_PERSISTENT | 0.0089 |
+| team_defense.early_down_epa_per_play | 0.0728 | -0.0013 | 0.0639 | 1 | 49 | 0.0031 | 0.0683 | -0.0683 | 20 | 0.3871 | low | RANK_PERSISTENT | 0.0016 |
+| team_defense.epa_per_play | 0.0286 | 0.0046 | 0.0677 | 1 | 49 | 0.0060 | 0.0209 | -0.0209 | 17 | 0.4839 | low | RANK_PERSISTENT | 0.0246 |
+| team_defense.explosive_pass_rate | 0.1111 | 0.0797 | 0.0112 | 1 | 49 | 0.0818 | 0.1868 | -0.1868 | 25 | 0.2258 | low | NOT_RANK_PERSISTENT | 0.0067 |
+| team_defense.explosive_rush_rate | 0.0952 | 0.1000 | 0.0206 | 1 | 49 | 0.0997 | -0.0135 | 0.0135 | 19 | 0.4194 | low | RANK_PERSISTENT | 0.0056 |
+| team_defense.pass_epa_per_dropback | 0.2260 | 0.0361 | 0.0949 | 1 | 49 | 0.0473 | 0.1177 | -0.1177 | 23 | 0.2903 | low | RANK_PERSISTENT | 0.0494 |
+| team_defense.pass_success_rate | 0.4815 | 0.4536 | 0.0320 | 1 | 49 | 0.4553 | 0.0511 | -0.0511 | 20 | 0.3871 | low | RANK_PERSISTENT | 0.0027 |
+| team_defense.rush_epa_per_play | -0.1946 | -0.0760 | 0.0649 | 1 | 49 | -0.0839 | -0.1217 | 0.1217 | 8 | 0.7742 | low | NOT_RANK_PERSISTENT | -0.0073 |
+| team_defense.rush_success_rate | 0.2857 | 0.4020 | 0.0330 | 1 | 49 | 0.3951 | -0.2074 | 0.2074 | 6 | 0.8387 | low | RANK_PERSISTENT | -0.0211 |
+| team_defense.success_rate | 0.3878 | 0.4384 | 0.0255 | 1 | 49 | 0.4354 | -0.1170 | 0.1170 | 8 | 0.7742 | low | RANK_PERSISTENT | -0.0087 |
+| team_offense.early_down_epa_per_play | -0.1720 | -0.0054 | 0.0784 | 1 | 71 | -0.0239 | -0.2362 | -0.2362 | 27 | 0.1613 | low | UNVALIDATED_RANK_PERSISTENT | -0.1044 |
+| team_offense.epa_per_play | -0.0924 | -0.0001 | 0.0921 | 1 | 71 | -0.0104 | -0.1113 | -0.1113 | 22 | 0.3226 | low | VALIDATED_PERSISTENCE | -0.1154 |
+| team_offense.explosive_pass_rate | 0.0000 | 0.0796 | 0.0177 | 1 | 71 | 0.0749 | -0.2640 | -0.2640 | 28 | 0.0645 | low | RANK_PERSISTENT | -0.0217 |
+| team_offense.explosive_rush_rate | 0.0370 | 0.0990 | 0.0195 | 1 | 71 | 0.0954 | -0.1866 | -0.1866 | 30 | 0.0645 | low | NOT_RANK_PERSISTENT | -0.0029 |
+| team_offense.pass_epa_per_dropback | 0.0655 | 0.0308 | 0.1280 | 1 | 71 | 0.0346 | 0.0301 | 0.0301 | 15 | 0.5484 | low | UNVALIDATED_RANK_PERSISTENT | -0.1823 |
+| team_offense.pass_success_rate | 0.5238 | 0.4521 | 0.0418 | 1 | 71 | 0.4600 | 0.1906 | 0.1906 | 7 | 0.8065 | low | UNVALIDATED_RANK_PERSISTENT | -0.0562 |
+| team_offense.proe | -0.0626 | -0.0477 | 0.0349 | 1 | 71 | -0.0507 | -0.0857 | -0.0000 | — | — | low | VALIDATED_PERSISTENCE | -0.0372 |
+| team_offense.rush_epa_per_play | -0.4505 | -0.0806 | 0.0754 | 1 | 71 | -0.1024 | -0.2887 | -0.2887 | 32 | 0.0000 | low | RANK_PERSISTENT | -0.0174 |
+| team_offense.rush_success_rate | 0.2222 | 0.4004 | 0.0385 | 1 | 71 | 0.3867 | -0.3557 | -0.3557 | 31 | 0.0323 | low | RANK_PERSISTENT | -0.0020 |
+| team_offense.success_rate | 0.4085 | 0.4370 | 0.0337 | 1 | 71 | 0.4313 | -0.1690 | -0.1690 | 23 | 0.2903 | low | VALIDATED_PERSISTENCE | -0.0422 |
 
 ## NO
-Record: no games yet · Points for/against: —/— · Point differential: — · Data confidence: prior_season_only
-Strongest area: **defense_overall** (0.396) · Weakest area: **special_teams** (-0.962)
+Record: 0-1-0 · Points for/against: 30/31 · Point differential: -1 · Data confidence: low
+Strongest area: **passing_defense** (0.043) · Weakest area: **rushing_defense** (-0.150)
 
 ### Domain indices
 | domain | label | index_value | rank_of_league | delta_vs_prev_week | delta_vs_preseason | min_confidence |
 | --- | --- | --- | --- | --- | --- | --- |
-| defense_overall | Defensive Strength Index | 0.396 | 9 | 0.000 | 0.000 | prior_season_only |
-| pass_rush | Pass-Rush Strength Index | 0.262 | 8 | 0.000 | 0.000 | prior_season_only |
-| passing_defense | Pass-Defense Strength Index | 0.301 | 12 | 0.000 | 0.000 | prior_season_only |
-| rushing_defense | Run-Defense Strength Index | 0.366 | 7 | 0.000 | 0.000 | prior_season_only |
-| offense_overall | Offensive Strength Index | -0.389 | 27 | 0.000 | 0.000 | prior_season_only |
-| pass_protection | Pass-Protection Strength Index | 0.113 | 18 | 0.000 | 0.000 | prior_season_only |
-| passing_offense | Passing-Offense Strength Index | -0.431 | 27 | 0.000 | 0.000 | prior_season_only |
-| rushing_offense | Rushing-Offense Strength Index | -0.518 | 29 | 0.000 | 0.000 | prior_season_only |
-| special_teams | Special-Teams Strength Index | -0.962 | 32 | 0.000 | 0.000 | prior_season_only |
+| defense_overall | Defensive Strength Index | -0.002 | 17 | -0.398 | -0.398 | low |
+| pass_rush | Pass-Rush Strength Index | -0.051 | 20 | -0.313 | -0.313 | low |
+| passing_defense | Pass-Defense Strength Index | 0.043 | 12 | -0.258 | -0.258 | low |
+| rushing_defense | Run-Defense Strength Index | -0.150 | 30 | -0.515 | -0.515 | low |
+| offense_overall | Offensive Strength Index | 0.020 | 15 | 0.410 | 0.410 | low |
+| pass_protection | Pass-Protection Strength Index | -0.042 | 21 | -0.156 | -0.156 | low |
+| passing_offense | Passing-Offense Strength Index | 0.024 | 13 | 0.455 | 0.455 | low |
+| rushing_offense | Rushing-Offense Strength Index | -0.094 | 22 | 0.424 | 0.424 | low |
+| special_teams | Special-Teams Strength Index | -0.134 | 29 | 0.829 | 0.829 | low |
 
 ### Underlying metrics
 | metric | raw_value | ref_mean | ref_sd | n_games | n_opportunities | shrunk_value | z_shrunk | oriented_z_shrunk | rank_of_league | percentile | confidence | phase3_status | delta_shrunk_vs_prev_week |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
-| pass_protection.qb_hit_rate_allowed | 0.1224 | 0.1450 | 0.0327 | 17 | 670 | 0.1296 | -0.4699 | 0.4699 | 9 | 0.7419 | prior_season_only | UNVALIDATED_RANK_PERSISTENT | 0.0000 |
-| pass_protection.rush_stuffed_rate_approx | 0.1955 | 0.2045 | 0.0323 | 17 | 670 | 0.1999 | -0.1440 | 0.1440 | 17 | 0.4839 | prior_season_only | RANK_PERSISTENT | 0.0000 |
-| pass_protection.sack_rate_allowed | 0.0731 | 0.0664 | 0.0188 | 17 | 670 | 0.0710 | 0.2436 | -0.2436 | 22 | 0.3226 | prior_season_only | UNVALIDATED_RANK_PERSISTENT | 0.0000 |
-| pass_rush.qb_hit_rate_generated | 0.1398 | 0.1442 | 0.0234 | 17 | 565 | 0.1419 | -0.0958 | -0.0958 | 20 | 0.3871 | prior_season_only | RANK_PERSISTENT | 0.0000 |
-| pass_rush.sack_rate_generated | 0.0796 | 0.0660 | 0.0121 | 17 | 565 | 0.0735 | 0.6188 | 0.6188 | 5 | 0.8710 | prior_season_only | NOT_RANK_PERSISTENT | 0.0000 |
-| special_teams.fg_pct | 0.7143 | 0.8507 | 0.0691 | 17 | 218 | 0.7804 | -1.0166 | -1.0166 | 32 | 0.0000 | prior_season_only | NOT_RANK_PERSISTENT | 0.0000 |
-| special_teams.st_epa_per_play | -0.1112 | 0.0622 | 0.0928 | 17 | 218 | -0.0271 | -0.9624 | -0.9624 | 32 | 0.0000 | prior_season_only | RANK_PERSISTENT | 0.0000 |
-| team_defense.early_down_epa_per_play | -0.0473 | -0.0013 | 0.0639 | 17 | 1070 | -0.0250 | -0.3710 | 0.3710 | 9 | 0.7419 | prior_season_only | RANK_PERSISTENT | 0.0000 |
-| team_defense.epa_per_play | -0.0505 | 0.0046 | 0.0677 | 17 | 1070 | -0.0238 | -0.4190 | 0.4190 | 10 | 0.7097 | prior_season_only | RANK_PERSISTENT | 0.0000 |
-| team_defense.explosive_pass_rate | 0.0779 | 0.0797 | 0.0112 | 17 | 1070 | 0.0787 | -0.0883 | 0.0883 | 17 | 0.4839 | prior_season_only | NOT_RANK_PERSISTENT | 0.0000 |
-| team_defense.explosive_rush_rate | 0.0839 | 0.1000 | 0.0206 | 17 | 1070 | 0.0917 | -0.4027 | 0.4027 | 9 | 0.7419 | prior_season_only | RANK_PERSISTENT | 0.0000 |
-| team_defense.pass_epa_per_dropback | -0.0155 | 0.0361 | 0.0949 | 17 | 1070 | 0.0095 | -0.2802 | 0.2802 | 12 | 0.6452 | prior_season_only | RANK_PERSISTENT | 0.0000 |
-| team_defense.pass_success_rate | 0.4336 | 0.4536 | 0.0320 | 17 | 1070 | 0.4433 | -0.3217 | 0.3217 | 11 | 0.6774 | prior_season_only | RANK_PERSISTENT | 0.0000 |
-| team_defense.rush_epa_per_play | -0.1359 | -0.0760 | 0.0649 | 17 | 1070 | -0.1089 | -0.5059 | 0.5059 | 2 | 0.9677 | prior_season_only | NOT_RANK_PERSISTENT | 0.0000 |
-| team_defense.rush_success_rate | 0.3899 | 0.4020 | 0.0330 | 17 | 1070 | 0.3958 | -0.1881 | 0.1881 | 9 | 0.7419 | prior_season_only | RANK_PERSISTENT | 0.0000 |
-| team_defense.success_rate | 0.4187 | 0.4384 | 0.0255 | 17 | 1070 | 0.4282 | -0.3988 | 0.3988 | 8 | 0.7742 | prior_season_only | RANK_PERSISTENT | 0.0000 |
-| team_offense.early_down_epa_per_play | -0.0398 | -0.0054 | 0.0784 | 17 | 1108 | -0.0288 | -0.2990 | -0.2990 | 24 | 0.2581 | prior_season_only | UNVALIDATED_RANK_PERSISTENT | 0.0000 |
-| team_offense.epa_per_play | -0.0762 | -0.0001 | 0.0921 | 17 | 1108 | -0.0519 | -0.5620 | -0.5620 | 27 | 0.1613 | prior_season_only | VALIDATED_PERSISTENCE | 0.0000 |
-| team_offense.explosive_pass_rate | 0.0493 | 0.0796 | 0.0177 | 17 | 1108 | 0.0640 | -0.8808 | -0.8808 | 31 | 0.0323 | prior_season_only | RANK_PERSISTENT | 0.0000 |
-| team_offense.explosive_rush_rate | 0.0677 | 0.0990 | 0.0195 | 17 | 1108 | 0.0829 | -0.8267 | -0.8267 | 32 | 0.0000 | prior_season_only | NOT_RANK_PERSISTENT | 0.0000 |
-| team_offense.pass_epa_per_dropback | -0.0470 | 0.0308 | 0.1280 | 17 | 1108 | -0.0221 | -0.4134 | -0.4134 | 27 | 0.1613 | prior_season_only | UNVALIDATED_RANK_PERSISTENT | 0.0000 |
-| team_offense.pass_success_rate | 0.4522 | 0.4521 | 0.0418 | 17 | 1108 | 0.4522 | 0.0026 | 0.0026 | 17 | 0.4839 | prior_season_only | UNVALIDATED_RANK_PERSISTENT | 0.0000 |
-| team_offense.proe | -0.0583 | -0.0477 | 0.0349 | 17 | 1108 | -0.0563 | -0.2467 | -0.0000 | — | — | prior_season_only | VALIDATED_PERSISTENCE | 0.0000 |
-| team_offense.rush_epa_per_play | -0.1554 | -0.0806 | 0.0754 | 17 | 1108 | -0.1191 | -0.5114 | -0.5114 | 31 | 0.0323 | prior_season_only | RANK_PERSISTENT | 0.0000 |
-| team_offense.rush_success_rate | 0.3659 | 0.4004 | 0.0385 | 17 | 1108 | 0.3802 | -0.5243 | -0.5243 | 29 | 0.0968 | prior_season_only | RANK_PERSISTENT | 0.0000 |
-| team_offense.success_rate | 0.4242 | 0.4370 | 0.0337 | 17 | 1108 | 0.4266 | -0.3064 | -0.3064 | 26 | 0.1935 | prior_season_only | VALIDATED_PERSISTENCE | 0.0000 |
+| pass_protection.qb_hit_rate_allowed | 0.1452 | 0.1450 | 0.0327 | 1 | 62 | 0.1450 | 0.0006 | -0.0006 | 16 | 0.5161 | low | UNVALIDATED_RANK_PERSISTENT | 0.0154 |
+| pass_protection.rush_stuffed_rate_approx | 0.1739 | 0.2045 | 0.0323 | 1 | 62 | 0.2027 | -0.0557 | 0.0557 | 12 | 0.6452 | low | RANK_PERSISTENT | 0.0029 |
+| pass_protection.sack_rate_allowed | 0.0806 | 0.0664 | 0.0188 | 1 | 62 | 0.0680 | 0.0842 | -0.0842 | 23 | 0.2903 | low | UNVALIDATED_RANK_PERSISTENT | -0.0030 |
+| pass_rush.qb_hit_rate_generated | 0.1951 | 0.1442 | 0.0234 | 1 | 41 | 0.1472 | 0.1281 | 0.1281 | 8 | 0.7742 | low | RANK_PERSISTENT | 0.0052 |
+| pass_rush.sack_rate_generated | 0.0244 | 0.0660 | 0.0121 | 1 | 41 | 0.0633 | -0.2304 | -0.2304 | 27 | 0.1613 | low | NOT_RANK_PERSISTENT | -0.0102 |
+| special_teams.fg_pct | 0.5000 | 0.8507 | 0.0691 | 1 | 16 | 0.8301 | -0.2984 | -0.2984 | 26 | 0.0370 | low | NOT_RANK_PERSISTENT | 0.0497 |
+| special_teams.st_epa_per_play | -0.1488 | 0.0622 | 0.0928 | 1 | 16 | 0.0498 | -0.1337 | -0.1337 | 29 | 0.0968 | low | RANK_PERSISTENT | 0.0769 |
+| team_defense.early_down_epa_per_play | -0.0070 | -0.0013 | 0.0639 | 1 | 77 | -0.0016 | -0.0052 | 0.0052 | 18 | 0.4516 | low | RANK_PERSISTENT | 0.0234 |
+| team_defense.epa_per_play | -0.0272 | 0.0046 | 0.0677 | 1 | 77 | 0.0027 | -0.0276 | 0.0276 | 14 | 0.5806 | low | RANK_PERSISTENT | 0.0265 |
+| team_defense.explosive_pass_rate | 0.0244 | 0.0797 | 0.0112 | 1 | 77 | 0.0760 | -0.3286 | 0.3286 | 6 | 0.8387 | low | NOT_RANK_PERSISTENT | -0.0027 |
+| team_defense.explosive_rush_rate | 0.1944 | 0.1000 | 0.0206 | 1 | 77 | 0.1055 | 0.2699 | -0.2699 | 30 | 0.0645 | low | RANK_PERSISTENT | 0.0139 |
+| team_defense.pass_epa_per_dropback | 0.0122 | 0.0361 | 0.0949 | 1 | 77 | 0.0347 | -0.0148 | 0.0148 | 15 | 0.5484 | low | RANK_PERSISTENT | 0.0252 |
+| team_defense.pass_success_rate | 0.4146 | 0.4536 | 0.0320 | 1 | 77 | 0.4513 | -0.0716 | 0.0716 | 12 | 0.6452 | low | RANK_PERSISTENT | 0.0080 |
+| team_defense.rush_epa_per_play | -0.0720 | -0.0760 | 0.0649 | 1 | 77 | -0.0757 | 0.0041 | -0.0041 | 19 | 0.4194 | low | NOT_RANK_PERSISTENT | 0.0331 |
+| team_defense.rush_success_rate | 0.5000 | 0.4020 | 0.0330 | 1 | 77 | 0.4077 | 0.1749 | -0.1749 | 30 | 0.0645 | low | RANK_PERSISTENT | 0.0120 |
+| team_defense.success_rate | 0.4545 | 0.4384 | 0.0255 | 1 | 77 | 0.4393 | 0.0373 | -0.0373 | 20 | 0.3871 | low | RANK_PERSISTENT | 0.0111 |
+| team_offense.early_down_epa_per_play | -0.0138 | -0.0054 | 0.0784 | 1 | 88 | -0.0063 | -0.0120 | -0.0120 | 16 | 0.5161 | low | UNVALIDATED_RANK_PERSISTENT | 0.0225 |
+| team_offense.epa_per_play | 0.0299 | -0.0001 | 0.0921 | 1 | 88 | 0.0032 | 0.0362 | 0.0362 | 15 | 0.5484 | low | VALIDATED_PERSISTENCE | 0.0551 |
+| team_offense.explosive_pass_rate | 0.0968 | 0.0796 | 0.0177 | 1 | 88 | 0.0806 | 0.0571 | 0.0571 | 12 | 0.6452 | low | RANK_PERSISTENT | 0.0166 |
+| team_offense.explosive_rush_rate | 0.0870 | 0.0990 | 0.0195 | 1 | 88 | 0.0983 | -0.0363 | -0.0363 | 18 | 0.4516 | low | NOT_RANK_PERSISTENT | 0.0154 |
+| team_offense.pass_epa_per_dropback | 0.0006 | 0.0308 | 0.1280 | 1 | 88 | 0.0274 | -0.0262 | -0.0262 | 20 | 0.3871 | low | UNVALIDATED_RANK_PERSISTENT | 0.0495 |
+| team_offense.pass_success_rate | 0.4677 | 0.4521 | 0.0418 | 1 | 88 | 0.4538 | 0.0416 | 0.0416 | 16 | 0.5161 | low | UNVALIDATED_RANK_PERSISTENT | 0.0016 |
+| team_offense.proe | 0.0069 | -0.0477 | 0.0349 | 1 | 88 | -0.0368 | 0.3130 | 0.0000 | — | — | low | VALIDATED_PERSISTENCE | 0.0195 |
+| team_offense.rush_epa_per_play | -0.0751 | -0.0806 | 0.0754 | 1 | 88 | -0.0803 | 0.0043 | 0.0043 | 15 | 0.5484 | low | RANK_PERSISTENT | 0.0389 |
+| team_offense.rush_success_rate | 0.3043 | 0.4004 | 0.0385 | 1 | 88 | 0.3930 | -0.1917 | -0.1917 | 26 | 0.1935 | low | RANK_PERSISTENT | 0.0128 |
+| team_offense.success_rate | 0.4432 | 0.4370 | 0.0337 | 1 | 88 | 0.4382 | 0.0369 | 0.0369 | 14 | 0.5806 | low | VALIDATED_PERSISTENCE | 0.0116 |
 
 ## NYG
-Record: no games yet · Points for/against: —/— · Point differential: — · Data confidence: prior_season_only
-Strongest area: **rushing_offense** (0.176) · Weakest area: **rushing_defense** (-1.356)
+Record: 1-0-0 · Points for/against: 28/20 · Point differential: 8 · Data confidence: low
+Strongest area: **offense_overall** (0.558) · Weakest area: **pass_rush** (-0.259)
 
 ### Domain indices
 | domain | label | index_value | rank_of_league | delta_vs_prev_week | delta_vs_preseason | min_confidence |
 | --- | --- | --- | --- | --- | --- | --- |
-| defense_overall | Defensive Strength Index | -0.658 | 25 | 0.000 | 0.000 | prior_season_only |
-| pass_rush | Pass-Rush Strength Index | -0.012 | 19 | 0.000 | 0.000 | prior_season_only |
-| passing_defense | Pass-Defense Strength Index | -0.109 | 18 | 0.000 | 0.000 | prior_season_only |
-| rushing_defense | Run-Defense Strength Index | -1.356 | 32 | 0.000 | 0.000 | prior_season_only |
-| offense_overall | Offensive Strength Index | 0.034 | 21 | 0.000 | 0.000 | prior_season_only |
-| pass_protection | Pass-Protection Strength Index | -0.549 | 25 | 0.000 | 0.000 | prior_season_only |
-| passing_offense | Passing-Offense Strength Index | -0.072 | 20 | 0.000 | 0.000 | prior_season_only |
-| rushing_offense | Rushing-Offense Strength Index | 0.176 | 15 | 0.000 | 0.000 | prior_season_only |
-| special_teams | Special-Teams Strength Index | -0.222 | 27 | 0.000 | 0.000 | prior_season_only |
+| defense_overall | Defensive Strength Index | -0.132 | 26 | 0.527 | 0.527 | low |
+| pass_rush | Pass-Rush Strength Index | -0.259 | 29 | -0.247 | -0.247 | low |
+| passing_defense | Pass-Defense Strength Index | -0.103 | 23 | 0.005 | 0.005 | low |
+| rushing_defense | Run-Defense Strength Index | 0.098 | 11 | 1.454 | 1.454 | low |
+| offense_overall | Offensive Strength Index | 0.558 | 2 | 0.524 | 0.524 | low |
+| pass_protection | Pass-Protection Strength Index | 0.006 | 16 | 0.555 | 0.555 | low |
+| passing_offense | Passing-Offense Strength Index | 0.313 | 3 | 0.385 | 0.385 | low |
+| rushing_offense | Rushing-Offense Strength Index | 0.139 | 4 | -0.038 | -0.038 | low |
+| special_teams | Special-Teams Strength Index | 0.004 | 18 | 0.226 | 0.226 | low |
 
 ### Underlying metrics
 | metric | raw_value | ref_mean | ref_sd | n_games | n_opportunities | shrunk_value | z_shrunk | oriented_z_shrunk | rank_of_league | percentile | confidence | phase3_status | delta_shrunk_vs_prev_week |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
-| pass_protection.qb_hit_rate_allowed | 0.1795 | 0.1450 | 0.0327 | 17 | 624 | 0.1685 | 0.7168 | -0.7168 | 26 | 0.1935 | prior_season_only | UNVALIDATED_RANK_PERSISTENT | 0.0000 |
-| pass_protection.rush_stuffed_rate_approx | 0.1746 | 0.2045 | 0.0323 | 17 | 624 | 0.1891 | -0.4772 | 0.4772 | 9 | 0.7419 | prior_season_only | RANK_PERSISTENT | 0.0000 |
-| pass_protection.sack_rate_allowed | 0.0769 | 0.0664 | 0.0188 | 17 | 624 | 0.0736 | 0.3808 | -0.3808 | 23 | 0.2903 | prior_season_only | UNVALIDATED_RANK_PERSISTENT | 0.0000 |
-| pass_rush.qb_hit_rate_generated | 0.1498 | 0.1442 | 0.0234 | 17 | 621 | 0.1471 | 0.1229 | 0.1229 | 15 | 0.5484 | prior_season_only | RANK_PERSISTENT | 0.0000 |
-| pass_rush.sack_rate_generated | 0.0628 | 0.0660 | 0.0121 | 17 | 621 | 0.0643 | -0.1476 | -0.1476 | 17 | 0.4839 | prior_season_only | NOT_RANK_PERSISTENT | 0.0000 |
-| special_teams.fg_pct | 0.8846 | 0.8507 | 0.0691 | 17 | 217 | 0.8682 | 0.2526 | 0.2526 | 11 | 0.6774 | prior_season_only | NOT_RANK_PERSISTENT | 0.0000 |
-| special_teams.st_epa_per_play | 0.0221 | 0.0622 | 0.0928 | 17 | 217 | 0.0416 | -0.2225 | -0.2225 | 27 | 0.1613 | prior_season_only | RANK_PERSISTENT | 0.0000 |
-| team_defense.early_down_epa_per_play | 0.0757 | -0.0013 | 0.0639 | 17 | 1085 | 0.0383 | 0.6208 | -0.6208 | 24 | 0.2581 | prior_season_only | RANK_PERSISTENT | 0.0000 |
-| team_defense.epa_per_play | 0.0960 | 0.0046 | 0.0677 | 17 | 1085 | 0.0517 | 0.6953 | -0.6953 | 27 | 0.1613 | prior_season_only | RANK_PERSISTENT | 0.0000 |
-| team_defense.explosive_pass_rate | 0.0789 | 0.0797 | 0.0112 | 17 | 1085 | 0.0793 | -0.0380 | 0.0380 | 19 | 0.4194 | prior_season_only | NOT_RANK_PERSISTENT | 0.0000 |
-| team_defense.explosive_rush_rate | 0.1555 | 0.1000 | 0.0206 | 17 | 1085 | 0.1286 | 1.3893 | -1.3893 | 32 | 0.0000 | prior_season_only | RANK_PERSISTENT | 0.0000 |
-| team_defense.pass_epa_per_dropback | 0.0556 | 0.0361 | 0.0949 | 17 | 1085 | 0.0462 | 0.1060 | -0.1060 | 18 | 0.4516 | prior_season_only | RANK_PERSISTENT | 0.0000 |
-| team_defense.pass_success_rate | 0.4605 | 0.4536 | 0.0320 | 17 | 1085 | 0.4572 | 0.1111 | -0.1111 | 17 | 0.4839 | prior_season_only | RANK_PERSISTENT | 0.0000 |
-| team_defense.rush_epa_per_play | 0.1087 | -0.0760 | 0.0649 | 17 | 1085 | 0.0253 | 1.5598 | -1.5598 | 32 | 0.0000 | prior_season_only | NOT_RANK_PERSISTENT | 0.0000 |
-| team_defense.rush_success_rate | 0.4737 | 0.4020 | 0.0330 | 17 | 1085 | 0.4389 | 1.1202 | -1.1202 | 32 | 0.0000 | prior_season_only | RANK_PERSISTENT | 0.0000 |
-| team_defense.success_rate | 0.4710 | 0.4384 | 0.0255 | 17 | 1085 | 0.4552 | 0.6592 | -0.6592 | 25 | 0.2258 | prior_season_only | RANK_PERSISTENT | 0.0000 |
-| team_offense.early_down_epa_per_play | -0.0086 | -0.0054 | 0.0784 | 17 | 1137 | -0.0076 | -0.0278 | -0.0278 | 21 | 0.3548 | prior_season_only | UNVALIDATED_RANK_PERSISTENT | 0.0000 |
-| team_offense.epa_per_play | 0.0425 | -0.0001 | 0.0921 | 17 | 1137 | 0.0289 | 0.3151 | 0.3151 | 10 | 0.7097 | prior_season_only | VALIDATED_PERSISTENCE | 0.0000 |
-| team_offense.explosive_pass_rate | 0.0833 | 0.0796 | 0.0177 | 17 | 1137 | 0.0815 | 0.1092 | 0.1092 | 11 | 0.6774 | prior_season_only | RANK_PERSISTENT | 0.0000 |
-| team_offense.explosive_rush_rate | 0.0927 | 0.0990 | 0.0195 | 17 | 1137 | 0.0957 | -0.1673 | -0.1673 | 20 | 0.3871 | prior_season_only | NOT_RANK_PERSISTENT | 0.0000 |
-| team_offense.pass_epa_per_dropback | 0.0389 | 0.0308 | 0.1280 | 17 | 1137 | 0.0363 | 0.0433 | 0.0433 | 17 | 0.4839 | prior_season_only | UNVALIDATED_RANK_PERSISTENT | 0.0000 |
-| team_offense.pass_success_rate | 0.4295 | 0.4521 | 0.0418 | 17 | 1137 | 0.4367 | -0.3673 | -0.3673 | 27 | 0.1613 | prior_season_only | UNVALIDATED_RANK_PERSISTENT | 0.0000 |
-| team_offense.proe | -0.0839 | -0.0477 | 0.0349 | 17 | 1137 | -0.0770 | -0.8400 | -0.0000 | — | — | prior_season_only | VALIDATED_PERSISTENCE | 0.0000 |
-| team_offense.rush_epa_per_play | -0.0397 | -0.0806 | 0.0754 | 17 | 1137 | -0.0595 | 0.2799 | 0.2799 | 12 | 0.6452 | prior_season_only | RANK_PERSISTENT | 0.0000 |
-| team_offense.rush_success_rate | 0.4052 | 0.4004 | 0.0385 | 17 | 1137 | 0.4032 | 0.0731 | 0.0731 | 19 | 0.4194 | prior_season_only | RANK_PERSISTENT | 0.0000 |
-| team_offense.success_rate | 0.4292 | 0.4370 | 0.0337 | 17 | 1137 | 0.4307 | -0.1862 | -0.1862 | 25 | 0.2258 | prior_season_only | VALIDATED_PERSISTENCE | 0.0000 |
+| pass_protection.qb_hit_rate_allowed | 0.1515 | 0.1450 | 0.0327 | 1 | 33 | 0.1457 | 0.0221 | -0.0221 | 17 | 0.4355 | low | UNVALIDATED_RANK_PERSISTENT | -0.0227 |
+| pass_protection.rush_stuffed_rate_approx | 0.0909 | 0.2045 | 0.0323 | 1 | 33 | 0.1979 | -0.2066 | 0.2066 | 3 | 0.9355 | low | RANK_PERSISTENT | 0.0088 |
+| pass_protection.sack_rate_allowed | 0.0606 | 0.0664 | 0.0188 | 1 | 33 | 0.0658 | -0.0343 | 0.0343 | 15 | 0.5323 | low | UNVALIDATED_RANK_PERSISTENT | -0.0078 |
+| pass_rush.qb_hit_rate_generated | 0.0833 | 0.1442 | 0.0234 | 1 | 36 | 0.1406 | -0.1529 | -0.1529 | 27 | 0.1613 | low | RANK_PERSISTENT | -0.0065 |
+| pass_rush.sack_rate_generated | 0.0000 | 0.0660 | 0.0121 | 1 | 36 | 0.0616 | -0.3654 | -0.3654 | 28 | 0.0645 | low | NOT_RANK_PERSISTENT | -0.0026 |
+| special_teams.fg_pct | — | 0.8507 | 0.0691 | 1 | 9 | — | — | — | — | — | low | NOT_RANK_PERSISTENT | — |
+| special_teams.st_epa_per_play | 0.0683 | 0.0622 | 0.0928 | 1 | 9 | 0.0626 | 0.0038 | 0.0038 | 18 | 0.4516 | low | RANK_PERSISTENT | 0.0210 |
+| team_defense.early_down_epa_per_play | 0.0655 | -0.0013 | 0.0639 | 1 | 58 | 0.0026 | 0.0616 | -0.0616 | 19 | 0.4194 | low | RANK_PERSISTENT | -0.0357 |
+| team_defense.epa_per_play | 0.2709 | 0.0046 | 0.0677 | 1 | 58 | 0.0203 | 0.2312 | -0.2312 | 28 | 0.1290 | low | RANK_PERSISTENT | -0.0314 |
+| team_defense.explosive_pass_rate | 0.0000 | 0.0797 | 0.0112 | 1 | 58 | 0.0744 | -0.4735 | 0.4735 | 1 | 0.9355 | low | NOT_RANK_PERSISTENT | -0.0049 |
+| team_defense.explosive_rush_rate | 0.0000 | 0.1000 | 0.0206 | 1 | 58 | 0.0941 | -0.2855 | 0.2855 | 1 | 1.0000 | low | RANK_PERSISTENT | -0.0345 |
+| team_defense.pass_epa_per_dropback | 0.3144 | 0.0361 | 0.0949 | 1 | 58 | 0.0525 | 0.1725 | -0.1725 | 26 | 0.1935 | low | RANK_PERSISTENT | 0.0063 |
+| team_defense.pass_success_rate | 0.4722 | 0.4536 | 0.0320 | 1 | 58 | 0.4547 | 0.0341 | -0.0341 | 19 | 0.4194 | low | RANK_PERSISTENT | -0.0025 |
+| team_defense.rush_epa_per_play | -0.0999 | -0.0760 | 0.0649 | 1 | 58 | -0.0776 | -0.0245 | 0.0245 | 15 | 0.5484 | low | NOT_RANK_PERSISTENT | -0.1029 |
+| team_defense.rush_success_rate | 0.4118 | 0.4020 | 0.0330 | 1 | 58 | 0.4026 | 0.0175 | -0.0175 | 17 | 0.4839 | low | RANK_PERSISTENT | -0.0364 |
+| team_defense.success_rate | 0.4828 | 0.4384 | 0.0255 | 1 | 58 | 0.4410 | 0.1025 | -0.1025 | 25 | 0.2258 | low | RANK_PERSISTENT | -0.0142 |
+| team_offense.early_down_epa_per_play | 0.2224 | -0.0054 | 0.0784 | 1 | 66 | 0.0199 | 0.3229 | 0.3229 | 5 | 0.8710 | low | UNVALIDATED_RANK_PERSISTENT | 0.0275 |
+| team_offense.epa_per_play | 0.3629 | -0.0001 | 0.0921 | 1 | 66 | 0.0402 | 0.4380 | 0.4380 | 1 | 1.0000 | low | VALIDATED_PERSISTENCE | 0.0113 |
+| team_offense.explosive_pass_rate | 0.0000 | 0.0796 | 0.0177 | 1 | 66 | 0.0749 | -0.2640 | -0.2640 | 28 | 0.0645 | low | RANK_PERSISTENT | -0.0066 |
+| team_offense.explosive_rush_rate | 0.1212 | 0.0990 | 0.0195 | 1 | 66 | 0.1003 | 0.0668 | 0.0668 | 9 | 0.7258 | low | NOT_RANK_PERSISTENT | 0.0046 |
+| team_offense.pass_epa_per_dropback | 0.6670 | 0.0308 | 0.1280 | 1 | 66 | 0.1015 | 0.5524 | 0.5524 | 2 | 0.9677 | low | UNVALIDATED_RANK_PERSISTENT | 0.0652 |
+| team_offense.pass_success_rate | 0.6970 | 0.4521 | 0.0418 | 1 | 66 | 0.4793 | 0.6506 | 0.6506 | 2 | 0.9677 | low | UNVALIDATED_RANK_PERSISTENT | 0.0426 |
+| team_offense.proe | -0.0434 | -0.0477 | 0.0349 | 1 | 66 | -0.0468 | 0.0250 | 0.0000 | — | — | low | VALIDATED_PERSISTENCE | 0.0302 |
+| team_offense.rush_epa_per_play | 0.0587 | -0.0806 | 0.0754 | 1 | 66 | -0.0724 | 0.1087 | 0.1087 | 7 | 0.8065 | low | RANK_PERSISTENT | -0.0129 |
+| team_offense.rush_success_rate | 0.4848 | 0.4004 | 0.0385 | 1 | 66 | 0.4069 | 0.1687 | 0.1687 | 4 | 0.9032 | low | RANK_PERSISTENT | 0.0037 |
+| team_offense.success_rate | 0.5909 | 0.4370 | 0.0337 | 1 | 66 | 0.4677 | 0.9127 | 0.9127 | 2 | 0.9677 | low | VALIDATED_PERSISTENCE | 0.0371 |
 
 ## NYJ
-Record: no games yet · Points for/against: —/— · Point differential: — · Data confidence: prior_season_only
-Strongest area: **special_teams** (1.446) · Weakest area: **pass_protection** (-1.060)
+Record: 1-0-0 · Points for/against: 23/10 · Point differential: 13 · Data confidence: low
+Strongest area: **pass_protection** (0.377) · Weakest area: **rushing_defense** (-0.087)
 
 ### Domain indices
 | domain | label | index_value | rank_of_league | delta_vs_prev_week | delta_vs_preseason | min_confidence |
 | --- | --- | --- | --- | --- | --- | --- |
-| defense_overall | Defensive Strength Index | -0.863 | 28 | 0.000 | 0.000 | prior_season_only |
-| pass_rush | Pass-Rush Strength Index | -0.958 | 31 | 0.000 | 0.000 | prior_season_only |
-| passing_defense | Pass-Defense Strength Index | -0.951 | 31 | 0.000 | 0.000 | prior_season_only |
-| rushing_defense | Run-Defense Strength Index | -0.277 | 24 | 0.000 | 0.000 | prior_season_only |
-| offense_overall | Offensive Strength Index | -0.806 | 29 | 0.000 | 0.000 | prior_season_only |
-| pass_protection | Pass-Protection Strength Index | -1.060 | 30 | 0.000 | 0.000 | prior_season_only |
-| passing_offense | Passing-Offense Strength Index | -0.966 | 30 | 0.000 | 0.000 | prior_season_only |
-| rushing_offense | Rushing-Offense Strength Index | -0.020 | 22 | 0.000 | 0.000 | prior_season_only |
-| special_teams | Special-Teams Strength Index | 1.446 | 1 | 0.000 | 0.000 | prior_season_only |
+| defense_overall | Defensive Strength Index | 0.088 | 12 | 0.951 | 0.951 | low |
+| pass_rush | Pass-Rush Strength Index | 0.010 | 14 | 0.968 | 0.968 | low |
+| passing_defense | Pass-Defense Strength Index | 0.043 | 13 | 0.993 | 0.993 | low |
+| rushing_defense | Run-Defense Strength Index | -0.087 | 23 | 0.189 | 0.189 | low |
+| offense_overall | Offensive Strength Index | 0.229 | 7 | 1.035 | 1.035 | low |
+| pass_protection | Pass-Protection Strength Index | 0.377 | 1 | 1.437 | 1.437 | low |
+| passing_offense | Passing-Offense Strength Index | 0.217 | 6 | 1.183 | 1.183 | low |
+| rushing_offense | Rushing-Offense Strength Index | 0.088 | 10 | 0.109 | 0.109 | low |
+| special_teams | Special-Teams Strength Index | 0.146 | 8 | -1.300 | -1.300 | low |
 
 ### Underlying metrics
 | metric | raw_value | ref_mean | ref_sd | n_games | n_opportunities | shrunk_value | z_shrunk | oriented_z_shrunk | rank_of_league | percentile | confidence | phase3_status | delta_shrunk_vs_prev_week |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
-| pass_protection.qb_hit_rate_allowed | 0.1908 | 0.1450 | 0.0327 | 17 | 608 | 0.1761 | 0.9516 | -0.9516 | 29 | 0.0968 | prior_season_only | UNVALIDATED_RANK_PERSISTENT | 0.0000 |
-| pass_protection.rush_stuffed_rate_approx | 0.2095 | 0.2045 | 0.0323 | 17 | 608 | 0.2071 | 0.0787 | -0.0787 | 22 | 0.3226 | prior_season_only | RANK_PERSISTENT | 0.0000 |
-| pass_protection.sack_rate_allowed | 0.0987 | 0.0664 | 0.0188 | 17 | 608 | 0.0884 | 1.1687 | -1.1687 | 30 | 0.0645 | prior_season_only | UNVALIDATED_RANK_PERSISTENT | 0.0000 |
-| pass_rush.qb_hit_rate_generated | 0.1005 | 0.1442 | 0.0234 | 17 | 577 | 0.1217 | -0.9609 | -0.9609 | 30 | 0.0645 | prior_season_only | RANK_PERSISTENT | 0.0000 |
-| pass_rush.sack_rate_generated | 0.0451 | 0.0660 | 0.0121 | 17 | 577 | 0.0545 | -0.9549 | -0.9549 | 30 | 0.0645 | prior_season_only | NOT_RANK_PERSISTENT | 0.0000 |
-| special_teams.fg_pct | 0.9655 | 0.8507 | 0.0691 | 17 | 231 | 0.9099 | 0.8555 | 0.8555 | 1 | 1.0000 | prior_season_only | NOT_RANK_PERSISTENT | 0.0000 |
-| special_teams.st_epa_per_play | 0.3229 | 0.0622 | 0.0928 | 17 | 231 | 0.1965 | 1.4463 | 1.4463 | 1 | 1.0000 | prior_season_only | RANK_PERSISTENT | 0.0000 |
-| team_defense.early_down_epa_per_play | 0.1382 | -0.0013 | 0.0639 | 17 | 1098 | 0.0705 | 1.1248 | -1.1248 | 31 | 0.0323 | prior_season_only | RANK_PERSISTENT | 0.0000 |
-| team_defense.epa_per_play | 0.1471 | 0.0046 | 0.0677 | 17 | 1098 | 0.0780 | 1.0837 | -1.0837 | 30 | 0.0645 | prior_season_only | RANK_PERSISTENT | 0.0000 |
-| team_defense.explosive_pass_rate | 0.0988 | 0.0797 | 0.0112 | 17 | 1098 | 0.0902 | 0.9339 | -0.9339 | 30 | 0.0645 | prior_season_only | NOT_RANK_PERSISTENT | 0.0000 |
-| team_defense.explosive_rush_rate | 0.1113 | 0.1000 | 0.0206 | 17 | 1098 | 0.1058 | 0.2847 | -0.2847 | 23 | 0.2903 | prior_season_only | RANK_PERSISTENT | 0.0000 |
-| team_defense.pass_epa_per_dropback | 0.2875 | 0.0361 | 0.0949 | 17 | 1098 | 0.1656 | 1.3648 | -1.3648 | 32 | 0.0000 | prior_season_only | RANK_PERSISTENT | 0.0000 |
-| team_defense.pass_success_rate | 0.4870 | 0.4536 | 0.0320 | 17 | 1098 | 0.4708 | 0.5364 | -0.5364 | 24 | 0.2581 | prior_season_only | RANK_PERSISTENT | 0.0000 |
-| team_defense.rush_epa_per_play | -0.0345 | -0.0760 | 0.0649 | 17 | 1098 | -0.0532 | 0.3508 | -0.3508 | 25 | 0.2258 | prior_season_only | NOT_RANK_PERSISTENT | 0.0000 |
-| team_defense.rush_success_rate | 0.4144 | 0.4020 | 0.0330 | 17 | 1098 | 0.4084 | 0.1946 | -0.1946 | 17 | 0.4839 | prior_season_only | RANK_PERSISTENT | 0.0000 |
-| team_defense.success_rate | 0.4572 | 0.4384 | 0.0255 | 17 | 1098 | 0.4481 | 0.3805 | -0.3805 | 24 | 0.2581 | prior_season_only | RANK_PERSISTENT | 0.0000 |
-| team_offense.early_down_epa_per_play | -0.0858 | -0.0054 | 0.0784 | 17 | 1032 | -0.0601 | -0.6974 | -0.6974 | 29 | 0.0968 | prior_season_only | UNVALIDATED_RANK_PERSISTENT | 0.0000 |
-| team_offense.epa_per_play | -0.1293 | -0.0001 | 0.0921 | 17 | 1032 | -0.0880 | -0.9539 | -0.9539 | 29 | 0.0968 | prior_season_only | VALIDATED_PERSISTENCE | 0.0000 |
-| team_offense.explosive_pass_rate | 0.0428 | 0.0796 | 0.0177 | 17 | 1032 | 0.0606 | -1.0694 | -1.0694 | 32 | 0.0000 | prior_season_only | RANK_PERSISTENT | 0.0000 |
-| team_offense.explosive_rush_rate | 0.0973 | 0.0990 | 0.0195 | 17 | 1032 | 0.0981 | -0.0464 | -0.0464 | 17 | 0.4839 | prior_season_only | NOT_RANK_PERSISTENT | 0.0000 |
-| team_offense.pass_epa_per_dropback | -0.1481 | 0.0308 | 0.1280 | 17 | 1032 | -0.0908 | -0.9504 | -0.9504 | 28 | 0.1290 | prior_season_only | UNVALIDATED_RANK_PERSISTENT | 0.0000 |
-| team_offense.pass_success_rate | 0.3980 | 0.4521 | 0.0418 | 17 | 1032 | 0.4153 | -0.8788 | -0.8788 | 30 | 0.0645 | prior_season_only | UNVALIDATED_RANK_PERSISTENT | 0.0000 |
-| team_offense.proe | -0.1047 | -0.0477 | 0.0349 | 17 | 1032 | -0.0939 | -1.3240 | -0.0000 | — | — | prior_season_only | VALIDATED_PERSISTENCE | 0.0000 |
-| team_offense.rush_epa_per_play | -0.1169 | -0.0806 | 0.0754 | 17 | 1032 | -0.0993 | -0.2478 | -0.2478 | 28 | 0.1290 | prior_season_only | RANK_PERSISTENT | 0.0000 |
-| team_offense.rush_success_rate | 0.4140 | 0.4004 | 0.0385 | 17 | 1032 | 0.4083 | 0.2069 | 0.2069 | 16 | 0.5161 | prior_season_only | RANK_PERSISTENT | 0.0000 |
-| team_offense.success_rate | 0.4050 | 0.4370 | 0.0337 | 17 | 1032 | 0.4111 | -0.7659 | -0.7659 | 29 | 0.0968 | prior_season_only | VALIDATED_PERSISTENCE | 0.0000 |
+| pass_protection.qb_hit_rate_allowed | 0.0385 | 0.1450 | 0.0327 | 1 | 26 | 0.1332 | -0.3618 | 0.3618 | 1 | 1.0000 | low | UNVALIDATED_RANK_PERSISTENT | -0.0430 |
+| pass_protection.rush_stuffed_rate_approx | 0.1944 | 0.2045 | 0.0323 | 1 | 26 | 0.2039 | -0.0183 | 0.0183 | 16 | 0.5161 | low | RANK_PERSISTENT | -0.0031 |
+| pass_protection.sack_rate_allowed | 0.0000 | 0.0664 | 0.0188 | 1 | 26 | 0.0590 | -0.3929 | 0.3929 | 1 | 0.9355 | low | UNVALIDATED_RANK_PERSISTENT | -0.0293 |
+| pass_rush.qb_hit_rate_generated | 0.1282 | 0.1442 | 0.0234 | 1 | 39 | 0.1432 | -0.0401 | -0.0401 | 19 | 0.4032 | low | RANK_PERSISTENT | 0.0215 |
+| pass_rush.sack_rate_generated | 0.0769 | 0.0660 | 0.0121 | 1 | 39 | 0.0668 | 0.0602 | 0.0602 | 11 | 0.6774 | low | NOT_RANK_PERSISTENT | 0.0122 |
+| special_teams.fg_pct | 0.7500 | 0.8507 | 0.0691 | 1 | 12 | 0.8448 | -0.0857 | -0.0857 | 22 | 0.2222 | low | NOT_RANK_PERSISTENT | -0.0651 |
+| special_teams.st_epa_per_play | 0.2927 | 0.0622 | 0.0928 | 1 | 12 | 0.0758 | 0.1461 | 0.1461 | 8 | 0.7742 | low | RANK_PERSISTENT | -0.1207 |
+| team_defense.early_down_epa_per_play | -0.1542 | -0.0013 | 0.0639 | 1 | 50 | -0.0103 | -0.1408 | 0.1408 | 7 | 0.8065 | low | RANK_PERSISTENT | -0.0808 |
+| team_defense.epa_per_play | -0.1411 | 0.0046 | 0.0677 | 1 | 50 | -0.0040 | -0.1265 | 0.1265 | 10 | 0.7097 | low | RANK_PERSISTENT | -0.0820 |
+| team_defense.explosive_pass_rate | 0.0000 | 0.0797 | 0.0112 | 1 | 50 | 0.0744 | -0.4735 | 0.4735 | 1 | 0.9355 | low | NOT_RANK_PERSISTENT | -0.0158 |
+| team_defense.explosive_rush_rate | 0.2000 | 0.1000 | 0.0206 | 1 | 50 | 0.1058 | 0.2857 | -0.2857 | 31 | 0.0323 | low | RANK_PERSISTENT | 0.0000 |
+| team_defense.pass_epa_per_dropback | -0.1244 | 0.0361 | 0.0949 | 1 | 50 | 0.0267 | -0.0995 | 0.0995 | 10 | 0.7097 | low | RANK_PERSISTENT | -0.1389 |
+| team_defense.pass_success_rate | 0.4615 | 0.4536 | 0.0320 | 1 | 50 | 0.4541 | 0.0145 | -0.0145 | 15 | 0.5484 | low | RANK_PERSISTENT | -0.0167 |
+| team_defense.rush_epa_per_play | -0.0960 | -0.0760 | 0.0649 | 1 | 50 | -0.0773 | -0.0206 | 0.0206 | 16 | 0.5161 | low | NOT_RANK_PERSISTENT | -0.0241 |
+| team_defense.rush_success_rate | 0.4000 | 0.4020 | 0.0330 | 1 | 50 | 0.4019 | -0.0035 | 0.0035 | 12 | 0.5968 | low | RANK_PERSISTENT | -0.0065 |
+| team_defense.success_rate | 0.4400 | 0.4384 | 0.0255 | 1 | 50 | 0.4385 | 0.0037 | -0.0037 | 18 | 0.4516 | low | RANK_PERSISTENT | -0.0096 |
+| team_offense.early_down_epa_per_play | 0.1740 | -0.0054 | 0.0784 | 1 | 64 | 0.0145 | 0.2542 | 0.2542 | 8 | 0.7742 | low | UNVALIDATED_RANK_PERSISTENT | 0.0746 |
+| team_offense.epa_per_play | 0.1265 | -0.0001 | 0.0921 | 1 | 64 | 0.0139 | 0.1527 | 0.1527 | 10 | 0.7097 | low | VALIDATED_PERSISTENCE | 0.1019 |
+| team_offense.explosive_pass_rate | 0.1538 | 0.0796 | 0.0177 | 1 | 64 | 0.0839 | 0.2464 | 0.2464 | 3 | 0.9355 | low | RANK_PERSISTENT | 0.0233 |
+| team_offense.explosive_rush_rate | 0.0833 | 0.0990 | 0.0195 | 1 | 64 | 0.0981 | -0.0472 | -0.0472 | 19 | 0.4194 | low | NOT_RANK_PERSISTENT | -0.0000 |
+| team_offense.pass_epa_per_dropback | 0.3501 | 0.0308 | 0.1280 | 1 | 64 | 0.0663 | 0.2773 | 0.2773 | 6 | 0.8387 | low | UNVALIDATED_RANK_PERSISTENT | 0.1571 |
+| team_offense.pass_success_rate | 0.5000 | 0.4521 | 0.0418 | 1 | 64 | 0.4574 | 0.1273 | 0.1273 | 9 | 0.7097 | low | UNVALIDATED_RANK_PERSISTENT | 0.0421 |
+| team_offense.proe | -0.1201 | -0.0477 | 0.0349 | 1 | 64 | -0.0622 | -0.4155 | -0.0000 | — | — | low | VALIDATED_PERSISTENCE | 0.0317 |
+| team_offense.rush_epa_per_play | -0.0378 | -0.0806 | 0.0754 | 1 | 64 | -0.0781 | 0.0334 | 0.0334 | 10 | 0.7097 | low | RANK_PERSISTENT | 0.0212 |
+| team_offense.rush_success_rate | 0.4722 | 0.4004 | 0.0385 | 1 | 64 | 0.4059 | 0.1435 | 0.1435 | 8 | 0.7742 | low | RANK_PERSISTENT | -0.0024 |
+| team_offense.success_rate | 0.4844 | 0.4370 | 0.0337 | 1 | 64 | 0.4464 | 0.2811 | 0.2811 | 7 | 0.8065 | low | VALIDATED_PERSISTENCE | 0.0353 |
 
 ## PHI
-Record: no games yet · Points for/against: —/— · Point differential: — · Data confidence: prior_season_only
-Strongest area: **passing_defense** (0.593) · Weakest area: **special_teams** (-0.168)
+Record: 1-0-0 · Points for/against: 24/22 · Point differential: 2 · Data confidence: low
+Strongest area: **passing_defense** (0.013) · Weakest area: **offense_overall** (-0.275)
 
 ### Domain indices
 | domain | label | index_value | rank_of_league | delta_vs_prev_week | delta_vs_preseason | min_confidence |
 | --- | --- | --- | --- | --- | --- | --- |
-| defense_overall | Defensive Strength Index | 0.295 | 10 | 0.000 | 0.000 | prior_season_only |
-| pass_rush | Pass-Rush Strength Index | 0.230 | 11 | 0.000 | 0.000 | prior_season_only |
-| passing_defense | Pass-Defense Strength Index | 0.593 | 6 | 0.000 | 0.000 | prior_season_only |
-| rushing_defense | Run-Defense Strength Index | 0.012 | 16 | 0.000 | 0.000 | prior_season_only |
-| offense_overall | Offensive Strength Index | 0.059 | 19 | 0.000 | 0.000 | prior_season_only |
-| pass_protection | Pass-Protection Strength Index | 0.569 | 8 | 0.000 | 0.000 | prior_season_only |
-| passing_offense | Passing-Offense Strength Index | -0.009 | 18 | 0.000 | 0.000 | prior_season_only |
-| rushing_offense | Rushing-Offense Strength Index | 0.173 | 16 | 0.000 | 0.000 | prior_season_only |
-| special_teams | Special-Teams Strength Index | -0.168 | 25 | 0.000 | 0.000 | prior_season_only |
+| defense_overall | Defensive Strength Index | -0.003 | 18 | -0.298 | -0.298 | low |
+| pass_rush | Pass-Rush Strength Index | -0.225 | 28 | -0.455 | -0.455 | low |
+| passing_defense | Pass-Defense Strength Index | 0.013 | 17 | -0.580 | -0.580 | low |
+| rushing_defense | Run-Defense Strength Index | -0.029 | 18 | -0.041 | -0.041 | low |
+| offense_overall | Offensive Strength Index | -0.275 | 28 | -0.334 | -0.334 | low |
+| pass_protection | Pass-Protection Strength Index | -0.084 | 22 | -0.653 | -0.653 | low |
+| passing_offense | Passing-Offense Strength Index | 0.000 | 16 | 0.009 | 0.009 | low |
+| rushing_offense | Rushing-Offense Strength Index | -0.171 | 27 | -0.344 | -0.344 | low |
+| special_teams | Special-Teams Strength Index | 0.003 | 19 | 0.171 | 0.171 | low |
 
 ### Underlying metrics
 | metric | raw_value | ref_mean | ref_sd | n_games | n_opportunities | shrunk_value | z_shrunk | oriented_z_shrunk | rank_of_league | percentile | confidence | phase3_status | delta_shrunk_vs_prev_week |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
-| pass_protection.qb_hit_rate_allowed | 0.0995 | 0.1450 | 0.0327 | 17 | 573 | 0.1140 | -0.9460 | 0.9460 | 2 | 0.9677 | prior_season_only | UNVALIDATED_RANK_PERSISTENT | 0.0000 |
-| pass_protection.rush_stuffed_rate_approx | 0.2517 | 0.2045 | 0.0323 | 17 | 573 | 0.2289 | 0.7519 | -0.7519 | 31 | 0.0323 | prior_season_only | RANK_PERSISTENT | 0.0000 |
-| pass_protection.sack_rate_allowed | 0.0611 | 0.0664 | 0.0188 | 17 | 573 | 0.0628 | -0.1927 | 0.1927 | 15 | 0.5484 | prior_season_only | UNVALIDATED_RANK_PERSISTENT | 0.0000 |
-| pass_rush.qb_hit_rate_generated | 0.1629 | 0.1442 | 0.0234 | 17 | 626 | 0.1538 | 0.4131 | 0.4131 | 7 | 0.8065 | prior_season_only | RANK_PERSISTENT | 0.0000 |
-| pass_rush.sack_rate_generated | 0.0671 | 0.0660 | 0.0121 | 17 | 626 | 0.0666 | 0.0476 | 0.0476 | 15 | 0.5484 | prior_season_only | NOT_RANK_PERSISTENT | 0.0000 |
-| special_teams.fg_pct | 0.7407 | 0.8507 | 0.0691 | 17 | 217 | 0.7941 | -0.8195 | -0.8195 | 31 | 0.0323 | prior_season_only | NOT_RANK_PERSISTENT | 0.0000 |
-| special_teams.st_epa_per_play | 0.0319 | 0.0622 | 0.0928 | 17 | 217 | 0.0466 | -0.1680 | -0.1680 | 25 | 0.2258 | prior_season_only | RANK_PERSISTENT | 0.0000 |
-| team_defense.early_down_epa_per_play | -0.0248 | -0.0013 | 0.0639 | 17 | 1108 | -0.0134 | -0.1896 | 0.1896 | 14 | 0.5806 | prior_season_only | RANK_PERSISTENT | 0.0000 |
-| team_defense.epa_per_play | -0.0513 | 0.0046 | 0.0677 | 17 | 1108 | -0.0242 | -0.4247 | 0.4247 | 9 | 0.7419 | prior_season_only | RANK_PERSISTENT | 0.0000 |
-| team_defense.explosive_pass_rate | 0.0735 | 0.0797 | 0.0112 | 17 | 1108 | 0.0763 | -0.3031 | 0.3031 | 11 | 0.6774 | prior_season_only | NOT_RANK_PERSISTENT | 0.0000 |
-| team_defense.explosive_rush_rate | 0.0998 | 0.1000 | 0.0206 | 17 | 1108 | 0.0999 | -0.0046 | 0.0046 | 20 | 0.3871 | prior_season_only | RANK_PERSISTENT | 0.0000 |
-| team_defense.pass_epa_per_dropback | -0.0689 | 0.0361 | 0.0949 | 17 | 1108 | -0.0180 | -0.5702 | 0.5702 | 7 | 0.8065 | prior_season_only | RANK_PERSISTENT | 0.0000 |
-| team_defense.pass_success_rate | 0.4153 | 0.4536 | 0.0320 | 17 | 1108 | 0.4339 | -0.6159 | 0.6159 | 5 | 0.8710 | prior_season_only | RANK_PERSISTENT | 0.0000 |
-| team_defense.rush_epa_per_play | -0.1037 | -0.0760 | 0.0649 | 17 | 1108 | -0.0912 | -0.2341 | 0.2341 | 9 | 0.7419 | prior_season_only | NOT_RANK_PERSISTENT | 0.0000 |
-| team_defense.rush_success_rate | 0.4150 | 0.4020 | 0.0330 | 17 | 1108 | 0.4087 | 0.2029 | -0.2029 | 18 | 0.4516 | prior_season_only | RANK_PERSISTENT | 0.0000 |
-| team_defense.success_rate | 0.4251 | 0.4384 | 0.0255 | 17 | 1108 | 0.4315 | -0.2693 | 0.2693 | 11 | 0.6774 | prior_season_only | RANK_PERSISTENT | 0.0000 |
-| team_offense.early_down_epa_per_play | -0.0025 | -0.0054 | 0.0784 | 17 | 1033 | -0.0034 | 0.0250 | 0.0250 | 20 | 0.3871 | prior_season_only | UNVALIDATED_RANK_PERSISTENT | 0.0000 |
-| team_offense.epa_per_play | 0.0343 | -0.0001 | 0.0921 | 17 | 1033 | 0.0233 | 0.2540 | 0.2540 | 17 | 0.4839 | prior_season_only | VALIDATED_PERSISTENCE | 0.0000 |
-| team_offense.explosive_pass_rate | 0.0733 | 0.0796 | 0.0177 | 17 | 1033 | 0.0763 | -0.1823 | -0.1823 | 20 | 0.3871 | prior_season_only | RANK_PERSISTENT | 0.0000 |
-| team_offense.explosive_rush_rate | 0.1166 | 0.0990 | 0.0195 | 17 | 1033 | 0.1080 | 0.4624 | 0.4624 | 4 | 0.9032 | prior_season_only | NOT_RANK_PERSISTENT | 0.0000 |
-| team_offense.pass_epa_per_dropback | 0.0765 | 0.0308 | 0.1280 | 17 | 1033 | 0.0618 | 0.2427 | 0.2427 | 14 | 0.5806 | prior_season_only | UNVALIDATED_RANK_PERSISTENT | 0.0000 |
-| team_offense.pass_success_rate | 0.4468 | 0.4521 | 0.0418 | 17 | 1033 | 0.4485 | -0.0863 | -0.0863 | 22 | 0.3226 | prior_season_only | UNVALIDATED_RANK_PERSISTENT | 0.0000 |
-| team_offense.proe | -0.0495 | -0.0477 | 0.0349 | 17 | 1033 | -0.0492 | -0.0424 | -0.0000 | — | — | prior_season_only | VALIDATED_PERSISTENCE | 0.0000 |
-| team_offense.rush_epa_per_play | -0.0468 | -0.0806 | 0.0754 | 17 | 1033 | -0.0632 | 0.2312 | 0.2312 | 13 | 0.6129 | prior_season_only | RANK_PERSISTENT | 0.0000 |
-| team_offense.rush_success_rate | 0.4079 | 0.4004 | 0.0385 | 17 | 1033 | 0.4048 | 0.1150 | 0.1150 | 17 | 0.4839 | prior_season_only | RANK_PERSISTENT | 0.0000 |
-| team_offense.success_rate | 0.4327 | 0.4370 | 0.0337 | 17 | 1033 | 0.4335 | -0.1017 | -0.1017 | 23 | 0.2903 | prior_season_only | VALIDATED_PERSISTENCE | 0.0000 |
+| pass_protection.qb_hit_rate_allowed | 0.1515 | 0.1450 | 0.0327 | 1 | 33 | 0.1457 | 0.0221 | -0.0221 | 17 | 0.4355 | low | UNVALIDATED_RANK_PERSISTENT | 0.0317 |
+| pass_protection.rush_stuffed_rate_approx | 0.2632 | 0.2045 | 0.0323 | 1 | 33 | 0.2080 | 0.1066 | -0.1066 | 25 | 0.2097 | low | RANK_PERSISTENT | -0.0209 |
+| pass_protection.sack_rate_allowed | 0.0909 | 0.0664 | 0.0188 | 1 | 33 | 0.0691 | 0.1450 | -0.1450 | 26 | 0.1935 | low | UNVALIDATED_RANK_PERSISTENT | 0.0063 |
+| pass_rush.qb_hit_rate_generated | 0.0526 | 0.1442 | 0.0234 | 1 | 38 | 0.1388 | -0.2301 | -0.2301 | 31 | 0.0323 | low | RANK_PERSISTENT | -0.0151 |
+| pass_rush.sack_rate_generated | 0.0263 | 0.0660 | 0.0121 | 1 | 38 | 0.0634 | -0.2198 | -0.2198 | 25 | 0.2258 | low | NOT_RANK_PERSISTENT | -0.0032 |
+| special_teams.fg_pct | 1.0000 | 0.8507 | 0.0691 | 1 | 16 | 0.8595 | 0.1270 | 0.1270 | 1 | 0.6481 | low | NOT_RANK_PERSISTENT | 0.0654 |
+| special_teams.st_epa_per_play | 0.0677 | 0.0622 | 0.0928 | 1 | 16 | 0.0626 | 0.0034 | 0.0034 | 19 | 0.4194 | low | RANK_PERSISTENT | 0.0159 |
+| team_defense.early_down_epa_per_play | -0.0462 | -0.0013 | 0.0639 | 1 | 69 | -0.0039 | -0.0413 | 0.0413 | 14 | 0.5806 | low | RANK_PERSISTENT | 0.0095 |
+| team_defense.epa_per_play | 0.0733 | 0.0046 | 0.0677 | 1 | 69 | 0.0086 | 0.0597 | -0.0597 | 21 | 0.3548 | low | RANK_PERSISTENT | 0.0328 |
+| team_defense.explosive_pass_rate | 0.0263 | 0.0797 | 0.0112 | 1 | 69 | 0.0761 | -0.3171 | 0.3171 | 7 | 0.8065 | low | NOT_RANK_PERSISTENT | -0.0002 |
+| team_defense.explosive_rush_rate | 0.0690 | 0.1000 | 0.0206 | 1 | 69 | 0.0981 | -0.0885 | 0.0885 | 12 | 0.6452 | low | RANK_PERSISTENT | -0.0017 |
+| team_defense.pass_epa_per_dropback | 0.1676 | 0.0361 | 0.0949 | 1 | 69 | 0.0439 | 0.0815 | -0.0815 | 21 | 0.3548 | low | RANK_PERSISTENT | 0.0618 |
+| team_defense.pass_success_rate | 0.3947 | 0.4536 | 0.0320 | 1 | 69 | 0.4502 | -0.1081 | 0.1081 | 9 | 0.7419 | low | RANK_PERSISTENT | 0.0163 |
+| team_defense.rush_epa_per_play | -0.0465 | -0.0760 | 0.0649 | 1 | 69 | -0.0740 | 0.0303 | -0.0303 | 21 | 0.3548 | low | NOT_RANK_PERSISTENT | 0.0172 |
+| team_defense.rush_success_rate | 0.4828 | 0.4020 | 0.0330 | 1 | 69 | 0.4067 | 0.1441 | -0.1441 | 28 | 0.1290 | low | RANK_PERSISTENT | -0.0019 |
+| team_defense.success_rate | 0.4348 | 0.4384 | 0.0255 | 1 | 69 | 0.4382 | -0.0083 | 0.0083 | 17 | 0.4839 | low | RANK_PERSISTENT | 0.0066 |
+| team_offense.early_down_epa_per_play | -0.2043 | -0.0054 | 0.0784 | 1 | 53 | -0.0275 | -0.2819 | -0.2819 | 29 | 0.0968 | low | UNVALIDATED_RANK_PERSISTENT | -0.0241 |
+| team_offense.epa_per_play | 0.0272 | -0.0001 | 0.0921 | 1 | 53 | 0.0029 | 0.0330 | 0.0330 | 17 | 0.4839 | low | VALIDATED_PERSISTENCE | -0.0203 |
+| team_offense.explosive_pass_rate | 0.0909 | 0.0796 | 0.0177 | 1 | 53 | 0.0802 | 0.0376 | 0.0376 | 14 | 0.5806 | low | RANK_PERSISTENT | 0.0039 |
+| team_offense.explosive_rush_rate | 0.0526 | 0.0990 | 0.0195 | 1 | 53 | 0.0963 | -0.1397 | -0.1397 | 28 | 0.1129 | low | NOT_RANK_PERSISTENT | -0.0118 |
+| team_offense.pass_epa_per_dropback | 0.1658 | 0.0308 | 0.1280 | 1 | 53 | 0.0458 | 0.1173 | 0.1173 | 13 | 0.6129 | low | UNVALIDATED_RANK_PERSISTENT | -0.0161 |
+| team_offense.pass_success_rate | 0.3939 | 0.4521 | 0.0418 | 1 | 53 | 0.4456 | -0.1545 | -0.1545 | 25 | 0.2097 | low | UNVALIDATED_RANK_PERSISTENT | -0.0029 |
+| team_offense.proe | -0.0734 | -0.0477 | 0.0349 | 1 | 53 | -0.0528 | -0.1473 | -0.0000 | — | — | low | VALIDATED_PERSISTENCE | -0.0037 |
+| team_offense.rush_epa_per_play | -0.1666 | -0.0806 | 0.0754 | 1 | 53 | -0.0857 | -0.0671 | -0.0671 | 23 | 0.2903 | low | RANK_PERSISTENT | -0.0225 |
+| team_offense.rush_success_rate | 0.2632 | 0.4004 | 0.0385 | 1 | 53 | 0.3898 | -0.2740 | -0.2740 | 30 | 0.0645 | low | RANK_PERSISTENT | -0.0150 |
+| team_offense.success_rate | 0.3396 | 0.4370 | 0.0337 | 1 | 53 | 0.4175 | -0.5770 | -0.5770 | 31 | 0.0323 | low | VALIDATED_PERSISTENCE | -0.0160 |
 
 ## PIT
-Record: no games yet · Points for/against: —/— · Point differential: — · Data confidence: prior_season_only
-Strongest area: **pass_protection** (0.652) · Weakest area: **passing_offense** (-0.165)
+Record: 1-0-0 · Points for/against: 20/13 · Point differential: 7 · Data confidence: low
+Strongest area: **passing_defense** (0.333) · Weakest area: **offense_overall** (-0.362)
 
 ### Domain indices
 | domain | label | index_value | rank_of_league | delta_vs_prev_week | delta_vs_preseason | min_confidence |
 | --- | --- | --- | --- | --- | --- | --- |
-| defense_overall | Defensive Strength Index | 0.072 | 13 | 0.000 | 0.000 | prior_season_only |
-| pass_rush | Pass-Rush Strength Index | 0.250 | 9 | 0.000 | 0.000 | prior_season_only |
-| passing_defense | Pass-Defense Strength Index | -0.030 | 15 | 0.000 | 0.000 | prior_season_only |
-| rushing_defense | Run-Defense Strength Index | -0.074 | 20 | 0.000 | 0.000 | prior_season_only |
-| offense_overall | Offensive Strength Index | 0.120 | 18 | 0.000 | 0.000 | prior_season_only |
-| pass_protection | Pass-Protection Strength Index | 0.652 | 5 | 0.000 | 0.000 | prior_season_only |
-| passing_offense | Passing-Offense Strength Index | -0.165 | 23 | 0.000 | 0.000 | prior_season_only |
-| rushing_offense | Rushing-Offense Strength Index | 0.569 | 6 | 0.000 | 0.000 | prior_season_only |
-| special_teams | Special-Teams Strength Index | 0.405 | 10 | 0.000 | 0.000 | prior_season_only |
+| defense_overall | Defensive Strength Index | 0.241 | 1 | 0.170 | 0.170 | low |
+| pass_rush | Pass-Rush Strength Index | 0.303 | 3 | 0.054 | 0.054 | low |
+| passing_defense | Pass-Defense Strength Index | 0.333 | 1 | 0.363 | 0.363 | low |
+| rushing_defense | Run-Defense Strength Index | -0.003 | 16 | 0.071 | 0.071 | low |
+| offense_overall | Offensive Strength Index | -0.362 | 30 | -0.483 | -0.483 | low |
+| pass_protection | Pass-Protection Strength Index | 0.068 | 12 | -0.583 | -0.583 | low |
+| passing_offense | Passing-Offense Strength Index | -0.205 | 29 | -0.040 | -0.040 | low |
+| rushing_offense | Rushing-Offense Strength Index | -0.189 | 28 | -0.758 | -0.758 | low |
+| special_teams | Special-Teams Strength Index | -0.002 | 20 | -0.407 | -0.407 | low |
 
 ### Underlying metrics
 | metric | raw_value | ref_mean | ref_sd | n_games | n_opportunities | shrunk_value | z_shrunk | oriented_z_shrunk | rank_of_league | percentile | confidence | phase3_status | delta_shrunk_vs_prev_week |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
-| pass_protection.qb_hit_rate_allowed | 0.1066 | 0.1450 | 0.0327 | 17 | 591 | 0.1189 | -0.7980 | 0.7980 | 5 | 0.8710 | prior_season_only | UNVALIDATED_RANK_PERSISTENT | 0.0000 |
-| pass_protection.rush_stuffed_rate_approx | 0.1851 | 0.2045 | 0.0323 | 17 | 591 | 0.1945 | -0.3096 | 0.3096 | 12 | 0.6452 | prior_season_only | RANK_PERSISTENT | 0.0000 |
-| pass_protection.sack_rate_allowed | 0.0525 | 0.0664 | 0.0188 | 17 | 591 | 0.0569 | -0.5051 | 0.5051 | 11 | 0.6774 | prior_season_only | UNVALIDATED_RANK_PERSISTENT | 0.0000 |
-| pass_rush.qb_hit_rate_generated | 0.1581 | 0.1442 | 0.0234 | 17 | 683 | 0.1514 | 0.3071 | 0.3071 | 11 | 0.6774 | prior_season_only | RANK_PERSISTENT | 0.0000 |
-| pass_rush.sack_rate_generated | 0.0703 | 0.0660 | 0.0121 | 17 | 683 | 0.0684 | 0.1925 | 0.1925 | 11 | 0.6774 | prior_season_only | NOT_RANK_PERSISTENT | 0.0000 |
-| special_teams.fg_pct | 0.8438 | 0.8507 | 0.0691 | 17 | 226 | 0.8471 | -0.0519 | -0.0519 | 19 | 0.4032 | prior_season_only | NOT_RANK_PERSISTENT | 0.0000 |
-| special_teams.st_epa_per_play | 0.1351 | 0.0622 | 0.0928 | 17 | 226 | 0.0998 | 0.4045 | 0.4045 | 10 | 0.7097 | prior_season_only | RANK_PERSISTENT | 0.0000 |
-| team_defense.early_down_epa_per_play | -0.0459 | -0.0013 | 0.0639 | 17 | 1142 | -0.0243 | -0.3596 | 0.3596 | 10 | 0.7097 | prior_season_only | RANK_PERSISTENT | 0.0000 |
-| team_defense.epa_per_play | 0.0252 | 0.0046 | 0.0677 | 17 | 1142 | 0.0152 | 0.1566 | -0.1566 | 19 | 0.4194 | prior_season_only | RANK_PERSISTENT | 0.0000 |
-| team_defense.explosive_pass_rate | 0.0776 | 0.0797 | 0.0112 | 17 | 1142 | 0.0785 | -0.1019 | 0.1019 | 16 | 0.5161 | prior_season_only | NOT_RANK_PERSISTENT | 0.0000 |
-| team_defense.explosive_rush_rate | 0.0976 | 0.1000 | 0.0206 | 17 | 1142 | 0.0988 | -0.0585 | 0.0585 | 18 | 0.4516 | prior_season_only | RANK_PERSISTENT | 0.0000 |
-| team_defense.pass_epa_per_dropback | 0.0463 | 0.0361 | 0.0949 | 17 | 1142 | 0.0414 | 0.0553 | -0.0553 | 16 | 0.5161 | prior_season_only | RANK_PERSISTENT | 0.0000 |
-| team_defense.pass_success_rate | 0.4539 | 0.4536 | 0.0320 | 17 | 1142 | 0.4538 | 0.0039 | -0.0039 | 16 | 0.5161 | prior_season_only | RANK_PERSISTENT | 0.0000 |
-| team_defense.rush_epa_per_play | -0.0348 | -0.0760 | 0.0649 | 17 | 1142 | -0.0534 | 0.3479 | -0.3479 | 24 | 0.2581 | prior_season_only | NOT_RANK_PERSISTENT | 0.0000 |
-| team_defense.rush_success_rate | 0.3976 | 0.4020 | 0.0330 | 17 | 1142 | 0.3997 | -0.0681 | 0.0681 | 13 | 0.6129 | prior_season_only | RANK_PERSISTENT | 0.0000 |
-| team_defense.success_rate | 0.4378 | 0.4384 | 0.0255 | 17 | 1142 | 0.4381 | -0.0115 | 0.0115 | 13 | 0.6129 | prior_season_only | RANK_PERSISTENT | 0.0000 |
-| team_offense.early_down_epa_per_play | 0.0004 | -0.0054 | 0.0784 | 17 | 1015 | -0.0014 | 0.0502 | 0.0502 | 19 | 0.4194 | prior_season_only | UNVALIDATED_RANK_PERSISTENT | 0.0000 |
-| team_offense.epa_per_play | 0.0276 | -0.0001 | 0.0921 | 17 | 1015 | 0.0187 | 0.2050 | 0.2050 | 18 | 0.4516 | prior_season_only | VALIDATED_PERSISTENCE | 0.0000 |
-| team_offense.explosive_pass_rate | 0.0694 | 0.0796 | 0.0177 | 17 | 1015 | 0.0743 | -0.2963 | -0.2963 | 23 | 0.2903 | prior_season_only | RANK_PERSISTENT | 0.0000 |
-| team_offense.explosive_rush_rate | 0.1080 | 0.0990 | 0.0195 | 17 | 1015 | 0.1036 | 0.2361 | 0.2361 | 10 | 0.7097 | prior_season_only | NOT_RANK_PERSISTENT | 0.0000 |
-| team_offense.pass_epa_per_dropback | 0.0357 | 0.0308 | 0.1280 | 17 | 1015 | 0.0341 | 0.0261 | 0.0261 | 19 | 0.4194 | prior_season_only | UNVALIDATED_RANK_PERSISTENT | 0.0000 |
-| team_offense.pass_success_rate | 0.4382 | 0.4521 | 0.0418 | 17 | 1015 | 0.4427 | -0.2250 | -0.2250 | 24 | 0.2581 | prior_season_only | UNVALIDATED_RANK_PERSISTENT | 0.0000 |
-| team_offense.proe | -0.0356 | -0.0477 | 0.0349 | 17 | 1015 | -0.0379 | 0.2812 | 0.0000 | — | — | prior_season_only | VALIDATED_PERSISTENCE | 0.0000 |
-| team_offense.rush_epa_per_play | -0.0014 | -0.0806 | 0.0754 | 17 | 1015 | -0.0398 | 0.5411 | 0.5411 | 7 | 0.8065 | prior_season_only | RANK_PERSISTENT | 0.0000 |
-| team_offense.rush_success_rate | 0.4396 | 0.4004 | 0.0385 | 17 | 1015 | 0.4234 | 0.5969 | 0.5969 | 6 | 0.8387 | prior_season_only | RANK_PERSISTENT | 0.0000 |
-| team_offense.success_rate | 0.4414 | 0.4370 | 0.0337 | 17 | 1015 | 0.4405 | 0.1061 | 0.1061 | 17 | 0.4839 | prior_season_only | VALIDATED_PERSISTENCE | 0.0000 |
+| pass_protection.qb_hit_rate_allowed | 0.1395 | 0.1450 | 0.0327 | 1 | 43 | 0.1444 | -0.0185 | 0.0185 | 15 | 0.5484 | low | UNVALIDATED_RANK_PERSISTENT | 0.0255 |
+| pass_protection.rush_stuffed_rate_approx | 0.2778 | 0.2045 | 0.0323 | 1 | 43 | 0.2088 | 0.1332 | -0.1332 | 29 | 0.0968 | low | RANK_PERSISTENT | 0.0143 |
+| pass_protection.sack_rate_allowed | 0.0465 | 0.0664 | 0.0188 | 1 | 43 | 0.0642 | -0.1177 | 0.1177 | 11 | 0.6613 | low | UNVALIDATED_RANK_PERSISTENT | 0.0073 |
+| pass_rush.qb_hit_rate_generated | 0.1923 | 0.1442 | 0.0234 | 1 | 26 | 0.1470 | 0.1210 | 0.1210 | 9 | 0.7419 | low | RANK_PERSISTENT | -0.0044 |
+| pass_rush.sack_rate_generated | 0.1538 | 0.0660 | 0.0121 | 1 | 26 | 0.0719 | 0.4857 | 0.4857 | 2 | 0.9677 | low | NOT_RANK_PERSISTENT | 0.0035 |
+| special_teams.fg_pct | 0.6667 | 0.8507 | 0.0691 | 1 | 13 | 0.8399 | -0.1566 | -0.1566 | 23 | 0.1481 | low | NOT_RANK_PERSISTENT | -0.0072 |
+| special_teams.st_epa_per_play | 0.0586 | 0.0622 | 0.0928 | 1 | 13 | 0.0620 | -0.0023 | -0.0023 | 20 | 0.3871 | low | RANK_PERSISTENT | -0.0378 |
+| team_defense.early_down_epa_per_play | -0.2658 | -0.0013 | 0.0639 | 1 | 60 | -0.0169 | -0.2435 | 0.2435 | 2 | 0.9677 | low | RANK_PERSISTENT | 0.0074 |
+| team_defense.epa_per_play | -0.3577 | 0.0046 | 0.0677 | 1 | 60 | -0.0167 | -0.3146 | 0.3146 | 2 | 0.9677 | low | RANK_PERSISTENT | -0.0319 |
+| team_defense.explosive_pass_rate | 0.1154 | 0.0797 | 0.0112 | 1 | 60 | 0.0821 | 0.2122 | -0.2122 | 26 | 0.1935 | low | NOT_RANK_PERSISTENT | 0.0035 |
+| team_defense.explosive_rush_rate | 0.0938 | 0.1000 | 0.0206 | 1 | 60 | 0.0996 | -0.0177 | 0.0177 | 18 | 0.4516 | low | RANK_PERSISTENT | 0.0008 |
+| team_defense.pass_epa_per_dropback | -0.6063 | 0.0361 | 0.0949 | 1 | 60 | -0.0017 | -0.3983 | 0.3983 | 1 | 1.0000 | low | RANK_PERSISTENT | -0.0430 |
+| team_defense.pass_success_rate | 0.3077 | 0.4536 | 0.0320 | 1 | 60 | 0.4451 | -0.2679 | 0.2679 | 1 | 1.0000 | low | RANK_PERSISTENT | -0.0087 |
+| team_defense.rush_epa_per_play | -0.1126 | -0.0760 | 0.0649 | 1 | 60 | -0.0784 | -0.0376 | 0.0376 | 13 | 0.6129 | low | NOT_RANK_PERSISTENT | -0.0250 |
+| team_defense.rush_success_rate | 0.4375 | 0.4020 | 0.0330 | 1 | 60 | 0.4041 | 0.0634 | -0.0634 | 21 | 0.3387 | low | RANK_PERSISTENT | 0.0043 |
+| team_defense.success_rate | 0.3667 | 0.4384 | 0.0255 | 1 | 60 | 0.4342 | -0.1658 | 0.1658 | 5 | 0.8710 | low | RANK_PERSISTENT | -0.0039 |
+| team_offense.early_down_epa_per_play | -0.1460 | -0.0054 | 0.0784 | 1 | 65 | -0.0210 | -0.1994 | -0.1994 | 24 | 0.2581 | low | UNVALIDATED_RANK_PERSISTENT | -0.0196 |
+| team_offense.epa_per_play | -0.2515 | -0.0001 | 0.0921 | 1 | 65 | -0.0281 | -0.3033 | -0.3033 | 30 | 0.0645 | low | VALIDATED_PERSISTENCE | -0.0468 |
+| team_offense.explosive_pass_rate | 0.0698 | 0.0796 | 0.0177 | 1 | 65 | 0.0790 | -0.0325 | -0.0325 | 16 | 0.5161 | low | RANK_PERSISTENT | 0.0047 |
+| team_offense.explosive_rush_rate | 0.0556 | 0.0990 | 0.0195 | 1 | 65 | 0.0965 | -0.1309 | -0.1309 | 27 | 0.1613 | low | NOT_RANK_PERSISTENT | -0.0072 |
+| team_offense.pass_epa_per_dropback | -0.3239 | 0.0308 | 0.1280 | 1 | 65 | -0.0086 | -0.3080 | -0.3080 | 28 | 0.1290 | low | UNVALIDATED_RANK_PERSISTENT | -0.0428 |
+| team_offense.pass_success_rate | 0.3488 | 0.4521 | 0.0418 | 1 | 65 | 0.4406 | -0.2743 | -0.2743 | 31 | 0.0323 | low | UNVALIDATED_RANK_PERSISTENT | -0.0021 |
+| team_offense.proe | 0.0505 | -0.0477 | 0.0349 | 1 | 65 | -0.0281 | 0.5637 | 0.0000 | — | — | low | VALIDATED_PERSISTENCE | 0.0098 |
+| team_offense.rush_epa_per_play | -0.2522 | -0.0806 | 0.0754 | 1 | 65 | -0.0907 | -0.1339 | -0.1339 | 27 | 0.1613 | low | RANK_PERSISTENT | -0.0509 |
+| team_offense.rush_success_rate | 0.2778 | 0.4004 | 0.0385 | 1 | 65 | 0.3909 | -0.2448 | -0.2448 | 28 | 0.1290 | low | RANK_PERSISTENT | -0.0324 |
+| team_offense.success_rate | 0.3385 | 0.4370 | 0.0337 | 1 | 65 | 0.4173 | -0.5839 | -0.5839 | 32 | 0.0000 | low | VALIDATED_PERSISTENCE | -0.0233 |
 
 ## SEA
-Record: no games yet · Points for/against: —/— · Point differential: — · Data confidence: prior_season_only
-Strongest area: **rushing_defense** (1.028) · Weakest area: **rushing_offense** (-0.008)
+Record: 1-0-0 · Points for/against: 13/10 · Point differential: 3 · Data confidence: low
+Strongest area: **rushing_defense** (0.295) · Weakest area: **rushing_offense** (-0.159)
 
 ### Domain indices
 | domain | label | index_value | rank_of_league | delta_vs_prev_week | delta_vs_preseason | min_confidence |
 | --- | --- | --- | --- | --- | --- | --- |
-| defense_overall | Defensive Strength Index | 0.738 | 2 | 0.000 | 0.000 | prior_season_only |
-| pass_rush | Pass-Rush Strength Index | 0.220 | 13 | 0.000 | 0.000 | prior_season_only |
-| passing_defense | Pass-Defense Strength Index | 0.632 | 4 | 0.000 | 0.000 | prior_season_only |
-| rushing_defense | Run-Defense Strength Index | 1.028 | 1 | 0.000 | 0.000 | prior_season_only |
-| offense_overall | Offensive Strength Index | 0.464 | 10 | 0.000 | 0.000 | prior_season_only |
-| pass_protection | Pass-Protection Strength Index | 0.562 | 9 | 0.000 | 0.000 | prior_season_only |
-| passing_offense | Passing-Offense Strength Index | 0.823 | 4 | 0.000 | 0.000 | prior_season_only |
-| rushing_offense | Rushing-Offense Strength Index | -0.008 | 21 | 0.000 | 0.000 | prior_season_only |
-| special_teams | Special-Teams Strength Index | 0.642 | 8 | 0.000 | 0.000 | prior_season_only |
+| defense_overall | Defensive Strength Index | 0.104 | 8 | -0.635 | -0.635 | low |
+| pass_rush | Pass-Rush Strength Index | -0.017 | 17 | -0.236 | -0.236 | low |
+| passing_defense | Pass-Defense Strength Index | -0.074 | 21 | -0.706 | -0.706 | low |
+| rushing_defense | Run-Defense Strength Index | 0.295 | 1 | -0.733 | -0.733 | low |
+| offense_overall | Offensive Strength Index | -0.049 | 17 | -0.513 | -0.513 | low |
+| pass_protection | Pass-Protection Strength Index | -0.154 | 25 | -0.715 | -0.715 | low |
+| passing_offense | Passing-Offense Strength Index | 0.117 | 9 | -0.706 | -0.706 | low |
+| rushing_offense | Rushing-Offense Strength Index | -0.159 | 26 | -0.151 | -0.151 | low |
+| special_teams | Special-Teams Strength Index | 0.037 | 16 | -0.604 | -0.604 | low |
 
 ### Underlying metrics
 | metric | raw_value | ref_mean | ref_sd | n_games | n_opportunities | shrunk_value | z_shrunk | oriented_z_shrunk | rank_of_league | percentile | confidence | phase3_status | delta_shrunk_vs_prev_week |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
-| pass_protection.qb_hit_rate_allowed | 0.1158 | 0.1450 | 0.0327 | 17 | 518 | 0.1252 | -0.6061 | 0.6061 | 6 | 0.8387 | prior_season_only | UNVALIDATED_RANK_PERSISTENT | 0.0000 |
-| pass_protection.rush_stuffed_rate_approx | 0.2322 | 0.2045 | 0.0323 | 17 | 518 | 0.2188 | 0.4402 | -0.4402 | 26 | 0.1935 | prior_season_only | RANK_PERSISTENT | 0.0000 |
-| pass_protection.sack_rate_allowed | 0.0521 | 0.0664 | 0.0188 | 17 | 518 | 0.0567 | -0.5171 | 0.5171 | 9 | 0.7419 | prior_season_only | UNVALIDATED_RANK_PERSISTENT | 0.0000 |
-| pass_rush.qb_hit_rate_generated | 0.1597 | 0.1442 | 0.0234 | 17 | 689 | 0.1521 | 0.3407 | 0.3407 | 10 | 0.7097 | prior_season_only | RANK_PERSISTENT | 0.0000 |
-| pass_rush.sack_rate_generated | 0.0682 | 0.0660 | 0.0121 | 17 | 689 | 0.0672 | 0.0987 | 0.0987 | 12 | 0.6452 | prior_season_only | NOT_RANK_PERSISTENT | 0.0000 |
-| special_teams.fg_pct | 0.8542 | 0.8507 | 0.0691 | 17 | 218 | 0.8525 | 0.0257 | 0.0257 | 17 | 0.4839 | prior_season_only | NOT_RANK_PERSISTENT | 0.0000 |
-| special_teams.st_epa_per_play | 0.1779 | 0.0622 | 0.0928 | 17 | 218 | 0.1218 | 0.6416 | 0.6416 | 8 | 0.7742 | prior_season_only | RANK_PERSISTENT | 0.0000 |
-| team_defense.early_down_epa_per_play | -0.0702 | -0.0013 | 0.0639 | 17 | 1106 | -0.0368 | -0.5559 | 0.5559 | 4 | 0.9032 | prior_season_only | RANK_PERSISTENT | 0.0000 |
-| team_defense.epa_per_play | -0.1128 | 0.0046 | 0.0677 | 17 | 1106 | -0.0559 | -0.8926 | 0.8926 | 1 | 1.0000 | prior_season_only | RANK_PERSISTENT | 0.0000 |
-| team_defense.explosive_pass_rate | 0.0639 | 0.0797 | 0.0112 | 17 | 1106 | 0.0710 | -0.7735 | 0.7735 | 5 | 0.8710 | prior_season_only | NOT_RANK_PERSISTENT | 0.0000 |
-| team_defense.explosive_rush_rate | 0.0477 | 0.1000 | 0.0206 | 17 | 1106 | 0.0731 | -1.3059 | 1.3059 | 1 | 1.0000 | prior_season_only | RANK_PERSISTENT | 0.0000 |
-| team_defense.pass_epa_per_dropback | -0.0784 | 0.0361 | 0.0949 | 17 | 1106 | -0.0229 | -0.6216 | 0.6216 | 6 | 0.8387 | prior_season_only | RANK_PERSISTENT | 0.0000 |
-| team_defense.pass_success_rate | 0.4136 | 0.4536 | 0.0320 | 17 | 1106 | 0.4330 | -0.6431 | 0.6431 | 4 | 0.9032 | prior_season_only | RANK_PERSISTENT | 0.0000 |
-| team_defense.rush_epa_per_play | -0.2055 | -0.0760 | 0.0649 | 17 | 1106 | -0.1470 | -1.0934 | 1.0934 | 1 | 1.0000 | prior_season_only | NOT_RANK_PERSISTENT | 0.0000 |
-| team_defense.rush_success_rate | 0.3581 | 0.4020 | 0.0330 | 17 | 1106 | 0.3794 | -0.6856 | 0.6856 | 1 | 1.0000 | prior_season_only | RANK_PERSISTENT | 0.0000 |
-| team_defense.success_rate | 0.4005 | 0.4384 | 0.0255 | 17 | 1106 | 0.4189 | -0.7661 | 0.7661 | 3 | 0.9355 | prior_season_only | RANK_PERSISTENT | 0.0000 |
-| team_offense.early_down_epa_per_play | 0.0442 | -0.0054 | 0.0784 | 17 | 1039 | 0.0283 | 0.4301 | 0.4301 | 10 | 0.7097 | prior_season_only | UNVALIDATED_RANK_PERSISTENT | 0.0000 |
-| team_offense.epa_per_play | 0.0365 | -0.0001 | 0.0921 | 17 | 1039 | 0.0247 | 0.2702 | 0.2702 | 14 | 0.5806 | prior_season_only | VALIDATED_PERSISTENCE | 0.0000 |
-| team_offense.explosive_pass_rate | 0.1100 | 0.0796 | 0.0177 | 17 | 1039 | 0.0953 | 0.8850 | 0.8850 | 3 | 0.9355 | prior_season_only | RANK_PERSISTENT | 0.0000 |
-| team_offense.explosive_rush_rate | 0.1079 | 0.0990 | 0.0195 | 17 | 1039 | 0.1036 | 0.2354 | 0.2354 | 11 | 0.6774 | prior_season_only | NOT_RANK_PERSISTENT | 0.0000 |
-| team_offense.pass_epa_per_dropback | 0.1174 | 0.0308 | 0.1280 | 17 | 1039 | 0.0897 | 0.4604 | 0.4604 | 9 | 0.7419 | prior_season_only | UNVALIDATED_RANK_PERSISTENT | 0.0000 |
-| team_offense.pass_success_rate | 0.5212 | 0.4521 | 0.0418 | 17 | 1039 | 0.4991 | 1.1244 | 1.1244 | 4 | 0.9032 | prior_season_only | UNVALIDATED_RANK_PERSISTENT | 0.0000 |
-| team_offense.proe | -0.0899 | -0.0477 | 0.0349 | 17 | 1039 | -0.0818 | -0.9793 | -0.0000 | — | — | prior_season_only | VALIDATED_PERSISTENCE | 0.0000 |
-| team_offense.rush_epa_per_play | -0.0758 | -0.0806 | 0.0754 | 17 | 1039 | -0.0782 | 0.0325 | 0.0325 | 22 | 0.3226 | prior_season_only | RANK_PERSISTENT | 0.0000 |
-| team_offense.rush_success_rate | 0.3971 | 0.4004 | 0.0385 | 17 | 1039 | 0.3985 | -0.0490 | -0.0490 | 23 | 0.2903 | prior_season_only | RANK_PERSISTENT | 0.0000 |
-| team_offense.success_rate | 0.4658 | 0.4370 | 0.0337 | 17 | 1039 | 0.4603 | 0.6928 | 0.6928 | 8 | 0.7742 | prior_season_only | VALIDATED_PERSISTENCE | 0.0000 |
+| pass_protection.qb_hit_rate_allowed | 0.2222 | 0.1450 | 0.0327 | 1 | 27 | 0.1536 | 0.2622 | -0.2622 | 27 | 0.1613 | low | UNVALIDATED_RANK_PERSISTENT | 0.0284 |
+| pass_protection.rush_stuffed_rate_approx | 0.1905 | 0.2045 | 0.0323 | 1 | 27 | 0.2037 | -0.0256 | 0.0256 | 15 | 0.5484 | low | RANK_PERSISTENT | -0.0151 |
+| pass_protection.sack_rate_allowed | 0.0741 | 0.0664 | 0.0188 | 1 | 27 | 0.0673 | 0.0454 | -0.0454 | 21 | 0.3548 | low | UNVALIDATED_RANK_PERSISTENT | 0.0106 |
+| pass_rush.qb_hit_rate_generated | 0.1190 | 0.1442 | 0.0234 | 1 | 42 | 0.1427 | -0.0632 | -0.0632 | 22 | 0.3226 | low | RANK_PERSISTENT | -0.0095 |
+| pass_rush.sack_rate_generated | 0.0714 | 0.0660 | 0.0121 | 1 | 42 | 0.0664 | 0.0298 | 0.0298 | 13 | 0.5968 | low | NOT_RANK_PERSISTENT | -0.0008 |
+| special_teams.fg_pct | 1.0000 | 0.8507 | 0.0691 | 1 | 11 | 0.8595 | 0.1270 | 0.1270 | 1 | 0.6481 | low | NOT_RANK_PERSISTENT | 0.0070 |
+| special_teams.st_epa_per_play | 0.1209 | 0.0622 | 0.0928 | 1 | 11 | 0.0657 | 0.0372 | 0.0372 | 16 | 0.5161 | low | RANK_PERSISTENT | -0.0561 |
+| team_defense.early_down_epa_per_play | -0.1720 | -0.0013 | 0.0639 | 1 | 71 | -0.0114 | -0.1572 | 0.1572 | 6 | 0.8387 | low | RANK_PERSISTENT | 0.0255 |
+| team_defense.epa_per_play | -0.0924 | 0.0046 | 0.0677 | 1 | 71 | -0.0011 | -0.0842 | 0.0842 | 11 | 0.6774 | low | RANK_PERSISTENT | 0.0548 |
+| team_defense.explosive_pass_rate | 0.0000 | 0.0797 | 0.0112 | 1 | 71 | 0.0744 | -0.4735 | 0.4735 | 1 | 0.9355 | low | NOT_RANK_PERSISTENT | 0.0034 |
+| team_defense.explosive_rush_rate | 0.0370 | 0.1000 | 0.0206 | 1 | 71 | 0.0963 | -0.1797 | 0.1797 | 3 | 0.9355 | low | RANK_PERSISTENT | 0.0232 |
+| team_defense.pass_epa_per_dropback | 0.0655 | 0.0361 | 0.0949 | 1 | 71 | 0.0378 | 0.0182 | -0.0182 | 18 | 0.4516 | low | RANK_PERSISTENT | 0.0607 |
+| team_defense.pass_success_rate | 0.5238 | 0.4536 | 0.0320 | 1 | 71 | 0.4578 | 0.1288 | -0.1288 | 26 | 0.1935 | low | RANK_PERSISTENT | 0.0247 |
+| team_defense.rush_epa_per_play | -0.4505 | -0.0760 | 0.0649 | 1 | 71 | -0.1010 | -0.3844 | 0.3844 | 1 | 1.0000 | low | NOT_RANK_PERSISTENT | 0.0460 |
+| team_defense.rush_success_rate | 0.2222 | 0.4020 | 0.0330 | 1 | 71 | 0.3914 | -0.3207 | 0.3207 | 2 | 0.9677 | low | RANK_PERSISTENT | 0.0120 |
+| team_defense.success_rate | 0.4085 | 0.4384 | 0.0255 | 1 | 71 | 0.4366 | -0.0692 | 0.0692 | 10 | 0.7097 | low | RANK_PERSISTENT | 0.0177 |
+| team_offense.early_down_epa_per_play | 0.0728 | -0.0054 | 0.0784 | 1 | 49 | 0.0033 | 0.1109 | 0.1109 | 13 | 0.6129 | low | UNVALIDATED_RANK_PERSISTENT | -0.0250 |
+| team_offense.epa_per_play | 0.0286 | -0.0001 | 0.0921 | 1 | 49 | 0.0031 | 0.0347 | 0.0347 | 16 | 0.5161 | low | VALIDATED_PERSISTENCE | -0.0217 |
+| team_offense.explosive_pass_rate | 0.1111 | 0.0796 | 0.0177 | 1 | 49 | 0.0814 | 0.1046 | 0.1046 | 8 | 0.7742 | low | RANK_PERSISTENT | -0.0138 |
+| team_offense.explosive_rush_rate | 0.0952 | 0.0990 | 0.0195 | 1 | 49 | 0.0988 | -0.0114 | -0.0114 | 14 | 0.5806 | low | NOT_RANK_PERSISTENT | -0.0048 |
+| team_offense.pass_epa_per_dropback | 0.2260 | 0.0308 | 0.1280 | 1 | 49 | 0.0525 | 0.1695 | 0.1695 | 10 | 0.7097 | low | UNVALIDATED_RANK_PERSISTENT | -0.0372 |
+| team_offense.pass_success_rate | 0.4815 | 0.4521 | 0.0418 | 1 | 49 | 0.4553 | 0.0781 | 0.0781 | 13 | 0.6129 | low | UNVALIDATED_RANK_PERSISTENT | -0.0438 |
+| team_offense.proe | -0.0757 | -0.0477 | 0.0349 | 1 | 49 | -0.0533 | -0.1605 | -0.0000 | — | — | low | VALIDATED_PERSISTENCE | 0.0285 |
+| team_offense.rush_epa_per_play | -0.1946 | -0.0806 | 0.0754 | 1 | 49 | -0.0873 | -0.0890 | -0.0890 | 25 | 0.2258 | low | RANK_PERSISTENT | -0.0092 |
+| team_offense.rush_success_rate | 0.2857 | 0.4004 | 0.0385 | 1 | 49 | 0.3915 | -0.2290 | -0.2290 | 27 | 0.1613 | low | RANK_PERSISTENT | -0.0069 |
+| team_offense.success_rate | 0.3878 | 0.4370 | 0.0337 | 1 | 49 | 0.4271 | -0.2917 | -0.2917 | 25 | 0.2258 | low | VALIDATED_PERSISTENCE | -0.0332 |
 
 ## SF
-Record: no games yet · Points for/against: —/— · Point differential: — · Data confidence: prior_season_only
-Strongest area: **special_teams** (0.800) · Weakest area: **pass_rush** (-1.371)
+Record: 1-0-0 · Points for/against: 27/7 · Point differential: 20 · Data confidence: low
+Strongest area: **offense_overall** (0.437) · Weakest area: **special_teams** (-0.082)
 
 ### Domain indices
 | domain | label | index_value | rank_of_league | delta_vs_prev_week | delta_vs_preseason | min_confidence |
 | --- | --- | --- | --- | --- | --- | --- |
-| defense_overall | Defensive Strength Index | -0.680 | 26 | 0.000 | 0.000 | prior_season_only |
-| pass_rush | Pass-Rush Strength Index | -1.371 | 32 | 0.000 | 0.000 | prior_season_only |
-| passing_defense | Pass-Defense Strength Index | -0.612 | 25 | 0.000 | 0.000 | prior_season_only |
-| rushing_defense | Run-Defense Strength Index | -0.196 | 21 | 0.000 | 0.000 | prior_season_only |
-| offense_overall | Offensive Strength Index | 0.692 | 6 | 0.000 | 0.000 | prior_season_only |
-| pass_protection | Pass-Protection Strength Index | 0.560 | 10 | 0.000 | 0.000 | prior_season_only |
-| passing_offense | Passing-Offense Strength Index | 0.670 | 7 | 0.000 | 0.000 | prior_season_only |
-| rushing_offense | Rushing-Offense Strength Index | 0.294 | 11 | 0.000 | 0.000 | prior_season_only |
-| special_teams | Special-Teams Strength Index | 0.800 | 2 | 0.000 | 0.000 | prior_season_only |
+| defense_overall | Defensive Strength Index | 0.103 | 9 | 0.783 | 0.783 | low |
+| pass_rush | Pass-Rush Strength Index | -0.017 | 18 | 1.354 | 1.354 | low |
+| passing_defense | Pass-Defense Strength Index | 0.188 | 5 | 0.800 | 0.800 | low |
+| rushing_defense | Run-Defense Strength Index | 0.010 | 15 | 0.206 | 0.206 | low |
+| offense_overall | Offensive Strength Index | 0.437 | 4 | -0.254 | -0.254 | low |
+| pass_protection | Pass-Protection Strength Index | 0.348 | 2 | -0.212 | -0.212 | low |
+| passing_offense | Passing-Offense Strength Index | 0.110 | 10 | -0.560 | -0.560 | low |
+| rushing_offense | Rushing-Offense Strength Index | 0.222 | 1 | -0.073 | -0.073 | low |
+| special_teams | Special-Teams Strength Index | -0.082 | 25 | -0.882 | -0.882 | low |
 
 ### Underlying metrics
 | metric | raw_value | ref_mean | ref_sd | n_games | n_opportunities | shrunk_value | z_shrunk | oriented_z_shrunk | rank_of_league | percentile | confidence | phase3_status | delta_shrunk_vs_prev_week |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
-| pass_protection.qb_hit_rate_allowed | 0.1314 | 0.1450 | 0.0327 | 17 | 624 | 0.1358 | -0.2824 | 0.2824 | 14 | 0.5806 | prior_season_only | UNVALIDATED_RANK_PERSISTENT | 0.0000 |
-| pass_protection.rush_stuffed_rate_approx | 0.1941 | 0.2045 | 0.0323 | 17 | 624 | 0.1992 | -0.1657 | 0.1657 | 14 | 0.5806 | prior_season_only | RANK_PERSISTENT | 0.0000 |
-| pass_protection.sack_rate_allowed | 0.0433 | 0.0664 | 0.0188 | 17 | 624 | 0.0507 | -0.8377 | 0.8377 | 4 | 0.9032 | prior_season_only | UNVALIDATED_RANK_PERSISTENT | 0.0000 |
-| pass_rush.qb_hit_rate_generated | 0.0905 | 0.1442 | 0.0234 | 17 | 630 | 0.1165 | -1.1820 | -1.1820 | 32 | 0.0000 | prior_season_only | RANK_PERSISTENT | 0.0000 |
-| pass_rush.sack_rate_generated | 0.0317 | 0.0660 | 0.0121 | 17 | 630 | 0.0472 | -1.5608 | -1.5608 | 32 | 0.0000 | prior_season_only | NOT_RANK_PERSISTENT | 0.0000 |
-| special_teams.fg_pct | 0.9167 | 0.8507 | 0.0691 | 17 | 207 | 0.8847 | 0.4915 | 0.4915 | 7 | 0.8065 | prior_season_only | NOT_RANK_PERSISTENT | 0.0000 |
-| special_teams.st_epa_per_play | 0.2064 | 0.0622 | 0.0928 | 17 | 207 | 0.1365 | 0.8003 | 0.8003 | 2 | 0.9677 | prior_season_only | RANK_PERSISTENT | 0.0000 |
-| team_defense.early_down_epa_per_play | 0.0768 | -0.0013 | 0.0639 | 17 | 1063 | 0.0389 | 0.6301 | -0.6301 | 25 | 0.2258 | prior_season_only | RANK_PERSISTENT | 0.0000 |
-| team_defense.epa_per_play | 0.0700 | 0.0046 | 0.0677 | 17 | 1063 | 0.0383 | 0.4971 | -0.4971 | 24 | 0.2581 | prior_season_only | RANK_PERSISTENT | 0.0000 |
-| team_defense.explosive_pass_rate | 0.0714 | 0.0797 | 0.0112 | 17 | 1063 | 0.0752 | -0.4035 | 0.4035 | 9 | 0.7419 | prior_season_only | NOT_RANK_PERSISTENT | 0.0000 |
-| team_defense.explosive_rush_rate | 0.0827 | 0.1000 | 0.0206 | 17 | 1063 | 0.0911 | -0.4314 | 0.4314 | 8 | 0.7742 | prior_season_only | RANK_PERSISTENT | 0.0000 |
-| team_defense.pass_epa_per_dropback | 0.1431 | 0.0361 | 0.0949 | 17 | 1063 | 0.0912 | 0.5806 | -0.5806 | 25 | 0.2258 | prior_season_only | RANK_PERSISTENT | 0.0000 |
-| team_defense.pass_success_rate | 0.4937 | 0.4536 | 0.0320 | 17 | 1063 | 0.4743 | 0.6433 | -0.6433 | 26 | 0.1935 | prior_season_only | RANK_PERSISTENT | 0.0000 |
-| team_defense.rush_epa_per_play | -0.0694 | -0.0760 | 0.0649 | 17 | 1063 | -0.0724 | 0.0554 | -0.0554 | 17 | 0.4839 | prior_season_only | NOT_RANK_PERSISTENT | 0.0000 |
-| team_defense.rush_success_rate | 0.4637 | 0.4020 | 0.0330 | 17 | 1063 | 0.4338 | 0.9636 | -0.9636 | 31 | 0.0323 | prior_season_only | RANK_PERSISTENT | 0.0000 |
-| team_defense.success_rate | 0.4835 | 0.4384 | 0.0255 | 17 | 1063 | 0.4617 | 0.9136 | -0.9136 | 30 | 0.0645 | prior_season_only | RANK_PERSISTENT | 0.0000 |
-| team_offense.early_down_epa_per_play | 0.0236 | -0.0054 | 0.0784 | 17 | 1095 | 0.0143 | 0.2512 | 0.2512 | 14 | 0.5806 | prior_season_only | UNVALIDATED_RANK_PERSISTENT | 0.0000 |
-| team_offense.epa_per_play | 0.0910 | -0.0001 | 0.0921 | 17 | 1095 | 0.0618 | 0.6726 | 0.6726 | 6 | 0.8387 | prior_season_only | VALIDATED_PERSISTENCE | 0.0000 |
-| team_offense.explosive_pass_rate | 0.0817 | 0.0796 | 0.0177 | 17 | 1095 | 0.0807 | 0.0626 | 0.0626 | 13 | 0.6129 | prior_season_only | RANK_PERSISTENT | 0.0000 |
-| team_offense.explosive_rush_rate | 0.0858 | 0.0990 | 0.0195 | 17 | 1095 | 0.0922 | -0.3491 | -0.3491 | 23 | 0.2903 | prior_season_only | NOT_RANK_PERSISTENT | 0.0000 |
-| team_offense.pass_epa_per_dropback | 0.1673 | 0.0308 | 0.1280 | 17 | 1095 | 0.1236 | 0.7257 | 0.7257 | 6 | 0.8387 | prior_season_only | UNVALIDATED_RANK_PERSISTENT | 0.0000 |
-| team_offense.pass_success_rate | 0.5272 | 0.4521 | 0.0418 | 17 | 1095 | 0.5032 | 1.2221 | 1.2221 | 2 | 0.9516 | prior_season_only | UNVALIDATED_RANK_PERSISTENT | 0.0000 |
-| team_offense.proe | -0.0301 | -0.0477 | 0.0349 | 17 | 1095 | -0.0335 | 0.4077 | 0.0000 | — | — | prior_season_only | VALIDATED_PERSISTENCE | 0.0000 |
-| team_offense.rush_epa_per_play | -0.0328 | -0.0806 | 0.0754 | 17 | 1095 | -0.0560 | 0.3264 | 0.3264 | 10 | 0.7097 | prior_season_only | RANK_PERSISTENT | 0.0000 |
-| team_offense.rush_success_rate | 0.4176 | 0.4004 | 0.0385 | 17 | 1095 | 0.4105 | 0.2623 | 0.2623 | 13 | 0.6129 | prior_season_only | RANK_PERSISTENT | 0.0000 |
-| team_offense.success_rate | 0.4849 | 0.4370 | 0.0337 | 17 | 1095 | 0.4758 | 1.1511 | 1.1511 | 3 | 0.9355 | prior_season_only | VALIDATED_PERSISTENCE | 0.0000 |
+| pass_protection.qb_hit_rate_allowed | 0.0556 | 0.1450 | 0.0327 | 1 | 36 | 0.1351 | -0.3037 | 0.3037 | 3 | 0.9355 | low | UNVALIDATED_RANK_PERSISTENT | -0.0007 |
+| pass_protection.rush_stuffed_rate_approx | 0.0714 | 0.2045 | 0.0323 | 1 | 36 | 0.1967 | -0.2420 | 0.2420 | 2 | 0.9677 | low | RANK_PERSISTENT | -0.0025 |
+| pass_protection.sack_rate_allowed | 0.0000 | 0.0664 | 0.0188 | 1 | 36 | 0.0590 | -0.3929 | 0.3929 | 1 | 0.9355 | low | UNVALIDATED_RANK_PERSISTENT | 0.0084 |
+| pass_rush.qb_hit_rate_generated | 0.2759 | 0.1442 | 0.0234 | 1 | 29 | 0.1519 | 0.3310 | 0.3310 | 2 | 0.9677 | low | RANK_PERSISTENT | 0.0354 |
+| pass_rush.sack_rate_generated | 0.0000 | 0.0660 | 0.0121 | 1 | 29 | 0.0616 | -0.3654 | -0.3654 | 28 | 0.0645 | low | NOT_RANK_PERSISTENT | 0.0144 |
+| special_teams.fg_pct | 0.6667 | 0.8507 | 0.0691 | 1 | 10 | 0.8399 | -0.1566 | -0.1566 | 23 | 0.1481 | low | NOT_RANK_PERSISTENT | -0.0448 |
+| special_teams.st_epa_per_play | -0.0671 | 0.0622 | 0.0928 | 1 | 10 | 0.0546 | -0.0819 | -0.0819 | 25 | 0.2258 | low | RANK_PERSISTENT | -0.0819 |
+| team_defense.early_down_epa_per_play | -0.1079 | -0.0013 | 0.0639 | 1 | 60 | -0.0076 | -0.0981 | 0.0981 | 11 | 0.6774 | low | RANK_PERSISTENT | -0.0465 |
+| team_defense.epa_per_play | -0.2255 | 0.0046 | 0.0677 | 1 | 60 | -0.0089 | -0.1998 | 0.1998 | 5 | 0.8710 | low | RANK_PERSISTENT | -0.0472 |
+| team_defense.explosive_pass_rate | 0.0690 | 0.0797 | 0.0112 | 1 | 60 | 0.0790 | -0.0637 | 0.0637 | 16 | 0.5161 | low | NOT_RANK_PERSISTENT | 0.0038 |
+| team_defense.explosive_rush_rate | 0.0741 | 0.1000 | 0.0206 | 1 | 60 | 0.0984 | -0.0739 | 0.0739 | 13 | 0.6129 | low | RANK_PERSISTENT | 0.0074 |
+| team_defense.pass_epa_per_dropback | -0.3516 | 0.0361 | 0.0949 | 1 | 60 | 0.0133 | -0.2404 | 0.2404 | 4 | 0.9032 | low | RANK_PERSISTENT | -0.0779 |
+| team_defense.pass_success_rate | 0.3793 | 0.4536 | 0.0320 | 1 | 60 | 0.4493 | -0.1365 | 0.1365 | 5 | 0.8710 | low | RANK_PERSISTENT | -0.0250 |
+| team_defense.rush_epa_per_play | -0.1713 | -0.0760 | 0.0649 | 1 | 60 | -0.0823 | -0.0978 | 0.0978 | 9 | 0.7419 | low | NOT_RANK_PERSISTENT | -0.0099 |
+| team_defense.rush_success_rate | 0.4815 | 0.4020 | 0.0330 | 1 | 60 | 0.4067 | 0.1418 | -0.1418 | 27 | 0.1613 | low | RANK_PERSISTENT | -0.0271 |
+| team_defense.success_rate | 0.4333 | 0.4384 | 0.0255 | 1 | 60 | 0.4381 | -0.0117 | 0.0117 | 16 | 0.5161 | low | RANK_PERSISTENT | -0.0236 |
+| team_offense.early_down_epa_per_play | 0.2050 | -0.0054 | 0.0784 | 1 | 65 | 0.0180 | 0.2982 | 0.2982 | 6 | 0.8387 | low | UNVALIDATED_RANK_PERSISTENT | 0.0037 |
+| team_offense.epa_per_play | 0.1902 | -0.0001 | 0.0921 | 1 | 65 | 0.0210 | 0.2296 | 0.2296 | 7 | 0.8065 | low | VALIDATED_PERSISTENCE | -0.0408 |
+| team_offense.explosive_pass_rate | 0.0278 | 0.0796 | 0.0177 | 1 | 65 | 0.0765 | -0.1718 | -0.1718 | 25 | 0.2258 | low | RANK_PERSISTENT | -0.0042 |
+| team_offense.explosive_rush_rate | 0.1429 | 0.0990 | 0.0195 | 1 | 65 | 0.1016 | 0.1320 | 0.1320 | 6 | 0.8387 | low | NOT_RANK_PERSISTENT | 0.0094 |
+| team_offense.pass_epa_per_dropback | 0.2077 | 0.0308 | 0.1280 | 1 | 65 | 0.0504 | 0.1536 | 0.1536 | 11 | 0.6774 | low | UNVALIDATED_RANK_PERSISTENT | -0.0732 |
+| team_offense.pass_success_rate | 0.5833 | 0.4521 | 0.0418 | 1 | 65 | 0.4667 | 0.3487 | 0.3487 | 4 | 0.9032 | low | UNVALIDATED_RANK_PERSISTENT | -0.0365 |
+| team_offense.proe | 0.0358 | -0.0477 | 0.0349 | 1 | 65 | -0.0310 | 0.4791 | 0.0000 | — | — | low | VALIDATED_PERSISTENCE | 0.0025 |
+| team_offense.rush_epa_per_play | 0.1416 | -0.0806 | 0.0754 | 1 | 65 | -0.0675 | 0.1734 | 0.1734 | 3 | 0.9355 | low | RANK_PERSISTENT | -0.0115 |
+| team_offense.rush_success_rate | 0.5357 | 0.4004 | 0.0385 | 1 | 65 | 0.4108 | 0.2703 | 0.2703 | 1 | 1.0000 | low | RANK_PERSISTENT | 0.0003 |
+| team_offense.success_rate | 0.5692 | 0.4370 | 0.0337 | 1 | 65 | 0.4634 | 0.7841 | 0.7841 | 3 | 0.9355 | low | VALIDATED_PERSISTENCE | -0.0124 |
 
 ## TB
-Record: no games yet · Points for/against: —/— · Point differential: — · Data confidence: prior_season_only
-Strongest area: **pass_protection** (0.718) · Weakest area: **passing_defense** (-0.483)
+Record: 0-1-0 · Points for/against: 27/33 · Point differential: -6 · Data confidence: low
+Strongest area: **special_teams** (0.214) · Weakest area: **pass_protection** (-0.169)
 
 ### Domain indices
 | domain | label | index_value | rank_of_league | delta_vs_prev_week | delta_vs_preseason | min_confidence |
 | --- | --- | --- | --- | --- | --- | --- |
-| defense_overall | Defensive Strength Index | -0.244 | 21 | 0.000 | 0.000 | prior_season_only |
-| pass_rush | Pass-Rush Strength Index | -0.295 | 24 | 0.000 | 0.000 | prior_season_only |
-| passing_defense | Pass-Defense Strength Index | -0.483 | 24 | 0.000 | 0.000 | prior_season_only |
-| rushing_defense | Run-Defense Strength Index | 0.383 | 5 | 0.000 | 0.000 | prior_season_only |
-| offense_overall | Offensive Strength Index | 0.040 | 20 | 0.000 | 0.000 | prior_season_only |
-| pass_protection | Pass-Protection Strength Index | 0.718 | 4 | 0.000 | 0.000 | prior_season_only |
-| passing_offense | Passing-Offense Strength Index | 0.020 | 15 | 0.000 | 0.000 | prior_season_only |
-| rushing_offense | Rushing-Offense Strength Index | -0.022 | 23 | 0.000 | 0.000 | prior_season_only |
-| special_teams | Special-Teams Strength Index | -0.204 | 26 | 0.000 | 0.000 | prior_season_only |
+| defense_overall | Defensive Strength Index | -0.054 | 21 | 0.190 | 0.190 | low |
+| pass_rush | Pass-Rush Strength Index | -0.085 | 23 | 0.210 | 0.210 | low |
+| passing_defense | Pass-Defense Strength Index | -0.033 | 19 | 0.451 | 0.451 | low |
+| rushing_defense | Run-Defense Strength Index | -0.099 | 25 | -0.482 | -0.482 | low |
+| offense_overall | Offensive Strength Index | 0.111 | 13 | 0.071 | 0.071 | low |
+| pass_protection | Pass-Protection Strength Index | -0.169 | 26 | -0.888 | -0.888 | low |
+| passing_offense | Passing-Offense Strength Index | -0.078 | 22 | -0.098 | -0.098 | low |
+| rushing_offense | Rushing-Offense Strength Index | 0.148 | 3 | 0.170 | 0.170 | low |
+| special_teams | Special-Teams Strength Index | 0.214 | 4 | 0.418 | 0.418 | low |
 
 ### Underlying metrics
 | metric | raw_value | ref_mean | ref_sd | n_games | n_opportunities | shrunk_value | z_shrunk | oriented_z_shrunk | rank_of_league | percentile | confidence | phase3_status | delta_shrunk_vs_prev_week |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
-| pass_protection.qb_hit_rate_allowed | 0.0878 | 0.1450 | 0.0327 | 17 | 638 | 0.1061 | -1.1892 | 1.1892 | 1 | 1.0000 | prior_season_only | UNVALIDATED_RANK_PERSISTENT | 0.0000 |
-| pass_protection.rush_stuffed_rate_approx | 0.2106 | 0.2045 | 0.0323 | 17 | 638 | 0.2077 | 0.0974 | -0.0974 | 23 | 0.2903 | prior_season_only | RANK_PERSISTENT | 0.0000 |
-| pass_protection.sack_rate_allowed | 0.0596 | 0.0664 | 0.0188 | 17 | 638 | 0.0618 | -0.2478 | 0.2478 | 13 | 0.6129 | prior_season_only | UNVALIDATED_RANK_PERSISTENT | 0.0000 |
-| pass_rush.qb_hit_rate_generated | 0.1344 | 0.1442 | 0.0234 | 17 | 640 | 0.1391 | -0.2157 | -0.2157 | 25 | 0.2258 | prior_season_only | RANK_PERSISTENT | 0.0000 |
-| pass_rush.sack_rate_generated | 0.0578 | 0.0660 | 0.0121 | 17 | 640 | 0.0615 | -0.3747 | -0.3747 | 23 | 0.2903 | prior_season_only | NOT_RANK_PERSISTENT | 0.0000 |
-| special_teams.fg_pct | 0.8421 | 0.8507 | 0.0691 | 17 | 223 | 0.8463 | -0.0641 | -0.0641 | 21 | 0.3548 | prior_season_only | NOT_RANK_PERSISTENT | 0.0000 |
-| special_teams.st_epa_per_play | 0.0254 | 0.0622 | 0.0928 | 17 | 223 | 0.0433 | -0.2044 | -0.2044 | 26 | 0.1935 | prior_season_only | RANK_PERSISTENT | 0.0000 |
-| team_defense.early_down_epa_per_play | 0.0446 | -0.0013 | 0.0639 | 17 | 1025 | 0.0224 | 0.3704 | -0.3704 | 22 | 0.3226 | prior_season_only | RANK_PERSISTENT | 0.0000 |
-| team_defense.epa_per_play | 0.0166 | 0.0046 | 0.0677 | 17 | 1025 | 0.0108 | 0.0912 | -0.0912 | 17 | 0.4839 | prior_season_only | RANK_PERSISTENT | 0.0000 |
-| team_defense.explosive_pass_rate | 0.0859 | 0.0797 | 0.0112 | 17 | 1025 | 0.0831 | 0.3057 | -0.3057 | 24 | 0.2581 | prior_season_only | NOT_RANK_PERSISTENT | 0.0000 |
-| team_defense.explosive_rush_rate | 0.0901 | 0.1000 | 0.0206 | 17 | 1025 | 0.0949 | -0.2455 | 0.2455 | 13 | 0.6129 | prior_season_only | RANK_PERSISTENT | 0.0000 |
-| team_defense.pass_epa_per_dropback | 0.0861 | 0.0361 | 0.0949 | 17 | 1025 | 0.0619 | 0.2715 | -0.2715 | 20 | 0.3871 | prior_season_only | RANK_PERSISTENT | 0.0000 |
-| team_defense.pass_success_rate | 0.4969 | 0.4536 | 0.0320 | 17 | 1025 | 0.4759 | 0.6951 | -0.6951 | 27 | 0.1613 | prior_season_only | RANK_PERSISTENT | 0.0000 |
-| team_defense.rush_epa_per_play | -0.1168 | -0.0760 | 0.0649 | 17 | 1025 | -0.0984 | -0.3443 | 0.3443 | 5 | 0.8710 | prior_season_only | NOT_RANK_PERSISTENT | 0.0000 |
-| team_defense.rush_success_rate | 0.3662 | 0.4020 | 0.0330 | 17 | 1025 | 0.3835 | -0.5590 | 0.5590 | 4 | 0.9032 | prior_season_only | RANK_PERSISTENT | 0.0000 |
-| team_defense.success_rate | 0.4517 | 0.4384 | 0.0255 | 17 | 1025 | 0.4453 | 0.2694 | -0.2694 | 20 | 0.3871 | prior_season_only | RANK_PERSISTENT | 0.0000 |
-| team_offense.early_down_epa_per_play | 0.0150 | -0.0054 | 0.0784 | 17 | 1116 | 0.0085 | 0.1770 | 0.1770 | 18 | 0.4516 | prior_season_only | UNVALIDATED_RANK_PERSISTENT | 0.0000 |
-| team_offense.epa_per_play | 0.0057 | -0.0001 | 0.0921 | 17 | 1116 | 0.0038 | 0.0430 | 0.0430 | 20 | 0.3871 | prior_season_only | VALIDATED_PERSISTENCE | 0.0000 |
-| team_offense.explosive_pass_rate | 0.0862 | 0.0796 | 0.0177 | 17 | 1116 | 0.0830 | 0.1927 | 0.1927 | 9 | 0.7419 | prior_season_only | RANK_PERSISTENT | 0.0000 |
-| team_offense.explosive_rush_rate | 0.0787 | 0.0990 | 0.0195 | 17 | 1116 | 0.0886 | -0.5357 | -0.5357 | 25 | 0.2258 | prior_season_only | NOT_RANK_PERSISTENT | 0.0000 |
-| team_offense.pass_epa_per_dropback | 0.0413 | 0.0308 | 0.1280 | 17 | 1116 | 0.0380 | 0.0561 | 0.0561 | 16 | 0.5161 | prior_season_only | UNVALIDATED_RANK_PERSISTENT | 0.0000 |
-| team_offense.pass_success_rate | 0.4404 | 0.4521 | 0.0418 | 17 | 1116 | 0.4442 | -0.1893 | -0.1893 | 23 | 0.2903 | prior_season_only | UNVALIDATED_RANK_PERSISTENT | 0.0000 |
-| team_offense.proe | -0.0694 | -0.0477 | 0.0349 | 17 | 1116 | -0.0653 | -0.5041 | -0.0000 | — | — | prior_season_only | VALIDATED_PERSISTENCE | 0.0000 |
-| team_offense.rush_epa_per_play | -0.0873 | -0.0806 | 0.0754 | 17 | 1116 | -0.0840 | -0.0454 | -0.0454 | 24 | 0.2581 | prior_season_only | RANK_PERSISTENT | 0.0000 |
-| team_offense.rush_success_rate | 0.4005 | 0.4004 | 0.0385 | 17 | 1116 | 0.4004 | 0.0014 | 0.0014 | 21 | 0.3548 | prior_season_only | RANK_PERSISTENT | 0.0000 |
-| team_offense.success_rate | 0.4328 | 0.4370 | 0.0337 | 17 | 1116 | 0.4336 | -0.0999 | -0.0999 | 21 | 0.3548 | prior_season_only | VALIDATED_PERSISTENCE | 0.0000 |
+| pass_protection.qb_hit_rate_allowed | 0.1667 | 0.1450 | 0.0327 | 1 | 36 | 0.1474 | 0.0736 | -0.0736 | 22 | 0.3065 | low | UNVALIDATED_RANK_PERSISTENT | 0.0413 |
+| pass_protection.rush_stuffed_rate_approx | 0.2941 | 0.2045 | 0.0323 | 1 | 36 | 0.2098 | 0.1629 | -0.1629 | 30 | 0.0645 | low | RANK_PERSISTENT | 0.0021 |
+| pass_protection.sack_rate_allowed | 0.1111 | 0.0664 | 0.0188 | 1 | 36 | 0.0714 | 0.2645 | -0.2645 | 28 | 0.1290 | low | UNVALIDATED_RANK_PERSISTENT | 0.0096 |
+| pass_rush.qb_hit_rate_generated | 0.1622 | 0.1442 | 0.0234 | 1 | 37 | 0.1452 | 0.0452 | 0.0452 | 12 | 0.6452 | low | RANK_PERSISTENT | 0.0061 |
+| pass_rush.sack_rate_generated | 0.0270 | 0.0660 | 0.0121 | 1 | 37 | 0.0634 | -0.2158 | -0.2158 | 24 | 0.2581 | low | NOT_RANK_PERSISTENT | 0.0019 |
+| special_teams.fg_pct | 1.0000 | 0.8507 | 0.0691 | 1 | 13 | 0.8595 | 0.1270 | 0.1270 | 1 | 0.6481 | low | NOT_RANK_PERSISTENT | 0.0132 |
+| special_teams.st_epa_per_play | 0.3999 | 0.0622 | 0.0928 | 1 | 13 | 0.0821 | 0.2140 | 0.2140 | 4 | 0.9032 | low | RANK_PERSISTENT | 0.0388 |
+| team_defense.early_down_epa_per_play | 0.0821 | -0.0013 | 0.0639 | 1 | 63 | 0.0036 | 0.0768 | -0.0768 | 21 | 0.3548 | low | RANK_PERSISTENT | -0.0188 |
+| team_defense.epa_per_play | 0.0013 | 0.0046 | 0.0677 | 1 | 63 | 0.0044 | -0.0028 | 0.0028 | 15 | 0.5484 | low | RANK_PERSISTENT | -0.0064 |
+| team_defense.explosive_pass_rate | 0.0811 | 0.0797 | 0.0112 | 1 | 63 | 0.0798 | 0.0083 | -0.0083 | 18 | 0.4516 | low | NOT_RANK_PERSISTENT | -0.0033 |
+| team_defense.explosive_rush_rate | 0.1600 | 0.1000 | 0.0206 | 1 | 63 | 0.1035 | 0.1715 | -0.1715 | 28 | 0.1290 | low | RANK_PERSISTENT | 0.0086 |
+| team_defense.pass_epa_per_dropback | -0.0361 | 0.0361 | 0.0949 | 1 | 63 | 0.0319 | -0.0448 | 0.0448 | 12 | 0.6452 | low | RANK_PERSISTENT | -0.0300 |
+| team_defense.pass_success_rate | 0.5135 | 0.4536 | 0.0320 | 1 | 63 | 0.4572 | 0.1099 | -0.1099 | 25 | 0.2258 | low | RANK_PERSISTENT | -0.0188 |
+| team_defense.rush_epa_per_play | 0.0495 | -0.0760 | 0.0649 | 1 | 63 | -0.0676 | 0.1288 | -0.1288 | 25 | 0.2258 | low | NOT_RANK_PERSISTENT | 0.0307 |
+| team_defense.rush_success_rate | 0.4000 | 0.4020 | 0.0330 | 1 | 63 | 0.4019 | -0.0035 | 0.0035 | 12 | 0.5968 | low | RANK_PERSISTENT | 0.0183 |
+| team_defense.success_rate | 0.4762 | 0.4384 | 0.0255 | 1 | 63 | 0.4406 | 0.0873 | -0.0873 | 23 | 0.2903 | low | RANK_PERSISTENT | -0.0046 |
+| team_offense.early_down_epa_per_play | -0.0398 | -0.0054 | 0.0784 | 1 | 56 | -0.0092 | -0.0489 | -0.0489 | 17 | 0.4839 | low | UNVALIDATED_RANK_PERSISTENT | -0.0177 |
+| team_offense.epa_per_play | -0.0814 | -0.0001 | 0.0921 | 1 | 56 | -0.0092 | -0.0980 | -0.0980 | 21 | 0.3548 | low | VALIDATED_PERSISTENCE | -0.0130 |
+| team_offense.explosive_pass_rate | 0.0556 | 0.0796 | 0.0177 | 1 | 56 | 0.0782 | -0.0797 | -0.0797 | 21 | 0.3548 | low | RANK_PERSISTENT | -0.0048 |
+| team_offense.explosive_rush_rate | 0.0588 | 0.0990 | 0.0195 | 1 | 56 | 0.0967 | -0.1210 | -0.1210 | 26 | 0.1935 | low | NOT_RANK_PERSISTENT | 0.0081 |
+| team_offense.pass_epa_per_dropback | -0.2925 | 0.0308 | 0.1280 | 1 | 56 | -0.0051 | -0.2807 | -0.2807 | 27 | 0.1613 | low | UNVALIDATED_RANK_PERSISTENT | -0.0431 |
+| team_offense.pass_success_rate | 0.5000 | 0.4521 | 0.0418 | 1 | 56 | 0.4574 | 0.1273 | 0.1273 | 9 | 0.7097 | low | UNVALIDATED_RANK_PERSISTENT | 0.0132 |
+| team_offense.proe | -0.0271 | -0.0477 | 0.0349 | 1 | 56 | -0.0436 | 0.1183 | 0.0000 | — | — | low | VALIDATED_PERSISTENCE | 0.0217 |
+| team_offense.rush_epa_per_play | 0.1183 | -0.0806 | 0.0754 | 1 | 56 | -0.0689 | 0.1553 | 0.1553 | 4 | 0.9032 | low | RANK_PERSISTENT | 0.0151 |
+| team_offense.rush_success_rate | 0.4706 | 0.4004 | 0.0385 | 1 | 56 | 0.4058 | 0.1402 | 0.1402 | 9 | 0.7419 | low | RANK_PERSISTENT | 0.0053 |
+| team_offense.success_rate | 0.5179 | 0.4370 | 0.0337 | 1 | 56 | 0.4531 | 0.4796 | 0.4796 | 5 | 0.8710 | low | VALIDATED_PERSISTENCE | 0.0195 |
 
 ## TEN
-Record: no games yet · Points for/against: —/— · Point differential: — · Data confidence: prior_season_only
-Strongest area: **special_teams** (0.362) · Weakest area: **offense_overall** (-1.122)
+Record: 0-1-0 · Points for/against: 10/23 · Point differential: -13 · Data confidence: low
+Strongest area: **pass_protection** (-0.003) · Weakest area: **pass_rush** (-0.316)
 
 ### Domain indices
 | domain | label | index_value | rank_of_league | delta_vs_prev_week | delta_vs_preseason | min_confidence |
 | --- | --- | --- | --- | --- | --- | --- |
-| defense_overall | Defensive Strength Index | -0.608 | 24 | 0.000 | 0.000 | prior_season_only |
-| pass_rush | Pass-Rush Strength Index | 0.213 | 14 | 0.000 | 0.000 | prior_season_only |
-| passing_defense | Pass-Defense Strength Index | -0.699 | 26 | 0.000 | 0.000 | prior_season_only |
-| rushing_defense | Run-Defense Strength Index | 0.051 | 13 | 0.000 | 0.000 | prior_season_only |
-| offense_overall | Offensive Strength Index | -1.122 | 30 | 0.000 | 0.000 | prior_season_only |
-| pass_protection | Pass-Protection Strength Index | -0.630 | 26 | 0.000 | 0.000 | prior_season_only |
-| passing_offense | Passing-Offense Strength Index | -1.012 | 31 | 0.000 | 0.000 | prior_season_only |
-| rushing_offense | Rushing-Offense Strength Index | -0.317 | 27 | 0.000 | 0.000 | prior_season_only |
-| special_teams | Special-Teams Strength Index | 0.362 | 13 | 0.000 | 0.000 | prior_season_only |
+| defense_overall | Defensive Strength Index | -0.124 | 25 | 0.483 | 0.483 | low |
+| pass_rush | Pass-Rush Strength Index | -0.316 | 32 | -0.528 | -0.528 | low |
+| passing_defense | Pass-Defense Strength Index | -0.140 | 25 | 0.559 | 0.559 | low |
+| rushing_defense | Run-Defense Strength Index | -0.039 | 20 | -0.090 | -0.090 | low |
+| offense_overall | Offensive Strength Index | -0.121 | 20 | 1.001 | 1.001 | low |
+| pass_protection | Pass-Protection Strength Index | -0.003 | 18 | 0.627 | 0.627 | low |
+| passing_offense | Passing-Offense Strength Index | -0.125 | 26 | 0.887 | 0.887 | low |
+| rushing_offense | Rushing-Offense Strength Index | -0.006 | 21 | 0.310 | 0.310 | low |
+| special_teams | Special-Teams Strength Index | -0.256 | 31 | -0.619 | -0.619 | low |
 
 ### Underlying metrics
 | metric | raw_value | ref_mean | ref_sd | n_games | n_opportunities | shrunk_value | z_shrunk | oriented_z_shrunk | rank_of_league | percentile | confidence | phase3_status | delta_shrunk_vs_prev_week |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
-| pass_protection.qb_hit_rate_allowed | 0.1703 | 0.1450 | 0.0327 | 17 | 646 | 0.1622 | 0.5254 | -0.5254 | 23 | 0.2903 | prior_season_only | UNVALIDATED_RANK_PERSISTENT | 0.0000 |
-| pass_protection.rush_stuffed_rate_approx | 0.1944 | 0.2045 | 0.0323 | 17 | 646 | 0.1993 | -0.1607 | 0.1607 | 15 | 0.5484 | prior_season_only | RANK_PERSISTENT | 0.0000 |
-| pass_protection.sack_rate_allowed | 0.0867 | 0.0664 | 0.0188 | 17 | 646 | 0.0802 | 0.7343 | -0.7343 | 27 | 0.1613 | prior_season_only | UNVALIDATED_RANK_PERSISTENT | 0.0000 |
-| pass_rush.qb_hit_rate_generated | 0.1544 | 0.1442 | 0.0234 | 17 | 596 | 0.1494 | 0.2243 | 0.2243 | 13 | 0.6129 | prior_season_only | RANK_PERSISTENT | 0.0000 |
-| pass_rush.sack_rate_generated | 0.0705 | 0.0660 | 0.0121 | 17 | 596 | 0.0685 | 0.2013 | 0.2013 | 10 | 0.7097 | prior_season_only | NOT_RANK_PERSISTENT | 0.0000 |
-| special_teams.fg_pct | 0.8056 | 0.8507 | 0.0691 | 17 | 242 | 0.8274 | -0.3365 | -0.3365 | 26 | 0.1935 | prior_season_only | NOT_RANK_PERSISTENT | 0.0000 |
-| special_teams.st_epa_per_play | 0.1276 | 0.0622 | 0.0928 | 17 | 242 | 0.0959 | 0.3625 | 0.3625 | 13 | 0.6129 | prior_season_only | RANK_PERSISTENT | 0.0000 |
-| team_defense.early_down_epa_per_play | 0.0897 | -0.0013 | 0.0639 | 17 | 1035 | 0.0456 | 0.7335 | -0.7335 | 27 | 0.1613 | prior_season_only | RANK_PERSISTENT | 0.0000 |
-| team_defense.epa_per_play | 0.1060 | 0.0046 | 0.0677 | 17 | 1035 | 0.0568 | 0.7710 | -0.7710 | 28 | 0.1290 | prior_season_only | RANK_PERSISTENT | 0.0000 |
-| team_defense.explosive_pass_rate | 0.0973 | 0.0797 | 0.0112 | 17 | 1035 | 0.0894 | 0.8619 | -0.8619 | 29 | 0.0968 | prior_season_only | NOT_RANK_PERSISTENT | 0.0000 |
-| team_defense.explosive_rush_rate | 0.0918 | 0.1000 | 0.0206 | 17 | 1035 | 0.0958 | -0.2037 | 0.2037 | 17 | 0.4839 | prior_season_only | RANK_PERSISTENT | 0.0000 |
-| team_defense.pass_epa_per_dropback | 0.1861 | 0.0361 | 0.0949 | 17 | 1035 | 0.1134 | 0.8144 | -0.8144 | 29 | 0.0968 | prior_season_only | RANK_PERSISTENT | 0.0000 |
-| team_defense.pass_success_rate | 0.4899 | 0.4536 | 0.0320 | 17 | 1035 | 0.4723 | 0.5835 | -0.5835 | 25 | 0.2258 | prior_season_only | RANK_PERSISTENT | 0.0000 |
-| team_defense.rush_epa_per_play | -0.0426 | -0.0760 | 0.0649 | 17 | 1035 | -0.0577 | 0.2823 | -0.2823 | 20 | 0.3871 | prior_season_only | NOT_RANK_PERSISTENT | 0.0000 |
-| team_defense.rush_success_rate | 0.3871 | 0.4020 | 0.0330 | 17 | 1035 | 0.3943 | -0.2325 | 0.2325 | 8 | 0.7742 | prior_season_only | RANK_PERSISTENT | 0.0000 |
-| team_defense.success_rate | 0.4541 | 0.4384 | 0.0255 | 17 | 1035 | 0.4465 | 0.3180 | -0.3180 | 22 | 0.3226 | prior_season_only | RANK_PERSISTENT | 0.0000 |
-| team_offense.early_down_epa_per_play | -0.1056 | -0.0054 | 0.0784 | 17 | 1046 | -0.0736 | -0.8697 | -0.8697 | 30 | 0.0645 | prior_season_only | UNVALIDATED_RANK_PERSISTENT | 0.0000 |
-| team_offense.epa_per_play | -0.1484 | -0.0001 | 0.0921 | 17 | 1046 | -0.1010 | -1.0951 | -1.0951 | 30 | 0.0645 | prior_season_only | VALIDATED_PERSISTENCE | 0.0000 |
-| team_offense.explosive_pass_rate | 0.0635 | 0.0796 | 0.0177 | 17 | 1046 | 0.0713 | -0.4679 | -0.4679 | 28 | 0.1290 | prior_season_only | RANK_PERSISTENT | 0.0000 |
-| team_offense.explosive_rush_rate | 0.0944 | 0.0990 | 0.0195 | 17 | 1046 | 0.0967 | -0.1205 | -0.1205 | 18 | 0.4516 | prior_season_only | NOT_RANK_PERSISTENT | 0.0000 |
-| team_offense.pass_epa_per_dropback | -0.1963 | 0.0308 | 0.1280 | 17 | 1046 | -0.1237 | -1.2068 | -1.2068 | 31 | 0.0323 | prior_season_only | UNVALIDATED_RANK_PERSISTENT | 0.0000 |
-| team_offense.pass_success_rate | 0.3684 | 0.4521 | 0.0418 | 17 | 1046 | 0.3952 | -1.3602 | -1.3602 | 31 | 0.0323 | prior_season_only | UNVALIDATED_RANK_PERSISTENT | 0.0000 |
-| team_offense.proe | -0.0699 | -0.0477 | 0.0349 | 17 | 1046 | -0.0657 | -0.5153 | -0.0000 | — | — | prior_season_only | VALIDATED_PERSISTENCE | 0.0000 |
-| team_offense.rush_epa_per_play | -0.1168 | -0.0806 | 0.0754 | 17 | 1046 | -0.0992 | -0.2471 | -0.2471 | 27 | 0.1613 | prior_season_only | RANK_PERSISTENT | 0.0000 |
-| team_offense.rush_success_rate | 0.3750 | 0.4004 | 0.0385 | 17 | 1046 | 0.3855 | -0.3861 | -0.3861 | 27 | 0.1613 | prior_season_only | RANK_PERSISTENT | 0.0000 |
-| team_offense.success_rate | 0.3786 | 0.4370 | 0.0337 | 17 | 1046 | 0.3897 | -1.4007 | -1.4007 | 31 | 0.0323 | prior_season_only | VALIDATED_PERSISTENCE | 0.0000 |
+| pass_protection.qb_hit_rate_allowed | 0.1282 | 0.1450 | 0.0327 | 1 | 39 | 0.1431 | -0.0570 | 0.0570 | 13 | 0.5968 | low | UNVALIDATED_RANK_PERSISTENT | -0.0191 |
+| pass_protection.rush_stuffed_rate_approx | 0.0000 | 0.2045 | 0.0323 | 1 | 39 | 0.1925 | -0.3719 | 0.3719 | 1 | 1.0000 | low | RANK_PERSISTENT | -0.0068 |
+| pass_protection.sack_rate_allowed | 0.0769 | 0.0664 | 0.0188 | 1 | 39 | 0.0676 | 0.0622 | -0.0622 | 22 | 0.3226 | low | UNVALIDATED_RANK_PERSISTENT | -0.0126 |
+| pass_rush.qb_hit_rate_generated | 0.0385 | 0.1442 | 0.0234 | 1 | 26 | 0.1380 | -0.2657 | -0.2657 | 32 | 0.0000 | low | RANK_PERSISTENT | -0.0115 |
+| pass_rush.sack_rate_generated | 0.0000 | 0.0660 | 0.0121 | 1 | 26 | 0.0616 | -0.3654 | -0.3654 | 28 | 0.0645 | low | NOT_RANK_PERSISTENT | -0.0068 |
+| special_teams.fg_pct | 1.0000 | 0.8507 | 0.0691 | 1 | 15 | 0.8595 | 0.1270 | 0.1270 | 1 | 0.6481 | low | NOT_RANK_PERSISTENT | 0.0320 |
+| special_teams.st_epa_per_play | -0.3421 | 0.0622 | 0.0928 | 1 | 15 | 0.0385 | -0.2562 | -0.2562 | 31 | 0.0323 | low | RANK_PERSISTENT | -0.0574 |
+| team_defense.early_down_epa_per_play | 0.1740 | -0.0013 | 0.0639 | 1 | 64 | 0.0090 | 0.1614 | -0.1614 | 25 | 0.2258 | low | RANK_PERSISTENT | -0.0366 |
+| team_defense.epa_per_play | 0.1265 | 0.0046 | 0.0677 | 1 | 64 | 0.0118 | 0.1058 | -0.1058 | 23 | 0.2903 | low | RANK_PERSISTENT | -0.0451 |
+| team_defense.explosive_pass_rate | 0.1538 | 0.0797 | 0.0112 | 1 | 64 | 0.0846 | 0.4407 | -0.4407 | 30 | 0.0645 | low | NOT_RANK_PERSISTENT | -0.0047 |
+| team_defense.explosive_rush_rate | 0.0833 | 0.1000 | 0.0206 | 1 | 64 | 0.0990 | -0.0475 | 0.0475 | 14 | 0.5806 | low | RANK_PERSISTENT | 0.0032 |
+| team_defense.pass_epa_per_dropback | 0.3501 | 0.0361 | 0.0949 | 1 | 64 | 0.0546 | 0.1947 | -0.1947 | 27 | 0.1613 | low | RANK_PERSISTENT | -0.0588 |
+| team_defense.pass_success_rate | 0.5000 | 0.4536 | 0.0320 | 1 | 64 | 0.4564 | 0.0851 | -0.0851 | 22 | 0.2903 | low | RANK_PERSISTENT | -0.0160 |
+| team_defense.rush_epa_per_play | -0.0378 | -0.0760 | 0.0649 | 1 | 64 | -0.0734 | 0.0393 | -0.0393 | 23 | 0.2903 | low | NOT_RANK_PERSISTENT | -0.0158 |
+| team_defense.rush_success_rate | 0.4722 | 0.4020 | 0.0330 | 1 | 64 | 0.4061 | 0.1253 | -0.1253 | 25 | 0.2258 | low | RANK_PERSISTENT | 0.0118 |
+| team_defense.success_rate | 0.4844 | 0.4384 | 0.0255 | 1 | 64 | 0.4411 | 0.1063 | -0.1063 | 26 | 0.1935 | low | RANK_PERSISTENT | -0.0054 |
+| team_offense.early_down_epa_per_play | -0.1542 | -0.0054 | 0.0784 | 1 | 50 | -0.0219 | -0.2110 | -0.2110 | 26 | 0.1935 | low | UNVALIDATED_RANK_PERSISTENT | 0.0516 |
+| team_offense.epa_per_play | -0.1411 | -0.0001 | 0.0921 | 1 | 50 | -0.0158 | -0.1701 | -0.1701 | 23 | 0.2903 | low | VALIDATED_PERSISTENCE | 0.0852 |
+| team_offense.explosive_pass_rate | 0.0000 | 0.0796 | 0.0177 | 1 | 50 | 0.0749 | -0.2640 | -0.2640 | 28 | 0.0645 | low | RANK_PERSISTENT | 0.0036 |
+| team_offense.explosive_rush_rate | 0.2000 | 0.0990 | 0.0195 | 1 | 50 | 0.1050 | 0.3041 | 0.3041 | 2 | 0.9677 | low | NOT_RANK_PERSISTENT | 0.0083 |
+| team_offense.pass_epa_per_dropback | -0.1244 | 0.0308 | 0.1280 | 1 | 50 | 0.0135 | -0.1348 | -0.1348 | 23 | 0.2903 | low | UNVALIDATED_RANK_PERSISTENT | 0.1372 |
+| team_offense.pass_success_rate | 0.4615 | 0.4521 | 0.0418 | 1 | 50 | 0.4531 | 0.0251 | 0.0251 | 18 | 0.4516 | low | UNVALIDATED_RANK_PERSISTENT | 0.0579 |
+| team_offense.proe | 0.0378 | -0.0477 | 0.0349 | 1 | 50 | -0.0306 | 0.4906 | 0.0000 | — | — | low | VALIDATED_PERSISTENCE | 0.0351 |
+| team_offense.rush_epa_per_play | -0.0960 | -0.0806 | 0.0754 | 1 | 50 | -0.0815 | -0.0120 | -0.0120 | 17 | 0.4839 | low | RANK_PERSISTENT | 0.0177 |
+| team_offense.rush_success_rate | 0.4000 | 0.4004 | 0.0385 | 1 | 50 | 0.4003 | -0.0007 | -0.0007 | 18 | 0.4032 | low | RANK_PERSISTENT | 0.0148 |
+| team_offense.success_rate | 0.4400 | 0.4370 | 0.0337 | 1 | 50 | 0.4376 | 0.0180 | 0.0180 | 15 | 0.5484 | low | VALIDATED_PERSISTENCE | 0.0479 |
 
 ## WAS
-Record: no games yet · Points for/against: —/— · Point differential: — · Data confidence: prior_season_only
-Strongest area: **offense_overall** (0.426) · Weakest area: **defense_overall** (-1.045)
+Record: 0-1-0 · Points for/against: 22/24 · Point differential: -2 · Data confidence: low
+Strongest area: **pass_protection** (0.275) · Weakest area: **passing_offense** (-0.070)
 
 ### Domain indices
 | domain | label | index_value | rank_of_league | delta_vs_prev_week | delta_vs_preseason | min_confidence |
 | --- | --- | --- | --- | --- | --- | --- |
-| defense_overall | Defensive Strength Index | -1.045 | 32 | 0.000 | 0.000 | prior_season_only |
-| pass_rush | Pass-Rush Strength Index | 0.034 | 17 | 0.000 | 0.000 | prior_season_only |
-| passing_defense | Pass-Defense Strength Index | -0.870 | 28 | 0.000 | 0.000 | prior_season_only |
-| rushing_defense | Run-Defense Strength Index | -0.656 | 29 | 0.000 | 0.000 | prior_season_only |
-| offense_overall | Offensive Strength Index | 0.426 | 11 | 0.000 | 0.000 | prior_season_only |
-| pass_protection | Pass-Protection Strength Index | 0.103 | 19 | 0.000 | 0.000 | prior_season_only |
-| passing_offense | Passing-Offense Strength Index | 0.063 | 14 | 0.000 | 0.000 | prior_season_only |
-| rushing_offense | Rushing-Offense Strength Index | 0.352 | 9 | 0.000 | 0.000 | prior_season_only |
-| special_teams | Special-Teams Strength Index | 0.313 | 15 | 0.000 | 0.000 | prior_season_only |
+| defense_overall | Defensive Strength Index | 0.132 | 6 | 1.177 | 1.177 | low |
+| pass_rush | Pass-Rush Strength Index | 0.078 | 11 | 0.044 | 0.044 | low |
+| passing_defense | Pass-Defense Strength Index | 0.015 | 16 | 0.884 | 0.884 | low |
+| rushing_defense | Run-Defense Strength Index | 0.159 | 6 | 0.815 | 0.815 | low |
+| offense_overall | Offensive Strength Index | 0.006 | 16 | -0.420 | -0.420 | low |
+| pass_protection | Pass-Protection Strength Index | 0.275 | 5 | 0.173 | 0.173 | low |
+| passing_offense | Passing-Offense Strength Index | -0.070 | 20 | -0.134 | -0.134 | low |
+| rushing_offense | Rushing-Offense Strength Index | 0.096 | 9 | -0.257 | -0.257 | low |
+| special_teams | Special-Teams Strength Index | -0.032 | 21 | -0.345 | -0.345 | low |
 
 ### Underlying metrics
 | metric | raw_value | ref_mean | ref_sd | n_games | n_opportunities | shrunk_value | z_shrunk | oriented_z_shrunk | rank_of_league | percentile | confidence | phase3_status | delta_shrunk_vs_prev_week |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
-| pass_protection.qb_hit_rate_allowed | 0.1365 | 0.1450 | 0.0327 | 17 | 564 | 0.1392 | -0.1761 | 0.1761 | 15 | 0.5484 | prior_season_only | UNVALIDATED_RANK_PERSISTENT | 0.0000 |
-| pass_protection.rush_stuffed_rate_approx | 0.2091 | 0.2045 | 0.0323 | 17 | 564 | 0.2069 | 0.0733 | -0.0733 | 21 | 0.3548 | prior_season_only | RANK_PERSISTENT | 0.0000 |
-| pass_protection.sack_rate_allowed | 0.0656 | 0.0664 | 0.0188 | 17 | 564 | 0.0659 | -0.0291 | 0.0291 | 18 | 0.4516 | prior_season_only | UNVALIDATED_RANK_PERSISTENT | 0.0000 |
-| pass_rush.qb_hit_rate_generated | 0.1429 | 0.1442 | 0.0234 | 17 | 616 | 0.1435 | -0.0290 | -0.0290 | 19 | 0.4194 | prior_season_only | RANK_PERSISTENT | 0.0000 |
-| pass_rush.sack_rate_generated | 0.0682 | 0.0660 | 0.0121 | 17 | 616 | 0.0672 | 0.0972 | 0.0972 | 13 | 0.6129 | prior_season_only | NOT_RANK_PERSISTENT | 0.0000 |
-| special_teams.fg_pct | 0.7667 | 0.8507 | 0.0691 | 17 | 218 | 0.8074 | -0.6263 | -0.6263 | 29 | 0.0968 | prior_season_only | NOT_RANK_PERSISTENT | 0.0000 |
-| special_teams.st_epa_per_play | 0.1186 | 0.0622 | 0.0928 | 17 | 218 | 0.0913 | 0.3129 | 0.3129 | 15 | 0.5484 | prior_season_only | RANK_PERSISTENT | 0.0000 |
-| team_defense.early_down_epa_per_play | 0.1483 | -0.0013 | 0.0639 | 17 | 1116 | 0.0757 | 1.2061 | -1.2061 | 32 | 0.0000 | prior_season_only | RANK_PERSISTENT | 0.0000 |
-| team_defense.epa_per_play | 0.1517 | 0.0046 | 0.0677 | 17 | 1116 | 0.0804 | 1.1187 | -1.1187 | 31 | 0.0323 | prior_season_only | RANK_PERSISTENT | 0.0000 |
-| team_defense.explosive_pass_rate | 0.0860 | 0.0797 | 0.0112 | 17 | 1116 | 0.0832 | 0.3107 | -0.3107 | 25 | 0.2258 | prior_season_only | NOT_RANK_PERSISTENT | 0.0000 |
-| team_defense.explosive_rush_rate | 0.1176 | 0.1000 | 0.0206 | 17 | 1116 | 0.1091 | 0.4425 | -0.4425 | 26 | 0.1935 | prior_season_only | RANK_PERSISTENT | 0.0000 |
-| team_defense.pass_epa_per_dropback | 0.2240 | 0.0361 | 0.0949 | 17 | 1116 | 0.1329 | 1.0203 | -1.0203 | 30 | 0.0645 | prior_season_only | RANK_PERSISTENT | 0.0000 |
-| team_defense.pass_success_rate | 0.4984 | 0.4536 | 0.0320 | 17 | 1116 | 0.4767 | 0.7193 | -0.7193 | 28 | 0.1290 | prior_season_only | RANK_PERSISTENT | 0.0000 |
-| team_defense.rush_epa_per_play | 0.0262 | -0.0760 | 0.0649 | 17 | 1116 | -0.0200 | 0.8625 | -0.8625 | 28 | 0.1290 | prior_season_only | NOT_RANK_PERSISTENT | 0.0000 |
-| team_defense.rush_success_rate | 0.4444 | 0.4020 | 0.0330 | 17 | 1116 | 0.4239 | 0.6634 | -0.6634 | 29 | 0.0968 | prior_season_only | RANK_PERSISTENT | 0.0000 |
-| team_defense.success_rate | 0.4785 | 0.4384 | 0.0255 | 17 | 1116 | 0.4591 | 0.8115 | -0.8115 | 28 | 0.1290 | prior_season_only | RANK_PERSISTENT | 0.0000 |
-| team_offense.early_down_epa_per_play | 0.0361 | -0.0054 | 0.0784 | 17 | 1029 | 0.0228 | 0.3594 | 0.3594 | 11 | 0.6774 | prior_season_only | UNVALIDATED_RANK_PERSISTENT | 0.0000 |
-| team_offense.epa_per_play | 0.0347 | -0.0001 | 0.0921 | 17 | 1029 | 0.0236 | 0.2574 | 0.2574 | 16 | 0.5161 | prior_season_only | VALIDATED_PERSISTENCE | 0.0000 |
-| team_offense.explosive_pass_rate | 0.0709 | 0.0796 | 0.0177 | 17 | 1029 | 0.0751 | -0.2514 | -0.2514 | 21 | 0.3548 | prior_season_only | RANK_PERSISTENT | 0.0000 |
-| team_offense.explosive_rush_rate | 0.1106 | 0.0990 | 0.0195 | 17 | 1029 | 0.1050 | 0.3049 | 0.3049 | 9 | 0.7419 | prior_season_only | NOT_RANK_PERSISTENT | 0.0000 |
-| team_offense.pass_epa_per_dropback | 0.0378 | 0.0308 | 0.1280 | 17 | 1029 | 0.0355 | 0.0373 | 0.0373 | 18 | 0.4516 | prior_season_only | UNVALIDATED_RANK_PERSISTENT | 0.0000 |
-| team_offense.pass_success_rate | 0.4770 | 0.4521 | 0.0418 | 17 | 1029 | 0.4690 | 0.4044 | 0.4044 | 9 | 0.7419 | prior_season_only | UNVALIDATED_RANK_PERSISTENT | 0.0000 |
-| team_offense.proe | -0.0777 | -0.0477 | 0.0349 | 17 | 1029 | -0.0720 | -0.6959 | -0.0000 | — | — | prior_season_only | VALIDATED_PERSISTENCE | 0.0000 |
-| team_offense.rush_epa_per_play | -0.0388 | -0.0806 | 0.0754 | 17 | 1029 | -0.0591 | 0.2855 | 0.2855 | 11 | 0.6774 | prior_season_only | RANK_PERSISTENT | 0.0000 |
-| team_offense.rush_success_rate | 0.4279 | 0.4004 | 0.0385 | 17 | 1029 | 0.4165 | 0.4187 | 0.4187 | 10 | 0.7097 | prior_season_only | RANK_PERSISTENT | 0.0000 |
-| team_offense.success_rate | 0.4645 | 0.4370 | 0.0337 | 17 | 1029 | 0.4593 | 0.6616 | 0.6616 | 9 | 0.7419 | prior_season_only | VALIDATED_PERSISTENCE | 0.0000 |
+| pass_protection.qb_hit_rate_allowed | 0.0526 | 0.1450 | 0.0327 | 1 | 38 | 0.1347 | -0.3136 | 0.3136 | 2 | 0.9677 | low | UNVALIDATED_RANK_PERSISTENT | -0.0045 |
+| pass_protection.rush_stuffed_rate_approx | 0.1724 | 0.2045 | 0.0323 | 1 | 38 | 0.2026 | -0.0584 | 0.0584 | 11 | 0.6774 | low | RANK_PERSISTENT | -0.0043 |
+| pass_protection.sack_rate_allowed | 0.0263 | 0.0664 | 0.0188 | 1 | 38 | 0.0620 | -0.2372 | 0.2372 | 8 | 0.7742 | low | UNVALIDATED_RANK_PERSISTENT | -0.0039 |
+| pass_rush.qb_hit_rate_generated | 0.1515 | 0.1442 | 0.0234 | 1 | 33 | 0.1446 | 0.0185 | 0.0185 | 13 | 0.5645 | low | RANK_PERSISTENT | 0.0011 |
+| pass_rush.sack_rate_generated | 0.0909 | 0.0660 | 0.0121 | 1 | 33 | 0.0677 | 0.1375 | 0.1375 | 7 | 0.8065 | low | NOT_RANK_PERSISTENT | 0.0005 |
+| special_teams.fg_pct | 0.5000 | 0.8507 | 0.0691 | 1 | 15 | 0.8301 | -0.2984 | -0.2984 | 26 | 0.0370 | low | NOT_RANK_PERSISTENT | 0.0227 |
+| special_teams.st_epa_per_play | 0.0112 | 0.0622 | 0.0928 | 1 | 15 | 0.0592 | -0.0323 | -0.0323 | 21 | 0.3548 | low | RANK_PERSISTENT | -0.0321 |
+| team_defense.early_down_epa_per_play | -0.2043 | -0.0013 | 0.0639 | 1 | 53 | -0.0132 | -0.1869 | 0.1869 | 4 | 0.9032 | low | RANK_PERSISTENT | -0.0890 |
+| team_defense.epa_per_play | 0.0272 | 0.0046 | 0.0677 | 1 | 53 | 0.0059 | 0.0197 | -0.0197 | 16 | 0.5161 | low | RANK_PERSISTENT | -0.0745 |
+| team_defense.explosive_pass_rate | 0.0909 | 0.0797 | 0.0112 | 1 | 53 | 0.0804 | 0.0667 | -0.0667 | 19 | 0.4194 | low | NOT_RANK_PERSISTENT | -0.0027 |
+| team_defense.explosive_rush_rate | 0.0526 | 0.1000 | 0.0206 | 1 | 53 | 0.0972 | -0.1352 | 0.1352 | 4 | 0.8871 | low | RANK_PERSISTENT | -0.0119 |
+| team_defense.pass_epa_per_dropback | 0.1658 | 0.0361 | 0.0949 | 1 | 53 | 0.0438 | 0.0804 | -0.0804 | 20 | 0.3871 | low | RANK_PERSISTENT | -0.0892 |
+| team_defense.pass_success_rate | 0.3939 | 0.4536 | 0.0320 | 1 | 53 | 0.4501 | -0.1096 | 0.1096 | 7 | 0.7903 | low | RANK_PERSISTENT | -0.0266 |
+| team_defense.rush_epa_per_play | -0.1666 | -0.0760 | 0.0649 | 1 | 53 | -0.0820 | -0.0930 | 0.0930 | 10 | 0.7097 | low | NOT_RANK_PERSISTENT | -0.0621 |
+| team_defense.rush_success_rate | 0.2632 | 0.4020 | 0.0330 | 1 | 53 | 0.3938 | -0.2476 | 0.2476 | 3 | 0.9355 | low | RANK_PERSISTENT | -0.0300 |
+| team_defense.success_rate | 0.3396 | 0.4384 | 0.0255 | 1 | 53 | 0.4326 | -0.2283 | 0.2283 | 2 | 0.9677 | low | RANK_PERSISTENT | -0.0265 |
+| team_offense.early_down_epa_per_play | -0.0462 | -0.0054 | 0.0784 | 1 | 69 | -0.0099 | -0.0578 | -0.0578 | 19 | 0.4194 | low | UNVALIDATED_RANK_PERSISTENT | -0.0327 |
+| team_offense.epa_per_play | 0.0733 | -0.0001 | 0.0921 | 1 | 69 | 0.0080 | 0.0886 | 0.0886 | 12 | 0.6452 | low | VALIDATED_PERSISTENCE | -0.0155 |
+| team_offense.explosive_pass_rate | 0.0263 | 0.0796 | 0.0177 | 1 | 69 | 0.0764 | -0.1767 | -0.1767 | 26 | 0.1935 | low | RANK_PERSISTENT | 0.0013 |
+| team_offense.explosive_rush_rate | 0.0690 | 0.0990 | 0.0195 | 1 | 69 | 0.0972 | -0.0905 | -0.0905 | 21 | 0.3548 | low | NOT_RANK_PERSISTENT | -0.0077 |
+| team_offense.pass_epa_per_dropback | 0.1676 | 0.0308 | 0.1280 | 1 | 69 | 0.0460 | 0.1188 | 0.1188 | 12 | 0.6452 | low | UNVALIDATED_RANK_PERSISTENT | 0.0104 |
+| team_offense.pass_success_rate | 0.3947 | 0.4521 | 0.0418 | 1 | 69 | 0.4457 | -0.1523 | -0.1523 | 24 | 0.2581 | low | UNVALIDATED_RANK_PERSISTENT | -0.0233 |
+| team_offense.proe | -0.0763 | -0.0477 | 0.0349 | 1 | 69 | -0.0534 | -0.1638 | -0.0000 | — | — | low | VALIDATED_PERSISTENCE | 0.0185 |
+| team_offense.rush_epa_per_play | -0.0465 | -0.0806 | 0.0754 | 1 | 69 | -0.0786 | 0.0266 | 0.0266 | 12 | 0.6452 | low | RANK_PERSISTENT | -0.0195 |
+| team_offense.rush_success_rate | 0.4828 | 0.4004 | 0.0385 | 1 | 69 | 0.4067 | 0.1645 | 0.1645 | 5 | 0.8710 | low | RANK_PERSISTENT | -0.0098 |
+| team_offense.success_rate | 0.4348 | 0.4370 | 0.0337 | 1 | 69 | 0.4365 | -0.0129 | -0.0129 | 16 | 0.5161 | low | VALIDATED_PERSISTENCE | -0.0228 |
 

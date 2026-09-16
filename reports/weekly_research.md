@@ -1,71 +1,69 @@
-# Weekly Research — 2026 (preseason)
+# Weekly Research — 2026 Week 1
 
 > These indices are **transparent research indices**, not ratings, probabilities, or predictions of game outcomes. Each is an equal-weight mean of its member metrics' oriented, shrunk z-scores (reference-SD units). The member metrics are shown alongside every index. This project does not model game winners, scores, or spreads.
 
-Generated 2026-09-09T22:15:52+00:00. Latest completed regular-season week detected: **0** — running in preseason-baseline mode.
-
-No games have been played yet. The tables below are the **preseason baseline**: each team's prior full regular season, shrunk toward the 3-season league reference. They update automatically once Week 1 completes.
+Generated 2026-09-16T01:32:02+00:00. Latest completed regular-season week detected: **1**
 
 ## Biggest offense movers (week over week)
 **Risers**
 | team | index_value | delta_vs_prev_week | rank_of_league | rank_change_vs_prev_week |
 | --- | --- | --- | --- | --- |
-| LA | 1.526 | 0.000 | 1 | 0 |
-| NE | 1.107 | 0.000 | 2 | 0 |
-| BUF | 1.096 | 0.000 | 3 | 0 |
-| GB | 0.878 | 0.000 | 4 | 0 |
-| DAL | 0.835 | 0.000 | 5 | 0 |
-| SF | 0.692 | 0.000 | 6 | 0 |
+| CLE | -0.129 | 1.442 | 22 | 10 |
+| LV | -0.120 | 1.217 | 19 | 12 |
+| NYJ | 0.229 | 1.035 | 7 | 22 |
+| TEN | -0.121 | 1.001 | 20 | 10 |
+| NYG | 0.558 | 0.524 | 2 | 19 |
+| NO | 0.020 | 0.410 | 15 | 12 |
 
 **Fallers**
 | team | index_value | delta_vs_prev_week | rank_of_league | rank_change_vs_prev_week |
 | --- | --- | --- | --- | --- |
-| CLE | -1.571 | 0.000 | 32 | 0 |
-| LV | -1.338 | 0.000 | 31 | 0 |
-| TEN | -1.122 | 0.000 | 30 | 0 |
-| NYJ | -0.806 | 0.000 | 29 | 0 |
-| MIN | -0.394 | 0.000 | 28 | 0 |
-| NO | -0.389 | 0.000 | 27 | 0 |
+| LA | -0.146 | -1.672 | 23 | -22 |
+| NE | -0.172 | -1.279 | 25 | -23 |
+| GB | -0.127 | -1.005 | 21 | -17 |
+| BUF | 0.229 | -0.868 | 8 | -5 |
+| IND | -0.198 | -0.811 | 26 | -19 |
+| ATL | -0.406 | -0.660 | 32 | -18 |
 
 ## Biggest defense movers (week over week)
 **Risers**
 | team | index_value | delta_vs_prev_week | rank_of_league | rank_change_vs_prev_week |
 | --- | --- | --- | --- | --- |
-| HOU | 0.931 | 0.000 | 1 | 0 |
-| SEA | 0.738 | 0.000 | 2 | 0 |
-| DEN | 0.716 | 0.000 | 3 | 0 |
-| MIN | 0.621 | 0.000 | 4 | 0 |
-| CLE | 0.594 | 0.000 | 5 | 0 |
-| LAC | 0.571 | 0.000 | 6 | 0 |
+| WAS | 0.132 | 1.177 | 6 | 26 |
+| ARI | 0.095 | 0.996 | 10 | 20 |
+| NYJ | 0.088 | 0.951 | 12 | 16 |
+| CIN | -0.025 | 0.850 | 20 | 9 |
+| MIA | 0.080 | 0.801 | 13 | 14 |
+| SF | 0.103 | 0.783 | 9 | 17 |
 
 **Fallers**
 | team | index_value | delta_vs_prev_week | rank_of_league | rank_change_vs_prev_week |
 | --- | --- | --- | --- | --- |
-| WAS | -1.045 | 0.000 | 32 | 0 |
-| DAL | -0.973 | 0.000 | 31 | 0 |
-| ARI | -0.901 | 0.000 | 30 | 0 |
-| CIN | -0.874 | 0.000 | 29 | 0 |
-| NYJ | -0.863 | 0.000 | 28 | 0 |
-| MIA | -0.721 | 0.000 | 27 | 0 |
+| HOU | -0.163 | -1.094 | 27 | -26 |
+| CLE | -0.307 | -0.902 | 32 | -27 |
+| LAC | -0.117 | -0.688 | 23 | -17 |
+| DEN | 0.030 | -0.686 | 15 | -12 |
+| LA | -0.218 | -0.681 | 29 | -21 |
+| SEA | 0.104 | -0.635 | 8 | -6 |
 
 ## Biggest metric changes vs preseason baseline
 | team | metric | shrunk_value | delta_shrunk_vs_preseason | percentile | confidence |
 | --- | --- | --- | --- | --- | --- |
-| ARI | pass_protection.qb_hit_rate_allowed | 0.1641 | 0.0000 | 0.2581 | prior_season_only |
-| ARI | pass_protection.sack_rate_allowed | 0.0751 | 0.0000 | 0.2258 | prior_season_only |
-| ARI | pass_rush.qb_hit_rate_generated | 0.1272 | 0.0000 | 0.0968 | prior_season_only |
-| ARI | pass_rush.sack_rate_generated | 0.0564 | 0.0000 | 0.1290 | prior_season_only |
-| ARI | special_teams.st_epa_per_play | 0.0214 | 0.0000 | 0.0968 | prior_season_only |
-| ARI | team_defense.early_down_epa_per_play | 0.0657 | 0.0000 | 0.0645 | prior_season_only |
-| ARI | team_defense.epa_per_play | 0.0484 | 0.0000 | 0.1935 | prior_season_only |
-| ARI | team_defense.explosive_rush_rate | 0.1124 | 0.0000 | 0.0968 | prior_season_only |
-| ARI | team_defense.pass_epa_per_dropback | 0.1027 | 0.0000 | 0.1935 | prior_season_only |
-| ARI | team_defense.pass_success_rate | 0.4875 | 0.0000 | 0.0323 | prior_season_only |
-| ARI | team_defense.rush_epa_per_play | -0.0551 | 0.0000 | 0.3226 | prior_season_only |
-| ARI | team_defense.rush_success_rate | 0.4170 | 0.0000 | 0.2903 | prior_season_only |
-| ARI | team_defense.success_rate | 0.4641 | 0.0000 | 0.0000 | prior_season_only |
-| ARI | team_offense.early_down_epa_per_play | -0.0095 | 0.0000 | 0.3226 | prior_season_only |
-| ARI | team_offense.epa_per_play | -0.0094 | 0.0000 | 0.2903 | prior_season_only |
+| NE | team_offense.pass_epa_per_dropback | 0.0346 | -0.1823 | 0.5484 | low |
+| LA | team_offense.pass_epa_per_dropback | -0.0117 | -0.1733 | 0.0968 | low |
+| CLE | team_offense.pass_epa_per_dropback | 0.0023 | 0.1624 | 0.1935 | low |
+| GB | team_offense.pass_epa_per_dropback | 0.0208 | -0.1609 | 0.3226 | low |
+| NYJ | team_offense.pass_epa_per_dropback | 0.0663 | 0.1571 | 0.8387 | low |
+| NYJ | team_defense.pass_epa_per_dropback | 0.0267 | -0.1389 | 0.7097 | low |
+| TEN | team_offense.pass_epa_per_dropback | 0.0135 | 0.1372 | 0.2903 | low |
+| LV | team_offense.pass_epa_per_dropback | 0.0282 | 0.1311 | 0.4194 | low |
+| MIN | team_offense.pass_epa_per_dropback | 0.0321 | 0.1283 | 0.5161 | low |
+| LV | team_offense.epa_per_play | -0.0033 | 0.1273 | 0.3871 | low |
+| LA | team_offense.epa_per_play | -0.0252 | -0.1265 | 0.1290 | low |
+| LA | team_offense.early_down_epa_per_play | -0.0168 | -0.1235 | 0.3226 | low |
+| NYJ | special_teams.st_epa_per_play | 0.0758 | -0.1207 | 0.7742 | low |
+| CLE | team_defense.pass_epa_per_dropback | 0.0806 | 0.1195 | 0.0000 | low |
+| HOU | team_defense.pass_epa_per_dropback | 0.0668 | 0.1165 | 0.0645 | low |
 
 ## Which factors have the strongest evidence (historical, 2016-2025)
 From `outputs/research/factor_summary.csv`. **association** = same-season descriptive correlation; **chronological** = walk-forward (metric now -> outcome over next 4 games), with a cluster-bootstrap 95% CI; **stability** = sign-consistency of the association across 10 seasons. A large correlation alone is not called 'important'. Factors in a group are redundant -- treat each group as one line of evidence.

@@ -42,7 +42,8 @@ def build_weekly_snapshot(metrics_long: pl.DataFrame, season: int, through_week:
     ).with_columns(
         (pl.col("index_value") - pl.col("index_prev_week")).alias("delta_vs_prev_week"),
         (pl.col("index_value") - pl.col("index_preseason")).alias("delta_vs_preseason"),
-        (pl.col("rank_prev_week") - pl.col("rank_of_league")).alias("rank_change_vs_prev_week"),
+        (pl.col("rank_prev_week").cast(pl.Int64) - pl.col("rank_of_league").cast(pl.Int64))
+        .alias("rank_change_vs_prev_week"),
         pl.lit(season).alias("season"), pl.lit(through_week).alias("through_week"),
     ).sort(["domain", "rank_of_league"])
 
